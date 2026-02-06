@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<title>World 69</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="top-icons">
+    <img src="https://img.icons8.com/ios-filled/50/00ff5a/shopping-cart.png" alt="Carrinho">
+    <img src="https://img.icons8.com/ios-filled/50/00ff5a/money.png" alt="Pagamento">
+  </div>
+  <h1 class="logo">World 69</h1>
+  <input id="searchInput" type="search" placeholder="Pesquisar produtos...">
+</header>
+
+<nav id="categories">
+  <button data-cat="ALL">TODOS</button>
+  <button data-cat="SCRIPTS">SCRIPTS</button>
+  <button data-cat="SITES">SITES</button>
+  <button data-cat="APPS">APPS</button>
+  <button data-cat="SNI">SNI</button>
+  <button data-cat="BOOKS">BOOKS</button>
+  <button data-cat="RAROS">RAROS</button>
+  <button data-cat="BOTS">BOTS</button>
+  <button data-cat="HAKS">HAKS</button>
+</nav>
+
+<main id="grid"></main>
+
+<footer>
+  <p>📞 +244 951875350</p>
+  <p>✉️ world69.ao@gmail.com</p>
+</footer>
+
+<!-- Modal -->
+<div id="modal" class="modal" style="display:none">
+  <div class="modal-box">
+    <button class="btn-close" id="modalCloseBtn">VOLTAR</button>
+    <img id="mImg" alt="">
+    <h2 id="mName"></h2>
+    <p id="mDesc"></p>
+    <a id="mBtn" class="btn" target="_blank" rel="noopener"></a>
+    <div id="payment-logos" class="payment-logos" style="display:none">
+      <img src="https://i.postimg.cc/X7b6QL79/20314154-4E37-4918-A91C-B2E45F4957FC.png" alt="PayPal">
+      <img src="https://i.postimg.cc/kg763Wwb/72507DB1-F645-4FE6-AD76-4F79B0937B4A.jpg" alt="PayPay AO">
+      <img src="https://i.postimg.cc/mkFZCgjf/E40B277B-5EF8-4691-8BCE-3CF29F609946.jpg" alt="Multicaixa Express">
+    </div>
+  </div>
+</div>
+
+<!-- Script no fim da página: garante DOM pronto -->
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyC_FrApgE4TYfrBnq4urrWac9oiLavecMg",
+  authDomain: "world-69.firebaseapp.com",
+  projectId: "world-69"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+// ELEMENTS
+const grid = document.getElementById('grid');
+const searchInput = document.getElementById('searchInput');
+const categories = document.getElementById('categories');
+
+const modal = document.getElementById('modal');
+const modalBox = modal.querySelector('.modal-box');
+const modalCloseBtn = document.getElementById('modalCloseBtn');
+const mImg = document.getElementById('mImg');
+const mName = document.getElementById('mName');
+const mDesc = document.getElementById('mDesc');
+const mBtn = document.getElementById('mBtn');
+const paymentLogos = document.getElementById('payment-logos');
+
+let allProducts = [];
+
+// safe function to create a card element and attach listener
+function createCard(product){
+  const card = document.createElement('div');
+  card.className = 'card';
+
+  const img = document.createElement('img');
+  img.src = product.image || 'assets/placeholder.png';
+  img.alt = product.name || 'produto';
+
+  const body = document.createElement('div');
+  body.className = 'card-body';
+
+  const h3 = document.createElement('h3');
+  h3.innerText = product.name || 'Sem nome';
+
+  const tag = document.createElement('span');
+  tag.className = 'tag ' + (product.type || 'free');
+  tag.innerText = (product.type === 'paid') ? 'PAGO' : 'GRÁTIS';
+
+  body.appendChild(h3);
+  body.appendChild(tag);
+  card.appendChild(img);
+  card.appendChild(body);
+
+  // add click handler (safe, not inline HTML)
+  card.addEventListener('click', () => {
+    openModal(product);
+  });
+
+  return card;
+}
+
+// display list of products (array)
+function displayProducts(products){
+  grid.innerHTML = '';
+  if(!products || products.length === 0){
+    const notice = document.createElement('div');
+    notice.style.textAlign = 'center';
+    notice.style.padding = '30px';
+    notice.style.opacity = '.7';
+    notice.innerText = 'Sem produtos nessa categoria.';
+    grid.appendChild(notice);
+    return;
+  }
+  products.forEach(p => {
+    const card = createCard(p);
+    grid.appendChild(card);
+  });
+}
+
+// open modal with product object
+function openModal(p){
+  try {
+    modal.style.display = 'flex';
+    mImg.src = p.image || 'assets/placeholder.png';
+    mName.innerText = p.name || '';
+    mDesc.innerText = p.description || '';
+    if(p.type === 'paid'){
+      mBtn.innerText = 'PAGAR';
+      // whatsapp link - encode product name
+      mBtn.href = 'https://wa.me/244951875350?text=' + encodeURIComponent('Quero comprar: ' + p.name);
+      paymentLogos.style.display = 'flex';
+    } else {
+      mBtn.innerText = 'BAIXAR';
+      mBtn.href = p.link || '#';
+      paymentLogos.style.display = 'none';
+    }
+  } catch (err) {
+    console.error('openModal error', err);
+  }
+}
+
+// close modal
+function closeModal(){
+  modal.style.display = 'none';
+  paymentLogos.style.display = 'none';
+}
+
+// click outside modal-box closes modal
+modal.addEventListener('click', (e) => {
+  if(e.target === modal) closeModal();
+});
+
+// close button
+modalCloseBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  closeModal();
+});
+
+// search handler
+searchInput.addEventListener('input', (e) => {
+  const q = e.target.value.trim().toLowerCase();
+  if(!q) displayProducts(allProducts);
+  else displayProducts(allProducts.filter(p => (p.name || '').toLowerCase().includes(q)));
+});
+
+// category buttons (event delegation)
+categories.addEventListener('click', (e) => {
+  const btn = e.target.closest('button');
+  if(!btn) return;
+  const cat = btn.dataset.cat;
+  if(!cat || cat === 'ALL') {
+    displayProducts(allProducts);
+    return;
+  }
+  displayProducts(allProducts.filter(p => p.category === cat));
+});
+
+// load products from Firestore
+(async function load(){
+  try {
+    const snap = await getDocs(collection(db, 'products'));
+    allProducts = [];
+    snap.forEach(doc => {
+      const data = doc.data();
+      // keep also id if needed later: data._id = doc.id;
+      allProducts.push(data);
+    });
+    displayProducts(allProducts);
+  } catch (err) {
+    console.error('Erro ao buscar produtos:', err);
+    grid.innerHTML = '<div style="text-align:center;padding:20px;opacity:.7">Erro ao carregar produtos.</div>';
+  }
+})();
+</script>
+</body>
+  </html>
