@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin | World 69</title>
+<link rel="stylesheet" href="admin.css">
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+import { getFirestore, collection, addDoc, getDocs, deleteDoc, doc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyC_FrApgE4TYfrBnq4urrWac9oiLavecMg",
+  authDomain: "world-69.firebaseapp.com",
+  projectId: "world-69"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+// SENHA DO ADMIN
+const ADMIN_PASSWORD = "world69admin";
+
+// Verifica senha
+window.onload = async () => {
+  const senha = prompt("Digite a senha do Admin:");
+  if(senha !== ADMIN_PASSWORD){
+    alert("Senha incorreta! Acesso negado.");
+    document.body.innerHTML = "<h2 style='color:#ff0000; text-align:center; margin-top:50px;'>Acesso negado</h2>";
+    return;
+  }
+  document.getElementById("admin-form").style.display = "block";
+  loadProducts();
+};
+
+// ADICIONAR PRODUTO
+window.addProduct = async () => {
+  const name = document.getElementById("name").value.trim();
+  const image = document.getElementById("image").value.trim();
+  const desc = document.getElementById("desc").value.trim();
+  const link = document.getElementById("link").value.trim();
+  const type = document.getElementById("type").value;
+  const category = document.getElementById("category").value;
+
+  if(!name || !image || !desc || !link || !category){
+    alert("Preencha todos os campos!");
+    return;
+  }
+
+  try {
+    await addDoc(collection(db, "products"), {
+      name: name,
+      image: image,
+      description: desc,
+      link: link,
+      type: type,
+      category: category
+    });
+    alert("Produto publicado com sucesso!");
+    document.getElementById("admin-form").reset();
+    loadProducts(); // Recarrega lista
+  } catch(e){
+    alert("Erro ao publicar: " + e);
+  }
+};
+
+// CARREGA PRODUTOS PARA EDIÇÃO/DELEÇÃO
+async function loadProducts(){
+  const list = document.getElementById("products-list");
+  list.innerHTML = "";
+  const snap = await getDocs(collection(db, "products"));
+  snap.forEach(docSnap => {
+    const p = docSnap.data();
+    const div = document.createElement("div");
+    div.classList.add("product-item");
+    div.innerHTML = `
+      <strong>${p.name}</strong> [${p.type.toUpperCase()} - ${p.category}] 
+      <button onclick="deleteProduct('${docSnap.id}')">Deletar</button>
+    `;
+    list.appendChild(div);
+  });
+}
+
+// DELETAR PRODUTO
+window.deleteProduct = async (id) => {
+  if(confirm("Tem certeza que quer deletar este produto?")){
+    try {
+      await deleteDoc(doc(db, "products", id));
+      alert("Produto deletado com sucesso!");
+      loadProducts();
+    } catch(e){
+      alert("Erro ao deletar: " + e);
+    }
+  }
+};
+</script>
+
+<style>
+body { background:#050505; color:#fff; font-family:'Segoe UI',sans-serif; padding:20px;}
+h1 { text-align:center; color:#00ff5a; margin-bottom:20px; animation: glow 2s infinite;}
+@keyframes glow {0%{opacity:.4}50%{opacity:1}100%{opacity:.4}}
+
+#admin-form { display:none; max-width:500px; margin:0 auto; }
+#admin-form input, #admin-form textarea, #admin-form select, #admin-form button {
+  width:100%; padding:10px; margin-bottom:10px; border-radius:6px; border:none; font-size:14px;
+}
+#admin-form textarea { height:80px; resize:none; }
+
+#admin-form button {
+  background:#00ff5a; color:#000; font-weight:bold; cursor:pointer;
+  transition: transform .2s;
+}
+#admin-form button:hover { transform:scale(1.05); }
+
+#products-list { max-width:500px; margin:20px auto; }
+.product-item {
+  background:#111; padding:10px; margin-bottom:8px; border-radius:6px; display:flex; justify-content:space-between; align-items:center;
+}
+.product-item button {
+  background:#ff0000; color:#fff; border:none; padding:6px 12px; border-radius:4px; cursor:pointer;
+  transition: transform .2s;
+}
+.product-item button:hover { transform:scale(1.05); }
+
+@media (max-width:480px){
+  body { padding:10px;}
+  #admin-form, #products-list { width:95%; }
+}
+</style>
+
+</head>
+<body>
+
+<h1>World 69 — Admin</h1>
+
+<!-- FORMULÁRIO DE PRODUTOS -->
+<form id="admin-form" onsubmit="event.preventDefault(); addProduct();">
+  <input id="name" type="text" placeholder="Nome do produto">
+  <input id="image" type="text" placeholder="Link da imagem">
+  <textarea id="desc" placeholder="Descrição completa"></textarea>
+  <input id="link" type="text" placeholder="Link Google Drive ou WhatsApp">
+
+  <select id="type">
+    <option value="free">Grátis</option>
+    <option value="paid">Pago</option>
+  </select>
+
+  <select id="category">
+    <option value="SCRIPTS">SCRIPTS</option>
+    <option value="SITES">SITES</option>
+    <option value="APPS">APPS</option>
+    <option value="SNI">SNI</option>
+    <option value="BOOKS">BOOKS</option>
+    <option value="RAROS">RAROS</option>
+    <option value="BOTS">BOTS</option>
+    <option value="HAKS">HAKS</option>
+  </select>
+
+  <button type="submit">PUBLICAR</button>
+</form>
+
+<!-- LISTA DE PRODUTOS -->
+<div id="products-list"></div>
+
+</body>
+</html>
