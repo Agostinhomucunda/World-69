@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<title>World 69</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="style.css">
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyC_FrApgE4TYfrBnq4urrWac9oiLavecMg",
+  authDomain: "world-69.firebaseapp.com",
+  projectId: "world-69"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+let allProducts = [];
+
+window.onload = async () => {
+  const snap = await getDocs(collection(db, "products"));
+  snap.forEach(doc => allProducts.push(doc.data()));
+  displayProducts(allProducts);
+};
+
+// Exibir produtos
+function displayProducts(products){
+  const grid = document.getElementById("grid");
+  grid.innerHTML = "";
+  products.forEach(p => {
+    grid.innerHTML += `
+      <div class="card" onclick="openModal('${p.name}','${p.image}','${p.description}','${p.type}','${p.link}')">
+        <img src="${p.image}">
+        <div class="card-body">
+          <h3>${p.name}</h3>
+          <span class="tag ${p.type}">${p.type === 'free' ? 'GRÁTIS' : 'PAGO'}</span>
+        </div>
+      </div>
+    `;
+  });
+}
+
+// Filtrar categorias
+window.filterCategory = (cat) => {
+  if(cat === 'ALL') displayProducts(allProducts);
+  else displayProducts(allProducts.filter(p => p.category === cat));
+};
+
+// Barra de pesquisa
+window.searchProducts = (term) => {
+  displayProducts(allProducts.filter(p => p.name.toLowerCase().includes(term.toLowerCase())));
+};
+
+// --- MODAL ---
+const modal = document.getElementById("modal");
+const paymentSection = document.getElementById("payment-logos");
+
+// Abrir modal
+function openModal(name, img, desc, type, link){
+  modal.style.display = "flex";
+  document.getElementById("mImg").src = img;
+  document.getElementById("mName").innerText = name;
+  document.getElementById("mDesc").innerText = desc;
+  const btn = document.getElementById("mBtn");
+
+  if(type === "free"){
+    btn.innerText = "BAIXAR";
+    btn.href = link;
+    paymentSection.style.display = "none";
+  } else {
+    btn.innerText = "PAGAR";
+    btn.href = `https://wa.me/244951875350?text=Quero%20comprar:%20${name}`;
+    paymentSection.style.display = "flex";
+  }
+}
+
+// Fechar modal
+function closeModal(){
+  modal.style.display = "none";
+  paymentSection.style.display = "none";
+}
+
+// Clique fora da box fecha modal
+modal.addEventListener("click", (e) => {
+  if(e.target === modal) closeModal();
+});
+
+// Botão VOLTAR dentro do modal
+function backModal(){
+  closeModal();
+}
+</script>
+</head>
+
+<body>
+
+<header>
+  <div class="top-icons">
+    <img src="https://img.icons8.com/ios-filled/50/00ff5a/shopping-cart.png" alt="Carrinho">
+    <img src="https://img.icons8.com/ios-filled/50/00ff5a/money.png" alt="Pagamento">
+  </div>
+  <h1 class="logo">World 69</h1>
+  <input type="search" placeholder="Pesquisar produtos..." oninput="searchProducts(this.value)">
+</header>
+
+<nav>
+  <button onclick="filterCategory('ALL')">TODOS</button>
+  <button onclick="filterCategory('SCRIPTS')">SCRIPTS</button>
+  <button onclick="filterCategory('SITES')">SITES</button>
+  <button onclick="filterCategory('APPS')">APPS</button>
+  <button onclick="filterCategory('SNI')">SNI</button>
+  <button onclick="filterCategory('BOOKS')">BOOKS</button>
+  <button onclick="filterCategory('RAROS')">RAROS</button>
+  <button onclick="filterCategory('BOTS')">BOTS</button>
+  <button onclick="filterCategory('HAKS')">HAKS</button>
+</nav>
+
+<main id="grid"></main>
+
+<footer>
+  <p>📞 +244 951875350</p>
+  <p>✉️ world69.ao@gmail.com</p>
+</footer>
+
+<!-- MODAL -->
+<div id="modal" class="modal">
+  <div class="modal-box">
+    <button class="btn-close" onclick="backModal()">VOLTAR</button>
+    <img id="mImg">
+    <h2 id="mName"></h2>
+    <p id="mDesc"></p>
+    <a id="mBtn" class="btn" target="_blank"></a>
+    <div id="payment-logos" class="payment-logos">
+      <img src="https://i.postimg.cc/X7b6QL79/20314154-4E37-4918-A91C-B2E45F4957FC.png" alt="PayPal">
+      <img src="https://i.postimg.cc/kg763Wwb/72507DB1-F645-4FE6-AD76-4F79B0937B4A.jpg" alt="PayPay AO">
+      <img src="https://i.postimg.cc/mkFZCgjf/E40B277B-5EF8-4691-8BCE-3CF29F609946.jpg" alt="Multicaixa Express">
+    </div>
+  </div>
+</div>
+
+</body>
+  </html>
