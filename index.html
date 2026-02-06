@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<title>World 69</title>
+<link rel="stylesheet" href="style.css">
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyC_FrApgE4TYfrBnq4urrWac9oiLavecMg",
+  authDomain: "world-69.firebaseapp.com",
+  projectId: "world-69"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+window.onload = async () => {
+  const grid = document.getElementById("grid");
+  const snap = await getDocs(collection(db, "products"));
+
+  snap.forEach(doc => {
+    const p = doc.data();
+    grid.innerHTML += `
+      <div class="card" onclick="openModal('${p.name}','${p.image}','${p.description}','${p.type}','${p.link}')">
+        <img src="${p.image}">
+        <div class="card-body">
+          <h3>${p.name}</h3>
+          <span class="tag ${p.type}">${p.type === 'free' ? 'GRÁTIS' : 'PAGO'}</span>
+        </div>
+      </div>
+    `;
+  });
+};
+
+window.openModal = (n,i,d,t,l) => {
+  modal.style.display = "flex";
+  mImg.src = i;
+  mName.innerText = n;
+  mDesc.innerText = d;
+  mBtn.innerText = t === "free" ? "BAIXAR" : "PAGAR";
+  mBtn.href = t === "free" ? l : `https://wa.me/244951875350?text=Quero%20comprar:%20${n}`;
+};
+</script>
+</head>
+
+<body>
+
+<header>
+  <h1 class="logo">World 69</h1>
+  <input type="search" placeholder="Pesquisar produtos...">
+</header>
+
+<nav>
+  <button>SCRIPTS</button>
+  <button>SITES</button>
+  <button>APPS</button>
+  <button>SNI</button>
+  <button>BOOKS</button>
+  <button>RAROS</button>
+  <button>BOTS</button>
+  <button>HAKS</button>
+</nav>
+
+<main id="grid"></main>
+
+<footer>
+  <p>📞 +244 951875350</p>
+  <p>✉️ world69.ao@gmail.com</p>
+</footer>
+
+<!-- MODAL -->
+<div id="modal" class="modal" onclick="this.style.display='none'">
+  <div class="modal-box" onclick="event.stopPropagation()">
+    <img id="mImg">
+    <h2 id="mName"></h2>
+    <p id="mDesc"></p>
+    <a id="mBtn" class="btn" target="_blank"></a>
+  </div>
+</div>
+
+</body>
+</html>
