@@ -1,0 +1,150 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #050505;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+header {
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.top-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.top-icons img {
+  width: 30px;
+  height: 30px;
+}
+
+.logo {
+  color: #00ff5a;
+  font-size: 32px;
+  animation: glow 2s infinite;
+}
+
+@keyframes glow {
+  0% {opacity:.4}
+  50% {opacity:1}
+  100% {opacity:.4}
+}
+
+header input {
+  width: 90%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 6px;
+  border: none;
+}
+
+nav {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 10px;
+}
+
+nav button {
+  background: #00ff5a;
+  border: none;
+  padding: 8px 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+main {
+  padding: 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(160px,1fr));
+  gap: 15px;
+}
+
+.card {
+  background: #0f0f0f;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform .2s;
+}
+
+.card:hover { transform: scale(1.04); }
+
+.card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 10px;
+}
+
+.tag {
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.free { background:#00ff5a; color:#000; }
+.paid { background:#ffc400; color:#000; }
+
+footer {
+  text-align: center;
+  padding: 15px;
+  opacity: .7;
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.8);
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+}
+
+.modal-box {
+  background: #111;
+  width: 90%;
+  max-width: 400px;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.modal-box img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.btn {
+  display: block;
+  background: #00ff5a;
+  color: #000;
+  text-align: center;
+  padding: 10px;
+  margin-top: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* LOGOS DE PAGAMENTO */
+.payment-logos {
+  display: none;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.payment-logos img {
+  width: 50px;
+  height: auto;
+  }
