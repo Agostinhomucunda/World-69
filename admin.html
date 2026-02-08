@@ -9,6 +9,7 @@
 <script type="module">
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
 import { getFirestore, collection, addDoc, getDocs, deleteDoc, doc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyC_FrApgE4TYfrBnq4urrWac9oiLavecMg",
@@ -18,20 +19,30 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+const auth = getAuth(app);
 
-// SENHA DO ADMIN
-const ADMIN_PASSWORD = "world69admin";
-
-// Verifica senha
-window.onload = async () => {
-  const senha = prompt("Digite a senha do Admin:");
-  if(senha !== ADMIN_PASSWORD){
-    alert("Senha incorreta! Acesso negado.");
-    document.body.innerHTML = "<h2 style='color:#ff0000; text-align:center; margin-top:50px;'>Acesso negado</h2>";
-    return;
+// Check Firebase Authentication state
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    // User is authenticated — show admin panel
+    document.getElementById("admin-content").style.display = "block";
+    document.getElementById("loading-msg").style.display = "none";
+    document.getElementById("user-email").textContent = user.email;
+    loadProducts();
+  } else {
+    // Not authenticated — redirect to login
+    window.location.href = "login.html";
   }
-  document.getElementById("admin-form").style.display = "block";
-  loadProducts();
+});
+
+// LOGOUT
+window.logout = async () => {
+  try {
+    await signOut(auth);
+    window.location.href = "login.html";
+  } catch (e) {
+    alert("Erro ao sair: " + e);
+  }
 };
 
 // ADICIONAR PRODUTO
@@ -75,7 +86,7 @@ async function loadProducts(){
     const div = document.createElement("div");
     div.classList.add("product-item");
     div.innerHTML = `
-      <strong>${p.name}</strong> [${p.type.toUpperCase()} - ${p.category}] 
+      <strong>${p.name}</strong> [${p.type.toUpperCase()} - ${p.category}]
       <button onclick="deleteProduct('${docSnap.id}')">Deletar</button>
     `;
     list.appendChild(div);
@@ -101,7 +112,18 @@ body { background:#050505; color:#fff; font-family:'Segoe UI',sans-serif; paddin
 h1 { text-align:center; color:#00ff5a; margin-bottom:20px; animation: glow 2s infinite;}
 @keyframes glow {0%{opacity:.4}50%{opacity:1}100%{opacity:.4}}
 
-#admin-form { display:none; max-width:500px; margin:0 auto; }
+.admin-bar {
+  max-width:500px; margin:0 auto 15px; display:flex; justify-content:space-between; align-items:center;
+  background:#111; padding:10px 15px; border-radius:6px; font-size:13px;
+}
+.admin-bar span { color:#aaa; }
+.admin-bar button {
+  background:#ff4d4d; color:#fff; border:none; padding:6px 14px; border-radius:4px;
+  cursor:pointer; font-weight:bold; font-size:12px; transition: transform .2s;
+}
+.admin-bar button:hover { transform:scale(1.05); }
+
+#admin-form { max-width:500px; margin:0 auto; }
 #admin-form input, #admin-form textarea, #admin-form select, #admin-form button {
   width:100%; padding:10px; margin-bottom:10px; border-radius:6px; border:none; font-size:14px;
 }
@@ -123,9 +145,13 @@ h1 { text-align:center; color:#00ff5a; margin-bottom:20px; animation: glow 2s in
 }
 .product-item button:hover { transform:scale(1.05); }
 
+#loading-msg {
+  text-align:center; padding:50px; color:#aaa; font-size:16px;
+}
+
 @media (max-width:480px){
   body { padding:10px;}
-  #admin-form, #products-list { width:95%; }
+  #admin-form, #products-list, .admin-bar { width:95%; }
 }
 </style>
 
@@ -134,34 +160,48 @@ h1 { text-align:center; color:#00ff5a; margin-bottom:20px; animation: glow 2s in
 
 <h1>World 69 — Admin</h1>
 
-<!-- FORMULÁRIO DE PRODUTOS -->
-<form id="admin-form" onsubmit="event.preventDefault(); addProduct();">
-  <input id="name" type="text" placeholder="Nome do produto">
-  <input id="image" type="text" placeholder="Link da imagem">
-  <textarea id="desc" placeholder="Descrição completa"></textarea>
-  <input id="link" type="text" placeholder="Link Google Drive ou WhatsApp">
+<!-- Loading state while checking auth -->
+<div id="loading-msg">Verificando autenticação...</div>
 
-  <select id="type">
-    <option value="free">Grátis</option>
-    <option value="paid">Pago</option>
-  </select>
+<!-- Admin content (hidden until authenticated) -->
+<div id="admin-content" style="display:none;">
 
-  <select id="category">
-    <option value="SCRIPTS">SCRIPTS</option>
-    <option value="SITES">SITES</option>
-    <option value="APPS">APPS</option>
-    <option value="SNI">SNI</option>
-    <option value="BOOKS">BOOKS</option>
-    <option value="RAROS">RAROS</option>
-    <option value="BOTS">BOTS</option>
-    <option value="HAKS">HAKS</option>
-  </select>
+  <!-- User bar with email and logout -->
+  <div class="admin-bar">
+    <span id="user-email"></span>
+    <button onclick="logout()">SAIR</button>
+  </div>
 
-  <button type="submit">PUBLICAR</button>
-</form>
+  <!-- FORMULÁRIO DE PRODUTOS -->
+  <form id="admin-form" onsubmit="event.preventDefault(); addProduct();">
+    <input id="name" type="text" placeholder="Nome do produto">
+    <input id="image" type="text" placeholder="Link da imagem">
+    <textarea id="desc" placeholder="Descrição completa"></textarea>
+    <input id="link" type="text" placeholder="Link Google Drive ou WhatsApp">
 
-<!-- LISTA DE PRODUTOS -->
-<div id="products-list"></div>
+    <select id="type">
+      <option value="free">Grátis</option>
+      <option value="paid">Pago</option>
+    </select>
+
+    <select id="category">
+      <option value="SCRIPTS">SCRIPTS</option>
+      <option value="SITES">SITES</option>
+      <option value="APPS">APPS</option>
+      <option value="SNI">SNI</option>
+      <option value="BOOKS">BOOKS</option>
+      <option value="RAROS">RAROS</option>
+      <option value="BOTS">BOTS</option>
+      <option value="HAKS">HAKS</option>
+    </select>
+
+    <button type="submit">PUBLICAR</button>
+  </form>
+
+  <!-- LISTA DE PRODUTOS -->
+  <div id="products-list"></div>
+
+</div>
 
 </body>
 </html>
