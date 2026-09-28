@@ -1,211 +1,74 @@
-<!DOCTYPE html>
-<html lang="pt">
+<!doctype html>
+<html lang="pt-PT">
 <head>
-<meta charset="UTF-8">
-<title>World 69</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="World 69: descubra ferramentas gratuitas, produtos digitais e recursos úteis num só lugar.">
+  <meta name="theme-color" content="#080a0d">
+  <title>World 69 — Recursos digitais para ir mais longe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="World 69 — início">
+        <span class="brand-mark" aria-hidden="true"><i></i><b></b></span>
+        <span><strong>WORLD 69</strong><small>digital discovery</small></span>
+      </a>
+      <div class="header-actions">
+        <a class="header-link" href="#catalogo">Explorar</a>
+        <a class="admin-link" href="login.html">Área admin <span>↗</span></a>
+      </div>
+    </header>
 
-<header>
-  <div class="top-icons">
-    <img src="https://img.icons8.com/ios-filled/50/00ff5a/shopping-cart.png" alt="Carrinho">
-    <img src="https://img.icons8.com/ios-filled/50/00ff5a/money.png" alt="Pagamento">
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="pulse-dot"></span> catálogo aberto · atualizado com curadoria</p>
+          <h1 id="hero-title">Ferramentas certas.<br><em>Próximo nível.</em></h1>
+          <p class="hero-lede">Uma seleção direta de software, recursos e produtos digitais para criar, aprender e trabalhar melhor — sem perder tempo à procura.</p>
+          <div class="hero-actions"><a class="button button-primary" href="#catalogo">Ver catálogo <span>↓</span></a><span class="hero-note">links oficiais · acesso rápido</span></div>
+        </div>
+        <div class="hero-orbit" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit-core"><span>69</span><small>WORLD</small></div><span class="orbit-label label-top">FREE / OPEN</span><span class="orbit-label label-bottom">CURATED 2026</span></div>
+      </section>
+
+      <section class="catalog-section" id="catalogo" aria-labelledby="catalog-title">
+        <div class="section-heading"><div><p class="eyebrow">01 / coleção</p><h2 id="catalog-title">O que estás a procurar?</h2></div><p class="catalog-count" id="catalogCount">A preparar catálogo…</p></div>
+        <div class="toolbar">
+          <label class="search-box"><span aria-hidden="true">⌕</span><input id="searchInput" type="search" placeholder="Pesquisar por nome ou categoria…" autocomplete="off"><kbd>/</kbd></label>
+          <div class="filters" id="categories" role="group" aria-label="Filtrar por categoria">
+            <button class="filter active" data-cat="ALL" type="button">Tudo</button><button class="filter" data-cat="FREE" type="button">Grátis</button><button class="filter" data-cat="PAID" type="button">Premium</button><button class="filter" data-cat="DEV" type="button">Dev</button><button class="filter" data-cat="DESIGN" type="button">Design</button><button class="filter" data-cat="VIDEO" type="button">Vídeo</button><button class="filter" data-cat="APPS" type="button">Apps</button><button class="filter" data-cat="AUDIO" type="button">Áudio</button><button class="filter" data-cat="OFFICE" type="button">Produtividade</button><button class="filter" data-cat="SECURITY" type="button">Segurança</button>
+          </div>
+        </div>
+        <div class="catalog-grid" id="grid" aria-live="polite"><div class="loading-state"><span class="loader"></span><p>A preparar recursos para ti…</p></div></div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><div class="footer-brand"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><i></i><b></b></span><span><strong>WORLD 69</strong><small>digital discovery</small></span></a><p>Descobre. Cria. Partilha.<br>O teu próximo recurso começa aqui.</p></div><div><p class="footer-label">NAVEGAR</p><a href="#catalogo">Catálogo</a><a href="#catalogo" data-footer-filter="FREE">Recursos grátis</a><a href="login.html">Área admin</a></div><div><p class="footer-label">CONTACTO</p><a href="mailto:world69.ao@gmail.com">world69.ao@gmail.com</a><a href="https://wa.me/244951875350" target="_blank" rel="noopener">WhatsApp · +244 951 875 350</a></div><div class="footer-end"><span>© 2026 World 69</span><span>feito para quem faz</span></div></footer>
   </div>
-  <h1 class="logo">World 69</h1>
-  <input id="searchInput" type="search" placeholder="Pesquisar produtos...">
-</header>
 
-<nav id="categories">
-  <button data-cat="ALL">TODOS</button>
-  <button data-cat="SCRIPTS">SCRIPTS</button>
-  <button data-cat="SITES">SITES</button>
-  <button data-cat="APPS">APPS</button>
-  <button data-cat="SNI">SNI</button>
-  <button data-cat="BOOKS">BOOKS</button>
-  <button data-cat="RAROS">RAROS</button>
-  <button data-cat="BOTS">BOTS</button>
-  <button data-cat="HAKS">HAKS</button>
-</nav>
+  <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="mName"><div class="modal-box"><button class="modal-close" id="modalCloseBtn" type="button" aria-label="Fechar detalhe">×</button><div class="modal-image-wrap"><img id="mImg" alt=""><span id="mBadge" class="badge"></span></div><div class="modal-content"><p id="mCategory" class="eyebrow"></p><h2 id="mName"></h2><p id="mDesc" class="modal-desc"></p><div id="mMeta" class="modal-meta"></div><a id="mBtn" class="button button-primary modal-cta" target="_blank" rel="noopener"></a><p id="mSource" class="modal-source"></p><div id="payment-logos" class="payment-logos" hidden><span>Pagamento simples via WhatsApp</span><b>PayPal</b><b>Express</b><b>AO</b></div></div></div></div>
 
-<main id="grid"></main>
-
-<footer>
-  <p>📞 +244 951875350</p>
-  <p>✉️ world69.ao@gmail.com</p>
-</footer>
-
-<!-- Modal -->
-<div id="modal" class="modal" style="display:none">
-  <div class="modal-box">
-    <button class="btn-close" id="modalCloseBtn">VOLTAR</button>
-    <img id="mImg" alt="">
-    <h2 id="mName"></h2>
-    <p id="mDesc"></p>
-    <a id="mBtn" class="btn" target="_blank" rel="noopener"></a>
-    <div id="payment-logos" class="payment-logos" style="display:none">
-      <img src="https://i.postimg.cc/X7b6QL79/20314154-4E37-4918-A91C-B2E45F4957FC.png" alt="PayPal">
-      <img src="https://i.postimg.cc/kg763Wwb/72507DB1-F645-4FE6-AD76-4F79B0937B4A.jpg" alt="PayPay AO">
-      <img src="https://i.postimg.cc/mkFZCgjf/E40B277B-5EF8-4691-8BCE-3CF29F609946.jpg" alt="Multicaixa Express">
-    </div>
-  </div>
-</div>
-
-<!-- Script no fim da página: garante DOM pronto -->
-<script type="module">
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
-
-const firebaseConfig = {
-  apiKey: "AIzaSyC_FrApgE4TYfrBnq4urrWac9oiLavecMg",
-  authDomain: "world-69.firebaseapp.com",
-  projectId: "world-69"
-};
-
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
-
-// ELEMENTS
-const grid = document.getElementById('grid');
-const searchInput = document.getElementById('searchInput');
-const categories = document.getElementById('categories');
-
-const modal = document.getElementById('modal');
-const modalBox = modal.querySelector('.modal-box');
-const modalCloseBtn = document.getElementById('modalCloseBtn');
-const mImg = document.getElementById('mImg');
-const mName = document.getElementById('mName');
-const mDesc = document.getElementById('mDesc');
-const mBtn = document.getElementById('mBtn');
-const paymentLogos = document.getElementById('payment-logos');
-
-let allProducts = [];
-
-// safe function to create a card element and attach listener
-function createCard(product){
-  const card = document.createElement('div');
-  card.className = 'card';
-
-  const img = document.createElement('img');
-  img.src = product.image || 'assets/placeholder.png';
-  img.alt = product.name || 'produto';
-
-  const body = document.createElement('div');
-  body.className = 'card-body';
-
-  const h3 = document.createElement('h3');
-  h3.innerText = product.name || 'Sem nome';
-
-  const tag = document.createElement('span');
-  tag.className = 'tag ' + (product.type || 'free');
-  tag.innerText = (product.type === 'paid') ? 'PAGO' : 'GRÁTIS';
-
-  body.appendChild(h3);
-  body.appendChild(tag);
-  card.appendChild(img);
-  card.appendChild(body);
-
-  // add click handler (safe, not inline HTML)
-  card.addEventListener('click', () => {
-    openModal(product);
-  });
-
-  return card;
-}
-
-// display list of products (array)
-function displayProducts(products){
-  grid.innerHTML = '';
-  if(!products || products.length === 0){
-    const notice = document.createElement('div');
-    notice.style.textAlign = 'center';
-    notice.style.padding = '30px';
-    notice.style.opacity = '.7';
-    notice.innerText = 'Sem produtos nessa categoria.';
-    grid.appendChild(notice);
-    return;
-  }
-  products.forEach(p => {
-    const card = createCard(p);
-    grid.appendChild(card);
-  });
-}
-
-// open modal with product object
-function openModal(p){
-  try {
-    modal.style.display = 'flex';
-    mImg.src = p.image || 'assets/placeholder.png';
-    mName.innerText = p.name || '';
-    mDesc.innerText = p.description || '';
-    if(p.type === 'paid'){
-      mBtn.innerText = 'PAGAR';
-      // whatsapp link - encode product name
-      mBtn.href = 'https://wa.me/244951875350?text=' + encodeURIComponent('Quero comprar: ' + p.name);
-      paymentLogos.style.display = 'flex';
-    } else {
-      mBtn.innerText = 'BAIXAR';
-      mBtn.href = p.link || '#';
-      paymentLogos.style.display = 'none';
-    }
-  } catch (err) {
-    console.error('openModal error', err);
-  }
-}
-
-// close modal
-function closeModal(){
-  modal.style.display = 'none';
-  paymentLogos.style.display = 'none';
-}
-
-// click outside modal-box closes modal
-modal.addEventListener('click', (e) => {
-  if(e.target === modal) closeModal();
-});
-
-// close button
-modalCloseBtn.addEventListener('click', (e) => {
-  e.preventDefault();
-  closeModal();
-});
-
-// search handler
-searchInput.addEventListener('input', (e) => {
-  const q = e.target.value.trim().toLowerCase();
-  if(!q) displayProducts(allProducts);
-  else displayProducts(allProducts.filter(p => (p.name || '').toLowerCase().includes(q)));
-});
-
-// category buttons (event delegation)
-categories.addEventListener('click', (e) => {
-  const btn = e.target.closest('button');
-  if(!btn) return;
-  const cat = btn.dataset.cat;
-  if(!cat || cat === 'ALL') {
-    displayProducts(allProducts);
-    return;
-  }
-  displayProducts(allProducts.filter(p => p.category === cat));
-});
-
-// load products from Firestore
-(async function load(){
-  try {
-    const snap = await getDocs(collection(db, 'products'));
-    allProducts = [];
-    snap.forEach(doc => {
-      const data = doc.data();
-      // keep also id if needed later: data._id = doc.id;
-      allProducts.push(data);
-    });
-    displayProducts(allProducts);
-  } catch (err) {
-    console.error('Erro ao buscar produtos:', err);
-    grid.innerHTML = '<div style="text-align:center;padding:20px;opacity:.7">Erro ao carregar produtos.</div>';
-  }
-})();
-</script>
+  <script type="module">
+    import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
+    import { getFirestore, collection, getDocs } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js';
+    import { freeProducts } from './free-products.js';
+    const firebaseConfig={apiKey:'AIzaSyC_FrApgE4TYfrBnq4urrWac9oiLavecMg',authDomain:'world-69.firebaseapp.com',projectId:'world-69'};
+    const db=getFirestore(initializeApp(firebaseConfig));
+    const grid=document.querySelector('#grid'), searchInput=document.querySelector('#searchInput'), categories=document.querySelector('#categories'), count=document.querySelector('#catalogCount');
+    const modal=document.querySelector('#modal'), modalClose=document.querySelector('#modalCloseBtn'), mImg=document.querySelector('#mImg'), mName=document.querySelector('#mName'), mDesc=document.querySelector('#mDesc'), mBadge=document.querySelector('#mBadge'), mCategory=document.querySelector('#mCategory'), mMeta=document.querySelector('#mMeta'), mBtn=document.querySelector('#mBtn'), mSource=document.querySelector('#mSource'), paymentLogos=document.querySelector('#payment-logos');
+    let allProducts=[...freeProducts.map(p=>({...p,type:'free'}))], activeCategory='ALL';
+    const safeImage=(img)=>img||'https://placehold.co/800x520/171d24/b7ff3c?text=World+69';
+    function createCard(p){const card=document.createElement('article');card.className='product-card';card.tabIndex=0;card.setAttribute('role','button');const img=document.createElement('img');img.src=safeImage(p.image);img.alt='';img.loading='lazy';img.onerror=()=>{img.src='https://placehold.co/800x520/171d24/b7ff3c?text=World+69'};const body=document.createElement('div');body.className='product-body';const top=document.createElement('div');top.className='product-top';top.innerHTML=`<span class="product-category">${p.categoryLabel||p.category||'Recurso'}</span><span class="badge ${p.type==='paid'?'badge-paid':'badge-free'}">${p.type==='paid'?'PREMIUM':'GRÁTIS'}</span>`;const h3=document.createElement('h3');h3.textContent=p.name||'Recurso sem nome';const desc=document.createElement('p');desc.textContent=p.description||'Descobre este recurso no World 69.';const action=document.createElement('span');action.className='card-action';action.textContent=p.type==='paid'?'Ver produto →':'Abrir recurso ↗';body.append(top,h3,desc,action);card.append(img,body);card.addEventListener('click',()=>openModal(p));card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' ')openModal(p)});return card}
+    function render(){const q=searchInput.value.trim().toLowerCase();const visible=allProducts.filter(p=>{const matchesCat=activeCategory==='ALL'||(activeCategory==='FREE'&&p.type==='free')||(activeCategory==='PAID'&&p.type==='paid')||p.category===activeCategory;const hay=[p.name,p.description,p.category,p.categoryLabel].join(' ').toLowerCase();return matchesCat&&(!q||hay.includes(q))});grid.innerHTML='';count.textContent=`${visible.length} ${visible.length===1?'recurso encontrado':'recursos encontrados'}`;if(!visible.length){grid.innerHTML='<div class="empty-state"><span>⌁</span><h3>Nada encontrado por aqui.</h3><p>Tenta outra palavra ou escolhe uma categoria diferente.</p></div>';return}visible.forEach(p=>grid.appendChild(createCard(p)))}
+    function openModal(p){modal.classList.add('is-open');modal.setAttribute('aria-hidden','false');document.body.classList.add('modal-open');mImg.src=safeImage(p.image);mImg.alt=p.name||'';mBadge.className=`badge ${p.type==='paid'?'badge-paid':'badge-free'}`;mBadge.textContent=p.type==='paid'?'PREMIUM':'GRÁTIS';mCategory.textContent=p.categoryLabel||p.category||'Recurso digital';mName.textContent=p.name||'';mDesc.textContent=p.description||'';mMeta.innerHTML=`<span>✓ Fonte oficial</span><span>${p.license||'Acesso livre'}</span>`;mBtn.textContent=p.type==='paid'?'Falar no WhatsApp ↗':'Abrir recurso oficial ↗';mBtn.href=p.type==='paid'?'https://wa.me/244951875350?text='+encodeURIComponent('Quero comprar: '+p.name):p.link||'#';mSource.innerHTML=p.source?`Fonte: <a href="${p.source}" target="_blank" rel="noopener">ver projeto oficial ↗</a>`:'';paymentLogos.hidden=p.type!=='paid'}
+    function closeModal(){modal.classList.remove('is-open');modal.setAttribute('aria-hidden','true');document.body.classList.remove('modal-open')}
+    categories.addEventListener('click',e=>{const btn=e.target.closest('button');if(!btn)return;activeCategory=btn.dataset.cat;document.querySelectorAll('.filter').forEach(b=>b.classList.toggle('active',b===btn));render()});searchInput.addEventListener('input',render);modal.addEventListener('click',e=>{if(e.target===modal)closeModal()});modalClose.addEventListener('click',closeModal);document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();if(e.key==='/'&&document.activeElement!==searchInput){e.preventDefault();searchInput.focus()}});document.querySelectorAll('[data-footer-filter]').forEach(a=>a.addEventListener('click',()=>{activeCategory='FREE';document.querySelectorAll('.filter').forEach(b=>b.classList.toggle('active',b.dataset.cat==='FREE'));setTimeout(render,0)}));
+    async function loadPaid(){try{const snap=await getDocs(collection(db,'products'));snap.forEach(d=>{const p=d.data();if(p.type==='paid')allProducts.push({...p,type:'paid',categoryLabel:p.category});});render()}catch(e){console.warn('Produtos premium indisponíveis:',e);render()}}
+    render();loadPaid();
+  </script>
 </body>
-  </html>
+</html>
