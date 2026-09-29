@@ -1,0 +1,43 @@
+name: Atualizar catálogo World 69
+
+on:
+  schedule:
+    - cron: "0 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: world69-catalog-collector
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Obter repositório
+        uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Preparar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Procurar e acrescentar recursos públicos
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 scripts/update_catalog.py --batch-size 40 --target 1000 --per-source 4
+      - name: Guardar lote no catálogo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add catalog.generated.json catalog-progress.json free-products.generated.js
+          if git diff --cached --quiet; then
+            echo "Sem novos produtos neste lote."
+            exit 0
+          fi
+          git commit -m "Add next public catalog batch"
+          git push origin HEAD:main
