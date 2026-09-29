@@ -21,6 +21,7 @@ A rotina consulta a API pública de pesquisa do GitHub por tópicos de desenvolv
 - O primeiro lote acrescenta mais de 100 recursos quando as fontes públicas têm resultados suficientes.
 - A rotina agendada acrescenta até 40 recursos por execução horária e para ao atingir o limite de 1.000 recursos no total (incluindo a lista curada original).
 - A agenda do GitHub Actions é de melhor esforço: o GitHub pode atrasar execuções em períodos de alta carga. O prazo de cerca de um dia para alcançar o limite depende da disponibilidade e da diversidade de itens nas fontes; não é uma garantia de horário.
+- O módulo do catálogo usa uma versão de cache por minuto para que os lotes publicados não fiquem presos a uma cópia antiga do navegador.
 - O processo não usa scraping de páginas privadas, não exige chave de terceiros e não publica links sem origem. Só os dados do catálogo e o cursor são gravados pelo workflow.
 - Para iniciar um lote manual no GitHub, use **Actions → Atualizar catálogo World 69 → Run workflow**.
 

@@ -131,7 +131,8 @@
     import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
     import { getFirestore, collection, getDocs } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js';
     import { freeProducts } from './free-products.js';
-    import { generatedProducts } from './free-products.generated.js';
+    const catalogVersion = Math.floor(Date.now() / 60_000);
+    const { generatedProducts } = await import(`./free-products.generated.js?v=${catalogVersion}`);
 
     const firebaseConfig = {apiKey:'AIzaSyC_FrApgE4TYfrBnq4urrWac9oiLavecMg',authDomain:'world-69.firebaseapp.com',projectId:'world-69'};
     const db = getFirestore(initializeApp(firebaseConfig));
