@@ -582,6 +582,12 @@ async function finishLesson() {
   } else {
     showToast('Esta missão já está guardada no teu progresso.');
   }
+  const nextLesson = getTrack(selectedTrack).lessons.find((lesson) => !state.completed.includes(lesson.id));
+  if (nextLesson) {
+    openLesson(selectedTrack, nextLesson.id);
+    assistantSay(`Muito bem. A próxima missão é “${nextLesson.title}”. Vamos continuar?`, { speak: true });
+    return;
+  }
   renderDashboard();
   $('lesson-workspace').hidden = true;
   $('dashboard').hidden = false;
