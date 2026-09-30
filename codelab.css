@@ -333,6 +333,7 @@
 @media(max-width:700px){.track-heading-actions{align-items:flex-start;flex-direction:column}.mrzinho-lesson-class{grid-template-columns:1fr}.class-avatar{display:none}.class-actions{align-items:flex-start;flex-direction:column}.syntax-editor .code-highlight,.syntax-editor .code-editor{min-height:210px;padding:14px;font-size:12px}}
 
 .codelab-account-link{border:1px solid rgba(91,214,255,.35);padding:9px 12px;border-radius:999px;color:var(--blue);font:10px 'DM Mono',monospace;white-space:nowrap}.codelab-account-link:hover{border-color:var(--blue);background:rgba(91,214,255,.08)}.codelab-account-link span{margin-left:4px}@media(max-width:700px){.codelab-account-link{padding:8px 9px}.codelab-account-link{font-size:0}.codelab-account-link:before{content:'Conta ↗';font-size:10px}}
+.syntax-string{color:#ff6b81!important}.syntax-keyword{color:#58a6ff!important}.syntax-function{color:#ffd166!important}.syntax-number{color:#ff9f68!important}.syntax-comment{color:#8b949e!important;font-style:italic}
 
 
 /* Mrzinho guided class screen */

@@ -200,6 +200,7 @@ function highlightCode(source = '') {
   html = html.replace(/(&quot;.*?&quot;|&#39;.*?&#39;|".*?"|'.*?')/g, '<span class="syntax-string">$1</span>');
   html = html.replace(/\b(var|let|const|if|else|for|in|true|false|def|return|int|print|cout|using|namespace)\b/g, '<span class="syntax-keyword">$1</span>');
   html = html.replace(/\b(console|log|range|endl)\b/g, '<span class="syntax-function">$1</span>');
+  html = html.replace(/\b\d+(?:\.\d+)?\b/g, '<span class="syntax-number">$&</span>');
   html = html.replace(/(\/\/.*|#.*)/g, '<span class="syntax-comment">$1</span>');
   return html;
 }
@@ -295,7 +296,8 @@ function renderDailyMission() {
   const allLessons = tracks.flatMap((track) => track.lessons.map((lesson) => ({ ...lesson, trackId: track.id })));
   const available = allLessons.filter((lesson) => !state.completed.includes(lesson.id));
   const pool = available.length ? available : allLessons;
-  const index = new Date().getDay() % pool.length;
+  // Advance the card after each completed mission instead of repeating one card all day.
+  const index = (new Date().getDay() + totalCompleted()) % pool.length;
   const mission = pool[index];
   $('daily-title').textContent = mission.title;
   $('daily-description').textContent = `${getTrack(mission.trackId).title} · ${mission.duration} min. Sem sequência obrigatória; continua à tua espera quando quiseres.`;
