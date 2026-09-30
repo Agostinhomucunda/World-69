@@ -773,3 +773,4 @@ function bindTeacherClass() {
 }
 
 bindTeacherClass();
+if (new URLSearchParams(window.location.search).get('teacher') === '1') window.setTimeout(openTeacherClass, 180);

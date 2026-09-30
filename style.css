@@ -316,3 +316,7 @@ h1,h2,h3,p { margin-top: 0; }
 /* Compact website commercial */
 .commercial-section{display:grid;grid-template-columns:minmax(230px,.7fr) minmax(0,1.3fr);align-items:center;gap:44px;padding:54px 0;border-bottom:1px solid var(--line)}
 .commercial-copy h2{font:600 clamp(30px,4vw,52px)/.98 'Space Grotesk',sans-serif;letter-spacing:-.06em;margin:0 0 15px}.commercial-copy h2 em{font-style:normal;color:var(--lime)}.commercial-copy>p:not(.eyebrow){color:var(--muted);font-size:12px;line-height:1.7;max-width:340px;margin:0 0 20px}.commercial-frame{position:relative;min-width:0;border:1px solid rgba(183,255,60,.25);border-radius:16px;overflow:hidden;background:#0b0e11;box-shadow:0 18px 50px rgba(0,0,0,.22)}.commercial-frame video{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:#0b0e11}.commercial-duration{position:absolute;right:12px;top:11px;padding:5px 7px;border:1px solid rgba(255,255,255,.18);border-radius:5px;background:rgba(8,10,13,.76);color:var(--lime);font:9px 'DM Mono',monospace;letter-spacing:.06em;pointer-events:none}@media(max-width:700px){.commercial-section{grid-template-columns:1fr;gap:23px;padding:43px 0 50px}.commercial-copy h2{font-size:38px}.commercial-frame{border-radius:12px}}
+
+
+/* Admin remains a direct/private route, never a public navigation item */
+.admin-link{display:none!important}
