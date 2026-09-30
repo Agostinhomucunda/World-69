@@ -92,6 +92,58 @@ function showToast(message) {
   toastTimer = window.setTimeout(() => el.classList.remove('is-visible'), 3000);
 }
 
+const voiceAvailable = 'speechSynthesis' in window && 'SpeechSynthesisUtterance' in window;
+let voiceEnabled = localStorage.getItem('w69-codelab:mrzinho-voice') !== 'off';
+let lastMrzinhoText = '';
+
+function preferredVoice() {
+  if (!voiceAvailable) return null;
+  const voices = window.speechSynthesis.getVoices();
+  return voices.find((voice) => /^pt-PT/i.test(voice.lang)) || voices.find((voice) => /^pt-BR/i.test(voice.lang)) || voices.find((voice) => /^pt/i.test(voice.lang)) || null;
+}
+
+function speakMrzinho(text = lastMrzinhoText) {
+  if (!voiceAvailable || !voiceEnabled || !text) return;
+  window.speechSynthesis.cancel();
+  const utterance = new SpeechSynthesisUtterance(text);
+  utterance.lang = 'pt-PT';
+  utterance.rate = 0.94;
+  utterance.pitch = 1.04;
+  const voice = preferredVoice();
+  if (voice) utterance.voice = voice;
+  window.speechSynthesis.speak(utterance);
+}
+
+function assistantSay(text, { speak = true } = {}) {
+  lastMrzinhoText = text;
+  const message = $('mrzinho-message');
+  if (message) message.textContent = text;
+  $('mrzinho')?.classList.add('is-talking');
+  window.clearTimeout(window.__mrzinhoTalkingTimer);
+  window.__mrzinhoTalkingTimer = window.setTimeout(() => $('mrzinho')?.classList.remove('is-talking'), 1800);
+  if (speak) speakMrzinho(text);
+}
+
+function currentLessonHelp() {
+  if (!activeLesson) return 'Escolhe uma missão e eu explico o primeiro passo. Não precisas saber tudo antes de começar.';
+  const language = activeLesson.language === 'python' ? 'Python' : activeLesson.language === 'javascript' ? 'JavaScript' : activeLesson.language === 'cpp' ? 'C++' : 'lógica';
+  return `${activeLesson.title}: começa por identificar o que a missão pede, faz uma alteração pequena e executa. Em ${language}, a melhor estratégia é testar, observar a saída e ajustar sem pressa.`;
+}
+
+function buildLessonExplanation(lesson) {
+  const language = lesson.language === 'python' ? 'Python' : lesson.language === 'javascript' ? 'JavaScript' : lesson.language === 'cpp' ? 'C++' : 'lógica de programação';
+  const common = lesson.kind === 'choice' ? 'Erro comum: escolher depressa sem traduzir a regra para passos. Lê a pergunta como se estivesses a ensinar outra pessoa.' : `Erro comum: mudar muitas coisas ao mesmo tempo. Em ${language}, altera uma linha, executa e usa a saída como pista.`;
+  return `<p>${escapeHtml(lesson.lesson)}</p><div class="explain-steps"><div><strong>Como pensar</strong><span>Divide o desafio em entrada, decisão e resultado. Pergunta: “o que já está pronto e o que falta eu completar?”</span></div><div><strong>Na prática</strong><span>${escapeHtml(lesson.objective)} O objetivo não é decorar: é reconhecer a ideia quando voltares a encontrá-la.</span></div><div class="explain-warning"><strong>O Mrzinho avisa</strong><span>${escapeHtml(common)}</span></div></div>`;
+}
+
+function updateVoiceControl() {
+  const button = $('mrzinho-voice');
+  if (!button) return;
+  button.setAttribute('aria-pressed', String(voiceEnabled));
+  button.innerHTML = `<span>${voiceEnabled ? '●' : '○'}</span> ${voiceEnabled ? 'voz ativa' : 'voz pausada'}`;
+  $('mrzinho')?.classList.toggle('voice-off', !voiceEnabled);
+}
+
 function reflectProfileFields() {
   $('profile-name').value = state.profile?.name || '';
   $('profile-goal').value = state.profile?.goal || 'games';
@@ -201,7 +253,7 @@ function openLesson(trackId, lessonId) {
   $('lesson-meta').textContent = `MISSÃO · ${lesson.duration} MIN · ${lesson.language === 'cpp' ? 'C++ GUIADO' : lesson.kind === 'choice' ? 'LÓGICA' : lesson.language.toUpperCase()}`;
   $('lesson-title').textContent = lesson.title;
   $('lesson-story').textContent = lesson.story;
-  $('lesson-explanation').textContent = lesson.lesson;
+  $('lesson-explanation').innerHTML = buildLessonExplanation(lesson);
   $('mission-objective').textContent = lesson.objective;
   $('mission-icon').textContent = track.icon;
   $('mission-kind').textContent = lesson.language === 'cpp' ? 'DESAFIO C++ · LEITURA' : lesson.kind === 'choice' ? 'DESAFIO DE LÓGICA' : `PRÁTICA ${lesson.language.toUpperCase()}`;
@@ -218,6 +270,7 @@ function openLesson(trackId, lessonId) {
   $('hint-button').onclick = revealHint;
   $('solution-button').onclick = revealSolution;
   renderChallenge(lesson);
+  assistantSay(`Boa escolha. Vamos por partes: ${lesson.objective}`, { speak: true });
   $('lesson-workspace').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
@@ -364,6 +417,7 @@ function showFeedback(message, success) {
   feedback.hidden = false;
   feedback.className = `feedback-box ${success ? 'is-success' : 'is-retry'}`;
   feedback.textContent = message;
+  assistantSay(success ? `Muito bem! ${message}` : `Está tudo bem. ${message}`, { speak: true });
   if (success) {
     $('complete-lesson').hidden = false;
     $('complete-lesson').textContent = state.completed.includes(activeLesson.id) ? 'Missão já concluída ✓' : 'Guardar missão concluída · +25 XP';
@@ -378,9 +432,11 @@ function revealHint() {
     currentHint += 1;
     $('hint-button').textContent = currentHint < activeLesson.hints.length ? `Dica ${currentHint + 1} / ${activeLesson.hints.length}` : 'Dicas usadas';
     hintBox.hidden = false;
+    assistantSay(`Aqui vai uma pista: ${activeLesson.hints[currentHint - 1]}`, { speak: true });
   } else {
     hintBox.textContent = 'Já viste todas as dicas. Experimenta resolver em passos pequenos — ou consulta uma solução para aprender com ela.';
     hintBox.hidden = false;
+    assistantSay(`Pensa em passos pequenos. ${hintBox.textContent}`, { speak: true });
   }
 }
 
@@ -452,6 +508,7 @@ function bindEvents() {
     render();
     $('dashboard').scrollIntoView({ behavior: 'smooth', block: 'start' });
     showToast('O teu caminho está preparado. Podes mudar de trilha quando quiseres.');
+    assistantSay(`Perfeito, ${state.profile.name || 'explorador'}! Já tenho um caminho para ti. Começa por uma missão curta e deixa a prática ensinar-te.`, { speak: true });
   });
   $('edit-profile').addEventListener('click', () => {
     reflectProfileFields();
@@ -478,10 +535,30 @@ function bindEvents() {
     openTrack(selectedTrack);
   });
   $('workspace-save').addEventListener('click', () => saveProgress(true));
+  $('mrzinho-toggle').addEventListener('click', () => {
+    const widget = $('mrzinho');
+    const open = widget.classList.toggle('is-collapsed') === false;
+    $('mrzinho-toggle').setAttribute('aria-expanded', String(open));
+  });
+  $('mrzinho-speak').addEventListener('click', () => speakMrzinho());
+  $('mrzinho-hint').addEventListener('click', () => {
+    if (activeLesson) revealHint();
+    else assistantSay('Ainda estamos a preparar o teu caminho. Diz-me o teu nome, escolhe um avatar e responde sem medo ao check-in.');
+  });
+  $('mrzinho-voice').addEventListener('click', () => {
+    voiceEnabled = !voiceEnabled;
+    localStorage.setItem('w69-codelab:mrzinho-voice', voiceEnabled ? 'on' : 'off');
+    if (!voiceEnabled && voiceAvailable) window.speechSynthesis.cancel();
+    updateVoiceControl();
+    assistantSay(voiceEnabled ? 'A minha voz está ativa. Vou falar quando houver uma pista importante.' : 'Voz pausada. Continuo aqui por texto sempre que precisares.', { speak: voiceEnabled });
+  });
 }
 
+
 bindEvents();
+updateVoiceControl();
 loadProgress().catch(() => render());
+window.setTimeout(() => assistantSay('Olá! Sou o Mrzinho. Não precisas chegar preparado: escolhe um pequeno passo e eu ajudo-te a continuar.', { speak: false }), 450);
 
 // Read-only QA hook: the student area is intentionally local-only.
 window.__world69CodelabReady = Promise.resolve({
