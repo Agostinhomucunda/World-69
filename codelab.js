@@ -1493,8 +1493,1367 @@ const teacherLessons = {
   ]
 }
 };
+
+const advancedTeacherSteps = {
+  "javascript": [
+    {
+      "title": "Desestruturação",
+      "copy": "Extrair valores de arrays e objetos torna o código mais expressivo.",
+      "code": [
+        "const aluno = { nome: \"Kito\", xp: 50 };\nconst { nome, xp } = aluno;"
+      ],
+      "focus": 0,
+      "focusLabel": "extrair propriedades",
+      "explanation": "Extrair valores de arrays e objetos torna o código mais expressivo. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Spread",
+      "copy": "O operador spread cria cópias e combina coleções sem alterar a original.",
+      "code": [
+        "const base = [1, 2];\nconst completa = [...base, 3, 4];"
+      ],
+      "focus": 0,
+      "focusLabel": "combinar arrays",
+      "explanation": "O operador spread cria cópias e combina coleções sem alterar a original. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Rest",
+      "copy": "Rest reúne argumentos variáveis numa coleção.",
+      "code": [
+        "function somar(...valores) {\n  return valores.reduce((a, b) => a + b, 0);\n}"
+      ],
+      "focus": 0,
+      "focusLabel": "reunir argumentos",
+      "explanation": "Rest reúne argumentos variáveis numa coleção. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Valores opcionais",
+      "copy": "Optional chaining evita erros quando uma propriedade pode faltar.",
+      "code": [
+        "const cidade = utilizador?.morada?.cidade ?? \"desconhecida\";"
+      ],
+      "focus": 0,
+      "focusLabel": "ler com segurança",
+      "explanation": "Optional chaining evita erros quando uma propriedade pode faltar. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Closures",
+      "copy": "Uma função pode lembrar o estado do lugar onde foi criada.",
+      "code": [
+        "function criarContador() {\n  let total = 0;\n  return () => ++total;\n}"
+      ],
+      "focus": 0,
+      "focusLabel": "fechar sobre estado",
+      "explanation": "Uma função pode lembrar o estado do lugar onde foi criada. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "this",
+      "copy": "O contexto this depende de como uma função é chamada.",
+      "code": [
+        "const jogador = {\n  pontos: 10,\n  mostrar() { return this.pontos; }\n};"
+      ],
+      "focus": 0,
+      "focusLabel": "entender contexto",
+      "explanation": "O contexto this depende de como uma função é chamada. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Classes",
+      "copy": "Classes organizam estado e comportamentos relacionados.",
+      "code": [
+        "class Pessoa {\n  constructor(nome) { this.nome = nome; }\n  saudar() { return `Olá, ${this.nome}`; }\n}"
+      ],
+      "focus": 0,
+      "focusLabel": "modelar objetos",
+      "explanation": "Classes organizam estado e comportamentos relacionados. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Herança",
+      "copy": "Uma classe pode especializar o comportamento de outra.",
+      "code": [
+        "class Admin extends Pessoa {\n  podeGerir() { return true; }\n}"
+      ],
+      "focus": 0,
+      "focusLabel": "especializar classes",
+      "explanation": "Uma classe pode especializar o comportamento de outra. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Encapsulamento",
+      "copy": "Campos privados protegem regras internas do objeto.",
+      "code": [
+        "class Carteira {\n  #saldo = 0;\n  depositar(valor) { this.#saldo += valor; }\n}"
+      ],
+      "focus": 0,
+      "focusLabel": "proteger invariantes",
+      "explanation": "Campos privados protegem regras internas do objeto. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Erros",
+      "copy": "Exceções tornam falhas visíveis e tratáveis.",
+      "code": [
+        "try {\n  validarEntrada(dados);\n} catch (erro) {\n  console.error(erro.message);\n}"
+      ],
+      "focus": 0,
+      "focusLabel": "tratar falhas",
+      "explanation": "Exceções tornam falhas visíveis e tratáveis. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Erros próprios",
+      "copy": "Erros com nomes claros ajudam quem mantém o sistema.",
+      "code": [
+        "class DadosInvalidos extends Error {}\nthrow new DadosInvalidos(\"Nome obrigatório\");"
+      ],
+      "focus": 0,
+      "focusLabel": "comunicar contratos",
+      "explanation": "Erros com nomes claros ajudam quem mantém o sistema. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "JSON",
+      "copy": "JSON é um formato comum para trocar dados com APIs.",
+      "code": [
+        "const texto = JSON.stringify({ ativo: true });\nconst dados = JSON.parse(texto);"
+      ],
+      "focus": 0,
+      "focusLabel": "serializar dados",
+      "explanation": "JSON é um formato comum para trocar dados com APIs. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Fetch completo",
+      "copy": "Uma chamada de rede deve verificar resposta e tratar falhas.",
+      "code": [
+        "async function obter() {\n  const resposta = await fetch(url);\n  if (!resposta.ok) throw new Error(\"Falha HTTP\");\n  return resposta.json();\n}"
+      ],
+      "focus": 0,
+      "focusLabel": "validar resposta",
+      "explanation": "Uma chamada de rede deve verificar resposta e tratar falhas. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Event loop",
+      "copy": "JavaScript agenda tarefas assíncronas sem bloquear a interface.",
+      "code": [
+        "console.log(\"A\");\nsetTimeout(() => console.log(\"C\"));\nconsole.log(\"B\");"
+      ],
+      "focus": 0,
+      "focusLabel": "ordenar tarefas",
+      "explanation": "JavaScript agenda tarefas assíncronas sem bloquear a interface. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Debounce",
+      "copy": "Debounce evita executar a mesma ação em excesso durante a digitação.",
+      "code": [
+        "const pesquisar = debounce(valor => buscar(valor), 250);\ninput.addEventListener(\"input\", e => pesquisar(e.target.value));"
+      ],
+      "focus": 0,
+      "focusLabel": "controlar frequência",
+      "explanation": "Debounce evita executar a mesma ação em excesso durante a digitação. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "AbortController",
+      "copy": "Pedidos antigos podem ser cancelados quando uma nova pesquisa começa.",
+      "code": [
+        "const controller = new AbortController();\nfetch(url, { signal: controller.signal });\ncontroller.abort();"
+      ],
+      "focus": 0,
+      "focusLabel": "cancelar pedidos",
+      "explanation": "Pedidos antigos podem ser cancelados quando uma nova pesquisa começa. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Acessibilidade",
+      "copy": "Interfaces devem funcionar com teclado e leitores de ecrã.",
+      "code": [
+        "botao.setAttribute(\"aria-label\", \"Guardar projeto\");\nbotao.addEventListener(\"keydown\", tratarTecla);"
+      ],
+      "focus": 0,
+      "focusLabel": "tornar acessível",
+      "explanation": "Interfaces devem funcionar com teclado e leitores de ecrã. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Formulários",
+      "copy": "Validar no cliente melhora a experiência, mas não substitui validação segura.",
+      "code": [
+        "form.addEventListener(\"submit\", event => {\n  event.preventDefault();\n  if (!email.value.includes(\"@\")) mostrarErro();\n});"
+      ],
+      "focus": 0,
+      "focusLabel": "validar entrada",
+      "explanation": "Validar no cliente melhora a experiência, mas não substitui validação segura. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Segurança XSS",
+      "copy": "Texto do utilizador não deve ser inserido como HTML sem sanitização.",
+      "code": [
+        "mensagem.textContent = textoDoUtilizador;\n// evita interpretar texto como marcação"
+      ],
+      "focus": 0,
+      "focusLabel": "evitar XSS",
+      "explanation": "Texto do utilizador não deve ser inserido como HTML sem sanitização. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Imutabilidade",
+      "copy": "Criar novo estado previsível facilita a atualização da interface.",
+      "code": [
+        "const novoEstado = { ...estado, carregado: true };"
+      ],
+      "focus": 0,
+      "focusLabel": "atualizar estado",
+      "explanation": "Criar novo estado previsível facilita a atualização da interface. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Reducers",
+      "copy": "Um reducer transforma estado e ação num novo estado.",
+      "code": [
+        "function reducer(estado, acao) {\n  if (acao.type === \"somar\") return { ...estado, total: estado.total + 1 };\n  return estado;\n}"
+      ],
+      "focus": 0,
+      "focusLabel": "reduzir ações",
+      "explanation": "Um reducer transforma estado e ação num novo estado. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Iteradores",
+      "copy": "Iteradores definem como uma coleção fornece o próximo valor.",
+      "code": [
+        "const iterador = [10, 20][Symbol.iterator]();\nconsole.log(iterador.next().value);"
+      ],
+      "focus": 0,
+      "focusLabel": "produzir valores",
+      "explanation": "Iteradores definem como uma coleção fornece o próximo valor. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Geradores",
+      "copy": "Geradores pausam em yield e continuam quando são pedidos.",
+      "code": [
+        "function* passos() {\n  yield \"início\";\n  yield \"fim\";\n}"
+      ],
+      "focus": 0,
+      "focusLabel": "pausar execução",
+      "explanation": "Geradores pausam em yield e continuam quando são pedidos. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Map e Set",
+      "copy": "Map e Set resolvem relações e valores únicos com clareza.",
+      "code": [
+        "const vistos = new Set([\"a\", \"a\"]);\nconst nomes = new Map([[1, \"Ana\"]]);"
+      ],
+      "focus": 0,
+      "focusLabel": "escolher coleções",
+      "explanation": "Map e Set resolvem relações e valores únicos com clareza. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Web Components",
+      "copy": "Componentes nativos podem encapsular marcação e comportamento.",
+      "code": [
+        "class Cartao extends HTMLElement {\n  connectedCallback() { this.textContent = \"Olá\"; }\n}\ncustomElements.define(\"x-cartao\", Cartao);"
+      ],
+      "focus": 0,
+      "focusLabel": "criar componente",
+      "explanation": "Componentes nativos podem encapsular marcação e comportamento. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Service Worker",
+      "copy": "Um Service Worker pode tratar cache e funcionamento offline.",
+      "code": [
+        "self.addEventListener(\"fetch\", event => {\n  event.respondWith(caches.match(event.request));\n});"
+      ],
+      "focus": 0,
+      "focusLabel": "interceptar pedidos",
+      "explanation": "Um Service Worker pode tratar cache e funcionamento offline. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Performance",
+      "copy": "Medir antes de otimizar evita soluções baseadas em suposições.",
+      "code": [
+        "performance.mark(\"inicio\");\nrenderizar();\nperformance.mark(\"fim\");"
+      ],
+      "focus": 0,
+      "focusLabel": "medir desempenho",
+      "explanation": "Medir antes de otimizar evita soluções baseadas em suposições. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Lazy loading",
+      "copy": "Carregar recursos só quando necessários reduz o primeiro carregamento.",
+      "code": [
+        "const modulo = await import(\"./editor.js\");\nmodulo.abrir();"
+      ],
+      "focus": 0,
+      "focusLabel": "carregar sob demanda",
+      "explanation": "Carregar recursos só quando necessários reduz o primeiro carregamento. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Testes unitários",
+      "copy": "Um teste pequeno fixa o comportamento de uma função.",
+      "code": [
+        "const resultado = somar(2, 3);\nconsole.assert(resultado === 5);"
+      ],
+      "focus": 0,
+      "focusLabel": "verificar comportamento",
+      "explanation": "Um teste pequeno fixa o comportamento de uma função. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Mocks",
+      "copy": "Mocks isolam uma função de rede ou serviço externo durante o teste.",
+      "code": [
+        "const api = { listar: () => Promise.resolve([\"A\"]) };\nawait api.listar();"
+      ],
+      "focus": 0,
+      "focusLabel": "isolar dependências",
+      "explanation": "Mocks isolam uma função de rede ou serviço externo durante o teste. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Arquitetura",
+      "copy": "Separar domínio, interface e infraestrutura reduz acoplamento.",
+      "code": [
+        "const estado = dominio.calcular(dados);\ninterface.render(estado);"
+      ],
+      "focus": 0,
+      "focusLabel": "separar responsabilidades",
+      "explanation": "Separar domínio, interface e infraestrutura reduz acoplamento. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Build e ambiente",
+      "copy": "Configurações diferentes não devem ficar espalhadas pelo código.",
+      "code": [
+        "const ambiente = import.meta.env.MODE;\nconsole.log(`modo: ${ambiente}`);"
+      ],
+      "focus": 0,
+      "focusLabel": "configurar ambiente",
+      "explanation": "Configurações diferentes não devem ficar espalhadas pelo código. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Capstone JavaScript",
+      "copy": "O projeto final combina dados, UI, rede, erros, testes e acessibilidade.",
+      "code": [
+        "async function iniciar() {\n  const dados = await obter();\n  renderizar(dados);\n}\niniciar().catch(mostrarErro);"
+      ],
+      "focus": 0,
+      "focusLabel": "compor uma aplicação",
+      "explanation": "O projeto final combina dados, UI, rede, erros, testes e acessibilidade. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    }
+  ],
+  "python": [
+    {
+      "title": "Tuplos",
+      "copy": "Tuplos agrupam valores que não devem ser alterados.",
+      "code": [
+        "ponto = (10, 20)\nx, y = ponto"
+      ],
+      "focus": 0,
+      "focusLabel": "desempacotar valores",
+      "explanation": "Tuplos agrupam valores que não devem ser alterados. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Conjuntos",
+      "copy": "Sets guardam valores únicos e permitem operações de conjunto.",
+      "code": [
+        "visitantes = {\"Ana\", \"Kito\", \"Ana\"}\nprint(visitantes)"
+      ],
+      "focus": 0,
+      "focusLabel": "remover duplicados",
+      "explanation": "Sets guardam valores únicos e permitem operações de conjunto. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Fatiamento",
+      "copy": "Slicing seleciona partes de sequências sem ciclos manuais.",
+      "code": [
+        "nomes = [\"A\", \"B\", \"C\", \"D\"]\nprint(nomes[1:3])"
+      ],
+      "focus": 0,
+      "focusLabel": "selecionar intervalo",
+      "explanation": "Slicing seleciona partes de sequências sem ciclos manuais. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Desempacotamento",
+      "copy": "O Python pode distribuir elementos por vários nomes.",
+      "code": [
+        "primeiro, *resto = [1, 2, 3, 4]\nprint(primeiro, resto)"
+      ],
+      "focus": 0,
+      "focusLabel": "distribuir itens",
+      "explanation": "O Python pode distribuir elementos por vários nomes. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Ordenação por chave",
+      "copy": "sorted pode ordenar objetos segundo uma propriedade.",
+      "code": [
+        "alunos = [{\"nome\":\"A\", \"nota\":18}, {\"nome\":\"B\", \"nota\":12}]\nordenados = sorted(alunos, key=lambda a: a[\"nota\"], reverse=True)"
+      ],
+      "focus": 0,
+      "focusLabel": "ordenar por regra",
+      "explanation": "sorted pode ordenar objetos segundo uma propriedade. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Lambdas",
+      "copy": "Lambdas são funções pequenas úteis em transformações locais.",
+      "code": [
+        "dobro = lambda n: n * 2\nprint(dobro(4))"
+      ],
+      "focus": 0,
+      "focusLabel": "criar função curta",
+      "explanation": "Lambdas são funções pequenas úteis em transformações locais. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Decoradores",
+      "copy": "Decoradores envolvem funções para acrescentar comportamento.",
+      "code": [
+        "def registar(funcao):\n    def envolvida(*args):\n        print(\"a executar\")\n        return funcao(*args)\n    return envolvida"
+      ],
+      "focus": 0,
+      "focusLabel": "envolver funções",
+      "explanation": "Decoradores envolvem funções para acrescentar comportamento. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Dataclasses",
+      "copy": "Dataclasses reduzem código repetitivo em objetos de dados.",
+      "code": [
+        "from dataclasses import dataclass\n@dataclass\nclass Aluno:\n    nome: str\n    nota: int"
+      ],
+      "focus": 0,
+      "focusLabel": "declarar dados",
+      "explanation": "Dataclasses reduzem código repetitivo em objetos de dados. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Type hints",
+      "copy": "Anotações documentam tipos e ajudam ferramentas a encontrar erros.",
+      "code": [
+        "def media(valores: list[float]) -> float:\n    return sum(valores) / len(valores)"
+      ],
+      "focus": 0,
+      "focusLabel": "explicitar tipos",
+      "explanation": "Anotações documentam tipos e ajudam ferramentas a encontrar erros. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Protocolos",
+      "copy": "Protocolos descrevem o comportamento necessário sem exigir herança.",
+      "code": [
+        "class PodeGuardar(Protocol):\n    def guardar(self, valor: str) -> None: ..."
+      ],
+      "focus": 0,
+      "focusLabel": "definir contrato",
+      "explanation": "Protocolos descrevem o comportamento necessário sem exigir herança. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Context managers",
+      "copy": "Context managers garantem preparação e limpeza de recursos.",
+      "code": [
+        "with abrir_conexao() as conexao:\n    conexao.executar(consulta)"
+      ],
+      "focus": 0,
+      "focusLabel": "gerir recursos",
+      "explanation": "Context managers garantem preparação e limpeza de recursos. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Logging",
+      "copy": "Logs estruturados ajudam a observar um programa em produção.",
+      "code": [
+        "import logging\nlogging.info(\"utilizador autenticado\", extra={\"uid\": uid})"
+      ],
+      "focus": 0,
+      "focusLabel": "observar execução",
+      "explanation": "Logs estruturados ajudam a observar um programa em produção. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Testes unitários",
+      "copy": "Testes tornam uma regra executável e repetível.",
+      "code": [
+        "def test_soma():\n    assert somar(2, 3) == 5"
+      ],
+      "focus": 0,
+      "focusLabel": "fixar comportamento",
+      "explanation": "Testes tornam uma regra executável e repetível. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Fixtures",
+      "copy": "Fixtures preparam dados consistentes para os testes.",
+      "code": [
+        "def test_total(client, dados_exemplo):\n    assert client.total(dados_exemplo) == 30"
+      ],
+      "focus": 0,
+      "focusLabel": "preparar cenário",
+      "explanation": "Fixtures preparam dados consistentes para os testes. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Ambientes virtuais",
+      "copy": "Ambientes isolam dependências entre projetos.",
+      "code": [
+        "python -m venv .venv\npython -m pip install -r requirements.txt"
+      ],
+      "focus": 0,
+      "focusLabel": "isolar dependências",
+      "explanation": "Ambientes isolam dependências entre projetos. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Pacotes",
+      "copy": "Um pacote bem organizado define módulos e uma API clara.",
+      "code": [
+        "app/\n  __init__.py\n  modelos.py\n  servicos.py"
+      ],
+      "focus": 0,
+      "focusLabel": "organizar pacote",
+      "explanation": "Um pacote bem organizado define módulos e uma API clara. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "JSON e APIs",
+      "copy": "Bibliotecas de dados permitem trocar informação com serviços.",
+      "code": [
+        "import json\npayload = json.loads(resposta.text)\nprint(payload[\"nome\"])"
+      ],
+      "focus": 0,
+      "focusLabel": "ler payload",
+      "explanation": "Bibliotecas de dados permitem trocar informação com serviços. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "SQLite",
+      "copy": "Uma base local organiza dados que precisam de consulta.",
+      "code": [
+        "with sqlite3.connect(\"app.db\") as db:\n    db.execute(\"CREATE TABLE IF NOT EXISTS tarefas (texto TEXT)\")"
+      ],
+      "focus": 0,
+      "focusLabel": "persistir dados",
+      "explanation": "Uma base local organiza dados que precisam de consulta. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Generators",
+      "copy": "Geradores processam grandes sequências sem carregar tudo em memória.",
+      "code": [
+        "def linhas_validas(ficheiro):\n    for linha in ficheiro:\n        if linha.strip():\n            yield linha.strip()"
+      ],
+      "focus": 0,
+      "focusLabel": "processar em fluxo",
+      "explanation": "Geradores processam grandes sequências sem carregar tudo em memória. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Asyncio",
+      "copy": "asyncio coordena tarefas que esperam por I/O.",
+      "code": [
+        "async def carregar_tudo(urls):\n    return await asyncio.gather(*(carregar(url) for url in urls))"
+      ],
+      "focus": 0,
+      "focusLabel": "concorrer I/O",
+      "explanation": "asyncio coordena tarefas que esperam por I/O. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Threads",
+      "copy": "Threads podem esperar por operações bloqueantes, com cuidado sobre estado partilhado.",
+      "code": [
+        "with ThreadPoolExecutor() as pool:\n    resultados = list(pool.map baixar, urls)"
+      ],
+      "focus": 0,
+      "focusLabel": "paralelizar espera",
+      "explanation": "Threads podem esperar por operações bloqueantes, com cuidado sobre estado partilhado. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Multiprocessing",
+      "copy": "Processos separados aproveitam vários núcleos para trabalho CPU-bound.",
+      "code": [
+        "with ProcessPoolExecutor() as pool:\n    resultados = list(pool.map(calcular, dados))"
+      ],
+      "focus": 0,
+      "focusLabel": "usar vários núcleos",
+      "explanation": "Processos separados aproveitam vários núcleos para trabalho CPU-bound. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Profiling",
+      "copy": "Medir o tempo revela o verdadeiro ponto lento do programa.",
+      "code": [
+        "import cProfile\ncProfile.run(\"gerar_relatorio()\")"
+      ],
+      "focus": 0,
+      "focusLabel": "medir gargalos",
+      "explanation": "Medir o tempo revela o verdadeiro ponto lento do programa. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Segurança de entradas",
+      "copy": "Nunca confies em dados externos nem construas SQL por concatenação.",
+      "code": [
+        "cursor.execute(\"SELECT * FROM users WHERE id = ?\", (user_id,))"
+      ],
+      "focus": 0,
+      "focusLabel": "parametrizar consulta",
+      "explanation": "Nunca confies em dados externos nem construas SQL por concatenação. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "HTTP robusto",
+      "copy": "Clientes devem usar timeout, validação e tratamento de status.",
+      "code": [
+        "resposta = requests.get(url, timeout=10)\nresposta.raise_for_status()"
+      ],
+      "focus": 0,
+      "focusLabel": "tratar rede",
+      "explanation": "Clientes devem usar timeout, validação e tratamento de status. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Filas",
+      "copy": "Filas desacoplam quem produz trabalho de quem o executa.",
+      "code": [
+        "fila.put(tarefa)\ntarefa = fila.get()\nfila.task_done()"
+      ],
+      "focus": 0,
+      "focusLabel": "desacoplar trabalho",
+      "explanation": "Filas desacoplam quem produz trabalho de quem o executa. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Padrão estratégia",
+      "copy": "Estratégias permitem trocar um algoritmo sem alterar o fluxo principal.",
+      "code": [
+        "def calcular(preco, regra):\n    return regra(preco)"
+      ],
+      "focus": 0,
+      "focusLabel": "trocar algoritmo",
+      "explanation": "Estratégias permitem trocar um algoritmo sem alterar o fluxo principal. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Observabilidade",
+      "copy": "Métricas, logs e traces mostram o caminho de uma operação.",
+      "code": [
+        "with tracer.start_as_current_span(\"checkout\"):\n    processar_pedido()"
+      ],
+      "focus": 0,
+      "focusLabel": "seguir uma operação",
+      "explanation": "Métricas, logs e traces mostram o caminho de uma operação. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Deploy",
+      "copy": "Configuração por ambiente torna o programa portátil.",
+      "code": [
+        "import os\nDEBUG = os.getenv(\"DEBUG\", \"0\") == \"1\""
+      ],
+      "focus": 0,
+      "focusLabel": "configurar deploy",
+      "explanation": "Configuração por ambiente torna o programa portátil. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Performance de dados",
+      "copy": "Escolher estruturas e evitar trabalho repetido melhora escalabilidade.",
+      "code": [
+        "indices = {item.id: item for item in itens}\nresultado = indices.get(alvo)"
+      ],
+      "focus": 0,
+      "focusLabel": "indexar procura",
+      "explanation": "Escolher estruturas e evitar trabalho repetido melhora escalabilidade. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Capstone Python",
+      "copy": "O projeto final junta API, persistência, testes, logs e tratamento de erros.",
+      "code": [
+        "def executar():\n    try:\n        dados = carregar()\n        guardar(processar(dados))\n    except Exception:\n        logging.exception(\"falha no processamento\")"
+      ],
+      "focus": 0,
+      "focusLabel": "compor serviço",
+      "explanation": "O projeto final junta API, persistência, testes, logs e tratamento de erros. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    }
+  ],
+  "cpp": [
+    {
+      "title": "Const correctness",
+      "copy": "const comunica que uma função não deve alterar um valor.",
+      "code": [
+        "void mostrar(const std::string& nome) {\n  std::cout << nome;\n}"
+      ],
+      "focus": 0,
+      "focusLabel": "proteger leitura",
+      "explanation": "const comunica que uma função não deve alterar um valor. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Vector",
+      "copy": "vector cresce dinamicamente e é a coleção de uso geral.",
+      "code": [
+        "std::vector<int> pontos{10, 20};\npontos.push_back(30);"
+      ],
+      "focus": 0,
+      "focusLabel": "gerir coleção",
+      "explanation": "vector cresce dinamicamente e é a coleção de uso geral. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Iteradores",
+      "copy": "Iteradores permitem percorrer coleções de forma uniforme.",
+      "code": [
+        "for (auto it = pontos.begin(); it != pontos.end(); ++it) {\n  std::cout << *it;\n}"
+      ],
+      "focus": 0,
+      "focusLabel": "percorrer iteradores",
+      "explanation": "Iteradores permitem percorrer coleções de forma uniforme. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Range for",
+      "copy": "Range-based for torna a leitura de coleções mais clara.",
+      "code": [
+        "for (const auto& ponto : pontos) {\n  std::cout << ponto;\n}"
+      ],
+      "focus": 0,
+      "focusLabel": "simplificar percurso",
+      "explanation": "Range-based for torna a leitura de coleções mais clara. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Algoritmos",
+      "copy": "A biblioteca padrão oferece algoritmos prontos e testados.",
+      "code": [
+        "std::sort(pontos.begin(), pontos.end());\nauto it = std::find(pontos.begin(), pontos.end(), 20);"
+      ],
+      "focus": 0,
+      "focusLabel": "reutilizar algoritmo",
+      "explanation": "A biblioteca padrão oferece algoritmos prontos e testados. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Lambdas",
+      "copy": "Lambdas criam pequenas regras junto da chamada.",
+      "code": [
+        "std::sort(pontos.begin(), pontos.end(), [](int a, int b) {\n  return a > b;\n});"
+      ],
+      "focus": 0,
+      "focusLabel": "definir comparação",
+      "explanation": "Lambdas criam pequenas regras junto da chamada. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Smart pointers",
+      "copy": "unique_ptr gere a propriedade de um objeto sem delete manual.",
+      "code": [
+        "auto jogador = std::make_unique<Jogador>(\"Kito\");"
+      ],
+      "focus": 0,
+      "focusLabel": "gerir propriedade",
+      "explanation": "unique_ptr gere a propriedade de um objeto sem delete manual. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Shared pointers",
+      "copy": "shared_ptr partilha propriedade quando vários donos são necessários.",
+      "code": [
+        "auto recurso = std::make_shared<Recurso>();\nauto outro = recurso;"
+      ],
+      "focus": 0,
+      "focusLabel": "partilhar recurso",
+      "explanation": "shared_ptr partilha propriedade quando vários donos são necessários. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Move semantics",
+      "copy": "Mover transfere recursos e evita cópias desnecessárias.",
+      "code": [
+        "std::vector<int> criar() {\n  return {1, 2, 3};\n}\nauto dados = criar();"
+      ],
+      "focus": 0,
+      "focusLabel": "evitar cópias",
+      "explanation": "Mover transfere recursos e evita cópias desnecessárias. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Rvalue references",
+      "copy": "Referências rvalue permitem construir ou mover temporários.",
+      "code": [
+        "void guardar(std::string&& texto) {\n  valor = std::move(texto);\n}"
+      ],
+      "focus": 0,
+      "focusLabel": "mover temporário",
+      "explanation": "Referências rvalue permitem construir ou mover temporários. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "RAII",
+      "copy": "A aquisição e libertação de recursos devem acompanhar o tempo de vida.",
+      "code": [
+        "std::lock_guard<std::mutex> bloqueio(mutex);\nprocessar();"
+      ],
+      "focus": 0,
+      "focusLabel": "libertar automaticamente",
+      "explanation": "A aquisição e libertação de recursos devem acompanhar o tempo de vida. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Namespaces",
+      "copy": "Namespaces evitam colisões entre nomes de bibliotecas.",
+      "code": [
+        "namespace World69 {\n  struct Config {};\n}\nWorld69::Config config;"
+      ],
+      "focus": 0,
+      "focusLabel": "organizar nomes",
+      "explanation": "Namespaces evitam colisões entre nomes de bibliotecas. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Headers",
+      "copy": "Headers expõem contratos; implementações ficam em fontes separadas.",
+      "code": [
+        "// conta.h\nclass Conta {\npublic: void depositar(double);\n};"
+      ],
+      "focus": 0,
+      "focusLabel": "separar interface",
+      "explanation": "Headers expõem contratos; implementações ficam em fontes separadas. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "CMake",
+      "copy": "Um sistema de build descreve fontes e dependências de forma reproduzível.",
+      "code": [
+        "add_executable(app main.cpp conta.cpp)\ntarget_compile_features(app PRIVATE cxx_std_20)"
+      ],
+      "focus": 0,
+      "focusLabel": "reproduzir build",
+      "explanation": "Um sistema de build descreve fontes e dependências de forma reproduzível. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Exceções",
+      "copy": "Exceções propagam falhas quando um contrato não pode ser cumprido.",
+      "code": [
+        "try { abrir(); }\ncatch (const std::runtime_error& erro) {\n  std::cerr << erro.what();\n}"
+      ],
+      "focus": 0,
+      "focusLabel": "propagar falha",
+      "explanation": "Exceções propagam falhas quando um contrato não pode ser cumprido. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Optional",
+      "copy": "optional representa um resultado que pode não existir.",
+      "code": [
+        "std::optional<int> procurar(int id) {\n  if (!existe(id)) return std::nullopt;\n  return valor;\n}"
+      ],
+      "focus": 0,
+      "focusLabel": "representar ausência",
+      "explanation": "optional representa um resultado que pode não existir. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Variant",
+      "copy": "variant representa uma de várias alternativas conhecidas.",
+      "code": [
+        "std::variant<int, std::string> resposta;\nresposta = \"ok\";"
+      ],
+      "focus": 0,
+      "focusLabel": "modelar alternativas",
+      "explanation": "variant representa uma de várias alternativas conhecidas. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Filesystem",
+      "copy": "filesystem oferece operações portáveis sobre caminhos e ficheiros.",
+      "code": [
+        "for (const auto& entrada : std::filesystem::directory_iterator(\".\")) {\n  std::cout << entrada.path();\n}"
+      ],
+      "focus": 0,
+      "focusLabel": "percorrer diretório",
+      "explanation": "filesystem oferece operações portáveis sobre caminhos e ficheiros. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Serialização",
+      "copy": "Dados podem ser convertidos para formato de armazenamento ou transporte.",
+      "code": [
+        "std::string linha = nome + \";\" + std::to_string(pontos);\nstd::cout << linha;"
+      ],
+      "focus": 0,
+      "focusLabel": "formatar dados",
+      "explanation": "Dados podem ser convertidos para formato de armazenamento ou transporte. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Testes C++",
+      "copy": "Testes confirmam contratos e protegem refatorações.",
+      "code": [
+        "TEST(Soma, DoisValores) {\n  EXPECT_EQ(somar(2, 3), 5);\n}"
+      ],
+      "focus": 0,
+      "focusLabel": "fixar contrato",
+      "explanation": "Testes confirmam contratos e protegem refatorações. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Debugging",
+      "copy": "Um debugger permite observar valores e fluxo sem adivinhar.",
+      "code": [
+        "breakpoint em: calcularTotal()\nobservar: subtotal, desconto"
+      ],
+      "focus": 0,
+      "focusLabel": "inspecionar estado",
+      "explanation": "Um debugger permite observar valores e fluxo sem adivinhar. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Complexidade",
+      "copy": "A análise de custo ajuda a escolher entre procura linear e índice.",
+      "code": [
+        "for (const auto& item : itens) procurar(item);\n// custo cresce com o número de itens"
+      ],
+      "focus": 0,
+      "focusLabel": "analisar custo",
+      "explanation": "A análise de custo ajuda a escolher entre procura linear e índice. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Hash map",
+      "copy": "unordered_map oferece procura média rápida por chave.",
+      "code": [
+        "std::unordered_map<int, std::string> nomes;\nnomes[7] = \"Kito\";"
+      ],
+      "focus": 0,
+      "focusLabel": "indexar por chave",
+      "explanation": "unordered_map oferece procura média rápida por chave. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Stack e queue",
+      "copy": "Estruturas diferentes expressam ordens de processamento diferentes.",
+      "code": [
+        "std::stack<int> pilha;\nstd::queue<int> fila;"
+      ],
+      "focus": 0,
+      "focusLabel": "escolher ordem",
+      "explanation": "Estruturas diferentes expressam ordens de processamento diferentes. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Grafos",
+      "copy": "Grafos modelam ligações entre entidades e podem ser percorridos.",
+      "code": [
+        "std::vector<std::vector<int>> grafo;\ngrafo[1].push_back(2);"
+      ],
+      "focus": 0,
+      "focusLabel": "modelar ligações",
+      "explanation": "Grafos modelam ligações entre entidades e podem ser percorridos. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Threads",
+      "copy": "Threads executam trabalho concorrente, mas partilha exige coordenação.",
+      "code": [
+        "std::thread tarefa([] { processar(); });\ntarefa.join();"
+      ],
+      "focus": 0,
+      "focusLabel": "executar concorrência",
+      "explanation": "Threads executam trabalho concorrente, mas partilha exige coordenação. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Mutex",
+      "copy": "Mutex protege uma região crítica contra acessos simultâneos.",
+      "code": [
+        "std::lock_guard<std::mutex> guarda(mutex);\ncontador++;"
+      ],
+      "focus": 0,
+      "focusLabel": "proteger estado",
+      "explanation": "Mutex protege uma região crítica contra acessos simultâneos. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Atomics",
+      "copy": "Atomics permitem operações simples seguras entre threads.",
+      "code": [
+        "std::atomic<int> contador{0};\ncontador.fetch_add(1);"
+      ],
+      "focus": 0,
+      "focusLabel": "coordenar contador",
+      "explanation": "Atomics permitem operações simples seguras entre threads. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Future",
+      "copy": "Future representa um resultado que ficará disponível depois.",
+      "code": [
+        "auto futuro = std::async(std::launch::async, calcular);\nint resultado = futuro.get();"
+      ],
+      "focus": 0,
+      "focusLabel": "aguardar resultado",
+      "explanation": "Future representa um resultado que ficará disponível depois. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Design factory",
+      "copy": "Uma factory centraliza a criação de variantes de objetos.",
+      "code": [
+        "std::unique_ptr<Forma> criar(Tipo tipo) {\n  return std::make_unique<Quadrado>();\n}"
+      ],
+      "focus": 0,
+      "focusLabel": "centralizar criação",
+      "explanation": "Uma factory centraliza a criação de variantes de objetos. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Design observer",
+      "copy": "Observer avisa interessados quando o estado muda.",
+      "code": [
+        "for (auto& observador : observadores) {\n  observador->atualizar(evento);\n}"
+      ],
+      "focus": 0,
+      "focusLabel": "notificar mudanças",
+      "explanation": "Observer avisa interessados quando o estado muda. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Performance",
+      "copy": "Perfil e memória devem orientar otimizações concretas.",
+      "code": [
+        "// medir antes de mudar\nauto inicio = std::chrono::steady_clock::now();\nexecutar();"
+      ],
+      "focus": 0,
+      "focusLabel": "medir execução",
+      "explanation": "Perfil e memória devem orientar otimizações concretas. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Capstone C++",
+      "copy": "O projeto final junta classes, coleções, RAII, testes e concorrência segura.",
+      "code": [
+        "class Servico {\n  std::vector<Tarefa> tarefas;\npublic:\n  void executar();\n};"
+      ],
+      "focus": 0,
+      "focusLabel": "compor sistema",
+      "explanation": "O projeto final junta classes, coleções, RAII, testes e concorrência segura. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    }
+  ],
+  "logic": [
+    {
+      "title": "Tabela verdade",
+      "copy": "Tabelas verdade mostram o resultado de combinações booleanas.",
+      "code": [
+        "A E B:\nV,V → V\nV,F → F\nF,V → F\nF,F → F"
+      ],
+      "focus": 0,
+      "focusLabel": "verificar combinação",
+      "explanation": "Tabelas verdade mostram o resultado de combinações booleanas. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Invariantes",
+      "copy": "Uma invariante é uma regra que deve continuar verdadeira.",
+      "code": [
+        "antes: saldo >= 0\nação: levantar valor\ndepois: saldo >= 0"
+      ],
+      "focus": 0,
+      "focusLabel": "proteger invariante",
+      "explanation": "Uma invariante é uma regra que deve continuar verdadeira. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Pré e pós-condições",
+      "copy": "Contratos definem o que uma operação exige e garante.",
+      "code": [
+        "pré: lista ordenada\\> inserir item\npós: lista continua ordenada"
+      ],
+      "focus": 0,
+      "focusLabel": "definir contrato",
+      "explanation": "Contratos definem o que uma operação exige e garante. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Modularidade",
+      "copy": "Módulos pequenos podem ser compreendidos e testados separadamente.",
+      "code": [
+        "entrada → módulo A → módulo B → saída"
+      ],
+      "focus": 0,
+      "focusLabel": "dividir problema",
+      "explanation": "Módulos pequenos podem ser compreendidos e testados separadamente. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Acoplamento",
+      "copy": "Menos dependências diretas tornam alterações mais seguras.",
+      "code": [
+        "interface: guardar(dado)\nimplementação: memória ou ficheiro"
+      ],
+      "focus": 0,
+      "focusLabel": "reduzir acoplamento",
+      "explanation": "Menos dependências diretas tornam alterações mais seguras. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Coesão",
+      "copy": "Cada módulo deve ter uma responsabilidade relacionada.",
+      "code": [
+        "módulo pagamentos:\n  calcular\n  validar\n  registar"
+      ],
+      "focus": 0,
+      "focusLabel": "manter coesão",
+      "explanation": "Cada módulo deve ter uma responsabilidade relacionada. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Busca linear",
+      "copy": "Busca linear verifica itens até encontrar uma resposta.",
+      "code": [
+        "para cada item:\n  se item == alvo: devolver item"
+      ],
+      "focus": 0,
+      "focusLabel": "procurar sequencialmente",
+      "explanation": "Busca linear verifica itens até encontrar uma resposta. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Busca binária",
+      "copy": "Busca binária exige dados ordenados e corta o intervalo ao meio.",
+      "code": [
+        "enquanto esquerda <= direita:\n  meio = (esquerda + direita) / 2"
+      ],
+      "focus": 0,
+      "focusLabel": "dividir intervalo",
+      "explanation": "Busca binária exige dados ordenados e corta o intervalo ao meio. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Ordenação",
+      "copy": "Ordenar organiza dados segundo uma regra explícita.",
+      "code": [
+        "comparar vizinhos\ntrocar se estão fora de ordem\nrepetir até estabilizar"
+      ],
+      "focus": 0,
+      "focusLabel": "ordenar dados",
+      "explanation": "Ordenar organiza dados segundo uma regra explícita. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Pilha",
+      "copy": "Stack segue LIFO: o último a entrar sai primeiro.",
+      "code": [
+        "empilhar(A)\nempilhar(B)\ndesempilhar() → B"
+      ],
+      "focus": 0,
+      "focusLabel": "usar LIFO",
+      "explanation": "Stack segue LIFO: o último a entrar sai primeiro. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Fila",
+      "copy": "Queue segue FIFO: o primeiro a entrar sai primeiro.",
+      "code": [
+        "entrar(A)\nentrar(B)\nsair() → A"
+      ],
+      "focus": 0,
+      "focusLabel": "usar FIFO",
+      "explanation": "Queue segue FIFO: o primeiro a entrar sai primeiro. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Árvore",
+      "copy": "Árvores organizam relações hierárquicas.",
+      "code": [
+        "raiz\n├── filho A\n└── filho B"
+      ],
+      "focus": 0,
+      "focusLabel": "modelar hierarquia",
+      "explanation": "Árvores organizam relações hierárquicas. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Grafo",
+      "copy": "Grafos representam nós e ligações, como mapas ou redes sociais.",
+      "code": [
+        "A -- B\n|\nC"
+      ],
+      "focus": 0,
+      "focusLabel": "representar rede",
+      "explanation": "Grafos representam nós e ligações, como mapas ou redes sociais. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "BFS",
+      "copy": "Busca em largura visita por camadas e usa uma fila.",
+      "code": [
+        "colocar início na fila\nvisitar vizinhos\ncontinuar por camadas"
+      ],
+      "focus": 0,
+      "focusLabel": "explorar por camadas",
+      "explanation": "Busca em largura visita por camadas e usa uma fila. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "DFS",
+      "copy": "Busca em profundidade segue um caminho antes de voltar atrás.",
+      "code": [
+        "visitar nó\nseguir vizinho\nvoltar quando não houver saída"
+      ],
+      "focus": 0,
+      "focusLabel": "explorar profundidade",
+      "explanation": "Busca em profundidade segue um caminho antes de voltar atrás. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Caminho mínimo",
+      "copy": "Pesos diferentes exigem comparar custos de caminhos.",
+      "code": [
+        "distância[A] = 0\nrelaxar arestas\nescolher menor custo"
+      ],
+      "focus": 0,
+      "focusLabel": "calcular caminho",
+      "explanation": "Pesos diferentes exigem comparar custos de caminhos. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Programação dinâmica",
+      "copy": "Guardar subresultados evita repetir o mesmo trabalho.",
+      "code": [
+        "se solução[n] existe: usar\nsenão: calcular e guardar"
+      ],
+      "focus": 0,
+      "focusLabel": "reutilizar subproblema",
+      "explanation": "Guardar subresultados evita repetir o mesmo trabalho. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Greedy",
+      "copy": "Algoritmo guloso escolhe o melhor passo local, quando a prova permite.",
+      "code": [
+        "escolher maior benefício agora\nmarcar recurso\ncontinuar"
+      ],
+      "focus": 0,
+      "focusLabel": "escolher localmente",
+      "explanation": "Algoritmo guloso escolhe o melhor passo local, quando a prova permite. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Backtracking",
+      "copy": "Backtracking tenta, verifica e desfaz quando a escolha falha.",
+      "code": [
+        "escolher opção\nse inválida: desfazer\ntentar próxima"
+      ],
+      "focus": 0,
+      "focusLabel": "voltar atrás",
+      "explanation": "Backtracking tenta, verifica e desfaz quando a escolha falha. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Invariantes de ciclo",
+      "copy": "Uma invariante explica o que é verdade em cada repetição.",
+      "code": [
+        "antes de cada volta: processados corretos\nprocessar próximo\nmanter regra"
+      ],
+      "focus": 0,
+      "focusLabel": "provar ciclo",
+      "explanation": "Uma invariante explica o que é verdade em cada repetição. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Complexidade O(1)",
+      "copy": "Acesso direto não cresce com o tamanho da coleção.",
+      "code": [
+        "índice = 4\nvalor = lista[índice]"
+      ],
+      "focus": 0,
+      "focusLabel": "acesso constante",
+      "explanation": "Acesso direto não cresce com o tamanho da coleção. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Complexidade O(n)",
+      "copy": "Percorrer todos os itens cresce proporcionalmente à entrada.",
+      "code": [
+        "para cada item em lista:\n  verificar(item)"
+      ],
+      "focus": 0,
+      "focusLabel": "custo linear",
+      "explanation": "Percorrer todos os itens cresce proporcionalmente à entrada. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Complexidade O(log n)",
+      "copy": "Dividir o espaço em cada passo reduz rapidamente a procura.",
+      "code": [
+        "n = n / 2\nrepetir até encontrar"
+      ],
+      "focus": 0,
+      "focusLabel": "custo logarítmico",
+      "explanation": "Dividir o espaço em cada passo reduz rapidamente a procura. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Requisitos funcionais",
+      "copy": "Requisitos funcionais descrevem ações que o sistema oferece.",
+      "code": [
+        "utilizador adiciona tarefa\nsistema guarda tarefa\nsistema mostra tarefa"
+      ],
+      "focus": 0,
+      "focusLabel": "descrever comportamento",
+      "explanation": "Requisitos funcionais descrevem ações que o sistema oferece. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Requisitos não funcionais",
+      "copy": "Qualidade também inclui velocidade, segurança e acessibilidade.",
+      "code": [
+        "responder em menos de 1 segundo\nfuncionar com teclado"
+      ],
+      "focus": 0,
+      "focusLabel": "definir qualidade",
+      "explanation": "Qualidade também inclui velocidade, segurança e acessibilidade. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Modelar casos de uso",
+      "copy": "Casos de uso ligam ator, objetivo e resultado.",
+      "code": [
+        "ator: aluno\nobjetivo: concluir missão\nresultado: progresso guardado"
+      ],
+      "focus": 0,
+      "focusLabel": "mapear objetivo",
+      "explanation": "Casos de uso ligam ator, objetivo e resultado. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Máquina de estados",
+      "copy": "Estados tornam transições permitidas explícitas.",
+      "code": [
+        "rascunho --publicar--> publicado\npublicado --arquivar--> arquivado"
+      ],
+      "focus": 0,
+      "focusLabel": "desenhar transição",
+      "explanation": "Estados tornam transições permitidas explícitas. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "API",
+      "copy": "Uma API define como dois componentes trocam mensagens.",
+      "code": [
+        "pedido: GET /tarefas\nresposta: 200 + lista"
+      ],
+      "focus": 0,
+      "focusLabel": "definir contrato API",
+      "explanation": "Uma API define como dois componentes trocam mensagens. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Segurança por camadas",
+      "copy": "Validar, autorizar e registar são responsabilidades diferentes.",
+      "code": [
+        "entrada → validar\nutilizador → autorizar\nação → registar"
+      ],
+      "focus": 0,
+      "focusLabel": "separar segurança",
+      "explanation": "Validar, autorizar e registar são responsabilidades diferentes. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Testes de propriedades",
+      "copy": "Testes de propriedades verificam regras para muitas entradas.",
+      "code": [
+        "para qualquer a,b:\nsomar(a,b) == somar(b,a)"
+      ],
+      "focus": 0,
+      "focusLabel": "verificar propriedade",
+      "explanation": "Testes de propriedades verificam regras para muitas entradas. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Integração contínua",
+      "copy": "Executar testes a cada alteração encontra regressões cedo.",
+      "code": [
+        "commit → lint → testes → publicar"
+      ],
+      "focus": 0,
+      "focusLabel": "automatizar verificação",
+      "explanation": "Executar testes a cada alteração encontra regressões cedo. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Deploy reversível",
+      "copy": "Uma publicação segura permite voltar à versão anterior.",
+      "code": [
+        "versão atual: v2\nse erro: voltar para v1"
+      ],
+      "focus": 0,
+      "focusLabel": "planejar rollback",
+      "explanation": "Uma publicação segura permite voltar à versão anterior. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    },
+    {
+      "title": "Capstone de lógica",
+      "copy": "O projeto final combina requisitos, dados, algoritmos, segurança e testes.",
+      "code": [
+        "definir objetivo\nmodelar dados\nescolher algoritmo\ntestar e publicar"
+      ],
+      "focus": 0,
+      "focusLabel": "compor solução",
+      "explanation": "O projeto final combina requisitos, dados, algoritmos, segurança e testes. Observa a linha destacada e tenta explicar esta decisão com as tuas próprias palavras."
+    }
+  ]
+};
+
+advancedTeacherSteps.python.push(
+  {
+    "title": "Cache e invalidação",
+    "copy": "Cache acelera leituras repetidas, mas precisa de uma regra clara para ficar atualizado.",
+    "code": [
+      "cache[chave] = valor",
+      "se expirado(chave):",
+      "  valor = carregar_novamente()"
+    ],
+    "focus": 0,
+    "focusLabel": "controlar cache",
+    "explanation": "Cache reduz trabalho repetido; expiração e invalidação evitam servir dados antigos."
+  },
+  {
+    "title": "Capstone Python: serviço completo",
+    "copy": "Este desafio final combina tipos, módulos, persistência, concorrência, testes e observabilidade.",
+    "code": [
+      "receber pedido",
+      "validar e processar",
+      "guardar resultado",
+      "registar sucesso ou falha"
+    ],
+    "focus": 0,
+    "focusLabel": "integrar arquitetura",
+    "explanation": "Um programa avançado não é apenas sintaxe: é um conjunto de decisões testáveis, observáveis e seguras."
+  }
+);
+advancedTeacherSteps.cpp.push(
+  {
+    "title": "Capstone C++: sistema completo",
+    "copy": "O desafio final reúne modelação, RAII, coleções, erros, testes e concorrência segura.",
+    "code": [
+      "receber configuração",
+      "criar serviço com RAII",
+      "processar tarefas",
+      "testar e medir"
+    ],
+    "focus": 0,
+    "focusLabel": "integrar sistema",
+    "explanation": "Um sistema C++ robusto combina desempenho com propriedade clara de recursos, contratos e testes."
+  }
+);
+for (const [language, steps] of Object.entries(advancedTeacherSteps)) {
+  const remaining = 50 - teacherLessons[language].steps.length;
+  teacherLessons[language].steps.push(...steps.slice(0, remaining));
+}
 let teacherLanguage = null;
 let teacherStepIndex = 0;
+let teacherIntroPending = false;
 let teacherRenderedLines = [];
 let teacherAnimationId = 0;
 const teacherWait = (ms) => new Promise((resolve) => window.setTimeout(resolve, ms));
@@ -1511,7 +2870,8 @@ async function eraseTeacherCode(animationId) {
 async function writeTeacherCode(step, animationId) {
   const code = $('teacher-code');
   teacherRenderedLines = [];
-  step.code.forEach((line, index) => teacherRenderedLines.push(`<span class="teacher-code-line ${index === step.focus ? 'is-focus' : ''}">${highlightCode(line) || ' '}</span>`));
+  const codeLines = step.code.flatMap((line) => String(line).split(/\r?\n/));
+  codeLines.forEach((line, index) => teacherRenderedLines.push(`<span class="teacher-code-line ${index === step.focus ? 'is-focus' : ''}">${highlightCode(line) || ' '}</span>`));
   const lines = [...teacherRenderedLines];
   teacherRenderedLines = [];
   code.innerHTML = '';
@@ -1533,13 +2893,13 @@ async function renderTeacherStep(announce = true) {
   $('teacher-step-title').textContent = step.title;
   $('teacher-step-copy').textContent = step.copy;
   $('teacher-explanation').textContent = step.explanation;
-  $('teacher-understood-state').textContent = teacherStepIndex === lesson.steps.length - 1 ? 'Último passo desta aula.' : 'Quando estiver claro, avança no teu ritmo.';
+  $('teacher-understood-state').textContent = teacherStepIndex === lesson.steps.length - 1 ? 'Último passo desta aula.' : 'Ouve a explicação do Mrzinho. Quando estiver claro, avança no teu ritmo.';
   $('teacher-understood').innerHTML = teacherStepIndex === lesson.steps.length - 1 ? 'Terminei a aula <span>✓</span>' : 'Entendi <span>→</span>';
   $('teacher-code').setAttribute('aria-label', `Exemplo de código. Foco: ${step.focusLabel}`);
   await eraseTeacherCode(animationId);
   if (animationId !== teacherAnimationId) return;
   await writeTeacherCode(step, animationId);
-  if (announce) assistantSay(`${step.title}. ${step.copy}`, { speak: true });
+  if (announce) assistantSay(`${step.title}. ${step.copy} ${step.explanation}`, { speak: true });
 }
 
 function openTeacherClass() {
@@ -1556,12 +2916,34 @@ function closeTeacherClass() {
   teacherAnimationId++;
 }
 
+function renderTeacherIntroduction() {
+  const lesson = teacherLessons[teacherLanguage];
+  const language = lesson.label;
+  const intro = `Olá! Eu sou o Mrzinho. Nesta trilha de ${language}, vamos avançar do básico ao avançado, um conceito de cada vez. Eu vou mostrar código, explicar a linha principal e falar contigo antes de cada passo. Quando a ideia estiver clara, carrega em “Entendi” para começarmos. Podes pedir para repetir sempre que precisares.`;
+  $('teacher-progress').textContent = `INTRODUÇÃO · ${lesson.steps.length} PASSOS`;
+  $('teacher-language-label').textContent = language;
+  $('teacher-focus-label').textContent = 'COMO VAI FUNCIONAR';
+  $('teacher-step-title').textContent = 'Antes de começar';
+  $('teacher-step-copy').textContent = `Vou acompanhar-te em ${lesson.steps.length} passos: fundamentos, prática, conceitos intermédios e temas avançados.`;
+  $('teacher-explanation').textContent = 'Ouve a introdução, observa o formato e avança quando estiveres pronto. Cada passo tem código, explicação e voz do Mrzinho.';
+  $('teacher-understood-state').textContent = 'Quando ouvires a introdução, carrega em “Entendi” para iniciar o passo 1.';
+  $('teacher-understood').innerHTML = 'Entendi, começar a aula <span>→</span>';
+  $('teacher-code').setAttribute('aria-label', `Introdução à trilha ${language}`);
+  const introStep = { code: ['1. Ouvir a explicação', '2. Ver o código', '3. Experimentar e avançar'], focus: 0 };
+  const animationId = ++teacherAnimationId;
+  eraseTeacherCode(animationId).then(() => writeTeacherCode(introStep, animationId));
+  assistantSay(intro, { speak: true });
+}
 function startTeacherLesson(language) {
   teacherLanguage = language;
   teacherStepIndex = 0;
+  teacherIntroPending = true;
+  voiceEnabled = true;
+  localStorage.setItem('w69-codelab:mrzinho-voice', 'on');
+  updateVoiceControl();
   $('teacher-picker').hidden = true;
   $('teacher-lesson').hidden = false;
-  renderTeacherStep(true);
+  renderTeacherIntroduction();
 }
 
 function bindTeacherClass() {
@@ -1571,8 +2953,9 @@ function bindTeacherClass() {
   $('mrzinho-class-screen')?.addEventListener('click', (event) => { if (event.target === $('mrzinho-class-screen')) closeTeacherClass(); });
   document.querySelectorAll('[data-teacher-language]').forEach((button) => button.addEventListener('click', () => startTeacherLesson(button.dataset.teacherLanguage)));
   $('teacher-back-picker')?.addEventListener('click', () => { $('teacher-picker').hidden = false; $('teacher-lesson').hidden = true; teacherAnimationId++; });
+  $('teacher-speak')?.addEventListener('click', () => speakMrzinho());
   $('teacher-not-understood')?.addEventListener('click', async () => { const step = teacherLessons[teacherLanguage].steps[teacherStepIndex]; assistantSay(`Vamos repetir. ${step.explanation}`, { speak: true }); await renderTeacherStep(false); $('teacher-understood-state').textContent = 'Sem problema. Repetimos devagar — mantém o foco na linha sublinhada.'; });
-  $('teacher-understood')?.addEventListener('click', () => { const last = teacherLessons[teacherLanguage].steps.length - 1; if (teacherStepIndex >= last) { $('teacher-understood-state').textContent = 'Aula concluída. Podes escolher outra linguagem quando quiseres.'; assistantSay('Muito bem. Terminaste esta aula guiada. A seguir podemos praticar com uma missão.', { speak: true }); return; } teacherStepIndex += 1; renderTeacherStep(true); });
+  $('teacher-understood')?.addEventListener('click', () => { if (teacherIntroPending) { teacherIntroPending = false; renderTeacherStep(true); return; } const last = teacherLessons[teacherLanguage].steps.length - 1; if (teacherStepIndex >= last) { $('teacher-understood-state').textContent = 'Aula concluída. Podes escolher outra linguagem quando quiseres.'; assistantSay('Muito bem. Terminaste esta aula guiada. A seguir podemos praticar com uma missão.', { speak: true }); return; } teacherStepIndex += 1; renderTeacherStep(true); });
 }
 
 bindTeacherClass();

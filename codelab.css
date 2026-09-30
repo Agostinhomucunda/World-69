@@ -364,3 +364,6 @@
   .teacher-screen-top h2 { font-size: clamp(30px, 9vw, 38px); }
   .teacher-code { min-height: 150px; max-height: 38vh; font-size: 10px; line-height: 1.65; }
 }
+
+.teacher-speak{border:1px solid rgba(91,214,255,.35);border-radius:999px;padding:12px 16px;background:transparent;color:var(--blue);cursor:pointer;font:10px 'DM Mono',monospace}.teacher-speak:hover{border-color:var(--blue);background:rgba(91,214,255,.08)}
+@media(max-width:470px){.teacher-speak{width:100%}}
