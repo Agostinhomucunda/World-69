@@ -134,6 +134,7 @@
 .lesson-explain .field-caption { color: var(--blue); }
 .lesson-explain #lesson-explanation { color: #c2cbd0; font-size: 11px; line-height: 1.7; white-space: pre-wrap; }
 .challenge-area { padding: 19px; border: 1px solid var(--line); border-radius: 12px; background: #0b0e11; }
+.choice-code-example { margin: 0 0 16px; padding: 14px; overflow-x: auto; border: 1px solid rgba(91,214,255,.2); border-radius: 10px; background: #07090c; color: #dbe7e7; font: 13px/1.7 'DM Mono',monospace; }
 .challenge-prompt { margin: 0 0 14px; font-size: 12px; line-height: 1.6; font-weight: 600; }
 .challenge-options { display: grid; gap: 8px; }
 .challenge-option { display: flex; align-items: flex-start; gap: 10px; padding: 11px 12px; border: 1px solid var(--line); border-radius: 9px; color: var(--muted); font-size: 10px; cursor: pointer; transition: .18s; }

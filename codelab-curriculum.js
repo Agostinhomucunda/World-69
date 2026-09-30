@@ -803,16 +803,22 @@ for (const track of tracks) {
     if (existing.has(id)) continue;
     const language = missionLanguage[track.id];
     const concept = topic.toLowerCase();
+    const executable = track.id === 'javascript' || track.id === 'python';
+    const code = track.id === 'python' ? `print("Prática: ${topic}")` : `console.log("Prática: ${topic}");`;
+    const expected = `Prática: ${topic}`;
     track.lessons.push({
-      id, title: `${topic} · prática`, duration: 8, kind: 'choice', language,
+      id, title: `${topic} · prática`, duration: 8, kind: executable ? (track.id === 'python' ? 'python' : 'code') : 'choice', language,
       objective: `Aplicar ${concept} numa situação concreta.`,
-      story: `Nesta missão vais consolidar ${concept} com uma decisão curta e objetiva.`,
-      lesson: `Identifica a ideia central de ${concept} e escolhe a solução que respeita o problema.`,
-      prompt: `Qual abordagem demonstra melhor que entendeste ${concept}?`,
-      options: [`Aplicar ${concept} com uma regra clara`, 'Ignorar os dados e escolher ao acaso', 'Repetir o mesmo passo sem verificar o resultado'],
-      answer: `Aplicar ${concept} com uma regra clara`,
+      story: `Nesta missão vais consolidar ${concept} com código e uma decisão objetiva.`,
+      lesson: `Lê o exemplo, identifica ${concept} e depois escreve ou escolhe uma solução que respeite o problema.`,
+      prompt: executable ? `Escreve um programa que mostre exatamente: ${expected}` : `Qual abordagem demonstra melhor que entendeste ${concept}?`,
+      ...(executable ? { starter: code, expected, solution: code } : {
+        codeExample: track.id === 'cpp' ? `int resultado = 2 + 3;\ncout << resultado;` : `se (condicao) {\n  executar();\n}`,
+        options: [`Aplicar ${concept} com uma regra clara`, 'Ignorar os dados e escolher ao acaso', 'Repetir o mesmo passo sem verificar o resultado'],
+        answer: `Aplicar ${concept} com uma regra clara`
+      }),
       success: `Boa! A missão de ${concept} foi concluída. Agora podes avançar para a próxima.`,
-      hints: [`Lê o objetivo e procura a opção que usa ${concept} de forma explícita.`, 'Explica a tua escolha antes de confirmar.']
+      hints: [`Lê o objetivo e procura a opção ou o código que usa ${concept} de forma explícita.`, 'Experimenta em passos pequenos antes de confirmar.']
     });
     existing.add(id);
   }

@@ -1,4 +1,4 @@
-import { tracks, placementQuestions } from './codelab-curriculum.js?v=20260930-missions-v2';
+import { tracks, placementQuestions } from './codelab-curriculum.js?v=20260930-practical-v3';
 
 const $ = (id) => document.getElementById(id);
 
@@ -334,7 +334,7 @@ function openLesson(trackId, lessonId) {
   selectedTrack = trackId;
   activeLesson = { ...lesson, trackId };
   currentHint = 0;
-  lessonReady = false;
+  lessonReady = true;
   $('dashboard').hidden = true;
   $('lesson-workspace').hidden = false;
   $('workspace-progress').textContent = `${track.title.toUpperCase()} · ${lesson.duration} MIN`;
@@ -343,6 +343,7 @@ function openLesson(trackId, lessonId) {
   $('lesson-story').textContent = lesson.story;
   $('lesson-explanation').innerHTML = buildLessonExplanation(lesson);
   renderMrzinhoClass(lesson);
+  $('mrzinho-lesson-class').hidden = true;
   $('mission-objective').textContent = lesson.objective;
   $('mission-icon').innerHTML = languageBadge(lesson.kind === 'choice' ? 'logic' : lesson.language);
   $('mission-kind').textContent = lesson.language === 'cpp' ? 'DESAFIO C++ · LEITURA' : lesson.kind === 'choice' ? 'DESAFIO DE LÓGICA' : `PRÁTICA ${lesson.language.toUpperCase()}`;
@@ -359,9 +360,8 @@ function openLesson(trackId, lessonId) {
   $('hint-button').onclick = revealHint;
   $('solution-button').onclick = revealSolution;
   renderChallenge(lesson);
-  $('lesson-ready-button').onclick = () => { lessonReady = true; $('challenge-area').classList.remove('is-locked'); $('challenge-area').removeAttribute('aria-disabled'); $('lesson-ready-button').textContent = 'Vamos resolver ↓'; assistantSay('Muito bem. Agora é a tua vez: aplica o que acabámos de ver.', { speak: true }); $('challenge-area').scrollIntoView({ behavior: 'smooth', block: 'center' }); };
-  $('lesson-example-button').onclick = () => { $('lesson-class-example').hidden = false; assistantSay('Repara nesta parte do exemplo. Não precisas decorar: observa a ideia e depois tenta com as tuas palavras.', { speak: true }); };
-  assistantSay(`Boa escolha. Primeiro temos uma mini-aula: vou explicar ${lesson.objective} e mostrar um exemplo.`, { speak: true });
+  $('challenge-area').classList.remove('is-locked');
+  $('challenge-area').removeAttribute('aria-disabled');
   $('lesson-workspace').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
@@ -370,7 +370,8 @@ function renderChallenge(lesson) {
   area.classList.add('is-locked');
   area.setAttribute('aria-disabled', 'true');
   if (lesson.kind === 'choice') {
-    area.innerHTML = `<p class="challenge-prompt">${escapeHtml(lesson.prompt)}</p><div class="challenge-options">${lesson.options.map((option, index) => `
+    const codeExample = lesson.codeExample ? `<pre class="choice-code-example"><code>${escapeHtml(lesson.codeExample)}</code></pre>` : '';
+    area.innerHTML = `${codeExample}<p class="challenge-prompt">${escapeHtml(lesson.prompt)}</p><div class="challenge-options">${lesson.options.map((option, index) => `
       <label class="challenge-option"><input type="radio" name="mission-answer" value="${index}"><span>${escapeHtml(option)}</span></label>`).join('')}
     </div><button class="button button-primary check-choice" id="check-choice" type="button">Verificar resposta <span>→</span></button>`;
     $('check-choice').addEventListener('click', () => {
