@@ -1,5 +1,5 @@
-const CACHE = 'world69-shell-v11';
-const SHELL = ['./', './index.html', './codelab.html', './conta.html', './login.html', './admin.html', './firebase-config.js', './admin-access.js', './style.css', './codelab.css', './codelab-ide.css', './codelab.js', './codelab-ide.js', './codelab-storage.js', './codelab-curriculum.js', './codelab-runner.js', './free-products.js', './free-products.generated.js', './manifest.webmanifest', './assets/favicon.svg', './assets/world69-commercial.mp4', './assets/world69-commercial-poster.jpg'];
+const CACHE = 'world69-shell-v12';
+const SHELL = ['./', './index.html', './codelab.html', './conta.html', './login.html', './admin.html', './firebase-config.js', './admin-access.js', './style.css', './codelab.css', './codelab-ide.css', './responsive.css', './codelab.js', './codelab-ide.js', './codelab-storage.js', './codelab-curriculum.js', './codelab-runner.js', './free-products.js', './free-products.generated.js', './manifest.webmanifest', './assets/favicon.svg', './assets/world69-commercial.mp4', './assets/world69-commercial-poster.jpg'];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(caches.open(CACHE).then((cache) => cache.addAll(SHELL)).then(() => self.skipWaiting()));

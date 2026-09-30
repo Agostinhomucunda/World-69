@@ -215,14 +215,6 @@ function renderMrzinhoClass(lesson) {
   $('lesson-ready-button').textContent = 'Já sei · Resolver agora →';
 }
 
-function updateVoiceControl() {
-  const button = $('mrzinho-voice');
-  if (!button) return;
-  button.setAttribute('aria-pressed', String(voiceEnabled));
-  button.innerHTML = `<span>${voiceEnabled ? '●' : '○'}</span> ${voiceEnabled ? 'voz ativa' : 'voz pausada'}`;
-  $('mrzinho')?.classList.toggle('voice-off', !voiceEnabled);
-}
-
 function reflectProfileFields() {
   $('profile-name').value = state.profile?.name || '';
   $('profile-goal').value = state.profile?.goal || 'games';
