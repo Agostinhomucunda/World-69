@@ -645,3 +645,130 @@ function updateCodeHighlight() {
   const highlight = $('code-highlight');
   if (editor && highlight) highlight.innerHTML = `${highlightCode(editor.value)}\n`;
 }
+
+
+const teacherLessons = {
+  javascript: {
+    label: 'JAVASCRIPT',
+    steps: [
+      { title: 'O que é uma instrução?', copy: 'Começamos pelo mais pequeno: uma instrução diz ao computador uma coisa concreta para fazer.', code: ['const mensagem = "Olá!";', 'console.log(mensagem);'], focus: 1, focusLabel: 'executar uma mensagem', explanation: 'console.log pede ao navegador para mostrar o valor entre parênteses. Primeiro guardamos a mensagem; depois mostramos essa mensagem.' },
+      { title: 'Guardar informação', copy: 'Uma variável é uma caixa com nome. O nome ajuda-nos a encontrar o valor mais tarde.', code: ['let pontos = 10;', 'pontos = pontos + 5;', 'console.log(pontos);'], focus: 1, focusLabel: 'atualizar o valor', explanation: 'let cria uma variável. A segunda linha lê os pontos antigos, soma 5 e guarda o novo resultado na mesma caixa.' },
+      { title: 'Tomar decisões', copy: 'O programa pode escolher um caminho. A palavra if significa “se isto for verdade”.', code: ['const idade = 18;', 'if (idade >= 18) {', '  console.log("Pode entrar");', '}'], focus: 1, focusLabel: 'condição', explanation: 'A condição entre parênteses é uma pergunta. Se a resposta for verdadeira, o bloco entre chavetas é executado.' },
+      { title: 'Repetir sem copiar', copy: 'Um ciclo repete uma ação. Assim o computador faz o trabalho várias vezes por nós.', code: ['for (let i = 0; i < 3; i++) {', '  console.log("Olá", i);', '}'], focus: 0, focusLabel: 'repetição', explanation: 'O for começa em zero, continua enquanto i for menor que 3 e aumenta i no fim de cada volta.' },
+      { title: 'Juntar as ideias', copy: 'Agora já consegues guardar dados, tomar decisões e repetir ações. É assim que pequenos programas crescem.', code: ['const nomes = ["Ana", "Kito", "Lia"];', 'for (const nome of nomes) {', '  console.log("Olá, " + nome);', '}'], focus: 1, focusLabel: 'percorrer dados', explanation: 'A lista guarda vários nomes. O for...of visita cada nome, um de cada vez, e usa-o na saudação.' }
+    ]
+  },
+  python: {
+    label: 'PYTHON',
+    steps: [
+      { title: 'Dar uma ordem', copy: 'Em Python, começamos com instruções simples e muito legíveis.', code: ['mensagem = "Olá!"', 'print(mensagem)'], focus: 1, focusLabel: 'mostrar no ecrã', explanation: 'print mostra um valor. A variável mensagem guarda o texto para podermos reutilizá-lo.' },
+      { title: 'Guardar e alterar', copy: 'Uma variável é um nome ligado a um valor. Podemos atualizar esse valor quando algo muda.', code: ['pontos = 10', 'pontos = pontos + 5', 'print(pontos)'], focus: 1, focusLabel: 'atualizar dados', explanation: 'Python lê a linha da direita primeiro: pega nos pontos atuais, soma 5 e guarda o resultado.' },
+      { title: 'Escolher um caminho', copy: 'if permite que o programa tome uma decisão com base numa condição.', code: ['idade = 18', 'if idade >= 18:', '    print("Pode entrar")'], focus: 1, focusLabel: 'decisão', explanation: 'Os dois pontos abrem o bloco. A indentação mostra ao Python quais linhas pertencem à decisão.' },
+      { title: 'Repetir uma ação', copy: 'for visita os itens de uma sequência, um de cada vez.', code: ['for numero in range(3):', '    print("Volta", numero)'], focus: 0, focusLabel: 'ciclo', explanation: 'range(3) fornece três valores. O bloco indentado corre uma vez para cada valor.' },
+      { title: 'Organizar com funções', copy: 'Uma função dá um nome a uma tarefa para podermos chamá-la quando for preciso.', code: ['def saudar(nome):', '    return "Olá, " + nome', '', 'print(saudar("Kito"))'], focus: 0, focusLabel: 'função', explanation: 'def cria uma função. O parâmetro nome recebe um valor e return devolve o resultado para quem chamou.' }
+    ]
+  },
+  cpp: {
+    label: 'C++',
+    steps: [
+      { title: 'Ler um programa', copy: 'Em C++, começamos por perceber a ordem das instruções que o computador vai executar.', code: ['int pontos = 10;', 'cout << pontos << endl;'], focus: 1, focusLabel: 'saída', explanation: 'cout envia informação para o terminal. endl termina a linha, como carregar no Enter.' },
+      { title: 'Tipos de dados', copy: 'O tipo int diz que vamos guardar um número inteiro.', code: ['int pontos = 10;', 'int bonus = 5;', 'cout << pontos + bonus << endl;'], focus: 0, focusLabel: 'tipo inteiro', explanation: 'Declarar o tipo ajuda o compilador a saber que operações são permitidas para este valor.' },
+      { title: 'Uma decisão', copy: 'if abre um caminho que só é executado quando a condição é verdadeira.', code: ['int idade = 18;', 'if (idade >= 18) {', '    cout << "Pode entrar" << endl;', '}'], focus: 1, focusLabel: 'condição', explanation: 'As chavetas agrupam as instruções da decisão. A comparação verifica se idade é maior ou igual a 18.' },
+      { title: 'Uma repetição', copy: 'for descreve um início, uma condição e uma mudança para cada volta.', code: ['for (int i = 0; i < 3; i++) {', '    cout << i << endl;', '}'], focus: 0, focusLabel: 'ciclo for', explanation: 'i começa em zero, o ciclo continua enquanto i for menor que 3 e i++ aumenta o contador.' },
+      { title: 'Pensar em funções', copy: 'Uma função transforma uma ideia numa peça que podemos reutilizar.', code: ['int somar(int a, int b) {', '    return a + b;', '}', 'cout << somar(2, 3) << endl;'], focus: 0, focusLabel: 'função', explanation: 'A função recebe dois inteiros e devolve a soma. Depois chamamos somar com os valores que queremos.' }
+    ]
+  },
+  logic: {
+    label: 'LÓGICA',
+    steps: [
+      { title: 'Decompor um problema', copy: 'Antes de escrever código, transforma uma tarefa grande em passos pequenos.', code: ['1. Receber os dados', '2. Transformar os dados', '3. Mostrar o resultado'], focus: 0, focusLabel: 'entrada', explanation: 'Quase todo programa tem entrada, transformação e saída. Esta sequência dá-nos um mapa para pensar.' },
+      { title: 'Comparar', copy: 'Uma condição é uma pergunta que pode ser verdadeira ou falsa.', code: ['idade >= 18  →  verdadeiro', 'idade < 18   →  falso'], focus: 0, focusLabel: 'comparação', explanation: 'Os símbolos >, < e = ajudam o programa a comparar valores e escolher o caminho certo.' },
+      { title: 'Escolher', copy: 'Quando uma resposta é verdadeira, seguimos um caminho; quando é falsa, seguimos outro.', code: ['SE chuva', '  levar guarda-chuva', 'SENÃO', '  sair sem guarda-chuva'], focus: 0, focusLabel: 'decisão', explanation: 'Escrever a decisão em linguagem humana antes do código evita que a sintaxe esconda a ideia.' },
+      { title: 'Repetir', copy: 'Quando uma ação se repete, procuramos o padrão e descrevemos quando parar.', code: ['enquanto ainda houver itens:', '  pegar no próximo item', '  tratar o item'], focus: 0, focusLabel: 'repetição', explanation: 'Um ciclo precisa de uma condição de paragem. Sem ela, o programa pode continuar para sempre.' },
+      { title: 'Criar um algoritmo', copy: 'Agora junta os passos numa receita que outra pessoa conseguiria seguir.', code: ['receber nome', 'se nome estiver vazio:', '  pedir nome novamente', 'senão:', '  mostrar saudação'], focus: 1, focusLabel: 'regra', explanation: 'Um algoritmo claro pode ser traduzido para JavaScript, Python, C++ ou outra linguagem. Primeiro vem o raciocínio.' }
+    ]
+  }
+};
+
+let teacherLanguage = null;
+let teacherStepIndex = 0;
+let teacherRenderedLines = [];
+let teacherAnimationId = 0;
+const teacherWait = (ms) => new Promise((resolve) => window.setTimeout(resolve, ms));
+
+async function eraseTeacherCode(animationId) {
+  const code = $('teacher-code');
+  while (teacherRenderedLines.length && animationId === teacherAnimationId) {
+    teacherRenderedLines.pop();
+    code.innerHTML = teacherRenderedLines.join('');
+    await teacherWait(35);
+  }
+}
+
+async function writeTeacherCode(step, animationId) {
+  const code = $('teacher-code');
+  teacherRenderedLines = [];
+  step.code.forEach((line, index) => teacherRenderedLines.push(`<span class="teacher-code-line ${index === step.focus ? 'is-focus' : ''}">${highlightCode(line) || ' '}</span>`));
+  const lines = [...teacherRenderedLines];
+  teacherRenderedLines = [];
+  code.innerHTML = '';
+  for (const line of lines) {
+    if (animationId !== teacherAnimationId) return;
+    teacherRenderedLines.push(line);
+    code.innerHTML = teacherRenderedLines.join('');
+    await teacherWait(70);
+  }
+}
+
+async function renderTeacherStep(announce = true) {
+  const lesson = teacherLessons[teacherLanguage];
+  const step = lesson.steps[teacherStepIndex];
+  const animationId = ++teacherAnimationId;
+  $('teacher-progress').textContent = `PASSO ${teacherStepIndex + 1} / ${lesson.steps.length}`;
+  $('teacher-language-label').textContent = lesson.label;
+  $('teacher-focus-label').textContent = `FOCO: ${step.focusLabel.toUpperCase()}`;
+  $('teacher-step-title').textContent = step.title;
+  $('teacher-step-copy').textContent = step.copy;
+  $('teacher-explanation').textContent = step.explanation;
+  $('teacher-understood-state').textContent = teacherStepIndex === lesson.steps.length - 1 ? 'Último passo desta aula.' : 'Quando estiver claro, avança no teu ritmo.';
+  $('teacher-understood').innerHTML = teacherStepIndex === lesson.steps.length - 1 ? 'Terminei a aula <span>✓</span>' : 'Entendi <span>→</span>';
+  $('teacher-code').setAttribute('aria-label', `Exemplo de código. Foco: ${step.focusLabel}`);
+  await eraseTeacherCode(animationId);
+  if (animationId !== teacherAnimationId) return;
+  await writeTeacherCode(step, animationId);
+  if (announce) assistantSay(`${step.title}. ${step.copy}`, { speak: true });
+}
+
+function openTeacherClass() {
+  $('mrzinho-class-screen').hidden = false;
+  $('teacher-picker').hidden = false;
+  $('teacher-lesson').hidden = true;
+  document.body.classList.add('teacher-open');
+  $('teacher-close').focus();
+}
+
+function closeTeacherClass() {
+  $('mrzinho-class-screen').hidden = true;
+  document.body.classList.remove('teacher-open');
+  teacherAnimationId++;
+}
+
+function startTeacherLesson(language) {
+  teacherLanguage = language;
+  teacherStepIndex = 0;
+  $('teacher-picker').hidden = true;
+  $('teacher-lesson').hidden = false;
+  renderTeacherStep(true);
+}
+
+function bindTeacherClass() {
+  $('mrzinho-class-button')?.addEventListener('click', openTeacherClass);
+  $('teacher-close')?.addEventListener('click', closeTeacherClass);
+  $('mrzinho-class-screen')?.addEventListener('click', (event) => { if (event.target === $('mrzinho-class-screen')) closeTeacherClass(); });
+  document.querySelectorAll('[data-teacher-language]').forEach((button) => button.addEventListener('click', () => startTeacherLesson(button.dataset.teacherLanguage)));
+  $('teacher-back-picker')?.addEventListener('click', () => { $('teacher-picker').hidden = false; $('teacher-lesson').hidden = true; teacherAnimationId++; });
+  $('teacher-not-understood')?.addEventListener('click', async () => { const step = teacherLessons[teacherLanguage].steps[teacherStepIndex]; assistantSay(`Vamos repetir. ${step.explanation}`, { speak: true }); await renderTeacherStep(false); $('teacher-understood-state').textContent = 'Sem problema. Repetimos devagar — mantém o foco na linha sublinhada.'; });
+  $('teacher-understood')?.addEventListener('click', () => { const last = teacherLessons[teacherLanguage].steps.length - 1; if (teacherStepIndex >= last) { $('teacher-understood-state').textContent = 'Aula concluída. Podes escolher outra linguagem quando quiseres.'; assistantSay('Muito bem. Terminaste esta aula guiada. A seguir podemos praticar com uma missão.', { speak: true }); return; } teacherStepIndex += 1; renderTeacherStep(true); });
+}
+
+bindTeacherClass();
