@@ -9,7 +9,7 @@
   const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
 
   if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => navigator.serviceWorker.register('./sw-v2.js?v=20260930-teacher-cache-v13').catch(() => {}));
+    window.addEventListener('load', () => navigator.serviceWorker.register('./sw-v2.js?v=20260930-teacher-cache-v14').catch(() => {}));
   }
 
   window.addEventListener('beforeinstallprompt', (event) => {

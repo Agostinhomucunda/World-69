@@ -2,7 +2,7 @@ import { tracks, placementQuestions } from './codelab-curriculum.js';
 
 const $ = (id) => document.getElementById(id);
 
-const initialState = () => ({ version: 1, profile: null, completed: [], drafts: {}, diagnosticScore: null, recommendedTrack: 'logic' });
+const initialState = () => ({ version: 1, profile: null, completed: [], drafts: {}, diagnosticScore: null, recommendedTrack: 'logic', missionCursor: 0 });
 let state = initialState();
 let selectedAvatar = '🦊';
 let selectedTrack = 'logic';
@@ -296,8 +296,9 @@ function renderDailyMission() {
   const allLessons = tracks.flatMap((track) => track.lessons.map((lesson) => ({ ...lesson, trackId: track.id })));
   const available = allLessons.filter((lesson) => !state.completed.includes(lesson.id));
   const pool = available.length ? available : allLessons;
-  // Advance the card after each completed mission instead of repeating one card all day.
-  const index = (new Date().getDay() + totalCompleted()) % pool.length;
+  // Use a persisted cursor so completing a mission always moves to another card.
+  const cursor = Number.isInteger(state.missionCursor) ? state.missionCursor : 0;
+  const index = cursor % pool.length;
   const mission = pool[index];
   $('daily-title').textContent = mission.title;
   $('daily-description').textContent = `${getTrack(mission.trackId).title} · ${mission.duration} min. Sem sequência obrigatória; continua à tua espera quando quiseres.`;
@@ -575,6 +576,7 @@ async function finishLesson() {
   if (!activeLesson) return;
   if (!state.completed.includes(activeLesson.id)) {
     state.completed.push(activeLesson.id);
+    state.missionCursor = (Number.isInteger(state.missionCursor) ? state.missionCursor : 0) + 1;
     await saveProgress();
     showToast('Missão guardada · +25 XP. Bom trabalho.');
   } else {
