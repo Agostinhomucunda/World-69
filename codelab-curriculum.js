@@ -69,6 +69,725 @@ else:
   }
 ];
 
+
+// Advanced path: extra missions keep each track growing beyond the first steps.
+const advancedLessons = {
+  "logic": [
+    {
+      "id": "logic-input-output",
+      "title": "Entrada, processo e saída",
+      "duration": 8,
+      "kind": "choice",
+      "language": null,
+      "objective": "Identificar as três partes de um problema",
+      "story": "Uma aplicação recebe dados, transforma-os e apresenta um resultado.",
+      "lesson": "Um programa precisa de uma entrada antes de conseguir transformar e devolver uma saída.",
+      "prompt": "Qual é a ordem mais clara?",
+      "options": [
+        "Mostrar o resultado → receber dados → transformar",
+        "Receber dados → transformar → mostrar resultado",
+        "Transformar sem receber dados"
+      ],
+      "answer": "Receber dados → transformar → mostrar resultado",
+      "success": "Boa leitura! O conceito ficou claro e já podes aplicá-lo numa missão.",
+      "hints": [
+        "Lê cada opção e procura a que representa exatamente a regra.",
+        "Explica a tua escolha em voz alta antes de confirmar."
+      ]
+    },
+    {
+      "id": "logic-pseudocode",
+      "title": "Escreve antes do código",
+      "duration": 8,
+      "kind": "choice",
+      "language": null,
+      "objective": "Traduzir uma ideia para pseudocódigo",
+      "story": "Antes da sintaxe, descreve a solução com palavras simples.",
+      "lesson": "O pseudocódigo deixa a ordem e os dados visíveis antes da linguagem.",
+      "prompt": "Qual pseudocódigo calcula o total com desconto?",
+      "options": [
+        "receber preço; calcular desconto; mostrar total",
+        "mostrar total; depois perguntar o preço",
+        "repetir sem nunca calcular"
+      ],
+      "answer": "receber preço; calcular desconto; mostrar total",
+      "success": "Boa leitura! O conceito ficou claro e já podes aplicá-lo numa missão.",
+      "hints": [
+        "Lê cada opção e procura a que representa exatamente a regra.",
+        "Explica a tua escolha em voz alta antes de confirmar."
+      ]
+    },
+    {
+      "id": "logic-boolean",
+      "title": "Verdadeiro ou falso",
+      "duration": 8,
+      "kind": "choice",
+      "language": null,
+      "objective": "Usar valores booleanos",
+      "story": "Uma regra de acesso depende de duas respostas.",
+      "lesson": "Com E/AND, todas as condições precisam ser verdadeiras.",
+      "prompt": "Se tem bilhete é verdadeiro e é maior de idade é falso, pode entrar?",
+      "options": [
+        "Sim, porque uma regra chega",
+        "Não, porque as duas condições são necessárias",
+        "Sempre, sem verificar"
+      ],
+      "answer": "Não, porque as duas condições são necessárias",
+      "success": "Boa leitura! O conceito ficou claro e já podes aplicá-lo numa missão.",
+      "hints": [
+        "Lê cada opção e procura a que representa exatamente a regra.",
+        "Explica a tua escolha em voz alta antes de confirmar."
+      ]
+    },
+    {
+      "id": "logic-data",
+      "title": "Escolhe a estrutura",
+      "duration": 8,
+      "kind": "choice",
+      "language": null,
+      "objective": "Distinguir lista, fila e mapa",
+      "story": "Uma biblioteca precisa relacionar o ISBN ao título de cada livro.",
+      "lesson": "Uma associação chave-valor torna a procura pelo ISBN direta.",
+      "prompt": "Qual estrutura representa melhor ISBN → título?",
+      "options": [
+        "Mapa/dicionário",
+        "Lista sem posições",
+        "Ciclo infinito"
+      ],
+      "answer": "Mapa/dicionário",
+      "success": "Boa leitura! O conceito ficou claro e já podes aplicá-lo numa missão.",
+      "hints": [
+        "Lê cada opção e procura a que representa exatamente a regra.",
+        "Explica a tua escolha em voz alta antes de confirmar."
+      ]
+    },
+    {
+      "id": "logic-debug",
+      "title": "O erro é uma pista",
+      "duration": 8,
+      "kind": "choice",
+      "language": null,
+      "objective": "Seguir uma estratégia de depuração",
+      "story": "Um contador mostra 11 quando deveria mostrar 10.",
+      "lesson": "Depurar é transformar um erro grande numa pergunta pequena e verificável.",
+      "prompt": "Qual é o primeiro passo útil?",
+      "options": [
+        "Mudar tudo ao mesmo tempo",
+        "Reproduzir, observar a entrada e isolar o passo errado",
+        "Ignorar o resultado"
+      ],
+      "answer": "Reproduzir, observar a entrada e isolar o passo errado",
+      "success": "Boa leitura! O conceito ficou claro e já podes aplicá-lo numa missão.",
+      "hints": [
+        "Lê cada opção e procura a que representa exatamente a regra.",
+        "Explica a tua escolha em voz alta antes de confirmar."
+      ]
+    },
+    {
+      "id": "logic-complexity",
+      "title": "Pensar no custo",
+      "duration": 8,
+      "kind": "choice",
+      "language": null,
+      "objective": "Comparar soluções por eficiência",
+      "story": "Duas soluções procuram um nome numa lista: uma verifica item a item; outra usa um índice.",
+      "lesson": "A escolha da estrutura de dados muda o trabalho necessário para cada procura.",
+      "prompt": "Qual tende a ser mais rápida para muitas procuras?",
+      "options": [
+        "A lista sem índice sempre",
+        "A estrutura com índice",
+        "As duas são sempre iguais"
+      ],
+      "answer": "A estrutura com índice",
+      "success": "Boa leitura! O conceito ficou claro e já podes aplicá-lo numa missão.",
+      "hints": [
+        "Lê cada opção e procura a que representa exatamente a regra.",
+        "Explica a tua escolha em voz alta antes de confirmar."
+      ]
+    },
+    {
+      "id": "logic-recursion",
+      "title": "Uma ideia dentro dela",
+      "duration": 8,
+      "kind": "choice",
+      "language": null,
+      "objective": "Reconhecer recursão",
+      "story": "Uma pasta pode conter ficheiros e outras pastas.",
+      "lesson": "Recursão resolve uma versão menor do mesmo problema e precisa de uma condição de paragem.",
+      "prompt": "Que estratégia visita todos os níveis?",
+      "options": [
+        "Visitar a pasta e repetir a mesma regra nas subpastas",
+        "Parar sempre na primeira pasta",
+        "Apagar as subpastas"
+      ],
+      "answer": "Visitar a pasta e repetir a mesma regra nas subpastas",
+      "success": "Boa leitura! O conceito ficou claro e já podes aplicá-lo numa missão.",
+      "hints": [
+        "Lê cada opção e procura a que representa exatamente a regra.",
+        "Explica a tua escolha em voz alta antes de confirmar."
+      ]
+    },
+    {
+      "id": "logic-project",
+      "title": "Planeia um mini-projeto",
+      "duration": 8,
+      "kind": "choice",
+      "language": null,
+      "objective": "Combinar requisitos, dados e testes",
+      "story": "Vais criar uma lista de tarefas que permite adicionar, concluir e filtrar itens.",
+      "lesson": "Um projeto sólido nasce de requisitos claros e de pequenas verificações contínuas.",
+      "prompt": "Qual plano é mais completo?",
+      "options": [
+        "Definir dados, ações, estados e testes pequenos",
+        "Começar pelo visual e ignorar regras",
+        "Guardar tudo numa variável sem formato"
+      ],
+      "answer": "Definir dados, ações, estados e testes pequenos",
+      "success": "Boa leitura! O conceito ficou claro e já podes aplicá-lo numa missão.",
+      "hints": [
+        "Lê cada opção e procura a que representa exatamente a regra.",
+        "Explica a tua escolha em voz alta antes de confirmar."
+      ]
+    }
+  ],
+  "javascript": [
+    {
+      "id": "js-types",
+      "title": "Tipos e conversões",
+      "duration": 8,
+      "kind": "choice",
+      "language": "javascript",
+      "objective": "Distinguir texto, número e booleano",
+      "story": "Uma idade chega como texto de um formulário e precisa entrar numa conta.",
+      "lesson": "Dados vindos de formulários são frequentemente texto; Number() permite tratá-los como número.",
+      "prompt": "Que operação prepara esse valor?",
+      "options": [
+        "Somar texto diretamente",
+        "Converter o texto para número",
+        "Apagar o valor"
+      ],
+      "answer": "Converter o texto para número",
+      "success": "Boa leitura! O conceito ficou claro e já podes aplicá-lo numa missão.",
+      "hints": [
+        "Lê cada opção e procura a que representa exatamente a regra.",
+        "Explica a tua escolha em voz alta antes de confirmar."
+      ]
+    },
+    {
+      "id": "js-arrays",
+      "title": "Coleções úteis",
+      "duration": 8,
+      "kind": "choice",
+      "language": "javascript",
+      "objective": "Ler e alterar arrays",
+      "story": "Uma lista de compras precisa de receber e remover itens.",
+      "lesson": "push adiciona ao final; pop remove o último item.",
+      "prompt": "Qual método acrescenta um item ao fim?",
+      "options": [
+        "push()",
+        "pop()",
+        "slice()"
+      ],
+      "answer": "push()",
+      "success": "Boa leitura! O conceito ficou claro e já podes aplicá-lo numa missão.",
+      "hints": [
+        "Lê cada opção e procura a que representa exatamente a regra.",
+        "Explica a tua escolha em voz alta antes de confirmar."
+      ]
+    },
+    {
+      "id": "js-objects",
+      "title": "Descrever entidades",
+      "duration": 8,
+      "kind": "choice",
+      "language": "javascript",
+      "objective": "Usar objetos e propriedades",
+      "story": "Um perfil tem nome, nível e pontos.",
+      "lesson": "Objetos agrupam propriedades nomeadas e tornam os dados legíveis.",
+      "prompt": "Qual representação é mais adequada?",
+      "options": [
+        "{ nome: \"Kito\", nivel: 2 }",
+        "[nome, nivel] sem contexto",
+        "\"perfil\" apenas"
+      ],
+      "answer": "{ nome: \"Kito\", nivel: 2 }",
+      "success": "Boa leitura! O conceito ficou claro e já podes aplicá-lo numa missão.",
+      "hints": [
+        "Lê cada opção e procura a que representa exatamente a regra.",
+        "Explica a tua escolha em voz alta antes de confirmar."
+      ]
+    },
+    {
+      "id": "js-functions",
+      "title": "Criar funções reutilizáveis",
+      "duration": 8,
+      "kind": "choice",
+      "language": "javascript",
+      "objective": "Definir parâmetros e retorno",
+      "story": "A mesma regra de desconto é usada em vários produtos.",
+      "lesson": "Uma função recebe dados, executa uma tarefa e pode devolver um resultado.",
+      "prompt": "O que evita duplicar a regra?",
+      "options": [
+        "Uma função com preço como parâmetro",
+        "Copiar a regra em cada botão",
+        "Um comentário sem código"
+      ],
+      "answer": "Uma função com preço como parâmetro",
+      "success": "Boa leitura! O conceito ficou claro e já podes aplicá-lo numa missão.",
+      "hints": [
+        "Lê cada opção e procura a que representa exatamente a regra.",
+        "Explica a tua escolha em voz alta antes de confirmar."
+      ]
+    },
+    {
+      "id": "js-dom",
+      "title": "Ligar código à página",
+      "duration": 8,
+      "kind": "choice",
+      "language": "javascript",
+      "objective": "Selecionar e atualizar elementos DOM",
+      "story": "Um botão deve alterar o texto de uma mensagem.",
+      "lesson": "Selecionamos o elemento e atualizamos o seu conteúdo sem reconstruir toda a página.",
+      "prompt": "Qual combinação faz sentido?",
+      "options": [
+        "querySelector e textContent",
+        "console.log e Math.random",
+        "localStorage e alert apenas"
+      ],
+      "answer": "querySelector e textContent",
+      "success": "Boa leitura! O conceito ficou claro e já podes aplicá-lo numa missão.",
+      "hints": [
+        "Lê cada opção e procura a que representa exatamente a regra.",
+        "Explica a tua escolha em voz alta antes de confirmar."
+      ]
+    },
+    {
+      "id": "js-events",
+      "title": "Responder a ações",
+      "duration": 8,
+      "kind": "choice",
+      "language": "javascript",
+      "objective": "Trabalhar com eventos",
+      "story": "O formulário deve validar os dados antes de recarregar a página.",
+      "lesson": "O evento submit permite validar e preventDefault impede o envio automático.",
+      "prompt": "Que evento e ação são adequados?",
+      "options": [
+        "submit e preventDefault",
+        "load e apagar formulário",
+        "scroll e recarregar sempre"
+      ],
+      "answer": "submit e preventDefault",
+      "success": "Boa leitura! O conceito ficou claro e já podes aplicá-lo numa missão.",
+      "hints": [
+        "Lê cada opção e procura a que representa exatamente a regra.",
+        "Explica a tua escolha em voz alta antes de confirmar."
+      ]
+    },
+    {
+      "id": "js-async",
+      "title": "Esperar por dados",
+      "duration": 8,
+      "kind": "choice",
+      "language": "javascript",
+      "objective": "Entender Promises e async/await",
+      "story": "Uma aplicação consulta uma API antes de desenhar os resultados.",
+      "lesson": "await torna a sequência assíncrona mais legível; a função precisa ser async.",
+      "prompt": "Por que usar await?",
+      "options": [
+        "Para esperar o resultado sem bloquear a leitura da função",
+        "Para esconder todos os erros",
+        "Para transformar CSS em JavaScript"
+      ],
+      "answer": "Para esperar o resultado sem bloquear a leitura da função",
+      "success": "Boa leitura! O conceito ficou claro e já podes aplicá-lo numa missão.",
+      "hints": [
+        "Lê cada opção e procura a que representa exatamente a regra.",
+        "Explica a tua escolha em voz alta antes de confirmar."
+      ]
+    },
+    {
+      "id": "js-modules",
+      "title": "Dividir o projeto",
+      "duration": 8,
+      "kind": "choice",
+      "language": "javascript",
+      "objective": "Usar import e export",
+      "story": "O catálogo e a interface devem ser módulos separados.",
+      "lesson": "Módulos ajudam a organizar, reutilizar e testar partes do sistema.",
+      "prompt": "Qual vantagem existe?",
+      "options": [
+        "Responsabilidades menores e dependências explícitas",
+        "Todos os ficheiros ficam globais",
+        "O navegador deixa de executar código"
+      ],
+      "answer": "Responsabilidades menores e dependências explícitas",
+      "success": "Boa leitura! O conceito ficou claro e já podes aplicá-lo numa missão.",
+      "hints": [
+        "Lê cada opção e procura a que representa exatamente a regra.",
+        "Explica a tua escolha em voz alta antes de confirmar."
+      ]
+    }
+  ],
+  "python": [
+    {
+      "id": "py-types",
+      "title": "Tipos que contam",
+      "duration": 8,
+      "kind": "choice",
+      "language": "python",
+      "objective": "Distinguir strings, números e booleanos",
+      "story": "Um relatório soma minutos e apresenta uma frase.",
+      "lesson": "Aspas criam texto; sem aspas, 30 é um inteiro que pode entrar numa soma.",
+      "prompt": "Qual valor é numérico?",
+      "options": [
+        "\"30\"",
+        "30",
+        "\"minutos\""
+      ],
+      "answer": "30",
+      "success": "Boa leitura! O conceito ficou claro e já podes aplicá-lo numa missão.",
+      "hints": [
+        "Lê cada opção e procura a que representa exatamente a regra.",
+        "Explica a tua escolha em voz alta antes de confirmar."
+      ]
+    },
+    {
+      "id": "py-lists",
+      "title": "Trabalhar com listas",
+      "duration": 8,
+      "kind": "choice",
+      "language": "python",
+      "objective": "Indexar e modificar listas",
+      "story": "Uma fila de tarefas precisa de ser percorrida e atualizada.",
+      "lesson": "Listas começam no índice zero; append adiciona elementos ao final.",
+      "prompt": "Como obter o primeiro item?",
+      "options": [
+        "tarefas[0]",
+        "tarefas[-0]()",
+        "first(tarefas)"
+      ],
+      "answer": "tarefas[0]",
+      "success": "Boa leitura! O conceito ficou claro e já podes aplicá-lo numa missão.",
+      "hints": [
+        "Lê cada opção e procura a que representa exatamente a regra.",
+        "Explica a tua escolha em voz alta antes de confirmar."
+      ]
+    },
+    {
+      "id": "py-dicts",
+      "title": "Guardar por chave",
+      "duration": 8,
+      "kind": "choice",
+      "language": "python",
+      "objective": "Usar dicionários",
+      "story": "Cada aluno tem um nome e uma nota associados.",
+      "lesson": "Dicionários representam relações chave-valor e permitem procurar pela chave.",
+      "prompt": "Que estrutura combina com essa relação?",
+      "options": [
+        "{\"Ana\": 18}",
+        "[\"Ana\", 18] sem chave",
+        "(\"Ana\" + 18)"
+      ],
+      "answer": "{\"Ana\": 18}",
+      "success": "Boa leitura! O conceito ficou claro e já podes aplicá-lo numa missão.",
+      "hints": [
+        "Lê cada opção e procura a que representa exatamente a regra.",
+        "Explica a tua escolha em voz alta antes de confirmar."
+      ]
+    },
+    {
+      "id": "py-functions",
+      "title": "Encapsular uma regra",
+      "duration": 8,
+      "kind": "choice",
+      "language": "python",
+      "objective": "Criar funções com parâmetros",
+      "story": "A mesma conversão de minutos aparece em vários relatórios.",
+      "lesson": "Funções dão nome a uma operação e podem devolver o seu resultado com return.",
+      "prompt": "Como evitar repetição?",
+      "options": [
+        "definir uma função que recebe minutos",
+        "copiar a conta em todo o programa",
+        "guardar a conta num comentário"
+      ],
+      "answer": "definir uma função que recebe minutos",
+      "success": "Boa leitura! O conceito ficou claro e já podes aplicá-lo numa missão.",
+      "hints": [
+        "Lê cada opção e procura a que representa exatamente a regra.",
+        "Explica a tua escolha em voz alta antes de confirmar."
+      ]
+    },
+    {
+      "id": "py-files",
+      "title": "Ler informação local",
+      "duration": 8,
+      "kind": "choice",
+      "language": "python",
+      "objective": "Entender abertura segura de ficheiros",
+      "story": "Um programa precisa ler notas guardadas num ficheiro.",
+      "lesson": "O bloco with gere o ciclo de vida do ficheiro mesmo quando ocorre um erro.",
+      "prompt": "Qual prática fecha o ficheiro automaticamente?",
+      "options": [
+        "with open(...) as arquivo:",
+        "open(...) e nunca fechar",
+        "print(...)"
+      ],
+      "answer": "with open(...) as arquivo:",
+      "success": "Boa leitura! O conceito ficou claro e já podes aplicá-lo numa missão.",
+      "hints": [
+        "Lê cada opção e procura a que representa exatamente a regra.",
+        "Explica a tua escolha em voz alta antes de confirmar."
+      ]
+    },
+    {
+      "id": "py-errors",
+      "title": "Tratar falhas",
+      "duration": 8,
+      "kind": "choice",
+      "language": "python",
+      "objective": "Usar try e except",
+      "story": "Uma entrada pode não ser um número válido.",
+      "lesson": "Tratamento específico mostra uma mensagem útil sem esconder erros diferentes.",
+      "prompt": "Como evitar que o programa termine sem explicação?",
+      "options": [
+        "try a conversão e except ValueError",
+        "ignorar sempre a entrada",
+        "usar um ciclo infinito"
+      ],
+      "answer": "try a conversão e except ValueError",
+      "success": "Boa leitura! O conceito ficou claro e já podes aplicá-lo numa missão.",
+      "hints": [
+        "Lê cada opção e procura a que representa exatamente a regra.",
+        "Explica a tua escolha em voz alta antes de confirmar."
+      ]
+    },
+    {
+      "id": "py-comprehensions",
+      "title": "Transformar coleções",
+      "duration": 8,
+      "kind": "choice",
+      "language": "python",
+      "objective": "Ler list comprehensions",
+      "story": "Queres os quadrados dos números pares de 0 a 5.",
+      "lesson": "A expressão combina ciclo e filtro numa nova lista de forma concisa.",
+      "prompt": "Que ideia representa isso?",
+      "options": [
+        "[n*n for n in range(6) if n % 2 == 0]",
+        "[n for n in 6]",
+        "square = 0"
+      ],
+      "answer": "[n*n for n in range(6) if n % 2 == 0]",
+      "success": "Boa leitura! O conceito ficou claro e já podes aplicá-lo numa missão.",
+      "hints": [
+        "Lê cada opção e procura a que representa exatamente a regra.",
+        "Explica a tua escolha em voz alta antes de confirmar."
+      ]
+    },
+    {
+      "id": "py-classes",
+      "title": "Modelar objetos",
+      "duration": 8,
+      "kind": "choice",
+      "language": "python",
+      "objective": "Reconhecer classes e métodos",
+      "story": "Um jogo tem vários jogadores com nome e pontos.",
+      "lesson": "Classes juntam dados e comportamentos de objetos semelhantes.",
+      "prompt": "Qual ideia organiza esse estado?",
+      "options": [
+        "Uma classe Jogador com atributos e métodos",
+        "Uma string gigante para todos",
+        "Variáveis globais sem relação"
+      ],
+      "answer": "Uma classe Jogador com atributos e métodos",
+      "success": "Boa leitura! O conceito ficou claro e já podes aplicá-lo numa missão.",
+      "hints": [
+        "Lê cada opção e procura a que representa exatamente a regra.",
+        "Explica a tua escolha em voz alta antes de confirmar."
+      ]
+    }
+  ],
+  "cpp": [
+    {
+      "id": "cpp-types",
+      "title": "Tipos com intenção",
+      "duration": 8,
+      "kind": "choice",
+      "language": "cpp",
+      "objective": "Escolher tipos numéricos",
+      "story": "Uma aplicação guarda a idade e a média de um aluno.",
+      "lesson": "O tipo comunica que valores e operações são esperados.",
+      "prompt": "Que combinação faz sentido?",
+      "options": [
+        "int para idade e double para média",
+        "string para tudo",
+        "bool para a média"
+      ],
+      "answer": "int para idade e double para média",
+      "success": "Boa leitura! O conceito ficou claro e já podes aplicá-lo numa missão.",
+      "hints": [
+        "Lê cada opção e procura a que representa exatamente a regra.",
+        "Explica a tua escolha em voz alta antes de confirmar."
+      ]
+    },
+    {
+      "id": "cpp-arrays",
+      "title": "Vários valores",
+      "duration": 8,
+      "kind": "choice",
+      "language": "cpp",
+      "objective": "Percorrer um array",
+      "story": "Um sensor entrega cinco leituras.",
+      "lesson": "Um ciclo usa o índice para visitar cada elemento dentro dos limites.",
+      "prompt": "Que ferramenta percorre todas as posições?",
+      "options": [
+        "for com índice",
+        "if sem repetição",
+        "cout apenas uma vez"
+      ],
+      "answer": "for com índice",
+      "success": "Boa leitura! O conceito ficou claro e já podes aplicá-lo numa missão.",
+      "hints": [
+        "Lê cada opção e procura a que representa exatamente a regra.",
+        "Explica a tua escolha em voz alta antes de confirmar."
+      ]
+    },
+    {
+      "id": "cpp-strings",
+      "title": "Trabalhar com texto",
+      "duration": 8,
+      "kind": "choice",
+      "language": "cpp",
+      "objective": "Usar std::string",
+      "story": "O programa junta nome e mensagem de boas-vindas.",
+      "lesson": "std::string oferece operações próprias para guardar e combinar texto.",
+      "prompt": "Qual tipo representa texto moderno em C++?",
+      "options": [
+        "std::string",
+        "int",
+        "bool"
+      ],
+      "answer": "std::string",
+      "success": "Boa leitura! O conceito ficou claro e já podes aplicá-lo numa missão.",
+      "hints": [
+        "Lê cada opção e procura a que representa exatamente a regra.",
+        "Explica a tua escolha em voz alta antes de confirmar."
+      ]
+    },
+    {
+      "id": "cpp-functions",
+      "title": "Separar responsabilidades",
+      "duration": 8,
+      "kind": "choice",
+      "language": "cpp",
+      "objective": "Definir funções em C++",
+      "story": "A conta do dano de um jogo aparece em vários locais.",
+      "lesson": "Funções reduzem duplicação e tornam a intenção do programa explícita.",
+      "prompt": "Qual solução é mais reutilizável?",
+      "options": [
+        "uma função calcularDano com parâmetros",
+        "copiar a expressão em cada lugar",
+        "um comentário com a fórmula"
+      ],
+      "answer": "uma função calcularDano com parâmetros",
+      "success": "Boa leitura! O conceito ficou claro e já podes aplicá-lo numa missão.",
+      "hints": [
+        "Lê cada opção e procura a que representa exatamente a regra.",
+        "Explica a tua escolha em voz alta antes de confirmar."
+      ]
+    },
+    {
+      "id": "cpp-references",
+      "title": "Evitar cópias",
+      "duration": 8,
+      "kind": "choice",
+      "language": "cpp",
+      "objective": "Entender referências",
+      "story": "Uma função precisa alterar o contador original.",
+      "lesson": "A referência liga o parâmetro ao objeto original; const impede alterações.",
+      "prompt": "Que parâmetro permite alterar o original?",
+      "options": [
+        "int& contador",
+        "int contador sempre",
+        "const int sem retorno"
+      ],
+      "answer": "int& contador",
+      "success": "Boa leitura! O conceito ficou claro e já podes aplicá-lo numa missão.",
+      "hints": [
+        "Lê cada opção e procura a que representa exatamente a regra.",
+        "Explica a tua escolha em voz alta antes de confirmar."
+      ]
+    },
+    {
+      "id": "cpp-structs",
+      "title": "Agrupar dados",
+      "duration": 8,
+      "kind": "choice",
+      "language": "cpp",
+      "objective": "Usar struct",
+      "story": "Um ponto tem coordenadas x e y.",
+      "lesson": "struct cria um tipo com campos relacionados e legíveis.",
+      "prompt": "Como representar o ponto?",
+      "options": [
+        "struct Ponto { double x; double y; };",
+        "duas strings sem nome",
+        "um ciclo for"
+      ],
+      "answer": "struct Ponto { double x; double y; };",
+      "success": "Boa leitura! O conceito ficou claro e já podes aplicá-lo numa missão.",
+      "hints": [
+        "Lê cada opção e procura a que representa exatamente a regra.",
+        "Explica a tua escolha em voz alta antes de confirmar."
+      ]
+    },
+    {
+      "id": "cpp-pointers",
+      "title": "Conhecer endereços",
+      "duration": 8,
+      "kind": "choice",
+      "language": "cpp",
+      "objective": "Distinguir ponteiro e valor",
+      "story": "Uma função recebe o endereço de um valor.",
+      "lesson": "O ponteiro guarda um endereço; o operador * acede ao valor nesse endereço.",
+      "prompt": "O que *ponteiro representa?",
+      "options": [
+        "o valor apontado",
+        "o nome do ficheiro",
+        "um ciclo"
+      ],
+      "answer": "o valor apontado",
+      "success": "Boa leitura! O conceito ficou claro e já podes aplicá-lo numa missão.",
+      "hints": [
+        "Lê cada opção e procura a que representa exatamente a regra.",
+        "Explica a tua escolha em voz alta antes de confirmar."
+      ]
+    },
+    {
+      "id": "cpp-design",
+      "title": "Construir por partes",
+      "duration": 8,
+      "kind": "choice",
+      "language": "cpp",
+      "objective": "Aplicar encapsulamento",
+      "story": "Um sistema de conta deve proteger o saldo.",
+      "lesson": "Encapsulamento concentra regras e evita alterações inválidas ao estado.",
+      "prompt": "Que desenho protege melhor o estado?",
+      "options": [
+        "classe com saldo privado e métodos controlados",
+        "saldo público alterável por todos",
+        "uma variável global"
+      ],
+      "answer": "classe com saldo privado e métodos controlados",
+      "success": "Boa leitura! O conceito ficou claro e já podes aplicá-lo numa missão.",
+      "hints": [
+        "Lê cada opção e procura a que representa exatamente a regra.",
+        "Explica a tua escolha em voz alta antes de confirmar."
+      ]
+    }
+  ]
+};
+for (const track of tracks) track.lessons.push(...(advancedLessons[track.id] || []));
+
+
 export const placementQuestions = [
   { id: 'q1', question: 'O que guarda uma variável?', options: ['Uma fotografia sempre', 'Um valor com um nome', 'Uma ligação à Internet'], answer: 1 },
   { id: 'q2', question: 'Para que serve uma condição?', options: ['Apagar todos os ficheiros', 'Mudar a cor do teclado', 'Decidir entre caminhos'], answer: 2 },

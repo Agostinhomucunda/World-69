@@ -648,48 +648,851 @@ function updateCodeHighlight() {
 
 
 const teacherLessons = {
-  javascript: {
-    label: 'JAVASCRIPT',
-    steps: [
-      { title: 'O que é uma instrução?', copy: 'Começamos pelo mais pequeno: uma instrução diz ao computador uma coisa concreta para fazer.', code: ['const mensagem = "Olá!";', 'console.log(mensagem);'], focus: 1, focusLabel: 'executar uma mensagem', explanation: 'console.log pede ao navegador para mostrar o valor entre parênteses. Primeiro guardamos a mensagem; depois mostramos essa mensagem.' },
-      { title: 'Guardar informação', copy: 'Uma variável é uma caixa com nome. O nome ajuda-nos a encontrar o valor mais tarde.', code: ['let pontos = 10;', 'pontos = pontos + 5;', 'console.log(pontos);'], focus: 1, focusLabel: 'atualizar o valor', explanation: 'let cria uma variável. A segunda linha lê os pontos antigos, soma 5 e guarda o novo resultado na mesma caixa.' },
-      { title: 'Tomar decisões', copy: 'O programa pode escolher um caminho. A palavra if significa “se isto for verdade”.', code: ['const idade = 18;', 'if (idade >= 18) {', '  console.log("Pode entrar");', '}'], focus: 1, focusLabel: 'condição', explanation: 'A condição entre parênteses é uma pergunta. Se a resposta for verdadeira, o bloco entre chavetas é executado.' },
-      { title: 'Repetir sem copiar', copy: 'Um ciclo repete uma ação. Assim o computador faz o trabalho várias vezes por nós.', code: ['for (let i = 0; i < 3; i++) {', '  console.log("Olá", i);', '}'], focus: 0, focusLabel: 'repetição', explanation: 'O for começa em zero, continua enquanto i for menor que 3 e aumenta i no fim de cada volta.' },
-      { title: 'Juntar as ideias', copy: 'Agora já consegues guardar dados, tomar decisões e repetir ações. É assim que pequenos programas crescem.', code: ['const nomes = ["Ana", "Kito", "Lia"];', 'for (const nome of nomes) {', '  console.log("Olá, " + nome);', '}'], focus: 1, focusLabel: 'percorrer dados', explanation: 'A lista guarda vários nomes. O for...of visita cada nome, um de cada vez, e usa-o na saudação.' }
+  "javascript": {
+    "label": "JAVASCRIPT",
+    "steps": [
+      {
+        "title": "O mapa da linguagem",
+        "copy": "Começamos pela sintaxe que todos os programas usam: valores, nomes e ações.",
+        "code": [
+          "const nome = \"Kito\";",
+          "console.log(nome);"
+        ],
+        "focus": 1,
+        "focusLabel": "mostrar um valor",
+        "explanation": "const cria um nome que aponta para um valor; console.log torna o valor visível."
+      },
+      {
+        "title": "Escolher entre const e let",
+        "copy": "Usa const quando a ligação não muda e let quando precisas atualizar o valor.",
+        "code": [
+          "let pontos = 10;",
+          "pontos += 5;",
+          "console.log(pontos);"
+        ],
+        "focus": 1,
+        "focusLabel": "atualizar uma variável",
+        "explanation": "A variável continua a ser o mesmo nome, mas o valor passa de 10 para 15."
+      },
+      {
+        "title": "Tipos e conversões",
+        "copy": "Texto, número e booleano comportam-se de formas diferentes.",
+        "code": [
+          "const idadeTexto = \"18\";",
+          "const idade = Number(idadeTexto);",
+          "console.log(idade + 1);"
+        ],
+        "focus": 1,
+        "focusLabel": "converter dados",
+        "explanation": "Number transforma o texto em número para que a soma seja matemática, não concatenação."
+      },
+      {
+        "title": "Comparar com segurança",
+        "copy": "Uma condição responde a uma pergunta verdadeira ou falsa.",
+        "code": [
+          "const saldo = 20;",
+          "if (saldo >= 10) {",
+          "  console.log(\"Pode comprar\");",
+          "}"
+        ],
+        "focus": 1,
+        "focusLabel": "comparar valores",
+        "explanation": ">= inclui o limite. O bloco só corre quando a comparação é verdadeira."
+      },
+      {
+        "title": "Criar caminhos alternativos",
+        "copy": "else trata o caso em que a primeira condição falha.",
+        "code": [
+          "if (saldo >= 10) {",
+          "  console.log(\"Comprar\");",
+          "} else {",
+          "  console.log(\"Poupar\");",
+          "}"
+        ],
+        "focus": 0,
+        "focusLabel": "decidir",
+        "explanation": "O programa tem agora dois caminhos e escolhe exatamente um deles."
+      },
+      {
+        "title": "Repetir com for",
+        "copy": "Um ciclo tem início, condição e atualização.",
+        "code": [
+          "for (let i = 1; i <= 3; i++) {",
+          "  console.log(i);",
+          "}"
+        ],
+        "focus": 0,
+        "focusLabel": "controlar um ciclo",
+        "explanation": "O contador começa em 1, repete até 3 e avança no fim de cada volta."
+      },
+      {
+        "title": "Guardar listas",
+        "copy": "Arrays guardam vários valores numa ordem.",
+        "code": [
+          "const cores = [\"verde\", \"azul\"];",
+          "cores.push(\"amarelo\");",
+          "console.log(cores[0]);"
+        ],
+        "focus": 1,
+        "focusLabel": "alterar uma lista",
+        "explanation": "push acrescenta ao fim; o índice zero aponta para o primeiro elemento."
+      },
+      {
+        "title": "Transformar listas",
+        "copy": "map cria uma nova lista aplicando uma função a cada item.",
+        "code": [
+          "const numeros = [1, 2, 3];",
+          "const dobro = numeros.map(n => n * 2);",
+          "console.log(dobro);"
+        ],
+        "focus": 1,
+        "focusLabel": "mapear dados",
+        "explanation": "A arrow function recebe cada n e devolve o valor transformado."
+      },
+      {
+        "title": "Filtrar resultados",
+        "copy": "filter conserva apenas os itens que passam numa regra.",
+        "code": [
+          "const idades = [12, 18, 25];",
+          "const adultos = idades.filter(idade => idade >= 18);",
+          "console.log(adultos);"
+        ],
+        "focus": 1,
+        "focusLabel": "filtrar dados",
+        "explanation": "A condição é testada em cada item e apenas os valores verdadeiros entram na nova lista."
+      },
+      {
+        "title": "Objetos e propriedades",
+        "copy": "Objetos agrupam dados com nomes que explicam o seu significado.",
+        "code": [
+          "const aluno = { nome: \"Kito\", xp: 40 };",
+          "aluno.xp += 10;",
+          "console.log(aluno.xp);"
+        ],
+        "focus": 1,
+        "focusLabel": "atualizar uma propriedade",
+        "explanation": "O ponto acede a uma propriedade; o objeto mantém nome e xp ligados."
+      },
+      {
+        "title": "Funções reutilizáveis",
+        "copy": "Uma função recebe parâmetros e devolve uma resposta.",
+        "code": [
+          "function somar(a, b) {",
+          "  return a + b;",
+          "}",
+          "console.log(somar(2, 3));"
+        ],
+        "focus": 1,
+        "focusLabel": "devolver um resultado",
+        "explanation": "return termina a função e entrega a soma para quem chamou."
+      },
+      {
+        "title": "Escopo e estado",
+        "copy": "Um nome criado dentro de uma função não deve vazar para todo o programa.",
+        "code": [
+          "function criarMensagem(nome) {",
+          "  const texto = \"Olá, \" + nome;",
+          "  return texto;",
+          "}"
+        ],
+        "focus": 1,
+        "focusLabel": "proteger o escopo",
+        "explanation": "texto só existe dentro da função, o que evita colisões acidentais."
+      },
+      {
+        "title": "A página é um documento",
+        "copy": "O DOM permite encontrar elementos reais da página.",
+        "code": [
+          "const titulo = document.querySelector(\"h1\");",
+          "titulo.textContent = \"Aprender fazendo\";"
+        ],
+        "focus": 0,
+        "focusLabel": "selecionar o DOM",
+        "explanation": "querySelector devolve o primeiro elemento que corresponde ao seletor."
+      },
+      {
+        "title": "Responder a eventos",
+        "copy": "A interface torna-se interativa quando escuta ações do utilizador.",
+        "code": [
+          "botao.addEventListener(\"click\", () => {",
+          "  mensagem.textContent = \"Clicaste!\";",
+          "});"
+        ],
+        "focus": 0,
+        "focusLabel": "escutar um clique",
+        "explanation": "O callback só é chamado quando o evento acontece."
+      },
+      {
+        "title": "Dados persistentes",
+        "copy": "localStorage guarda pequenas preferências no dispositivo.",
+        "code": [
+          "localStorage.setItem(\"nome\", \"Kito\");",
+          "const nome = localStorage.getItem(\"nome\");",
+          "console.log(nome);"
+        ],
+        "focus": 1,
+        "focusLabel": "guardar localmente",
+        "explanation": "Os valores são strings e permanecem depois de fechar a página."
+      },
+      {
+        "title": "Promessas e await",
+        "copy": "Operações de rede terminam mais tarde, por isso o código precisa esperar.",
+        "code": [
+          "async function carregar() {",
+          "  const resposta = await fetch(url);",
+          "  return resposta.json();",
+          "}"
+        ],
+        "focus": 1,
+        "focusLabel": "aguardar dados",
+        "explanation": "await pausa esta função até a Promise resolver, sem congelar a página inteira."
+      },
+      {
+        "title": "Módulos e arquitetura",
+        "copy": "Um projeto grande divide responsabilidades em ficheiros menores.",
+        "code": [
+          "export function formatar(valor) {",
+          "  return valor.toFixed(2);",
+          "}",
+          "import { formatar } from \"./format.js\";"
+        ],
+        "focus": 0,
+        "focusLabel": "reutilizar módulos",
+        "explanation": "export publica uma função e import torna a dependência explícita."
+      },
+      {
+        "title": "Projeto final: pensar como profissional",
+        "copy": "Agora combina dados, funções, DOM, eventos e estados num pequeno produto.",
+        "code": [
+          "const tarefas = [];",
+          "function adicionar(tarefa) { tarefas.push(tarefa); }",
+          "botao.addEventListener(\"click\", () => adicionar(input.value));"
+        ],
+        "focus": 2,
+        "focusLabel": "compor um sistema",
+        "explanation": "Um produto nasce de peças pequenas: estado, regras, interface e eventos bem separados."
+      }
     ]
   },
-  python: {
-    label: 'PYTHON',
-    steps: [
-      { title: 'Dar uma ordem', copy: 'Em Python, começamos com instruções simples e muito legíveis.', code: ['mensagem = "Olá!"', 'print(mensagem)'], focus: 1, focusLabel: 'mostrar no ecrã', explanation: 'print mostra um valor. A variável mensagem guarda o texto para podermos reutilizá-lo.' },
-      { title: 'Guardar e alterar', copy: 'Uma variável é um nome ligado a um valor. Podemos atualizar esse valor quando algo muda.', code: ['pontos = 10', 'pontos = pontos + 5', 'print(pontos)'], focus: 1, focusLabel: 'atualizar dados', explanation: 'Python lê a linha da direita primeiro: pega nos pontos atuais, soma 5 e guarda o resultado.' },
-      { title: 'Escolher um caminho', copy: 'if permite que o programa tome uma decisão com base numa condição.', code: ['idade = 18', 'if idade >= 18:', '    print("Pode entrar")'], focus: 1, focusLabel: 'decisão', explanation: 'Os dois pontos abrem o bloco. A indentação mostra ao Python quais linhas pertencem à decisão.' },
-      { title: 'Repetir uma ação', copy: 'for visita os itens de uma sequência, um de cada vez.', code: ['for numero in range(3):', '    print("Volta", numero)'], focus: 0, focusLabel: 'ciclo', explanation: 'range(3) fornece três valores. O bloco indentado corre uma vez para cada valor.' },
-      { title: 'Organizar com funções', copy: 'Uma função dá um nome a uma tarefa para podermos chamá-la quando for preciso.', code: ['def saudar(nome):', '    return "Olá, " + nome', '', 'print(saudar("Kito"))'], focus: 0, focusLabel: 'função', explanation: 'def cria uma função. O parâmetro nome recebe um valor e return devolve o resultado para quem chamou.' }
+  "python": {
+    "label": "PYTHON",
+    "steps": [
+      {
+        "title": "O primeiro programa",
+        "copy": "Python começa com instruções legíveis e valores simples.",
+        "code": [
+          "mensagem = \"Olá!\"",
+          "print(mensagem)"
+        ],
+        "focus": 1,
+        "focusLabel": "mostrar um valor",
+        "explanation": "A variável guarda o texto e print apresenta-o."
+      },
+      {
+        "title": "Tipos e conversões",
+        "copy": "Uma entrada de teclado chega como texto e pode precisar de conversão.",
+        "code": [
+          "idade_texto = \"18\"",
+          "idade = int(idade_texto)",
+          "print(idade + 1)"
+        ],
+        "focus": 1,
+        "focusLabel": "converter para inteiro",
+        "explanation": "int converte texto num número inteiro quando o conteúdo é válido."
+      },
+      {
+        "title": "Condições",
+        "copy": "if escolhe um bloco quando uma expressão é verdadeira.",
+        "code": [
+          "pontos = 12",
+          "if pontos >= 10:",
+          "    print(\"Nível aberto\")"
+        ],
+        "focus": 1,
+        "focusLabel": "testar uma regra",
+        "explanation": "Os dois pontos e a indentação definem o corpo do if."
+      },
+      {
+        "title": "Alternativas",
+        "copy": "else cobre o caminho contrário.",
+        "code": [
+          "if pontos >= 10:",
+          "    print(\"Avançar\")",
+          "else:",
+          "    print(\"Praticar\")"
+        ],
+        "focus": 0,
+        "focusLabel": "criar dois caminhos",
+        "explanation": "Apenas o bloco compatível com a condição será executado."
+      },
+      {
+        "title": "Ciclos for",
+        "copy": "for visita os valores de uma sequência.",
+        "code": [
+          "for numero in range(1, 4):",
+          "    print(numero)"
+        ],
+        "focus": 0,
+        "focusLabel": "repetir com limite",
+        "explanation": "range(1, 4) fornece 1, 2 e 3; o último limite fica de fora."
+      },
+      {
+        "title": "Ciclos while",
+        "copy": "while repete enquanto a condição continuar verdadeira.",
+        "code": [
+          "tentativas = 0",
+          "while tentativas < 3:",
+          "    tentativas += 1"
+        ],
+        "focus": 1,
+        "focusLabel": "controlar a paragem",
+        "explanation": "Atualizar tentativas é essencial para o ciclo terminar."
+      },
+      {
+        "title": "Listas",
+        "copy": "Listas guardam uma coleção que pode mudar.",
+        "code": [
+          "tarefas = [\"estudar\", \"praticar\"]",
+          "tarefas.append(\"rever\")",
+          "print(tarefas[0])"
+        ],
+        "focus": 1,
+        "focusLabel": "adicionar e indexar",
+        "explanation": "append adiciona um item e o índice zero seleciona o primeiro."
+      },
+      {
+        "title": "Dicionários",
+        "copy": "Dicionários ligam chaves a valores.",
+        "code": [
+          "aluno = {\"nome\": \"Kito\", \"xp\": 40}",
+          "aluno[\"xp\"] += 10",
+          "print(aluno[\"xp\"])"
+        ],
+        "focus": 1,
+        "focusLabel": "usar chave e valor",
+        "explanation": "A chave xp identifica o valor que queremos atualizar."
+      },
+      {
+        "title": "Funções",
+        "copy": "Funções dão nome a tarefas e recebem dados.",
+        "code": [
+          "def dobro(numero):",
+          "    return numero * 2",
+          "print(dobro(4))"
+        ],
+        "focus": 1,
+        "focusLabel": "devolver uma resposta",
+        "explanation": "return envia o resultado da função para o código que a chamou."
+      },
+      {
+        "title": "Exceções",
+        "copy": "Entradas reais podem falhar e devem receber uma resposta útil.",
+        "code": [
+          "try:",
+          "    idade = int(entrada)",
+          "except ValueError:",
+          "    print(\"Escreve um número\")"
+        ],
+        "focus": 2,
+        "focusLabel": "tratar erro de entrada",
+        "explanation": "except ValueError apanha apenas o erro esperado da conversão."
+      },
+      {
+        "title": "Ficheiros",
+        "copy": "with gere automaticamente a abertura e o fecho de um ficheiro.",
+        "code": [
+          "with open(\"notas.txt\", encoding=\"utf-8\") as arquivo:",
+          "    texto = arquivo.read()",
+          "print(texto)"
+        ],
+        "focus": 0,
+        "focusLabel": "ler dados locais",
+        "explanation": "O contexto with fecha o recurso mesmo se algo correr mal."
+      },
+      {
+        "title": "List comprehensions",
+        "copy": "Uma expressão pode criar uma lista transformada com filtro.",
+        "code": [
+          "pares = [n * 2 for n in range(4)]",
+          "print(pares)"
+        ],
+        "focus": 0,
+        "focusLabel": "transformar coleções",
+        "explanation": "A expressão percorre n, calcula n*2 e guarda os resultados."
+      },
+      {
+        "title": "Módulos",
+        "copy": "Importar módulos permite reutilizar código e a biblioteca padrão.",
+        "code": [
+          "from math import sqrt",
+          "raiz = sqrt(81)",
+          "print(raiz)"
+        ],
+        "focus": 0,
+        "focusLabel": "usar uma biblioteca",
+        "explanation": "import torna uma ferramenta existente disponível no ficheiro atual."
+      },
+      {
+        "title": "Classes",
+        "copy": "Uma classe descreve dados e comportamentos de um tipo de objeto.",
+        "code": [
+          "class Jogador:",
+          "    def __init__(self, nome):",
+          "        self.nome = nome"
+        ],
+        "focus": 0,
+        "focusLabel": "modelar objetos",
+        "explanation": "self representa o objeto atual; __init__ prepara o seu estado inicial."
+      },
+      {
+        "title": "Iteradores e geradores",
+        "copy": "yield produz valores aos poucos, sem criar tudo de uma vez.",
+        "code": [
+          "def contar(n):",
+          "    for i in range(n):",
+          "        yield i"
+        ],
+        "focus": 2,
+        "focusLabel": "produzir sob pedido",
+        "explanation": "Um gerador pausa em yield e continua quando o próximo valor é pedido."
+      },
+      {
+        "title": "Testar pequenas regras",
+        "copy": "Testes automáticos verificam se uma função mantém o contrato.",
+        "code": [
+          "def somar(a, b):",
+          "    return a + b",
+          "assert somar(2, 3) == 5"
+        ],
+        "focus": 2,
+        "focusLabel": "proteger comportamento",
+        "explanation": "assert transforma uma expectativa em uma verificação executável."
+      },
+      {
+        "title": "Projeto final: dados e automação",
+        "copy": "Combina funções, listas, ficheiros e tratamento de erros num pequeno relatório.",
+        "code": [
+          "def total(valores):",
+          "    return sum(valores)",
+          "notas = [12, 15, 18]",
+          "print(total(notas))"
+        ],
+        "focus": 0,
+        "focusLabel": "compor uma solução",
+        "explanation": "Programas úteis combinam dados, funções e respostas claras para falhas."
+      }
     ]
   },
-  cpp: {
-    label: 'C++',
-    steps: [
-      { title: 'Ler um programa', copy: 'Em C++, começamos por perceber a ordem das instruções que o computador vai executar.', code: ['int pontos = 10;', 'cout << pontos << endl;'], focus: 1, focusLabel: 'saída', explanation: 'cout envia informação para o terminal. endl termina a linha, como carregar no Enter.' },
-      { title: 'Tipos de dados', copy: 'O tipo int diz que vamos guardar um número inteiro.', code: ['int pontos = 10;', 'int bonus = 5;', 'cout << pontos + bonus << endl;'], focus: 0, focusLabel: 'tipo inteiro', explanation: 'Declarar o tipo ajuda o compilador a saber que operações são permitidas para este valor.' },
-      { title: 'Uma decisão', copy: 'if abre um caminho que só é executado quando a condição é verdadeira.', code: ['int idade = 18;', 'if (idade >= 18) {', '    cout << "Pode entrar" << endl;', '}'], focus: 1, focusLabel: 'condição', explanation: 'As chavetas agrupam as instruções da decisão. A comparação verifica se idade é maior ou igual a 18.' },
-      { title: 'Uma repetição', copy: 'for descreve um início, uma condição e uma mudança para cada volta.', code: ['for (int i = 0; i < 3; i++) {', '    cout << i << endl;', '}'], focus: 0, focusLabel: 'ciclo for', explanation: 'i começa em zero, o ciclo continua enquanto i for menor que 3 e i++ aumenta o contador.' },
-      { title: 'Pensar em funções', copy: 'Uma função transforma uma ideia numa peça que podemos reutilizar.', code: ['int somar(int a, int b) {', '    return a + b;', '}', 'cout << somar(2, 3) << endl;'], focus: 0, focusLabel: 'função', explanation: 'A função recebe dois inteiros e devolve a soma. Depois chamamos somar com os valores que queremos.' }
+  "cpp": {
+    "label": "C++",
+    "steps": [
+      {
+        "title": "A forma de um programa",
+        "copy": "Em C++, tipos e instruções dizem ao compilador como interpretar o código.",
+        "code": [
+          "int pontos = 10;",
+          "cout << pontos << endl;"
+        ],
+        "focus": 1,
+        "focusLabel": "produzir saída",
+        "explanation": "cout envia o valor para a saída e endl termina a linha."
+      },
+      {
+        "title": "Tipos primitivos",
+        "copy": "Escolher o tipo evita ambiguidades.",
+        "code": [
+          "int idade = 18;",
+          "double media = 16.5;",
+          "bool aprovado = true;"
+        ],
+        "focus": 0,
+        "focusLabel": "declarar tipos",
+        "explanation": "int, double e bool representam categorias diferentes de valor."
+      },
+      {
+        "title": "Condições",
+        "copy": "if executa uma decisão quando a comparação é verdadeira.",
+        "code": [
+          "if (pontos >= 10) {",
+          "  cout << \"Avançar\" << endl;",
+          "}"
+        ],
+        "focus": 0,
+        "focusLabel": "avaliar uma condição",
+        "explanation": "As chavetas agrupam o bloco que depende da expressão."
+      },
+      {
+        "title": "Ciclos",
+        "copy": "for concentra início, condição e atualização.",
+        "code": [
+          "for (int i = 0; i < 3; i++) {",
+          "  cout << i << endl;",
+          "}"
+        ],
+        "focus": 0,
+        "focusLabel": "repetir com contador",
+        "explanation": "O ciclo termina quando i deixa de ser menor que 3."
+      },
+      {
+        "title": "Arrays e índices",
+        "copy": "Um array guarda valores do mesmo tipo numa sequência fixa.",
+        "code": [
+          "int notas[3] = {12, 15, 18};",
+          "cout << notas[0] << endl;"
+        ],
+        "focus": 0,
+        "focusLabel": "ler uma posição",
+        "explanation": "O primeiro elemento tem índice zero."
+      },
+      {
+        "title": "Strings",
+        "copy": "Texto precisa de um tipo e de operações próprias.",
+        "code": [
+          "std::string nome = \"Kito\";",
+          "cout << \"Olá, \" << nome << endl;"
+        ],
+        "focus": 0,
+        "focusLabel": "combinar texto",
+        "explanation": "std::string representa texto e pode ser enviado para cout."
+      },
+      {
+        "title": "Funções",
+        "copy": "Funções dividem o programa e tornam regras reutilizáveis.",
+        "code": [
+          "int somar(int a, int b) {",
+          "  return a + b;",
+          "}"
+        ],
+        "focus": 1,
+        "focusLabel": "devolver um valor",
+        "explanation": "A assinatura declara o tipo de retorno e os parâmetros."
+      },
+      {
+        "title": "Referências",
+        "copy": "Uma referência permite que a função trabalhe com o objeto original.",
+        "code": [
+          "void ganhar(int& pontos) {",
+          "  pontos += 10;",
+          "}"
+        ],
+        "focus": 0,
+        "focusLabel": "alterar estado original",
+        "explanation": "O & no parâmetro evita uma cópia e liga o nome ao valor original."
+      },
+      {
+        "title": "Structs",
+        "copy": "struct agrupa campos relacionados num novo tipo.",
+        "code": [
+          "struct Ponto {",
+          "  double x;",
+          "  double y;",
+          "};"
+        ],
+        "focus": 0,
+        "focusLabel": "modelar dados",
+        "explanation": "Um Ponto reúne coordenadas com nomes claros."
+      },
+      {
+        "title": "Classes e encapsulamento",
+        "copy": "private protege o estado e public oferece operações seguras.",
+        "code": [
+          "class Conta {",
+          "private:",
+          "  double saldo;",
+          "public:",
+          "  void depositar(double valor);",
+          "};"
+        ],
+        "focus": 1,
+        "focusLabel": "proteger invariantes",
+        "explanation": "Nem todo código deve alterar saldo diretamente; a classe controla a regra."
+      },
+      {
+        "title": "Ponteiros",
+        "copy": "Um ponteiro guarda um endereço e pode apontar para um valor.",
+        "code": [
+          "int pontos = 10;",
+          "int* referencia = &pontos;",
+          "cout << *referencia << endl;"
+        ],
+        "focus": 1,
+        "focusLabel": "seguir um endereço",
+        "explanation": "& obtém o endereço e * lê o valor guardado nele."
+      },
+      {
+        "title": "Memória e RAII",
+        "copy": "Objetos de biblioteca podem gerir recursos automaticamente.",
+        "code": [
+          "std::vector<int> notas;",
+          "notas.push_back(18);",
+          "cout << notas.size();"
+        ],
+        "focus": 0,
+        "focusLabel": "usar recursos seguros",
+        "explanation": "vector cresce conforme necessário e gere a sua memória."
+      },
+      {
+        "title": "Templates",
+        "copy": "Uma função genérica pode trabalhar com vários tipos.",
+        "code": [
+          "template <typename T>",
+          "T maior(T a, T b) {",
+          "  return a > b ? a : b;",
+          "}"
+        ],
+        "focus": 0,
+        "focusLabel": "generalizar código",
+        "explanation": "T representa um tipo que será escolhido quando a função for usada."
+      },
+      {
+        "title": "Algoritmos da biblioteca",
+        "copy": "A biblioteca padrão oferece operações testadas para coleções.",
+        "code": [
+          "std::sort(notas.begin(), notas.end());",
+          "cout << notas.front();"
+        ],
+        "focus": 0,
+        "focusLabel": "reutilizar algoritmos",
+        "explanation": "sort organiza a coleção; front lê o primeiro elemento."
+      },
+      {
+        "title": "Erros e contratos",
+        "copy": "Um programa robusto valida entradas e comunica falhas.",
+        "code": [
+          "if (valor < 0) {",
+          "  throw std::invalid_argument(\"valor inválido\");",
+          "}"
+        ],
+        "focus": 1,
+        "focusLabel": "rejeitar estado inválido",
+        "explanation": "Uma exceção informa ao chamador que o contrato não foi respeitado."
+      },
+      {
+        "title": "Projeto final: desenhar um tipo",
+        "copy": "Combina classe, métodos, coleção e validação num pequeno sistema.",
+        "code": [
+          "class Inventario {",
+          "  std::vector<std::string> itens;",
+          "public:",
+          "  void adicionar(std::string item);",
+          "};"
+        ],
+        "focus": 1,
+        "focusLabel": "compor uma arquitetura",
+        "explanation": "Separar dados e operações cria um sistema que pode crescer sem perder clareza."
+      }
     ]
   },
-  logic: {
-    label: 'LÓGICA',
-    steps: [
-      { title: 'Decompor um problema', copy: 'Antes de escrever código, transforma uma tarefa grande em passos pequenos.', code: ['1. Receber os dados', '2. Transformar os dados', '3. Mostrar o resultado'], focus: 0, focusLabel: 'entrada', explanation: 'Quase todo programa tem entrada, transformação e saída. Esta sequência dá-nos um mapa para pensar.' },
-      { title: 'Comparar', copy: 'Uma condição é uma pergunta que pode ser verdadeira ou falsa.', code: ['idade >= 18  →  verdadeiro', 'idade < 18   →  falso'], focus: 0, focusLabel: 'comparação', explanation: 'Os símbolos >, < e = ajudam o programa a comparar valores e escolher o caminho certo.' },
-      { title: 'Escolher', copy: 'Quando uma resposta é verdadeira, seguimos um caminho; quando é falsa, seguimos outro.', code: ['SE chuva', '  levar guarda-chuva', 'SENÃO', '  sair sem guarda-chuva'], focus: 0, focusLabel: 'decisão', explanation: 'Escrever a decisão em linguagem humana antes do código evita que a sintaxe esconda a ideia.' },
-      { title: 'Repetir', copy: 'Quando uma ação se repete, procuramos o padrão e descrevemos quando parar.', code: ['enquanto ainda houver itens:', '  pegar no próximo item', '  tratar o item'], focus: 0, focusLabel: 'repetição', explanation: 'Um ciclo precisa de uma condição de paragem. Sem ela, o programa pode continuar para sempre.' },
-      { title: 'Criar um algoritmo', copy: 'Agora junta os passos numa receita que outra pessoa conseguiria seguir.', code: ['receber nome', 'se nome estiver vazio:', '  pedir nome novamente', 'senão:', '  mostrar saudação'], focus: 1, focusLabel: 'regra', explanation: 'Um algoritmo claro pode ser traduzido para JavaScript, Python, C++ ou outra linguagem. Primeiro vem o raciocínio.' }
-    ]
-  }
+  "logic": {
+  "label": "LÓGICA",
+  "steps": [
+    {
+      "title": "Pensar em passos",
+      "copy": "Antes do código, transforma uma tarefa grande numa sequência concreta.",
+      "code": [
+        "1. Receber dados",
+        "2. Transformar dados",
+        "3. Mostrar resultado"
+      ],
+      "focus": 0,
+      "focusLabel": "sequência",
+      "explanation": "Entrada, processo e saída dão um mapa inicial para quase qualquer programa."
+    },
+    {
+      "title": "Encontrar padrões",
+      "copy": "Programar é reconhecer o que se repete e dar-lhe um nome.",
+      "code": [
+        "dados = [2, 4, 6]",
+        "regra: somar 2",
+        "próximo = 8"
+      ],
+      "focus": 1,
+      "focusLabel": "padrão",
+      "explanation": "Uma regra explícita permite prever o próximo passo sem adivinhar."
+    },
+    {
+      "title": "Comparar valores",
+      "copy": "Condições transformam perguntas em verdadeiro ou falso.",
+      "code": [
+        "idade >= 18  → verdadeiro",
+        "idade < 18   → falso"
+      ],
+      "focus": 0,
+      "focusLabel": "comparação",
+      "explanation": "Operadores de comparação ajudam a escolher um caminho."
+    },
+    {
+      "title": "Usar E e OU",
+      "copy": "Regras podem exigir várias condições ao mesmo tempo.",
+      "code": [
+        "temBilhete E maiorDeIdade",
+        "temBilhete OU conviteEspecial"
+      ],
+      "focus": 0,
+      "focusLabel": "lógica booleana",
+      "explanation": "E exige tudo; OU aceita pelo menos uma condição verdadeira."
+    },
+    {
+      "title": "Escolher caminhos",
+      "copy": "Uma decisão completa prevê também o que fazer quando a regra falha.",
+      "code": [
+        "SE saldo >= preço",
+        "  comprar",
+        "SENÃO",
+        "  mostrar aviso"
+      ],
+      "focus": 0,
+      "focusLabel": "decisão",
+      "explanation": "Escrever os dois caminhos evita comportamentos indefinidos."
+    },
+    {
+      "title": "Repetir com limite",
+      "copy": "Todo ciclo precisa de uma condição de paragem.",
+      "code": [
+        "enquanto contador < 3:",
+        "  mostrar contador",
+        "  aumentar contador"
+      ],
+      "focus": 0,
+      "focusLabel": "paragem",
+      "explanation": "Atualizar o contador aproxima o algoritmo do fim."
+    },
+    {
+      "title": "Trabalhar com listas",
+      "copy": "Uma lista permite tratar muitos itens com a mesma regra.",
+      "code": [
+        "para cada tarefa na lista:",
+        "  se tarefa concluída:",
+        "    contar"
+      ],
+      "focus": 0,
+      "focusLabel": "percorrer dados",
+      "explanation": "O algoritmo visita cada elemento e toma uma decisão local."
+    },
+    {
+      "title": "Escolher estruturas",
+      "copy": "A forma de guardar dados influencia a solução.",
+      "code": [
+        "lista: [\"Ana\", \"Kito\"]",
+        "mapa: {\"Ana\": 18}"
+      ],
+      "focus": 1,
+      "focusLabel": "estrutura de dados",
+      "explanation": "Lista representa sequência; mapa relaciona uma chave com um valor."
+    },
+    {
+      "title": "Dividir em funções",
+      "copy": "Uma função é uma pequena máquina com entrada e saída.",
+      "code": [
+        "função calcularTotal(itens):",
+        "  somar preços",
+        "  devolver total"
+      ],
+      "focus": 0,
+      "focusLabel": "abstração",
+      "explanation": "Dar um nome à tarefa torna o algoritmo reutilizável e testável."
+    },
+    {
+      "title": "Modelar estados",
+      "copy": "Uma aplicação muda de estado ao longo do tempo.",
+      "code": [
+        "estado = \"a jogar\"",
+        "ação: terminar partida",
+        "novo estado = \"terminado\""
+      ],
+      "focus": 1,
+      "focusLabel": "estado",
+      "explanation": "Pensar em estados e transições clarifica o que cada ação pode fazer."
+    },
+    {
+      "title": "Detetar casos-limite",
+      "copy": "Os casos vazios e os limites revelam erros escondidos.",
+      "code": [
+        "se lista está vazia:",
+        "  mostrar \"sem resultados\"",
+        "senão: procurar"
+      ],
+      "focus": 0,
+      "focusLabel": "caso-limite",
+      "explanation": "Um algoritmo robusto decide o que acontece quando não há dados."
+    },
+    {
+      "title": "Depurar por hipóteses",
+      "copy": "Um erro é uma pista, não uma sentença.",
+      "code": [
+        "observar entrada",
+        "isolar passo",
+        "testar hipótese",
+        "corrigir e repetir"
+      ],
+      "focus": 1,
+      "focusLabel": "depuração",
+      "explanation": "Mudar uma coisa de cada vez ajuda a descobrir a causa."
+    },
+    {
+      "title": "Pensar em custo",
+      "copy": "Duas soluções corretas podem gastar trabalhos diferentes.",
+      "code": [
+        "procurar item:",
+        "  verificar um a um",
+        "índice: procurar diretamente"
+      ],
+      "focus": 1,
+      "focusLabel": "eficiência",
+      "explanation": "A estrutura certa pode reduzir o trabalho quando os dados crescem."
+    },
+    {
+      "title": "Recursão e base",
+      "copy": "Uma solução recursiva precisa de um caso simples que termina.",
+      "code": [
+        "resolver(n):",
+        "  se n == 0: parar",
+        "  senão: resolver(n - 1)"
+      ],
+      "focus": 1,
+      "focusLabel": "recursão",
+      "explanation": "O caso base impede que a solução continue para sempre."
+    },
+    {
+      "title": "Escrever requisitos",
+      "copy": "Antes de implementar, transforma desejos em comportamentos verificáveis.",
+      "code": [
+        "requisito: adicionar tarefa",
+        "entrada: texto",
+        "saída: tarefa na lista"
+      ],
+      "focus": 0,
+      "focusLabel": "requisito",
+      "explanation": "Um requisito claro diz o que entra, o que acontece e como observar o resultado."
+    },
+    {
+      "title": "Testar exemplos",
+      "copy": "Um exemplo pequeno pode confirmar uma regra.",
+      "code": [
+        "entrada: [2, 3]",
+        "regra: somar",
+        "esperado: 5"
+      ],
+      "focus": 2,
+      "focusLabel": "teste",
+      "explanation": "Testar entradas conhecidas protege a solução contra regressões."
+    },
+    {
+      "title": "Projeto final: algoritmo completo",
+      "copy": "Agora junta dados, decisões, ciclos, funções e testes num plano implementável.",
+      "code": [
+        "receber tarefas",
+        "filtrar as concluídas",
+        "ordenar por prioridade",
+        "mostrar resumo"
+      ],
+      "focus": 1,
+      "focusLabel": "composição",
+      "explanation": "Um algoritmo completo é claro o bastante para ser traduzido para qualquer linguagem."
+    }
+  ]
+}
 };
-
 let teacherLanguage = null;
 let teacherStepIndex = 0;
 let teacherRenderedLines = [];

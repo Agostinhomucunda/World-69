@@ -320,3 +320,24 @@ h1,h2,h3,p { margin-top: 0; }
 
 /* Admin remains a direct/private route, never a public navigation item */
 .admin-link{display:none!important}
+
+/* Mrzinho launcher: keep the invitation visible even on narrow phones. */
+.button-mrzinho { border: 1px solid rgba(183,255,60,.55); background: rgba(183,255,60,.09); color: var(--lime); }
+.button-mrzinho:hover { background: var(--lime); color: #101310; transform: translateY(-2px); }
+@media (max-width: 700px) {
+  .site-header { min-width: 0; }
+  .site-header .brand { min-width: 0; }
+  .site-header .brand > span:last-child { min-width: 0; }
+  .site-header .brand small { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .site-header .header-actions { min-width: 0; flex: 1 1 auto; justify-content: flex-end; }
+  .header-mrzinho { flex: 0 0 auto; }
+  .header-mrzinho > span:nth-child(2) { display: inline; }
+  .header-mrzinho { padding: 7px 8px; font-size: 8px; }
+  .button-mrzinho { width: 100%; }
+}
+@media (max-width: 390px) {
+  .site-header .brand small { max-width: 105px; }
+  .header-mrzinho > span:nth-child(2) { display: none; }
+  .header-mrzinho { width: 34px; height: 34px; justify-content: center; padding: 3px; }
+  .header-mrzinho > b:last-child { display: none; }
+}

@@ -341,3 +341,26 @@
 
 /* Highly visible first-screen launcher */
 .teacher-hero-button{border-color:rgba(183,255,60,.55);background:rgba(183,255,60,.09);color:var(--lime);box-shadow:0 0 0 1px rgba(183,255,60,.08),0 8px 24px rgba(183,255,60,.1);font-weight:700}.teacher-hero-button:hover{background:var(--lime);color:#101310;transform:translateY(-2px)}.teacher-hero-icon{font-size:15px}.lab-hero-actions .teacher-hero-button{display:inline-flex;align-items:center;gap:8px}@media(max-width:700px){.lab-header{height:auto;min-height:76px;padding:13px 0}.lab-header .header-actions{min-width:0;flex-wrap:wrap;justify-content:flex-end}.lab-header .local-save-label{display:none}.mrzinho-class-button{order:-1}.lab-hero-actions{align-items:stretch;flex-direction:column;gap:11px}.lab-hero-actions .button{justify-content:center;width:100%;max-width:330px}.lab-free-note{margin-top:2px}.teacher-hero-button{min-height:45px}}@media(max-width:470px){.lab-header .header-actions{gap:7px}.mrzinho-class-button{font-size:9px;padding:9px 11px}.mrzinho-class-button:after{display:none}}
+
+/* Device-aware compact layout for CodeLab launchers and learning cards. */
+@media (max-width: 700px) {
+  .lab-shell { padding-left: clamp(12px, 4vw, 20px); padding-right: clamp(12px, 4vw, 20px); }
+  .lab-header .header-actions { overflow: visible; }
+  .lab-header .mrzinho-class-button { display: inline-flex; visibility: visible; opacity: 1; }
+  .lab-hero { gap: clamp(16px, 5vw, 28px); }
+  .lab-hero h1 { font-size: clamp(34px, 10vw, 58px); }
+  .lab-console { transform: scale(.92); transform-origin: center; margin: -12px 0; }
+  .teacher-hero-button { display: inline-flex !important; visibility: visible; min-height: 44px; }
+  .teacher-language-option { min-height: clamp(106px, 24vw, 142px); padding: clamp(11px, 3vw, 18px); }
+  .teacher-language-option strong { font-size: clamp(14px, 4vw, 17px); }
+  .track-card { padding: clamp(14px, 3vw, 21px); }
+}
+@media (max-width: 390px) {
+  .lab-header .mrzinho-class-button { font-size: 0; width: 36px; height: 36px; justify-content: center; padding: 5px; }
+  .lab-header .mrzinho-class-button:after { content: '✦'; font-size: 16px; }
+  .lab-hero { grid-template-columns: 1fr; }
+  .lab-console { display: none; }
+  .teacher-screen-shell { border-radius: 16px; }
+  .teacher-screen-top h2 { font-size: clamp(30px, 9vw, 38px); }
+  .teacher-code { min-height: 150px; max-height: 38vh; font-size: 10px; line-height: 1.65; }
+}
