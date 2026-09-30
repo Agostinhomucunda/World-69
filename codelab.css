@@ -262,3 +262,7 @@
 @media (prefers-reduced-motion: reduce) {
   .codelab-page *, .codelab-page *::before, .codelab-page *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
+
+.local-save-label{display:inline-flex;align-items:center;gap:8px;color:var(--muted);font:10px 'DM Mono';text-transform:uppercase;letter-spacing:.08em;white-space:nowrap}
+.local-save-label:before{content:'';width:7px;height:7px;border-radius:50%;background:var(--lime);box-shadow:0 0 12px rgba(183,255,60,.65)}
+@media(max-width:700px){.local-save-label{font-size:8px}.lab-header .header-link{display:none}}

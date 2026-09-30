@@ -21,8 +21,7 @@
       <nav class="header-actions" aria-label="Navegação da sala">
         <a class="header-link" href="index.html#catalogo">Catálogo</a>
         <a class="header-link" href="index.html#cursos">Cursos</a>
-      <button class="lab-login-button" id="open-auth" type="button">Entrar / criar conta <span>↗</span></button>
-        <button class="lab-user-button" id="user-chip" type="button" hidden></button>
+        <span class="local-save-label">Progresso local</span>
       </nav>
     </header>
 
@@ -70,7 +69,7 @@
             <div class="diagnostic-actions"><button class="button button-quiet" id="back-profile" type="button">← Voltar</button><button class="button button-primary" id="finish-setup" type="button">Ver o meu caminho <span>→</span></button></div>
           </div>
         </div>
-        <aside class="privacy-note"><span aria-hidden="true">⌂</span><p>O teu progresso fica guardado neste navegador. Podes experimentar sem conta; se entrares mais tarde, associamos o progresso local ao perfil deste navegador.</p></aside>
+        <aside class="privacy-note"><span aria-hidden="true">⌂</span><p>O teu progresso fica guardado neste navegador, automaticamente. Podes voltar quando quiseres no mesmo dispositivo, sem criar conta e sem depender de login.</p></aside>
       </section>
 
       <section class="lab-dashboard" id="dashboard" hidden aria-labelledby="dashboard-title">
@@ -91,18 +90,6 @@
     <footer class="lab-footer"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><i></i><b></b></span><span><strong>WORLD 69</strong><small>CODELAB</small></span></a><p>Aprende fazendo. Descansa quando precisares. O teu caminho é teu.</p><a href="index.html">Voltar ao World 69 ↗</a></footer>
   </div>
 
-  <div class="auth-overlay" id="auth-overlay" hidden>
-      <section class="auth-card" role="dialog" aria-modal="true" aria-labelledby="auth-title">
-      <button class="auth-close" id="close-auth" type="button" aria-label="Fechar">×</button>
-      <p class="eyebrow">O TEU PERFIL</p><h2 id="auth-title">Continua noutro dia.</h2><p class="auth-intro">Usa uma conta para identificar o teu perfil neste navegador. Nunca pedimos a senha do Gmail: o botão Google abre a autenticação oficial.</p>
-      <button class="google-button" id="google-signin" type="button"><span class="google-g">G</span> Continuar com Google</button>
-      <div class="auth-divider"><span>ou usa email</span></div>
-      <form id="student-auth-form"><label class="profile-name-field">Email<input id="auth-email" type="email" autocomplete="email" required></label><label class="profile-name-field">Senha<input id="auth-password" type="password" minlength="6" autocomplete="current-password" required></label><div class="auth-form-actions"><button class="button button-primary" id="email-signin" type="submit">Entrar</button><button class="text-button" id="email-signup" type="button">Criar conta</button></div></form>
-      <button class="reset-password" id="reset-password" type="button">Esqueci-me da senha</button>
-      <p class="auth-message" id="auth-message" role="status" aria-live="polite"></p>
-      <p class="auth-privacy">A experiência funciona sem conta. A conta confirma a tua identidade; nesta primeira versão, o progresso continua guardado apenas neste navegador e ainda não sincroniza entre dispositivos.</p>
-    </section>
-  </div>
   <div class="lab-toast" id="lab-toast" role="status" aria-live="polite"></div>
 </body>
 </html>

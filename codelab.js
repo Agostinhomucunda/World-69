@@ -1,33 +1,14 @@
 import { tracks, placementQuestions } from './codelab-curriculum.js';
-import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
-import {
-  GoogleAuthProvider, browserLocalPersistence, createUserWithEmailAndPassword,
-  getAuth, getRedirectResult, onAuthStateChanged, sendPasswordResetEmail,
-  setPersistence, signInWithEmailAndPassword, signInWithPopup, signInWithRedirect,
-  signOut
-} from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js';
 
 const $ = (id) => document.getElementById(id);
-const firebaseConfig = {
-  apiKey: 'AIzaSyC_FrApgE4TYfrBnq4urrWac9oiLavecMg',
-  authDomain: 'world-69.firebaseapp.com',
-  projectId: 'world-69'
-};
-const firebaseApp = initializeApp(firebaseConfig, 'World69CodeLab');
-const auth = getAuth(firebaseApp);
-auth.languageCode = 'pt';
-const appReady = setPersistence(auth, browserLocalPersistence).catch(() => {});
 
 const initialState = () => ({ version: 1, profile: null, completed: [], drafts: {}, diagnosticScore: null, recommendedTrack: 'logic' });
 let state = initialState();
-let currentUser = null;
 let selectedAvatar = '🦊';
 let selectedTrack = 'logic';
 let activeLesson = null;
 let currentHint = 0;
 let toastTimer = 0;
-let authReadyResolve;
-const authReady = new Promise((resolve) => { authReadyResolve = resolve; });
 
 function escapeHtml(value = '') {
   return String(value).replace(/[&<>"']/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
@@ -79,7 +60,7 @@ async function writeStored(key, value) {
   return saved;
 }
 
-function storageKey() { return currentUser ? `student:${currentUser.uid}` : 'guest'; }
+function storageKey() { return 'guest'; }
 
 async function loadProgress() {
   const key = storageKey();
@@ -90,13 +71,6 @@ async function loadProgress() {
     state.drafts = state.drafts && typeof state.drafts === 'object' ? state.drafts : {};
   } else {
     state = initialState();
-    if (currentUser) {
-      const guest = await readStored('guest');
-      if (guest && typeof guest === 'object' && (guest.profile || (guest.completed || []).length)) {
-        state = { ...state, ...guest, completed: [...(guest.completed || [])], drafts: { ...(guest.drafts || {}) } };
-        await writeStored(key, state);
-      }
-    }
   }
   selectedAvatar = state.profile?.avatar || '🦊';
   reflectProfileFields();
@@ -134,7 +108,6 @@ function render() {
   $('lesson-workspace').hidden = true;
   $('onboarding-card').hidden = false;
   if (hasProfile) renderDashboard();
-  updateAuthControls();
 }
 
 function renderDiagnostic() {
@@ -152,7 +125,7 @@ function countCompleted(track) { return track.lessons.filter((lesson) => state.c
 function totalCompleted() { return new Set(state.completed).size; }
 
 function renderDashboard() {
-  const name = state.profile?.name?.trim() || (currentUser?.displayName?.split(' ')[0]) || 'explorador';
+  const name = state.profile?.name?.trim() || 'explorador';
   $('student-name').textContent = name;
   $('student-avatar').textContent = state.profile?.avatar || '🦊';
   $('completed-count').textContent = String(totalCompleted());
@@ -166,8 +139,7 @@ function renderDashboard() {
     : `Pelo teu check-in, sugerimos começar por ${recommended.title}. Podes mudar de caminho quando quiseres.`;
   renderTracks();
   renderDailyMission();
-  if (!currentUser) $('workspace-save').textContent = 'Guardar no navegador';
-  else $('workspace-save').textContent = 'Guardado neste navegador';
+  $('workspace-save').textContent = 'Guardar no navegador';
 }
 
 function renderTracks() {
@@ -444,51 +416,6 @@ async function finishLesson() {
   $('lessons-panel').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
-function friendlyAuthError(error) {
-  const code = error?.code || '';
-  if (code === 'auth/unauthorized-domain') return 'Este domínio ainda precisa de ser autorizado em Firebase Authentication → Settings → Authorized domains.';
-  if (code === 'auth/operation-not-allowed') return 'Este método de entrada ainda não está ativo em Firebase Authentication → Sign-in method.';
-  if (code === 'auth/popup-closed-by-user') return 'A janela de entrada foi fechada. Quando quiseres, tenta de novo.';
-  if (code === 'auth/popup-blocked') return 'O navegador bloqueou a janela. Tenta novamente ou permite pop-ups para este site.';
-  if (code === 'auth/email-already-in-use') return 'Este email já tem conta. Experimenta entrar em vez de criar conta.';
-  if (code === 'auth/weak-password') return 'Escolhe uma senha com pelo menos 6 caracteres.';
-  if (code === 'auth/invalid-credential' || code === 'auth/invalid-login-credentials') return 'Email ou senha não reconhecidos. Confere os dados ou pede para redefinir a senha.';
-  if (code === 'auth/network-request-failed') return 'Sem ligação ao Firebase neste momento. Confere a Internet e tenta novamente.';
-  return 'Não foi possível concluir a entrada agora. Tenta novamente ou confere a configuração de autenticação do Firebase.';
-}
-
-function updateAuthControls() {
-  const openButton = $('open-auth');
-  const userChip = $('user-chip');
-  if (currentUser) {
-    openButton.hidden = true;
-    userChip.hidden = false;
-    userChip.textContent = `${state.profile?.avatar || '●'} ${currentUser.displayName?.split(' ')[0] || currentUser.email?.split('@')[0] || 'Conta'} · sair`;
-    userChip.title = `Conta autenticada: ${currentUser.email || currentUser.uid}. O progresso está guardado localmente neste navegador.`;
-  } else {
-    userChip.hidden = true;
-    openButton.hidden = false;
-  }
-}
-
-function openAuth() {
-  $('auth-overlay').hidden = false;
-  $('auth-message').textContent = '';
-  $('auth-email').focus();
-}
-
-function closeAuth() { $('auth-overlay').hidden = true; }
-
-async function setupAuth() {
-  try { await getRedirectResult(auth); } catch (error) { $('auth-message').textContent = friendlyAuthError(error); }
-  onAuthStateChanged(auth, async (user) => {
-    currentUser = user;
-    await loadProgress();
-    if (user && !$('auth-overlay').hidden) closeAuth();
-    authReadyResolve();
-  });
-}
-
 function bindEvents() {
   document.querySelectorAll('.avatar-option').forEach((button) => button.addEventListener('click', () => {
     selectedAvatar = button.dataset.avatar;
@@ -551,65 +478,15 @@ function bindEvents() {
     openTrack(selectedTrack);
   });
   $('workspace-save').addEventListener('click', () => saveProgress(true));
-  $('open-auth').addEventListener('click', openAuth);
-  $('close-auth').addEventListener('click', closeAuth);
-  $('auth-overlay').addEventListener('click', (event) => { if (event.target === $('auth-overlay')) closeAuth(); });
-  $('user-chip').addEventListener('click', async () => {
-    if (currentUser) {
-      await signOut(auth);
-      showToast('Saíste da conta. O progresso deste navegador continua guardado.');
-    }
-  });
-  $('google-signin').addEventListener('click', async () => {
-    $('auth-message').textContent = 'A abrir o acesso Google seguro…';
-    try {
-      await appReady;
-      const provider = new GoogleAuthProvider();
-      if (window.matchMedia('(max-width: 700px)').matches) await signInWithRedirect(auth, provider);
-      else await signInWithPopup(auth, provider);
-    } catch (error) { $('auth-message').textContent = friendlyAuthError(error); }
-  });
-  $('student-auth-form').addEventListener('submit', async (event) => {
-    event.preventDefault();
-    $('auth-message').textContent = 'A verificar…';
-    try {
-      await appReady;
-      await signInWithEmailAndPassword(auth, $('auth-email').value.trim(), $('auth-password').value);
-      closeAuth();
-    } catch (error) { $('auth-message').textContent = friendlyAuthError(error); }
-  });
-  $('email-signup').addEventListener('click', async () => {
-    if (!$('student-auth-form').reportValidity()) return;
-    $('auth-message').textContent = 'A criar a tua conta segura…';
-    try {
-      await appReady;
-      await createUserWithEmailAndPassword(auth, $('auth-email').value.trim(), $('auth-password').value);
-      closeAuth();
-      showToast('Conta criada. Bem-vindo ao CodeLab.');
-    } catch (error) { $('auth-message').textContent = friendlyAuthError(error); }
-  });
-  $('reset-password').addEventListener('click', async () => {
-    const email = $('auth-email').value.trim();
-    if (!email) { $('auth-message').textContent = 'Escreve o teu email no campo acima e tenta outra vez.'; return; }
-    try {
-      await sendPasswordResetEmail(auth, email);
-      $('auth-message').textContent = 'Se existir uma conta para esse email, o Firebase enviará instruções de recuperação.';
-    } catch (error) { $('auth-message').textContent = friendlyAuthError(error); }
-  });
-  document.addEventListener('keydown', (event) => { if (event.key === 'Escape' && !$('auth-overlay').hidden) closeAuth(); });
 }
 
 bindEvents();
-setupAuth().catch((error) => {
-  $('auth-message').textContent = friendlyAuthError(error);
-  loadProgress().catch(() => render());
-  authReadyResolve();
-});
+loadProgress().catch(() => render());
 
-// Expose a small, read-only QA hook for browser validation; no account data is returned.
-window.__world69CodelabReady = authReady.then(() => ({
+// Read-only QA hook: the student area is intentionally local-only.
+window.__world69CodelabReady = Promise.resolve({
   tracks: tracks.length,
   lessonCount: tracks.reduce((sum, track) => sum + track.lessons.length, 0),
   storage: 'indexeddb-with-localstorage-fallback',
-  auth: Boolean(auth)
-}));
+  auth: false
+});
