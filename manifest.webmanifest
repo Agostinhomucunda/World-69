@@ -1,0 +1,14 @@
+{
+  "name": "World 69 — Recursos digitais",
+  "short_name": "World 69",
+  "description": "Descobre recursos digitais e aprende programação no CodeLab.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#080a0d",
+  "theme_color": "#080a0d",
+  "lang": "pt-PT",
+  "icons": [
+    { "src": "assets/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

@@ -176,6 +176,16 @@ function getTrack(trackId) { return tracks.find((track) => track.id === trackId)
 function countCompleted(track) { return track.lessons.filter((lesson) => state.completed.includes(lesson.id)).length; }
 function totalCompleted() { return new Set(state.completed).size; }
 
+function languageBadge(language, compact = false) {
+  const config = {
+    javascript: ['javascript', 'devicon-javascript-plain', 'JavaScript'],
+    python: ['python', 'devicon-python-plain', 'Python'],
+    cpp: ['cpp', 'devicon-cplusplus-plain', 'C++'],
+    logic: ['logic', 'devicon-git-plain', 'Lógica']
+  }[language] || ['logic', 'devicon-git-plain', 'Lógica'];
+  return `<span class="language-mark ${config[0]}" aria-label="${config[2]}"><i class="${config[1]}" aria-hidden="true"></i>${compact ? '' : `<span>${config[2]}</span>`}</span>`;
+}
+
 function renderDashboard() {
   const name = state.profile?.name?.trim() || 'explorador';
   $('student-name').textContent = name;
@@ -255,7 +265,7 @@ function openLesson(trackId, lessonId) {
   $('lesson-story').textContent = lesson.story;
   $('lesson-explanation').innerHTML = buildLessonExplanation(lesson);
   $('mission-objective').textContent = lesson.objective;
-  $('mission-icon').textContent = track.icon;
+  $('mission-icon').innerHTML = languageBadge(lesson.kind === 'choice' ? 'logic' : lesson.language);
   $('mission-kind').textContent = lesson.language === 'cpp' ? 'DESAFIO C++ · LEITURA' : lesson.kind === 'choice' ? 'DESAFIO DE LÓGICA' : `PRÁTICA ${lesson.language.toUpperCase()}`;
   $('lesson-feedback').hidden = true;
   $('lesson-feedback').className = 'feedback-box';
@@ -293,7 +303,7 @@ function renderChallenge(lesson) {
   area.innerHTML = `<p class="challenge-prompt">${escapeHtml(lesson.prompt)}</p>
     <label class="field-caption" for="code-editor">O TEU CÓDIGO</label>
     <textarea class="code-editor" id="code-editor" spellcheck="false" autocapitalize="off" autocomplete="off" aria-label="Editor de código"></textarea>
-    <div class="editor-toolbar"><span class="editor-language">${lesson.language.toUpperCase()} · execução isolada</span><button class="run-button" id="run-code" type="button"><span aria-hidden="true">▶</span> Executar e verificar</button></div>
+    <div class="editor-toolbar"><span class="editor-language">${languageBadge(lesson.language, true)} execução isolada · Ctrl/Cmd + Enter</span><div><button class="text-button editor-reset" id="reset-code" type="button">Repor exemplo</button><button class="run-button" id="run-code" type="button"><span aria-hidden="true">▶</span> Executar e verificar</button></div></div>
     <pre class="code-output" id="code-output" aria-live="polite">A saída do teu programa aparece aqui.</pre>`;
   $('code-editor').value = typeof savedDraft === 'string' ? savedDraft : lesson.starter;
   let draftTimer = 0;
@@ -301,6 +311,26 @@ function renderChallenge(lesson) {
     state.drafts[lesson.id] = $('code-editor').value.slice(0, 5000);
     window.clearTimeout(draftTimer);
     draftTimer = window.setTimeout(() => saveProgress(), 350);
+  });
+  $('code-editor').addEventListener('keydown', (event) => {
+    if (event.key === 'Tab') {
+      event.preventDefault();
+      const start = event.target.selectionStart;
+      const end = event.target.selectionEnd;
+      event.target.setRangeText('  ', start, end, 'end');
+      event.target.dispatchEvent(new Event('input', { bubbles: true }));
+    }
+    if (event.key === 'Enter' && (event.ctrlKey || event.metaKey)) {
+      event.preventDefault();
+      $('run-code').click();
+    }
+  });
+  $('reset-code').addEventListener('click', () => {
+    $('code-editor').value = lesson.starter;
+    state.drafts[lesson.id] = lesson.starter;
+    saveProgress();
+    showOutput('Exemplo reposto. Agora experimenta mudar uma linha.');
+    $('code-editor').focus();
   });
   $('run-code').addEventListener('click', () => {
     if (lesson.language === 'python') runPythonChallenge(lesson);

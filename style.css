@@ -221,3 +221,43 @@ h1,h2,h3,p { margin-top: 0; }
 @media (prefers-reduced-motion: reduce) {
   *,*::before,*::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
+
+/* Mobile catalogue: three compact products per row */
+@media (max-width: 700px) {
+  .catalog-grid { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 10px; }
+  .product-card>img { height: 118px; }
+  .product-body { padding: 10px; }
+  .product-top { display: block; margin-bottom: 9px; }
+  .product-category { display: block; margin-bottom: 6px; font-size: 8px; }
+  .badge { padding: 4px 5px; font-size: 7px; }
+  .product-card h3 { min-height: 0; font-size: 14px; }
+  .product-card p { font-size: 9px; min-height: 82px; }
+  .product-proof { font-size: 7px; }
+  .card-action { font-size: 8px; line-height: 1.45; }
+}
+@media (max-width: 390px) {
+  .catalog-grid { gap: 7px; }
+  .product-card>img { height: 100px; }
+  .product-body { padding: 8px; }
+  .product-card h3 { font-size: 13px; }
+  .product-card p { font-size: 8px; min-height: 88px; line-height: 1.45; }
+  .card-action { font-size: 7px; }
+}
+@media (max-width: 350px) {
+  .catalog-grid { gap: 5px; }
+  .product-card>img { height: 88px; }
+  .product-body { padding: 7px; }
+  .product-card h3 { font-size: 12px; }
+  .product-card p { font-size: 7px; min-height: 96px; }
+}
+/* PWA install prompt */
+.install-prompt { position: fixed; right: 22px; bottom: 22px; z-index: 25; display: flex; align-items: center; gap: 18px; width: min(420px, calc(100vw - 30px)); padding: 17px; border: 1px solid rgba(183,255,60,.35); border-radius: 17px; background: linear-gradient(135deg,rgba(26,38,30,.98),rgba(12,16,19,.98)); box-shadow: 0 20px 70px rgba(0,0,0,.5); animation: rise .35s both; }
+.install-prompt[hidden] { display: none; }
+.install-kicker { display: block; margin-bottom: 5px; color: var(--lime); font: 8px 'DM Mono',monospace; letter-spacing: .12em; }
+.install-prompt strong { display: block; font: 600 15px 'Space Grotesk',sans-serif; }
+.install-prompt p { margin: 5px 0 0; color: var(--muted); font-size: 10px; line-height: 1.5; }
+.install-actions { display: flex; align-items: center; gap: 7px; flex: 0 0 auto; }
+.install-actions .button { padding: 10px 12px; font-size: 10px; }
+.install-dismiss { width: 29px; height: 29px; border: 1px solid var(--line); border-radius: 50%; background: transparent; color: var(--muted); cursor: pointer; font-size: 19px; line-height: 1; }
+.install-dismiss:hover { color: var(--text); border-color: var(--lime); }
+@media (max-width: 520px) { .install-prompt { right: 12px; bottom: 12px; align-items: flex-start; gap: 10px; padding: 14px; } .install-actions { flex-direction: column; } .install-actions .button { white-space: nowrap; } }

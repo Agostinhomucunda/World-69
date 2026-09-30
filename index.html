@@ -6,6 +6,7 @@
   <meta name="description" content="World 69: descubra ferramentas gratuitas, cursos digitais e produtos úteis num só lugar.">
   <meta name="theme-color" content="#080a0d">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="manifest" href="manifest.webmanifest">
   <title>World 69 — Recursos digitais para ir mais longe</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -121,6 +122,8 @@
   </div>
 
   <a class="floating-whatsapp" href="https://wa.me/244951875350?text=Ol%C3%A1%20World%2069%2C%20vim%20pelo%20site." target="_blank" rel="noopener noreferrer" aria-label="Contactar World 69 pelo WhatsApp"><span class="whatsapp-icon" aria-hidden="true">WA</span><span>Falar connosco</span></a>
+
+  <aside class="install-prompt" id="install-prompt" hidden><div><span class="install-kicker">WORLD 69 · APP</span><strong>Instala o teu próximo recurso.</strong><p>Adiciona o World 69 ao teu ecrã para voltar mais depressa ao catálogo e ao CodeLab.</p></div><div class="install-actions"><button class="button button-primary" id="install-app" type="button">Instalar app</button><button class="install-dismiss" id="dismiss-install" type="button" aria-label="Dispensar sugestão">×</button></div></aside>
 
   <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="mName">
     <div class="modal-box">
@@ -272,6 +275,7 @@
 
     render();
     loadPaid();
-  </script>
+  </div>
+  <script src="pwa.js" defer></script>
 </body>
 </html>
