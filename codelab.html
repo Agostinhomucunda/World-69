@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080a0d">
+  <meta name="description" content="Aprende programação fazendo no World 69 CodeLab. Missões curtas, prática e progresso ao teu ritmo.">
+  <title>CodeLab — Aprende programação fazendo | World 69</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="codelab.css">
+  <script type="module" src="codelab.js"></script>
+</head>
+<body class="codelab-page">
+  <div class="site-shell lab-shell">
+    <header class="site-header lab-header">
+      <a class="brand" href="index.html" aria-label="World 69 — início"><span class="brand-mark" aria-hidden="true"><i></i><b></b></span><span><strong>WORLD 69</strong><small>CODELAB / aprender fazendo</small></span></a>
+      <nav class="header-actions" aria-label="Navegação da sala">
+        <a class="header-link" href="index.html#catalogo">Catálogo</a>
+        <a class="header-link" href="index.html#cursos">Cursos</a>
+      <button class="lab-login-button" id="open-auth" type="button">Entrar / criar conta <span>↗</span></button>
+        <button class="lab-user-button" id="user-chip" type="button" hidden></button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="lab-hero" aria-labelledby="lab-title">
+        <div class="lab-hero-copy">
+          <p class="eyebrow"><span class="pulse-dot"></span> WORLD 69 CODELAB · APRENDER FAZENDO</p>
+          <h1 id="lab-title">A tua próxima<br><em>linha de código.</em></h1>
+          <p>Missões curtas, prática a sério e espaço para errar sem medo. Aprende ao teu ritmo — cinco minutos já contam.</p>
+          <div class="lab-hero-actions">
+            <a class="button button-primary" href="#lab-path">Começar uma missão <span>↓</span></a>
+            <span class="lab-free-note"><span aria-hidden="true">✳</span> experimenta grátis, sem conta</span>
+          </div>
+          <div class="lab-hero-proof"><span class="proof-mark">✓</span> Sem rankings obrigatórios. Sem perder progresso por fazer uma pausa.</div>
+        </div>
+        <div class="lab-console" aria-label="Prévia de uma missão de programação">
+          <div class="console-top"><span><i></i><i></i><i></i></span><span>mission_001.js</span><span>● PRÁTICA</span></div>
+          <pre><code><span class="code-purple">var</span> missão = <span class="code-green">"ideia"</span>;
+<span class="code-purple">if</span> (curiosidade) {
+  aprender(<span class="code-green">"fazendo"</span>);
+  tentarDeNovo();
+}
+<span class="code-blue">console</span>.<span class="code-yellow">log</span>(<span class="code-green">"consegui!"</span>);</code></pre>
+          <div class="console-footer"><span>✦ 1 missão de cada vez</span><span>SEM PRESSA</span></div>
+          <div class="console-sticker">FEITO POR TI<br><strong>↗</strong></div>
+        </div>
+      </section>
+
+      <section class="lab-path" id="lab-path" aria-labelledby="path-title">
+        <div class="lab-section-heading"><div><p class="eyebrow">01 / O TEU PONTO DE PARTIDA</p><h2 id="path-title">Começa como estás.</h2><p class="section-intro">Escolhe um avatar e um objetivo. Se ainda não sabes nada, está perfeito: começamos do zero.</p></div><span class="step-chip"><span>1</span> PERFIL RÁPIDO</span></div>
+        <div class="onboarding-card" id="onboarding-card">
+          <div class="onboarding-progress"><span class="onboarding-progress-fill" id="setup-progress"></span></div>
+          <div class="setup-step" id="setup-profile">
+            <div class="setup-heading"><span class="setup-index">A / 02</span><h3>Como te chamamos?</h3><p>Um nome ou nickname basta. Não pedimos dados pessoais desnecessários.</p></div>
+            <label class="profile-name-field">O teu nome <span>opcional</span><input id="profile-name" maxlength="24" placeholder="Ex.: Kito" autocomplete="nickname"></label>
+            <div class="avatar-picker"><p class="field-caption">ESCOLHE UM AVATAR</p><div class="avatar-options" role="group" aria-label="Escolher avatar">
+              <button type="button" class="avatar-option is-selected" data-avatar="🦊" aria-label="Raposa">🦊</button><button type="button" class="avatar-option" data-avatar="🐼" aria-label="Panda">🐼</button><button type="button" class="avatar-option" data-avatar="🐙" aria-label="Polvo">🐙</button><button type="button" class="avatar-option" data-avatar="🦉" aria-label="Coruja">🦉</button><button type="button" class="avatar-option" data-avatar="🐢" aria-label="Tartaruga">🐢</button><button type="button" class="avatar-option" data-avatar="🚀" aria-label="Foguetão">🚀</button>
+            </div></div>
+            <label class="profile-select">O que gostavas de fazer com programação?<select id="profile-goal"><option value="games">Criar jogos e coisas interativas</option><option value="web">Fazer sites e aplicações</option><option value="automation">Automatizar tarefas</option><option value="data">Trabalhar com dados e IA</option><option value="curious">Ainda estou a descobrir</option></select></label>
+            <button class="button button-primary setup-next" id="to-diagnostic" type="button">Continuar <span>→</span></button>
+          </div>
+          <div class="setup-step" id="setup-diagnostic" hidden>
+            <div class="setup-heading"><span class="setup-index">B / 02</span><h3>Um check-in sem nota.</h3><p>Quatro perguntas rápidas só para encontrar um bom começo. Podes dizer “ainda não sei”.</p></div>
+            <div class="diagnostic-list" id="diagnostic-list"></div>
+            <div class="diagnostic-actions"><button class="button button-quiet" id="back-profile" type="button">← Voltar</button><button class="button button-primary" id="finish-setup" type="button">Ver o meu caminho <span>→</span></button></div>
+          </div>
+        </div>
+        <aside class="privacy-note"><span aria-hidden="true">⌂</span><p>O teu progresso fica guardado neste navegador. Podes experimentar sem conta; se entrares mais tarde, associamos o progresso local ao perfil deste navegador.</p></aside>
+      </section>
+
+      <section class="lab-dashboard" id="dashboard" hidden aria-labelledby="dashboard-title">
+        <div class="dashboard-welcome"><div><p class="eyebrow">02 / A TUA BANCADA</p><h2 id="dashboard-title">Vamos construir, <span id="student-name">explorador</span>.</h2><p id="recommendation-copy">O teu caminho está pronto para começar.</p></div><div class="student-avatar" id="student-avatar" aria-hidden="true">🦊</div></div>
+        <div class="progress-strip"><div class="progress-main"><span class="progress-symbol">✦</span><div><span class="progress-label">PROGRESSO DA SALA</span><strong id="progress-summary">0 missões concluídas</strong></div></div><div class="progress-metrics"><div><strong id="xp-total">0</strong><span>XP</span></div><div><strong id="completed-count">0</strong><span>MISSÕES</span></div><div class="progress-track"><span id="overall-progress"></span></div></div></div>
+        <div class="daily-mission" id="daily-mission"><div class="daily-stamp"><span>✳</span><small>MISSÃO<br>DE HOJE</small></div><div class="daily-copy"><p class="eyebrow">UMA IDEIA, UNS MINUTOS</p><h3 id="daily-title">Escolhe o teu primeiro desafio</h3><p id="daily-description">Sem sequência obrigatória. Se hoje não der, a missão continua à tua espera.</p></div><button class="button button-primary" id="daily-start" type="button">Começar <span>→</span></button></div>
+        <div class="track-heading"><div><p class="eyebrow">03 / MAPA DE APRENDIZAGEM</p><h2>Trilhas para explorar.</h2></div><button class="text-button" id="edit-profile" type="button">Ajustar o meu perfil ↗</button></div>
+        <div class="track-grid" id="track-grid"></div>
+        <div class="lessons-panel" id="lessons-panel" hidden><div class="lessons-heading"><button class="back-track" id="back-tracks" type="button">← Todas as trilhas</button><p class="eyebrow" id="lessons-kicker">TRILHA</p><h2 id="lessons-title">Missões</h2><p id="lessons-intro"></p></div><div class="lesson-list" id="lesson-list"></div></div>
+      </section>
+
+      <section class="lesson-workspace" id="lesson-workspace" hidden aria-labelledby="lesson-title">
+        <div class="workspace-top"><button class="back-track" id="exit-lesson" type="button">← Voltar às missões</button><span class="workspace-progress" id="workspace-progress">MISSÃO 01</span><button class="workspace-save" id="workspace-save" type="button">Guardar progresso</button></div>
+        <div class="workspace-layout"><article class="lesson-main"><p class="eyebrow" id="lesson-meta">MISSÃO · 5 MIN</p><h2 id="lesson-title"></h2><p class="lesson-story" id="lesson-story"></p><div class="lesson-explain"><span class="explain-icon">✳</span><div><p class="field-caption">IDEIA RÁPIDA</p><div id="lesson-explanation"></div></div></div><div class="challenge-area" id="challenge-area"></div><div class="feedback-box" id="lesson-feedback" aria-live="polite" hidden></div><div class="hint-row"><button class="text-button" id="hint-button" type="button">Dica 1 / 2</button><button class="text-button" id="solution-button" type="button">Ver uma solução</button></div><div class="hint-content" id="hint-content" hidden></div><button class="button button-primary complete-button" id="complete-lesson" type="button" hidden>Missão concluída <span>✓</span></button></article><aside class="workspace-side"><div class="mission-card"><span class="mission-icon" id="mission-icon">⌘</span><p class="eyebrow">O QUE VAIS TREINAR</p><h3 id="mission-objective"></h3><div class="mission-side-rule"></div><p class="mission-kind" id="mission-kind">PRÁTICA GUIADA</p><p class="encouragement">Uma tentativa é progresso. Errar mostra-nos o que praticar a seguir.</p></div><div class="streak-card"><span>◷</span><p><strong>Ao teu ritmo.</strong><br>Sem punição por fazer uma pausa.</p></div></aside></div>
+      </section>
+    </main>
+
+    <footer class="lab-footer"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><i></i><b></b></span><span><strong>WORLD 69</strong><small>CODELAB</small></span></a><p>Aprende fazendo. Descansa quando precisares. O teu caminho é teu.</p><a href="index.html">Voltar ao World 69 ↗</a></footer>
+  </div>
+
+  <div class="auth-overlay" id="auth-overlay" hidden>
+      <section class="auth-card" role="dialog" aria-modal="true" aria-labelledby="auth-title">
+      <button class="auth-close" id="close-auth" type="button" aria-label="Fechar">×</button>
+      <p class="eyebrow">O TEU PERFIL</p><h2 id="auth-title">Continua noutro dia.</h2><p class="auth-intro">Usa uma conta para identificar o teu perfil neste navegador. Nunca pedimos a senha do Gmail: o botão Google abre a autenticação oficial.</p>
+      <button class="google-button" id="google-signin" type="button"><span class="google-g">G</span> Continuar com Google</button>
+      <div class="auth-divider"><span>ou usa email</span></div>
+      <form id="student-auth-form"><label class="profile-name-field">Email<input id="auth-email" type="email" autocomplete="email" required></label><label class="profile-name-field">Senha<input id="auth-password" type="password" minlength="6" autocomplete="current-password" required></label><div class="auth-form-actions"><button class="button button-primary" id="email-signin" type="submit">Entrar</button><button class="text-button" id="email-signup" type="button">Criar conta</button></div></form>
+      <button class="reset-password" id="reset-password" type="button">Esqueci-me da senha</button>
+      <p class="auth-message" id="auth-message" role="status" aria-live="polite"></p>
+      <p class="auth-privacy">A experiência funciona sem conta. A conta confirma a tua identidade; nesta primeira versão, o progresso continua guardado apenas neste navegador e ainda não sincroniza entre dispositivos.</p>
+    </section>
+  </div>
+  <div class="lab-toast" id="lab-toast" role="status" aria-live="polite"></div>
+</body>
+</html>

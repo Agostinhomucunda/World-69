@@ -13,6 +13,10 @@ Montra digital em português para descobrir ferramentas, software e recursos út
 - `.github/workflows/catalog-collector.yml` — execução agendada do coletor.
 - `style.css` — sistema visual responsivo.
 - `login.html`, `admin.html`, `admin.css` — autenticação e gestão de produtos premium.
+- `codelab.html`, `codelab.css`, `codelab.js` — sala interativa de aprendizagem, perfil, diagnóstico e trilhas.
+- `codelab-curriculum.js` — conteúdos de lógica, JavaScript, Python e C++ guiado.
+- `codelab-runner.js` — executor de JavaScript limitado ao interpretador educativo.
+- `codelab-python-sandbox.html` — executor Python Pyodide em iframe isolado com CSP.
 
 ## Como o catálogo automático funciona
 
@@ -38,3 +42,9 @@ python3 -m http.server 4173
 ```
 
 Abra `http://localhost:4173`. O Firebase continua a ser configurado nos módulos HTML existentes. Nunca coloque credenciais privadas no repositório; a chave do navegador Firebase é pública e deve ser protegida por regras adequadas no Firebase.
+
+### CodeLab
+
+Abre `codelab.html`. A experiência inclui diagnóstico de nível sem nota, avatar, quatro trilhas, missões curtas, dicas e progresso local no navegador. JavaScript é interpretado num Web Worker com acesso apenas a `console.log`/`print`, sem o DOM nem APIs de rede. Python corre localmente com Pyodide num iframe de origem isolada; o primeiro carregamento precisa de Internet. A trilha C++ começa com desafios guiados de leitura e lógica; ainda não envia código dos alunos a um compilador remoto.
+
+Google e email/senha usam o Firebase Authentication existente. A autenticação estudantil usa uma app Firebase nomeada, isolada da sessão admin. **Configuração necessária antes de o login funcionar no site público:** no Console Firebase do projeto `world-69`, vai a **Authentication → Settings → Authorized domains** e adiciona `agostinhomucunda.github.io`; em **Authentication → Sign-in method**, ativa Google e Email/Password se estiverem desativados. A leitura pública dos domínios autorizados feita em 30-09-2026 confirmou que o domínio do GitHub Pages ainda não consta nessa lista; os métodos de entrada não puderam ser confirmados pela API pública. Até concluir essa configuração, as missões continuam disponíveis sem conta e o progresso fica no navegador. Não há sincronização de progresso entre dispositivos. Não foram encontradas regras Firestore próprias para estudantes, por isso o CodeLab não escreve na base de dados nem modifica o sistema de produtos/admin. Para sincronizar ou oferecer um tutor de IA/compilador C++ remoto, primeiro definir regras por UID, limites/custos e isolamento do executor; as notas estão em `CODELAB-TECH-NOTES.md`.

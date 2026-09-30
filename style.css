@@ -29,6 +29,11 @@ button,input { font: inherit; }
 .header-link { color: var(--muted); transition: color .2s; }
 .header-link:hover,.header-link:focus-visible { color: var(--text); }
 .admin-link,.header-whatsapp { border: 1px solid var(--line); padding: 10px 14px; border-radius: 999px; white-space: nowrap; transition: border-color .2s,background .2s; }
+.codelab-link { border: 1px solid rgba(183,255,60,.42); padding: 10px 14px; border-radius: 999px; color: var(--lime); white-space: nowrap; background: rgba(183,255,60,.055); transition: border-color .2s,background .2s,transform .2s; }
+.codelab-link:hover,.codelab-link:focus-visible { border-color: var(--lime); background: rgba(183,255,60,.13); transform: translateY(-1px); }
+.codelab-link span { margin-left: 4px; }
+.button-lab { border: 1px solid rgba(183,255,60,.36); background: rgba(183,255,60,.08); color: var(--lime); }
+.button-lab:hover { transform: translateY(-2px); border-color: var(--lime); background: rgba(183,255,60,.15); }
 .admin-link:hover,.header-whatsapp:hover { border-color: rgba(183,255,60,.48); background: rgba(183,255,60,.06); }
 .admin-link span,.header-whatsapp span { color: var(--lime); margin-left: 5px; }
 .header-whatsapp { color: var(--lime); }
@@ -153,6 +158,7 @@ h1,h2,h3,p { margin-top: 0; }
   .site-header { height: 76px; gap: 12px; }
   .header-actions { gap: 11px; }
   .header-link { display: none; }
+  .codelab-link { padding: 8px 9px; font-size: 10px; }
   .admin-link { padding: 8px 10px; font-size: 10px; }
   .header-whatsapp { padding: 8px 10px; font-size: 10px; }
   .hero { display: block; padding: 70px 0 75px; min-height: 0; }
@@ -195,6 +201,7 @@ h1,h2,h3,p { margin-top: 0; }
   .header-actions { gap: 7px; }
   .admin-link { padding: 7px 8px; }
   .header-whatsapp { padding: 7px 8px; }
+  .codelab-link { padding: 7px 8px; font-size: 9px; }
   .hero h1 { font-size: 50px; }
   .hero-actions { align-items: stretch; }
   .button { padding: 13px 14px; }

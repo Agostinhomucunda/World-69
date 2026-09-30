@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' 'wasm-unsafe-eval' https://cdn.jsdelivr.net; connect-src https://cdn.jsdelivr.net; style-src 'unsafe-inline'; img-src data:; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Executor Python isolado</title>
+</head>
+<body>
+<script type="module">
+import { loadPyodide } from 'https://cdn.jsdelivr.net/pyodide/v314.0.7/full/pyodide.mjs';
+
+const MAX_SOURCE = 5000;
+const MAX_OUTPUT = 1200;
+const post = (message) => parent.postMessage(message, '*');
+let pyodide;
+let isBusy = false;
+
+try {
+  pyodide = await loadPyodide({ indexURL: 'https://cdn.jsdelivr.net/pyodide/v314.0.7/full/' });
+} catch (error) {
+  post({ type: 'boot-error', message: 'Não foi possível carregar o motor Python. Confere a ligação à Internet e tenta novamente.' });
+}
+
+window.addEventListener('message', async (event) => {
+  if (event.source !== parent || !pyodide || isBusy) return;
+  const data = event.data;
+  if (!data || data.type !== 'run' || typeof data.nonce !== 'string' || typeof data.source !== 'string') return;
+  if (data.source.length > MAX_SOURCE) {
+    post({ type: 'run-error', nonce: data.nonce, message: 'O código é demasiado longo para este desafio.' });
+    return;
+  }
+  isBusy = true;
+  let output = '';
+  let stderr = '';
+  try {
+    pyodide.setStdout({ batched: (text) => { output = (output + text + '\n').slice(0, MAX_OUTPUT); } });
+    pyodide.setStderr({ batched: (text) => { stderr = (stderr + text + '\n').slice(0, MAX_OUTPUT); } });
+    await pyodide.runPythonAsync(data.source);
+    post({ type: 'result', nonce: data.nonce, output: output.trim(), stderr: stderr.trim() });
+  } catch (error) {
+    post({ type: 'run-error', nonce: data.nonce, message: String(error?.message || 'O Python encontrou um erro.').slice(0, 500) });
+  } finally {
+    isBusy = false;
+  }
+});
+if (pyodide) post({ type: 'ready' });
+</script>
+</body>
+</html>
