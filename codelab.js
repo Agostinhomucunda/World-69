@@ -763,6 +763,7 @@ function startTeacherLesson(language) {
 
 function bindTeacherClass() {
   $('mrzinho-class-button')?.addEventListener('click', openTeacherClass);
+  $('teacher-hero-button')?.addEventListener('click', openTeacherClass);
   $('teacher-close')?.addEventListener('click', closeTeacherClass);
   $('mrzinho-class-screen')?.addEventListener('click', (event) => { if (event.target === $('mrzinho-class-screen')) closeTeacherClass(); });
   document.querySelectorAll('[data-teacher-language]').forEach((button) => button.addEventListener('click', () => startTeacherLesson(button.dataset.teacherLanguage)));
