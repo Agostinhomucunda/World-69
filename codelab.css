@@ -370,3 +370,40 @@
 .teacher-speak{border:1px solid rgba(91,214,255,.35);border-radius:999px;padding:12px 16px;background:transparent;color:var(--blue);cursor:pointer;font:10px 'DM Mono',monospace}.teacher-speak:hover{border-color:var(--blue);background:rgba(91,214,255,.08)}
 @media(max-width:470px){.teacher-speak{width:100%}}
 .mrzinho-voice-picker{display:flex;align-items:center;gap:5px;color:var(--muted);font:8px 'DM Mono',monospace;text-transform:uppercase;letter-spacing:.06em}.mrzinho-voice-picker select{max-width:175px;border:1px solid rgba(183,255,60,.25);border-radius:999px;padding:6px 8px;background:#0d1416;color:var(--text);font:8px 'DM Mono',monospace;outline:0}.mrzinho-voice-picker select:focus{border-color:var(--lime)}
+
+/* Missões: seleção curta, explicação do Mrzinho e um único espaço de prática. */
+.track-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+.track-card { display: flex; min-height: 70px; align-items: center; gap: 13px; padding: 12px 15px; color: var(--text); cursor: pointer; text-align: left; }
+.track-card:hover,.track-card:focus-visible { border-color: var(--lime); background: rgba(183,255,60,.055); outline: 0; }
+.track-card .track-icon { flex: 0 0 42px; width: 42px; height: 42px; margin: 0; }
+.track-card .track-icon .language-mark { justify-content: center; }
+.track-card h3 { min-width: 0; margin: 0; font: 600 14px/1.25 'Space Grotesk',sans-serif; }
+.track-choice-arrow { margin-left: auto; color: var(--muted); font: 14px 'DM Mono',monospace; }
+.track-card:nth-child(4) .track-icon { color: var(--lime); border-color: rgba(183,255,60,.25); background: rgba(183,255,60,.07); }
+.track-heading .section-intro { margin-top: 8px; }
+.lesson-workspace { padding-top: 28px; }
+.workspace-layout { grid-template-columns: minmax(0, 1fr); max-width: 900px; margin-inline: auto; }
+.lesson-main { padding: clamp(20px, 4vw, 34px); }
+.lesson-story { margin-bottom: 18px; }
+.mrzinho-mission-intro { margin-top: 20px; padding: clamp(16px, 3vw, 24px); border: 1px solid rgba(183,255,60,.24); border-radius: 15px; background: linear-gradient(135deg,rgba(183,255,60,.07),rgba(91,214,255,.025) 70%); }
+.mission-guide-heading { display: grid; grid-template-columns: 42px minmax(0,1fr); align-items: start; gap: 13px; }
+.mission-guide-icon { display: grid; place-items: center; width: 40px; height: 40px; border: 1px solid rgba(183,255,60,.35); border-radius: 13px; background: rgba(183,255,60,.09); color: var(--lime); font-size: 18px; }
+.mission-guide-heading .field-caption { margin: 2px 0 6px; color: var(--lime); }
+.mission-guide-heading h3 { margin: 0 0 7px; font: 600 18px 'Space Grotesk',sans-serif; }
+.mission-guide-copy { margin: 0; color: #c1cccf; font-size: 11px; line-height: 1.7; }
+.mission-example { margin: 16px 0; padding: 13px 15px; overflow: hidden; border: 1px solid rgba(91,214,255,.2); border-radius: 10px; background: #07090c; }
+.mission-example .example-label { display: block; margin-bottom: 9px; color: var(--blue); font: 8px 'DM Mono',monospace; letter-spacing: .1em; }
+.mission-example pre { margin: 0; overflow: auto; color: #dce8e7; font: 12px/1.75 'DM Mono',monospace; tab-size: 2; }
+.mrzinho-mission-intro .button { min-height: 42px; }
+.mission-practice { margin-top: 18px; }
+.mission-practice[hidden],.mrzinho-mission-intro[hidden] { display: none !important; }
+.mission-practice .challenge-area { padding: clamp(15px, 3vw, 22px); }
+.mission-hint-row { margin-top: 13px; }
+.mission-hint-row .text-button { min-height: 32px; color: var(--blue); }
+.mission-hint-row .hint-content { margin-top: 6px; border-radius: 0 8px 8px 0; }
+.mission-hint-row .hint-content[hidden] { display: none !important; }
+.mission-hint-row .hint-content pre { overflow-x: auto; font: 11px/1.6 'DM Mono',monospace; }
+.mission-practice .complete-button { margin-top: 14px; }
+.mission-practice .editor-language { line-height: 1.5; }
+@media (max-width: 760px) { .track-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 470px) { .track-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; } .track-card { min-height: 64px; gap: 9px; padding: 9px; } .track-card .track-icon { flex-basis: 36px; width: 36px; height: 36px; } .track-card h3 { font-size: 12px; } .mission-guide-heading { grid-template-columns: 34px minmax(0,1fr); gap: 10px; } .mission-guide-icon { width: 34px; height: 34px; } .mission-example { padding: 11px; } .mission-example pre { font-size: 11px; } }

@@ -1,15 +1,15 @@
 import { tracks, placementQuestions } from './codelab-curriculum.js?v=20260930-code-only-v1';
+import { createEndlessMission } from './codelab-missions.js';
 
 const $ = (id) => document.getElementById(id);
 
-const initialState = () => ({ version: 1, profile: null, completed: [], drafts: {}, diagnosticScore: null, recommendedTrack: 'logic', missionCursor: 0 });
+const initialState = () => ({ version: 2, profile: null, completed: [], drafts: {}, diagnosticScore: null, recommendedTrack: 'logic', missionCursor: 0, endlessProgress: {} });
 let state = initialState();
 let selectedAvatar = '🦊';
 let selectedTrack = 'logic';
 let activeLesson = null;
 let currentHint = 0;
 let toastTimer = 0;
-let lessonReady = false;
 
 function escapeHtml(value = '') {
   return String(value).replace(/[&<>"']/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
@@ -70,6 +70,7 @@ async function loadProgress() {
     state = { ...initialState(), ...stored };
     state.completed = Array.isArray(state.completed) ? state.completed : [];
     state.drafts = state.drafts && typeof state.drafts === 'object' ? state.drafts : {};
+    state.endlessProgress = state.endlessProgress && typeof state.endlessProgress === 'object' ? state.endlessProgress : {};
   } else {
     state = initialState();
   }
@@ -206,14 +207,16 @@ function highlightCode(source = '') {
 }
 
 function renderMrzinhoClass(lesson) {
-  const example = $('lesson-class-example');
-  const copy = $('lesson-class-copy');
-  if (!example || !copy) return;
+  const example = $('mission-example');
   const language = lesson.language === 'python' ? 'Python' : lesson.language === 'cpp' ? 'C++' : lesson.language === 'javascript' ? 'JavaScript' : 'lógica';
-  copy.textContent = `Antes de resolver, vamos observar uma ideia em ${language}. Eu mostro um exemplo, explico cada parte e só depois passas ao quadro.`;
-  example.innerHTML = `<span class="example-label">EXEMPLO DO PROFESSOR · ${language.toUpperCase()}</span><pre><code>${highlightCode(lessonExample(lesson))}</code></pre><p>${escapeHtml(lesson.lesson)}</p>`;
-  example.hidden = false;
-  $('lesson-ready-button').textContent = 'Já sei · Resolver agora →';
+  if (!example) return;
+  const sample = typeof lesson.starter === 'string' ? lesson.starter : lessonExample(lesson);
+  $('mission-guide-title').textContent = `Vamos praticar ${language}`;
+  $('lesson-explanation').textContent = lesson.lesson || lesson.prompt || 'Observa o exemplo. Depois vamos resolver juntos, passo a passo.';
+  example.innerHTML = `<span class="example-label">EXEMPLO · ${language.toUpperCase()}</span><pre><code>${highlightCode(sample)}</code></pre>`;
+  $('mission-intro').hidden = false;
+  $('mission-practice').hidden = true;
+  $('mission-understood').innerHTML = 'Entendi · mostrar desafio <span>→</span>';
 }
 
 function reflectProfileFields() {
@@ -274,85 +277,59 @@ function renderDashboard() {
     ? 'Escolhe uma trilha e começa pela missão que te chamar.'
     : `Pelo teu check-in, sugerimos começar por ${recommended.title}. Podes mudar de caminho quando quiseres.`;
   renderTracks();
-  renderDailyMission();
-  $('workspace-save').textContent = 'Guardar no navegador';
+  $('workspace-save').textContent = 'Guardar rascunho';
 }
 
 function renderTracks() {
-  $('track-grid').innerHTML = tracks.map((track) => {
-    const completed = countCompleted(track);
-    const percent = Math.round(completed / track.lessons.length * 100);
-    return `<article class="track-card">
-      <div class="track-card-top"><span class="track-icon">${languageBadge(trackLanguage(track))}</span><span class="track-level">${escapeHtml(track.level)}</span></div>
-      <h3>${escapeHtml(track.title)}</h3><span class="track-subtitle">${escapeHtml(track.subtitle)}</span>
-      <p>${escapeHtml(track.description)}</p>
-      <div class="track-card-bottom"><span>${completed}/${track.lessons.length} missões</span><strong>${percent}% · ${track.minutes} min</strong></div>
-      <button class="track-open" type="button" data-track="${escapeHtml(track.id)}"><span>Explorar trilha</span><span>→</span></button>
-    </article>`;
-  }).join('');
+  $('track-grid').innerHTML = tracks.map((track) => `<button class="track-card" type="button" data-track="${escapeHtml(track.id)}" aria-label="Começar ou continuar missões de ${escapeHtml(track.title)}" title="${escapeHtml(track.title)}">
+    <span class="track-icon">${languageBadge(trackLanguage(track), true)}</span><h3>${escapeHtml(track.title)}</h3><span aria-hidden="true" class="track-choice-arrow">→</span>
+  </button>`).join('');
 }
 
-function renderDailyMission() {
-  const allLessons = tracks.flatMap((track) => track.lessons.map((lesson) => ({ ...lesson, trackId: track.id })));
-  const available = allLessons.filter((lesson) => !state.completed.includes(lesson.id));
-  const pool = available.length ? available : allLessons;
-  // Use a persisted cursor so completing a mission always moves to another card.
-  const cursor = Number.isInteger(state.missionCursor) ? state.missionCursor : 0;
-  const index = cursor % pool.length;
-  const mission = pool[index];
-  $('daily-title').textContent = mission.title;
-  $('daily-description').textContent = `${getTrack(mission.trackId).title} · ${mission.duration} min. Sem sequência obrigatória; continua à tua espera quando quiseres.`;
-  $('daily-start').onclick = () => openLesson(mission.trackId, mission.id);
+function getNextTrackLesson(trackId) {
+  const track = getTrack(trackId);
+  const nextLesson = track.lessons.find((lesson) => !state.completed.includes(lesson.id));
+  if (nextLesson) return nextLesson;
+  const progress = Number.isInteger(state.endlessProgress?.[trackId]) ? state.endlessProgress[trackId] : 0;
+  return createEndlessMission(trackId, progress + track.lessons.length * 12);
 }
 
 function openTrack(trackId) {
   selectedTrack = trackId;
-  const track = getTrack(trackId);
-  $('lessons-panel').hidden = false;
-  $('lessons-kicker').textContent = `TRILHA / ${track.level.toUpperCase()}`;
-  $('lessons-title').textContent = `Escolhe uma missão de ${track.title}`;
-  $('lessons-intro').textContent = track.description;
-  $('lesson-list').innerHTML = track.lessons.map((lesson, index) => {
-    const complete = state.completed.includes(lesson.id);
-    const language = lesson.kind === 'choice' && !lesson.language ? 'logic' : lesson.language;
-    const kind = lesson.language === 'cpp' ? 'C++ · leitura guiada' : lesson.kind === 'choice' ? 'Lógica' : lesson.language === 'python' ? 'Python' : 'JavaScript';
-    return `<article class="lesson-row ${complete ? 'is-complete' : ''}">
-      <span class="lesson-number">${complete ? '✓' : String(index + 1).padStart(2, '0')}</span>
-      <div><h3>${escapeHtml(lesson.title)}</h3><p>${languageBadge(language, true)} <span>${escapeHtml(lesson.objective)} · ${kind}</span></p></div>
-      <span class="lesson-time">${lesson.duration} MIN</span>
-      <button class="lesson-open" type="button" data-lesson="${escapeHtml(lesson.id)}">${complete ? 'Continuar' : 'Começar'}</button>
-    </article>`;
-  }).join('');
-  document.querySelectorAll('[data-lesson]').forEach((button) => button.addEventListener('click', () => openLesson(trackId, button.dataset.lesson)));
-  $('lessons-panel').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  openLesson(trackId, getNextTrackLesson(trackId));
 }
 
-function openLesson(trackId, lessonId) {
+function openLesson(trackId, lessonReference) {
   const track = getTrack(trackId);
-  const lesson = track.lessons.find((item) => item.id === lessonId);
+  const lesson = typeof lessonReference === 'object'
+    ? lessonReference
+    : track.lessons.find((item) => item.id === lessonReference);
   if (!lesson) return;
   selectedTrack = trackId;
   activeLesson = { ...lesson, trackId };
   currentHint = 0;
-  lessonReady = true;
   $('dashboard').hidden = true;
   $('lesson-workspace').hidden = false;
-  $('workspace-progress').textContent = `${track.title.toUpperCase()} · ${lesson.duration} MIN`;
-  $('lesson-meta').textContent = `MISSÃO · ${lesson.duration} MIN · ${lesson.language === 'cpp' ? 'C++ GUIADO' : lesson.kind === 'choice' ? 'LÓGICA' : lesson.language.toUpperCase()}`;
+  $('workspace-progress').textContent = `${track.title.toUpperCase()} · ${lesson.level || 'SEQUÊNCIA'}`;
+  $('lesson-meta').textContent = `MISSÃO · ${lesson.level || 'PRÁTICA'} · ${lesson.duration} MIN`;
   $('lesson-title').textContent = lesson.title;
   $('lesson-story').textContent = lesson.story;
-  $('lesson-explanation').innerHTML = buildLessonExplanation(lesson);
-  $('mission-objective').textContent = lesson.objective;
-  $('mission-icon').innerHTML = languageBadge(lesson.kind === 'choice' ? 'logic' : lesson.language);
-  $('mission-kind').textContent = lesson.language === 'cpp' ? 'DESAFIO C++ · LEITURA' : lesson.kind === 'choice' ? 'DESAFIO DE LÓGICA' : `PRÁTICA ${lesson.language.toUpperCase()}`;
+  renderMrzinhoClass(lesson);
+  $('hint-content').textContent = '';
+  $('hint-content').hidden = true;
+  $('hint-content').dataset.hasHint = '';
+  $('mission-hint-toggle').textContent = 'Ver dica do Mrzinho';
+  $('mission-hint-toggle').setAttribute('aria-expanded', 'false');
   $('lesson-feedback').hidden = true;
   $('lesson-feedback').className = 'feedback-box';
   $('lesson-feedback').textContent = '';
-  $('complete-lesson').hidden = !state.completed.includes(lesson.id);
-  $('complete-lesson').textContent = state.completed.includes(lesson.id) ? 'Missão já concluída ✓' : 'Missão concluída';
+  $('complete-lesson').hidden = true;
+  $('complete-lesson').textContent = 'Guardar e continuar →';
   $('complete-lesson').onclick = finishLesson;
   renderChallenge(lesson);
   $('lesson-workspace').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  const language = track.title;
+  assistantSay(`Olá! Sou o Mrzinho. Nesta trilha de ${language}, vamos avançar passo a passo. ${lesson.lesson} Observa o exemplo; quando estiver claro, carrega em Entendi para resolveres o desafio.`, { speak: true });
 }
 
 function renderChallenge(lesson) {
@@ -374,10 +351,12 @@ function renderChallenge(lesson) {
   }
 
   const savedDraft = state.drafts?.[lesson.id];
+  const runLabel = lesson.verifySource ? 'Verificar desafio' : 'Executar e verificar';
+  const runtimeLabel = lesson.verifySource ? 'prática guiada · verificação local' : 'execução isolada · Ctrl/Cmd + Enter';
   area.innerHTML = `<p class="challenge-prompt">${escapeHtml(lesson.prompt)}</p>
     <label class="field-caption" for="code-editor">O TEU CÓDIGO · AGORA ÉS TU</label>
     <div class="syntax-editor"><pre class="code-highlight" id="code-highlight" aria-hidden="true"></pre><textarea class="code-editor" id="code-editor" spellcheck="false" autocapitalize="off" autocomplete="off" aria-label="Editor de código"></textarea></div>
-    <div class="editor-toolbar"><span class="editor-language">${languageBadge(lesson.language, true)} execução isolada · Ctrl/Cmd + Enter</span><div><button class="text-button editor-reset" id="reset-code" type="button">Repor exemplo</button><button class="run-button" id="run-code" type="button"><span aria-hidden="true">▶</span> Executar e verificar</button></div></div>
+    <div class="editor-toolbar"><span class="editor-language">${languageBadge(lesson.language, true)} ${runtimeLabel}</span><div><button class="text-button editor-reset" id="reset-code" type="button">Repor exemplo</button><button class="run-button" id="run-code" type="button"><span aria-hidden="true">▶</span> ${runLabel}</button></div></div>
     <pre class="code-output" id="code-output" aria-live="polite">A saída do teu programa aparece aqui.</pre>`;
   $('code-editor').value = typeof savedDraft === 'string' ? savedDraft : lesson.starter;
   updateCodeHighlight();
@@ -433,6 +412,21 @@ function runStaticCodeChallenge(lesson) {
   const source = $('code-editor').value.trim();
   if (!source) return showOutput('Escreve o teu código antes de verificar.', 'error');
   if (source.length > 5000) return showOutput('Este desafio aceita até 5.000 caracteres.', 'error');
+  if (lesson.verifySource) {
+    const normalize = (code) => code
+      .replace(/\/\*[\s\S]*?\*\//g, '')
+      .replace(/\/\/.*$/gm, '')
+      .replace(/#.*$/gm, '')
+      .replace(/\s+/g, '')
+      .toLowerCase();
+    const correct = normalize(source) === normalize(lesson.solution || '');
+    if (!correct) {
+      showOutput('Ainda falta ajustar o código. Compara a condição ou a operação pedida e tenta novamente.', 'error');
+      return showFeedback('O Mrzinho está aqui: revê a dica e altera só a parte necessária.', false);
+    }
+    showOutput(lesson.language === 'cpp' ? 'Código guiado reconhecido. Este modo não compila C++ no navegador.' : 'Pseudocódigo reconhecido. Boa solução!', 'success');
+    return showFeedback(lesson.success, true);
+  }
   showOutput('Código recebido. A estrutura da tua solução foi registada.', 'success');
   showFeedback(lesson.success, true);
 }
@@ -536,7 +530,7 @@ function showFeedback(message, success) {
   assistantSay(success ? `Muito bem! ${message}` : `Está tudo bem. ${message}`, { speak: true });
   if (success) {
     $('complete-lesson').hidden = false;
-    $('complete-lesson').textContent = state.completed.includes(activeLesson.id) ? 'Missão já concluída ✓' : 'Guardar missão concluída · +25 XP';
+    $('complete-lesson').textContent = state.completed.includes(activeLesson.id) ? 'Missão já guardada ✓' : 'Guardar e continuar · +25 XP →';
   }
 }
 
@@ -546,14 +540,37 @@ function revealHint() {
   if (currentHint < activeLesson.hints.length) {
     hintBox.textContent = activeLesson.hints[currentHint];
     currentHint += 1;
-    $('hint-button').textContent = currentHint < activeLesson.hints.length ? `Dica ${currentHint + 1} / ${activeLesson.hints.length}` : 'Dicas usadas';
     hintBox.hidden = false;
+    hintBox.dataset.hasHint = 'true';
+    $('mission-hint-toggle').textContent = 'Ocultar dica';
+    $('mission-hint-toggle').setAttribute('aria-expanded', 'true');
     assistantSay(`Aqui vai uma pista: ${activeLesson.hints[currentHint - 1]}`, { speak: true });
   } else {
     hintBox.textContent = 'Já viste todas as dicas. Experimenta resolver em passos pequenos — ou consulta uma solução para aprender com ela.';
     hintBox.hidden = false;
+    hintBox.dataset.hasHint = 'true';
+    $('mission-hint-toggle').textContent = 'Ocultar dica';
+    $('mission-hint-toggle').setAttribute('aria-expanded', 'true');
     assistantSay(`Pensa em passos pequenos. ${hintBox.textContent}`, { speak: true });
   }
+}
+
+function toggleMissionHint() {
+  const hintBox = $('hint-content');
+  if (!hintBox) return;
+  if (!hintBox.hidden) {
+    hintBox.hidden = true;
+    $('mission-hint-toggle').textContent = 'Ver dica do Mrzinho';
+    $('mission-hint-toggle').setAttribute('aria-expanded', 'false');
+    return;
+  }
+  if (hintBox.dataset.hasHint === 'true') {
+    hintBox.hidden = false;
+    $('mission-hint-toggle').textContent = 'Ocultar dica';
+    $('mission-hint-toggle').setAttribute('aria-expanded', 'true');
+    return;
+  }
+  revealHint();
 }
 
 function revealSolution() {
@@ -574,25 +591,21 @@ function revealSolution() {
 
 async function finishLesson() {
   if (!activeLesson) return;
+  const trackId = selectedTrack;
   if (!state.completed.includes(activeLesson.id)) {
     state.completed.push(activeLesson.id);
     state.missionCursor = (Number.isInteger(state.missionCursor) ? state.missionCursor : 0) + 1;
+    if (activeLesson.endless) {
+      state.endlessProgress = state.endlessProgress && typeof state.endlessProgress === 'object' ? state.endlessProgress : {};
+      state.endlessProgress[trackId] = (Number.isInteger(state.endlessProgress[trackId]) ? state.endlessProgress[trackId] : 0) + 1;
+    }
     await saveProgress();
     showToast('Missão guardada · +25 XP. Bom trabalho.');
   } else {
     showToast('Esta missão já está guardada no teu progresso.');
   }
-  const nextLesson = getTrack(selectedTrack).lessons.find((lesson) => !state.completed.includes(lesson.id));
-  if (nextLesson) {
-    openLesson(selectedTrack, nextLesson.id);
-    assistantSay(`Muito bem. A próxima missão é “${nextLesson.title}”. Vamos continuar?`, { speak: true });
-    return;
-  }
-  renderDashboard();
-  $('lesson-workspace').hidden = true;
-  $('dashboard').hidden = false;
-  openTrack(selectedTrack);
-  $('lessons-panel').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  const nextLesson = getNextTrackLesson(trackId);
+  openLesson(trackId, nextLesson);
 }
 
 function bindEvents() {
@@ -647,17 +660,22 @@ function bindEvents() {
     const button = event.target.closest('[data-track]');
     if (button) openTrack(button.dataset.track);
   });
-  $('back-tracks').addEventListener('click', () => {
-    $('lessons-panel').hidden = true;
-    $('track-grid').scrollIntoView({ behavior: 'smooth', block: 'center' });
-  });
   $('exit-lesson').addEventListener('click', () => {
     $('lesson-workspace').hidden = true;
+    $('mission-practice').hidden = true;
     $('dashboard').hidden = false;
+    activeLesson = null;
     renderDashboard();
-    openTrack(selectedTrack);
+    $('track-grid').scrollIntoView({ behavior: 'smooth', block: 'center' });
   });
   $('workspace-save').addEventListener('click', () => saveProgress(true));
+  $('mission-understood').addEventListener('click', () => {
+    $('mission-intro').hidden = true;
+    $('mission-practice').hidden = false;
+    assistantSay('Muito bem. Agora és tu: experimenta resolver o desafio no quadro. Se precisares, pede-me uma dica.', { speak: true });
+    $('code-editor')?.focus();
+  });
+  $('mission-hint-toggle').addEventListener('click', toggleMissionHint);
   $('mrzinho-toggle').addEventListener('click', () => {
     const widget = $('mrzinho');
     const open = widget.classList.toggle('is-collapsed') === false;
@@ -666,7 +684,8 @@ function bindEvents() {
   $('mrzinho-speak').addEventListener('click', () => speakMrzinho());
   $('mrzinho-voice-select')?.addEventListener('change', (event) => { voicePreference = event.target.value || 'auto'; localStorage.setItem('w69-codelab:mrzinho-voice-name', voicePreference); assistantSay('Voz do Misterzinho atualizada. Ouve novamente para comparar o novo tom.', { speak: true }); });
   $('mrzinho-hint').addEventListener('click', () => {
-    if (activeLesson) revealHint();
+    if (activeLesson && !$('mission-practice').hidden) revealHint();
+    else if (activeLesson) assistantSay('Observa o exemplo primeiro. Quando estiveres pronto, carrega em “Entendi · mostrar desafio” e eu dou-te uma dica.');
     else assistantSay('Ainda estamos a preparar o teu caminho. Diz-me o teu nome, escolhe um avatar e responde sem medo ao check-in.');
   });
   $('mrzinho-voice').addEventListener('click', () => {

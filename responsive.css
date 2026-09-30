@@ -167,3 +167,26 @@ button {
     padding: 8px 9px;
   }
 }
+
+/* Os filtros do catálogo mantêm a largura do rótulo e deslizam na horizontal. */
+.filters {
+  min-width: 0;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x proximity;
+}
+
+.filters > .filter {
+  flex: 0 0 auto;
+  max-inline-size: none;
+  overflow-wrap: normal;
+  white-space: nowrap;
+  scroll-snap-align: start;
+}
+
+.filters:focus-visible {
+  outline: 2px solid var(--lime);
+  outline-offset: 3px;
+}

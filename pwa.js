@@ -9,7 +9,7 @@
   const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
 
   if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => navigator.serviceWorker.register('./sw-v2.js?v=20260930-historical-flow-v21').catch(() => {}));
+    window.addEventListener('load', () => navigator.serviceWorker.register('./sw-v2.js?v=20260930-mission-flow-v1').catch(() => {}));
   }
 
   window.addEventListener('beforeinstallprompt', (event) => {
