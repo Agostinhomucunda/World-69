@@ -787,6 +787,37 @@ const advancedLessons = {
 };
 for (const track of tracks) track.lessons.push(...(advancedLessons[track.id] || []));
 
+// Expand the guided progression into real, trackable practical missions.
+const missionBank = {
+  logic: ['Entrada, processo e saída', 'Pseudocódigo', 'Booleanos', 'Tabelas de decisão', 'Validação de dados', 'Contadores', 'Acumuladores', 'Ciclos aninhados', 'Busca linear', 'Ordenação', 'Modularização', 'Contratos de função', 'Casos extremos', 'Testes manuais', 'Depuração por etapas', 'Complexidade', 'Recursão', 'Estruturas de dados', 'Filas', 'Pilhas', 'Mapas', 'Grafos', 'Caminhos', 'Árvores', 'Modelação de domínio', 'Separação de responsabilidades', 'Refatoração', 'Reutilização', 'Documentação', 'Requisitos', 'Plano de implementação', 'Prototipagem', 'Feedback', 'Tratamento de falhas', 'Segurança de entradas', 'Desempenho', 'Manutenção', 'Colaboração', 'Revisão de solução'],
+  javascript: ['Valores e tipos', 'Conversões', 'Comparações', 'Operadores lógicos', 'Arrays', 'Métodos de array', 'Objetos', 'Desestruturação', 'Funções', 'Arrow functions', 'Escopo', 'Closures', 'DOM', 'Seletores', 'Eventos', 'Formulários', 'Validação', 'LocalStorage', 'JSON', 'Fetch', 'Promises', 'Async e await', 'Tratamento de erros', 'Módulos', 'Classes', 'Herança', 'Map e Set', 'Iteradores', 'Generators', 'Expressões regulares', 'Debounce', 'Acessibilidade', 'Web APIs', 'Performance', 'Segurança XSS', 'Testes', 'Debugging', 'Arquitetura', 'Projeto final'],
+  python: ['Valores e tipos', 'Conversões', 'Operadores', 'Condições compostas', 'Listas', 'Tuplos', 'Dicionários', 'Conjuntos', 'Slices', 'Funções', 'Parâmetros', 'Escopo', 'Compreensões', 'Lambda', 'Iteradores', 'Generators', 'Módulos', 'Pacotes', 'Exceções', 'Ficheiros', 'CSV', 'JSON', 'Datas', 'Expressões regulares', 'Testes', 'Dataclasses', 'Classes', 'Herança', 'Polimorfismo', 'Type hints', 'Decorators', 'Context managers', 'APIs', 'Requests', 'Dados tabulares', 'Performance', 'Debugging', 'Automação', 'Projeto final'],
+  cpp: ['Tipos e conversões', 'Operadores', 'Condições compostas', 'Arrays', 'Strings', 'Vectors', 'Iteradores', 'Funções', 'Parâmetros', 'Referências', 'Const correctness', 'Structs', 'Classes', 'Encapsulamento', 'Construtores', 'Destrutores', 'Herança', 'Polimorfismo', 'Templates', 'STL', 'Map e Set', 'Filas', 'Pilhas', 'Algoritmos', 'Lambdas', 'Ponteiros', 'Memória dinâmica', 'Smart pointers', 'Move semantics', 'Exceções', 'Ficheiros', 'Namespaces', 'Cabeçalhos', 'Compilação', 'Debugging', 'Testes', 'Performance', 'Design', 'Projeto final']
+};
+const missionLanguage = { logic: null, javascript: 'javascript', python: 'python', cpp: 'cpp' };
+for (const track of tracks) {
+  const existing = new Set(track.lessons.map((lesson) => lesson.id));
+  for (const [index, topic] of (missionBank[track.id] || []).entries()) {
+    if (track.lessons.length >= 50) break;
+    const id = `${track.id}-practice-${index + 1}`;
+    if (existing.has(id)) continue;
+    const language = missionLanguage[track.id];
+    const concept = topic.toLowerCase();
+    track.lessons.push({
+      id, title: `${topic} · prática`, duration: 8, kind: 'choice', language,
+      objective: `Aplicar ${concept} numa situação concreta.`,
+      story: `Nesta missão vais consolidar ${concept} com uma decisão curta e objetiva.`,
+      lesson: `Identifica a ideia central de ${concept} e escolhe a solução que respeita o problema.`,
+      prompt: `Qual abordagem demonstra melhor que entendeste ${concept}?`,
+      options: [`Aplicar ${concept} com uma regra clara`, 'Ignorar os dados e escolher ao acaso', 'Repetir o mesmo passo sem verificar o resultado'],
+      answer: `Aplicar ${concept} com uma regra clara`,
+      success: `Boa! A missão de ${concept} foi concluída. Agora podes avançar para a próxima.`,
+      hints: [`Lê o objetivo e procura a opção que usa ${concept} de forma explícita.`, 'Explica a tua escolha antes de confirmar.']
+    });
+    existing.add(id);
+  }
+}
+
 
 export const placementQuestions = [
   { id: 'q1', question: 'O que guarda uma variável?', options: ['Uma fotografia sempre', 'Um valor com um nome', 'Uma ligação à Internet'], answer: 1 },

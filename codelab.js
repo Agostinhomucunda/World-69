@@ -1,4 +1,4 @@
-import { tracks, placementQuestions } from './codelab-curriculum.js';
+import { tracks, placementQuestions } from './codelab-curriculum.js?v=20260930-missions-v2';
 
 const $ = (id) => document.getElementById(id);
 
