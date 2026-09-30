@@ -48,3 +48,19 @@ Abra `http://localhost:4173`. A autenticação Firebase permanece apenas na áre
 Abre `codelab.html`. A experiência inclui diagnóstico de nível sem nota, avatar, quatro trilhas, missões curtas, dicas e progresso local no navegador. JavaScript é interpretado num Web Worker com acesso apenas a `console.log`/`print`, sem o DOM nem APIs de rede. Python corre localmente com Pyodide num iframe de origem isolada; o primeiro carregamento precisa de Internet. A trilha C++ começa com desafios guiados de leitura e lógica; ainda não envia código dos alunos a um compilador remoto.
 
 A área do aluno é totalmente local e não usa Firebase Authentication. O perfil, progresso, rascunhos e missões concluídas são guardados no IndexedDB do navegador, com fallback para localStorage. Não há login nem sincronização entre dispositivos; a área administrativa continua com o seu fluxo de autenticação separado. Não foram encontradas regras Firestore próprias para estudantes, por isso o CodeLab não escreve na base de dados nem modifica o sistema de produtos/admin. Para sincronizar ou oferecer um tutor de IA/compilador C++ remoto, primeiro definir regras por UID, limites/custos e isolamento do executor; as notas estão em `CODELAB-TECH-NOTES.md`.
+
+
+
+## Firebase atual
+
+A aplicação usa agora o projeto Firebase `world-69` através de `firebase-config.js`. A configuração Web (`apiKey`, `authDomain`, `projectId`, `appId`) não é uma chave privada; a segurança depende dos providers ativos e das regras do Firestore.
+
+- `conta.html` é a conta do aluno: login anónimo, Google, criação/login por email e senha, redefinição de senha e logout.
+- `login.html` e `admin.html` continuam reservados à administração e usam email/senha no mesmo projeto Firebase.
+- Para o login Google funcionar em produção, adicionar `agostinhomucunda.github.io` em **Authentication → Settings → Authorized domains**.
+- Em **Authentication → Sign-in method**, ativar **Anonymous**, **Google** e **Email/Password**.
+- Criar o utilizador administrador em **Authentication → Users → Add user**. O Gmail proprietário do projeto é a conta de gestão do Console; não é automaticamente um utilizador com senha para entrar no site.
+- O snippet `firebase-admin` com `serviceAccountKey.json` é código de backend/servidor e não deve ser colocado no GitHub Pages nem no browser. O painel atual usa o SDK Web apenas para autenticação e Firestore.
+- Antes de publicar produtos no novo projeto, confirmar as regras do Firestore para permitir apenas utilizadores admin; uma verificação de email no cliente, sozinha, não é segurança suficiente.
+
+O próximo passo recomendado é criar regras owner-only e, depois, transferir/sincronizar o progresso do CodeLab por `request.auth.uid`, sem misturar a coleção `products` com os dados privados dos alunos.

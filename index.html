@@ -143,7 +143,7 @@
       console.warn('Catálogo gerado indisponível; a coleção curada continua disponível.', error);
     }
 
-    const firebaseConfig = {apiKey:'AIzaSyC_FrApgE4TYfrBnq4urrWac9oiLavecMg',authDomain:'world-69.firebaseapp.com',projectId:'world-69'};
+    import { firebaseConfig } from './firebase-config.js';
     const grid = document.querySelector('#grid');
     const searchInput = document.querySelector('#searchInput');
     const categories = document.querySelector('#categories');
