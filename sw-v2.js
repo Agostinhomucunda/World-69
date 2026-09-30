@@ -1,4 +1,4 @@
-const CACHE = 'world69-shell-v3';
+const CACHE = 'world69-shell-v4';
 const SHELL = ['./', './index.html', './codelab.html', './style.css', './codelab.css', './codelab-ide.css', './codelab.js', './codelab-ide.js', './codelab-storage.js', './codelab-curriculum.js', './codelab-runner.js', './free-products.js', './free-products.generated.js', './manifest.webmanifest', './assets/favicon.svg'];
 
 self.addEventListener('install', (event) => {

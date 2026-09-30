@@ -9,6 +9,7 @@ let selectedTrack = 'logic';
 let activeLesson = null;
 let currentHint = 0;
 let toastTimer = 0;
+let lessonReady = false;
 
 function escapeHtml(value = '') {
   return String(value).replace(/[&<>"']/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
@@ -136,6 +137,34 @@ function buildLessonExplanation(lesson) {
   return `<p>${escapeHtml(lesson.lesson)}</p><div class="explain-steps"><div><strong>Como pensar</strong><span>Divide o desafio em entrada, decisão e resultado. Pergunta: “o que já está pronto e o que falta eu completar?”</span></div><div><strong>Na prática</strong><span>${escapeHtml(lesson.objective)} O objetivo não é decorar: é reconhecer a ideia quando voltares a encontrá-la.</span></div><div class="explain-warning"><strong>O Mrzinho avisa</strong><span>${escapeHtml(common)}</span></div></div>`;
 }
 
+function lessonExample(lesson) {
+  if (lesson.solution) return lesson.solution;
+  if (lesson.language === 'cpp') return 'int pontos = 8;\ncout << pontos + 4 << endl;';
+  if (lesson.language === 'python') return 'mensagem = "Olá!"\nprint(mensagem)';
+  if (lesson.kind === 'choice') return '1. Ler a regra\n2. Identificar a condição\n3. Escolher o caminho correto';
+  return 'console.log("Olá, futuro programador!");';
+}
+
+function highlightCode(source = '') {
+  let html = escapeHtml(source);
+  html = html.replace(/(&quot;.*?&quot;|&#39;.*?&#39;|".*?"|'.*?')/g, '<span class="syntax-string">$1</span>');
+  html = html.replace(/\b(var|let|const|if|else|for|in|true|false|def|return|int|print|cout|using|namespace)\b/g, '<span class="syntax-keyword">$1</span>');
+  html = html.replace(/\b(console|log|range|endl)\b/g, '<span class="syntax-function">$1</span>');
+  html = html.replace(/(\/\/.*|#.*)/g, '<span class="syntax-comment">$1</span>');
+  return html;
+}
+
+function renderMrzinhoClass(lesson) {
+  const example = $('lesson-class-example');
+  const copy = $('lesson-class-copy');
+  if (!example || !copy) return;
+  const language = lesson.language === 'python' ? 'Python' : lesson.language === 'cpp' ? 'C++' : lesson.language === 'javascript' ? 'JavaScript' : 'lógica';
+  copy.textContent = `Antes de resolver, vamos observar uma ideia em ${language}. Eu mostro um exemplo, explico cada parte e só depois passas ao quadro.`;
+  example.innerHTML = `<span class="example-label">EXEMPLO DO PROFESSOR · ${language.toUpperCase()}</span><pre><code>${highlightCode(lessonExample(lesson))}</code></pre><p>${escapeHtml(lesson.lesson)}</p>`;
+  example.hidden = false;
+  $('lesson-ready-button').textContent = 'Já sei · Resolver agora →';
+}
+
 function updateVoiceControl() {
   const button = $('mrzinho-voice');
   if (!button) return;
@@ -181,10 +210,12 @@ function languageBadge(language, compact = false) {
     javascript: ['javascript', 'devicon-javascript-plain', 'JavaScript'],
     python: ['python', 'devicon-python-plain', 'Python'],
     cpp: ['cpp', 'devicon-cplusplus-plain', 'C++'],
-    logic: ['logic', 'devicon-git-plain', 'Lógica']
+    logic: ['logic', 'devicon-flowchart-plain', 'Lógica']
   }[language] || ['logic', 'devicon-git-plain', 'Lógica'];
   return `<span class="language-mark ${config[0]}" aria-label="${config[2]}"><i class="${config[1]}" aria-hidden="true"></i>${compact ? '' : `<span>${config[2]}</span>`}</span>`;
 }
+
+function trackLanguage(track) { return track.id === 'javascript' ? 'javascript' : track.id === 'python' ? 'python' : track.id === 'cpp' ? 'cpp' : 'logic'; }
 
 function renderDashboard() {
   const name = state.profile?.name?.trim() || 'explorador';
@@ -209,7 +240,7 @@ function renderTracks() {
     const completed = countCompleted(track);
     const percent = Math.round(completed / track.lessons.length * 100);
     return `<article class="track-card">
-      <div class="track-card-top"><span class="track-icon" aria-hidden="true">${escapeHtml(track.icon)}</span><span class="track-level">${escapeHtml(track.level)}</span></div>
+      <div class="track-card-top"><span class="track-icon">${languageBadge(trackLanguage(track))}</span><span class="track-level">${escapeHtml(track.level)}</span></div>
       <h3>${escapeHtml(track.title)}</h3><span class="track-subtitle">${escapeHtml(track.subtitle)}</span>
       <p>${escapeHtml(track.description)}</p>
       <div class="track-card-bottom"><span>${completed}/${track.lessons.length} missões</span><strong>${percent}% · ${track.minutes} min</strong></div>
@@ -234,14 +265,15 @@ function openTrack(trackId) {
   const track = getTrack(trackId);
   $('lessons-panel').hidden = false;
   $('lessons-kicker').textContent = `TRILHA / ${track.level.toUpperCase()}`;
-  $('lessons-title').textContent = track.title;
+  $('lessons-title').textContent = `Escolhe uma missão de ${track.title}`;
   $('lessons-intro').textContent = track.description;
   $('lesson-list').innerHTML = track.lessons.map((lesson, index) => {
     const complete = state.completed.includes(lesson.id);
+    const language = lesson.kind === 'choice' && !lesson.language ? 'logic' : lesson.language;
     const kind = lesson.language === 'cpp' ? 'C++ · leitura guiada' : lesson.kind === 'choice' ? 'Lógica' : lesson.language === 'python' ? 'Python' : 'JavaScript';
     return `<article class="lesson-row ${complete ? 'is-complete' : ''}">
       <span class="lesson-number">${complete ? '✓' : String(index + 1).padStart(2, '0')}</span>
-      <div><h3>${escapeHtml(lesson.title)}</h3><p>${escapeHtml(lesson.objective)} · ${kind}</p></div>
+      <div><h3>${escapeHtml(lesson.title)}</h3><p>${languageBadge(language, true)} <span>${escapeHtml(lesson.objective)} · ${kind}</span></p></div>
       <span class="lesson-time">${lesson.duration} MIN</span>
       <button class="lesson-open" type="button" data-lesson="${escapeHtml(lesson.id)}">${complete ? 'Rever' : 'Começar'}</button>
     </article>`;
@@ -257,6 +289,7 @@ function openLesson(trackId, lessonId) {
   selectedTrack = trackId;
   activeLesson = { ...lesson, trackId };
   currentHint = 0;
+  lessonReady = false;
   $('dashboard').hidden = true;
   $('lesson-workspace').hidden = false;
   $('workspace-progress').textContent = `${track.title.toUpperCase()} · ${lesson.duration} MIN`;
@@ -264,6 +297,7 @@ function openLesson(trackId, lessonId) {
   $('lesson-title').textContent = lesson.title;
   $('lesson-story').textContent = lesson.story;
   $('lesson-explanation').innerHTML = buildLessonExplanation(lesson);
+  renderMrzinhoClass(lesson);
   $('mission-objective').textContent = lesson.objective;
   $('mission-icon').innerHTML = languageBadge(lesson.kind === 'choice' ? 'logic' : lesson.language);
   $('mission-kind').textContent = lesson.language === 'cpp' ? 'DESAFIO C++ · LEITURA' : lesson.kind === 'choice' ? 'DESAFIO DE LÓGICA' : `PRÁTICA ${lesson.language.toUpperCase()}`;
@@ -280,12 +314,16 @@ function openLesson(trackId, lessonId) {
   $('hint-button').onclick = revealHint;
   $('solution-button').onclick = revealSolution;
   renderChallenge(lesson);
-  assistantSay(`Boa escolha. Vamos por partes: ${lesson.objective}`, { speak: true });
+  $('lesson-ready-button').onclick = () => { lessonReady = true; $('challenge-area').classList.remove('is-locked'); $('challenge-area').removeAttribute('aria-disabled'); $('lesson-ready-button').textContent = 'Vamos resolver ↓'; assistantSay('Muito bem. Agora é a tua vez: aplica o que acabámos de ver.', { speak: true }); $('challenge-area').scrollIntoView({ behavior: 'smooth', block: 'center' }); };
+  $('lesson-example-button').onclick = () => { $('lesson-class-example').hidden = false; assistantSay('Repara nesta parte do exemplo. Não precisas decorar: observa a ideia e depois tenta com as tuas palavras.', { speak: true }); };
+  assistantSay(`Boa escolha. Primeiro temos uma mini-aula: vou explicar ${lesson.objective} e mostrar um exemplo.`, { speak: true });
   $('lesson-workspace').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 function renderChallenge(lesson) {
   const area = $('challenge-area');
+  area.classList.add('is-locked');
+  area.setAttribute('aria-disabled', 'true');
   if (lesson.kind === 'choice') {
     area.innerHTML = `<p class="challenge-prompt">${escapeHtml(lesson.prompt)}</p><div class="challenge-options">${lesson.options.map((option, index) => `
       <label class="challenge-option"><input type="radio" name="mission-answer" value="${index}"><span>${escapeHtml(option)}</span></label>`).join('')}
@@ -301,17 +339,20 @@ function renderChallenge(lesson) {
 
   const savedDraft = state.drafts?.[lesson.id];
   area.innerHTML = `<p class="challenge-prompt">${escapeHtml(lesson.prompt)}</p>
-    <label class="field-caption" for="code-editor">O TEU CÓDIGO</label>
-    <textarea class="code-editor" id="code-editor" spellcheck="false" autocapitalize="off" autocomplete="off" aria-label="Editor de código"></textarea>
+    <label class="field-caption" for="code-editor">O TEU CÓDIGO · AGORA ÉS TU</label>
+    <div class="syntax-editor"><pre class="code-highlight" id="code-highlight" aria-hidden="true"></pre><textarea class="code-editor" id="code-editor" spellcheck="false" autocapitalize="off" autocomplete="off" aria-label="Editor de código"></textarea></div>
     <div class="editor-toolbar"><span class="editor-language">${languageBadge(lesson.language, true)} execução isolada · Ctrl/Cmd + Enter</span><div><button class="text-button editor-reset" id="reset-code" type="button">Repor exemplo</button><button class="run-button" id="run-code" type="button"><span aria-hidden="true">▶</span> Executar e verificar</button></div></div>
     <pre class="code-output" id="code-output" aria-live="polite">A saída do teu programa aparece aqui.</pre>`;
   $('code-editor').value = typeof savedDraft === 'string' ? savedDraft : lesson.starter;
+  updateCodeHighlight();
   let draftTimer = 0;
   $('code-editor').addEventListener('input', () => {
     state.drafts[lesson.id] = $('code-editor').value.slice(0, 5000);
+    updateCodeHighlight();
     window.clearTimeout(draftTimer);
     draftTimer = window.setTimeout(() => saveProgress(), 350);
   });
+  $('code-editor').addEventListener('scroll', () => { $('code-highlight').scrollTop = $('code-editor').scrollTop; $('code-highlight').scrollLeft = $('code-editor').scrollLeft; });
   $('code-editor').addEventListener('keydown', (event) => {
     if (event.key === 'Tab') {
       event.preventDefault();
@@ -597,3 +638,10 @@ window.__world69CodelabReady = Promise.resolve({
   storage: 'indexeddb-with-localstorage-fallback',
   auth: false
 });
+
+
+function updateCodeHighlight() {
+  const editor = $('code-editor');
+  const highlight = $('code-highlight');
+  if (editor && highlight) highlight.innerHTML = `${highlightCode(editor.value)}\n`;
+}
