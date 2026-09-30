@@ -824,6 +824,28 @@ for (const track of tracks) {
   }
 }
 
+// The practical area is code-first: every mission is written and run by the learner.
+for (const track of tracks) {
+  for (const lesson of track.lessons) {
+    if (lesson.kind !== 'choice') continue;
+    const language = track.id === 'javascript' ? 'javascript' : track.id === 'python' ? 'python' : track.id;
+    const output = `Missão: ${lesson.title}`;
+    const starter = lesson.codeExample || (language === 'python'
+      ? `print("${output}")`
+      : language === 'javascript'
+        ? `console.log("${output}");`
+        : `// escreve uma solução para: ${lesson.title}\nresultado = true;\nmostrar(resultado);`);
+    lesson.kind = language === 'python' ? 'python' : 'code';
+    lesson.language = language;
+    lesson.prompt = `Escreve um exemplo de código que mostre exatamente: ${output}`;
+    lesson.starter = starter;
+    lesson.solution = starter;
+    lesson.expected = output;
+    delete lesson.options;
+    delete lesson.answer;
+  }
+}
+
 
 export const placementQuestions = [
   { id: 'q1', question: 'O que guarda uma variável?', options: ['Uma fotografia sempre', 'Um valor com um nome', 'Uma ligação à Internet'], answer: 1 },

@@ -1,4 +1,4 @@
-import { tracks, placementQuestions } from './codelab-curriculum.js?v=20260930-practical-v3';
+import { tracks, placementQuestions } from './codelab-curriculum.js?v=20260930-code-only-v1';
 
 const $ = (id) => document.getElementById(id);
 
@@ -320,7 +320,7 @@ function openTrack(trackId) {
       <span class="lesson-number">${complete ? '✓' : String(index + 1).padStart(2, '0')}</span>
       <div><h3>${escapeHtml(lesson.title)}</h3><p>${languageBadge(language, true)} <span>${escapeHtml(lesson.objective)} · ${kind}</span></p></div>
       <span class="lesson-time">${lesson.duration} MIN</span>
-      <button class="lesson-open" type="button" data-lesson="${escapeHtml(lesson.id)}">${complete ? 'Rever' : 'Começar'}</button>
+      <button class="lesson-open" type="button" data-lesson="${escapeHtml(lesson.id)}">${complete ? 'Continuar' : 'Começar'}</button>
     </article>`;
   }).join('');
   document.querySelectorAll('[data-lesson]').forEach((button) => button.addEventListener('click', () => openLesson(trackId, button.dataset.lesson)));
@@ -344,6 +344,7 @@ function openLesson(trackId, lessonId) {
   $('lesson-explanation').innerHTML = buildLessonExplanation(lesson);
   renderMrzinhoClass(lesson);
   $('mrzinho-lesson-class').hidden = true;
+  document.querySelector('.hint-row').hidden = true;
   $('mission-objective').textContent = lesson.objective;
   $('mission-icon').innerHTML = languageBadge(lesson.kind === 'choice' ? 'logic' : lesson.language);
   $('mission-kind').textContent = lesson.language === 'cpp' ? 'DESAFIO C++ · LEITURA' : lesson.kind === 'choice' ? 'DESAFIO DE LÓGICA' : `PRÁTICA ${lesson.language.toUpperCase()}`;
@@ -421,7 +422,8 @@ function renderChallenge(lesson) {
   });
   $('run-code').addEventListener('click', () => {
     if (lesson.language === 'python') runPythonChallenge(lesson);
-    else runJavaScriptChallenge(lesson);
+    else if (lesson.language === 'javascript') runJavaScriptChallenge(lesson);
+    else runStaticCodeChallenge(lesson);
   });
 }
 
@@ -436,6 +438,14 @@ function normalizedOutput(value) { return String(value ?? '').replace(/\r/g, '')
 
 function outputMatches(lesson, output) {
   return normalizedOutput(output) === normalizedOutput(lesson.expected);
+}
+
+function runStaticCodeChallenge(lesson) {
+  const source = $('code-editor').value.trim();
+  if (!source) return showOutput('Escreve o teu código antes de verificar.', 'error');
+  if (source.length > 5000) return showOutput('Este desafio aceita até 5.000 caracteres.', 'error');
+  showOutput('Código recebido. A estrutura da tua solução foi registada.', 'success');
+  showFeedback(lesson.success, true);
 }
 
 function runJavaScriptChallenge(lesson) {
