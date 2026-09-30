@@ -1,5 +1,5 @@
-const CACHE = 'world69-shell-v5';
-const SHELL = ['./', './index.html', './codelab.html', './conta.html', './login.html', './admin.html', './firebase-config.js', './style.css', './codelab.css', './codelab-ide.css', './codelab.js', './codelab-ide.js', './codelab-storage.js', './codelab-curriculum.js', './codelab-runner.js', './free-products.js', './free-products.generated.js', './manifest.webmanifest', './assets/favicon.svg'];
+const CACHE = 'world69-shell-v6';
+const SHELL = ['./', './index.html', './codelab.html', './conta.html', './login.html', './admin.html', './firebase-config.js', './admin-access.js', './style.css', './codelab.css', './codelab-ide.css', './codelab.js', './codelab-ide.js', './codelab-storage.js', './codelab-curriculum.js', './codelab-runner.js', './free-products.js', './free-products.generated.js', './manifest.webmanifest', './assets/favicon.svg'];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(caches.open(CACHE).then((cache) => cache.addAll(SHELL)).then(() => self.skipWaiting()));

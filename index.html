@@ -23,9 +23,9 @@
       <nav class="header-actions" aria-label="Navegação principal">
         <a class="header-link" href="#catalogo">Produtos</a>
         <a class="header-link" href="#cursos">Cursos</a>
-        <a class="codelab-link" href="codelab.html">CodeLab do aluno <span>↗</span></a>
+        <a class="codelab-link" href="conta.html?next=codelab.html">CodeLab do aluno <span>↗</span></a>
         <a class="admin-link" href="login.html">Área admin <span>↗</span></a>
-        <a class="header-mrzinho" href="codelab.html#lab-path" aria-label="Conhecer o Mrzinho no CodeLab"><span class="mrzinho-mini-head" aria-hidden="true"><i></i><b></b><b></b><em>&lt;/&gt;</em></span><span>Conhece o Mrzinho</span><b>↗</b></a>
+        <a class="header-mrzinho" href="conta.html?next=codelab.html%23lab-path" aria-label="Conhecer o Mrzinho no CodeLab"><span class="mrzinho-mini-head" aria-hidden="true"><i></i><b></b><b></b><em>&lt;/&gt;</em></span><span>Conhece o Mrzinho</span><b>↗</b></a>
       </nav>
     </header>
 
@@ -38,7 +38,7 @@
           <div class="hero-actions">
             <a class="button button-primary" href="#catalogo">Explorar produtos <span>↓</span></a>
             <a class="button button-quiet" href="#cursos">Ver cursos <span>↘</span></a>
-            <a class="button button-lab" href="codelab.html">Abrir CodeLab <span>↗</span></a>
+            <a class="button button-lab" href="conta.html?next=codelab.html">Abrir CodeLab <span>↗</span></a>
           </div>
           <div class="hero-proof"><span class="proof-mark">✓</span><span id="heroCatalogCount">Recursos preservados e novos a chegar em lotes.</span></div>
         </div>
@@ -143,7 +143,7 @@
       console.warn('Catálogo gerado indisponível; a coleção curada continua disponível.', error);
     }
 
-    import { firebaseConfig } from './firebase-config.js';
+    const firebaseConfig = {apiKey:'AIzaSyC_FrApgE4TYfrBnq4urrWac9oiLavecMg',authDomain:'world-69.firebaseapp.com',projectId:'world-69'};
     const grid = document.querySelector('#grid');
     const searchInput = document.querySelector('#searchInput');
     const categories = document.querySelector('#categories');
