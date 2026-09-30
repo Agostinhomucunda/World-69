@@ -1,0 +1,169 @@
+/* Responsividade incremental do World 69: mantém o design e evita controlos cortados. */
+.site-shell {
+  min-width: 0;
+}
+
+.site-shell img,
+.site-shell video,
+.site-shell iframe {
+  max-inline-size: 100%;
+}
+
+.site-header,
+.lab-header,
+.site-header .header-actions,
+.lab-header .header-actions {
+  min-width: 0;
+}
+
+.site-header .header-actions > *,
+.lab-header .header-actions > * {
+  max-inline-size: 100%;
+}
+
+.button,
+button {
+  box-sizing: border-box;
+  min-width: 0;
+  max-inline-size: 100%;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 900px) {
+  .site-header,
+  .lab-header {
+    height: auto;
+    min-height: 76px;
+    flex-wrap: wrap;
+  }
+
+  .site-header .header-actions,
+  .lab-header .header-actions {
+    flex: 1 1 280px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 8px;
+  }
+
+  .site-header .header-actions > a,
+  .lab-header .header-actions > a {
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 700px) {
+  .site-header {
+    min-height: 68px;
+    gap: 8px;
+    padding-block: 9px;
+  }
+
+  .site-header .brand {
+    flex: 0 1 auto;
+    min-width: 0;
+  }
+
+  .site-header .header-actions {
+    flex: 1 1 145px;
+    min-width: 0;
+    gap: 6px;
+  }
+
+  .site-header .header-mrzinho {
+    display: inline-flex;
+    flex: 0 1 auto;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5px;
+    max-width: 100%;
+    min-height: 42px;
+    padding: 7px 9px;
+    font-size: clamp(9px, 2.7vw, 10px);
+    line-height: 1.2;
+    white-space: normal;
+  }
+
+  /* The existing mobile CSS hid this label, leaving only the mascot icon. */
+  .site-header .header-mrzinho > span:nth-child(2) {
+    display: inline;
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .site-header .header-mrzinho > span:first-child,
+  .site-header .header-mrzinho > b {
+    flex: 0 0 auto;
+  }
+
+  .site-header .codelab-link {
+    max-width: 100%;
+    padding: 8px 9px;
+    font-size: clamp(9px, 2.7vw, 10px);
+    line-height: 1.2;
+    white-space: normal;
+  }
+
+  .lab-header {
+    min-height: 76px;
+    gap: 8px;
+    padding-block: 9px;
+  }
+
+  .lab-header .header-actions {
+    flex: 1 1 150px;
+    min-width: 0;
+    gap: 6px;
+  }
+
+  .lab-header .header-actions > a {
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .lab-header .mrzinho-class-button {
+    flex: 0 1 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+    min-height: 42px;
+    padding: 8px 10px;
+    font-size: clamp(9px, 2.5vw, 10px);
+    line-height: 1.2;
+    white-space: normal;
+  }
+
+  .lab-hero-actions .button {
+    width: 100%;
+    max-width: 330px;
+    min-width: 0;
+    min-height: 44px;
+    line-height: 1.25;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 390px) {
+  .site-header .header-actions {
+    flex-basis: 130px;
+    gap: 5px;
+  }
+
+  .site-header .header-mrzinho {
+    gap: 4px;
+    padding: 6px 7px;
+    font-size: clamp(9px, 2.7vw, 10px);
+  }
+
+  .lab-header .header-actions {
+    flex-basis: 130px;
+  }
+
+  .lab-header .mrzinho-class-button {
+    gap: 5px;
+    padding: 8px 9px;
+  }
+}
