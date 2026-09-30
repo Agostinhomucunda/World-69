@@ -342,34 +342,23 @@ function openLesson(trackId, lessonId) {
   $('lesson-title').textContent = lesson.title;
   $('lesson-story').textContent = lesson.story;
   $('lesson-explanation').innerHTML = buildLessonExplanation(lesson);
-  renderMrzinhoClass(lesson);
-  $('mrzinho-lesson-class').hidden = true;
-  document.querySelector('.hint-row').hidden = true;
   $('mission-objective').textContent = lesson.objective;
   $('mission-icon').innerHTML = languageBadge(lesson.kind === 'choice' ? 'logic' : lesson.language);
   $('mission-kind').textContent = lesson.language === 'cpp' ? 'DESAFIO C++ · LEITURA' : lesson.kind === 'choice' ? 'DESAFIO DE LÓGICA' : `PRÁTICA ${lesson.language.toUpperCase()}`;
   $('lesson-feedback').hidden = true;
   $('lesson-feedback').className = 'feedback-box';
   $('lesson-feedback').textContent = '';
-  $('hint-content').hidden = true;
-  $('hint-content').textContent = '';
-  $('hint-button').textContent = `Dica 1 / ${lesson.hints.length}`;
-  $('solution-button').textContent = 'Ver uma solução';
   $('complete-lesson').hidden = !state.completed.includes(lesson.id);
   $('complete-lesson').textContent = state.completed.includes(lesson.id) ? 'Missão já concluída ✓' : 'Missão concluída';
   $('complete-lesson').onclick = finishLesson;
-  $('hint-button').onclick = revealHint;
-  $('solution-button').onclick = revealSolution;
   renderChallenge(lesson);
-  $('challenge-area').classList.remove('is-locked');
-  $('challenge-area').removeAttribute('aria-disabled');
   $('lesson-workspace').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 function renderChallenge(lesson) {
   const area = $('challenge-area');
-  area.classList.add('is-locked');
-  area.setAttribute('aria-disabled', 'true');
+  area.classList.remove('is-locked');
+  area.removeAttribute('aria-disabled');
   if (lesson.kind === 'choice') {
     const codeExample = lesson.codeExample ? `<pre class="choice-code-example"><code>${escapeHtml(lesson.codeExample)}</code></pre>` : '';
     area.innerHTML = `${codeExample}<p class="challenge-prompt">${escapeHtml(lesson.prompt)}</p><div class="challenge-options">${lesson.options.map((option, index) => `
