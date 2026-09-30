@@ -95,26 +95,76 @@ function showToast(message) {
 
 const voiceAvailable = 'speechSynthesis' in window && 'SpeechSynthesisUtterance' in window;
 let voiceEnabled = localStorage.getItem('w69-codelab:mrzinho-voice') !== 'off';
+let voicePreference = localStorage.getItem('w69-codelab:mrzinho-voice-name') || 'auto';
 let lastMrzinhoText = '';
-
-function preferredVoice() {
-  if (!voiceAvailable) return null;
-  const voices = window.speechSynthesis.getVoices();
-  return voices.find((voice) => /^pt-PT/i.test(voice.lang)) || voices.find((voice) => /^pt-BR/i.test(voice.lang)) || voices.find((voice) => /^pt/i.test(voice.lang)) || null;
+function availablePortugueseVoices() {
+  if (!voiceAvailable) return [];
+  return window.speechSynthesis.getVoices().filter((voice) => /^pt(?:-|$)/i.test(voice.lang));
 }
-
+function voiceScore(voice) {
+  const name = voice.name.toLowerCase();
+  const lang = voice.lang.toLowerCase();
+  let score = lang.startsWith('pt-pt') ? 40 : lang.startsWith('pt-br') ? 35 : 25;
+  if (/natural|neural|premium|enhanced|google|microsoft|siri/.test(name)) score += 30;
+  if (/male|femin|female/.test(name)) score += 2;
+  if (/compact|espeak|default/.test(name)) score -= 8;
+  return score;
+}
+function preferredVoice() {
+  const voices = availablePortugueseVoices();
+  if (!voices.length) return null;
+  if (voicePreference !== 'auto') return voices.find((voice) => `${voice.name}|${voice.lang}` === voicePreference) || voices[0];
+  return [...voices].sort((a, b) => voiceScore(b) - voiceScore(a))[0];
+}
+function spokenMrzinhoText(text) {
+  return text
+    .replace(/\bMrzinho\b/gi, 'Misterzinho')
+    .replace(/\bCodeLab\b/gi, 'Code Lab')
+    .replace(/\bJavaScript\b/gi, 'Java Script')
+    .replace(/\bPython\b/gi, 'Páiton')
+    .replace(/\bC\+\+\b/g, 'C mais mais')
+    .replace(/\bHTML\b/gi, 'H T M L')
+    .replace(/\bCSS\b/gi, 'C S S')
+    .replace(/\bDOM\b/gi, 'D O M')
+    .replace(/\bAPI\b/gi, 'A P I')
+    .replace(/\bURL\b/gi, 'U R L')
+    .replace(/\bUI\b/gi, 'interface')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
 function speakMrzinho(text = lastMrzinhoText) {
   if (!voiceAvailable || !voiceEnabled || !text) return;
   window.speechSynthesis.cancel();
-  const utterance = new SpeechSynthesisUtterance(text);
-  utterance.lang = 'pt-PT';
-  utterance.rate = 0.94;
-  utterance.pitch = 1.04;
+  const utterance = new SpeechSynthesisUtterance(spokenMrzinhoText(text));
+  utterance.lang = preferredVoice()?.lang || 'pt-PT';
+  utterance.rate = 0.88;
+  utterance.pitch = 0.94;
+  utterance.volume = 1;
   const voice = preferredVoice();
   if (voice) utterance.voice = voice;
   window.speechSynthesis.speak(utterance);
 }
-
+function populateVoiceSelector() {
+  const select = $('mrzinho-voice-select');
+  if (!select || !voiceAvailable) return;
+  const voices = availablePortugueseVoices();
+  const options = [`<option value="auto">automática · melhor disponível</option>`, ...voices.map((voice) => {
+    const value = `${voice.name}|${voice.lang}`;
+    return `<option value="${escapeHtml(value)}">${escapeHtml(voice.name)} · ${escapeHtml(voice.lang)}</option>`;
+  })];
+  select.innerHTML = options.join('');
+  select.value = voicePreference;
+  if (select.value !== voicePreference) { voicePreference = 'auto'; select.value = 'auto'; }
+}
+function updateVoiceControl() {
+  const button = $('mrzinho-voice');
+  if (!button) return;
+  button.setAttribute('aria-pressed', String(voiceEnabled));
+  button.innerHTML = `<span>${voiceEnabled ? '●' : '○'}</span> ${voiceEnabled ? 'voz ativa' : 'voz pausada'}`;
+  $('mrzinho')?.classList.toggle('voice-off', !voiceEnabled);
+  populateVoiceSelector();
+}
+if (voiceAvailable) window.speechSynthesis.addEventListener('voiceschanged', populateVoiceSelector);
 function assistantSay(text, { speak = true } = {}) {
   lastMrzinhoText = text;
   const message = $('mrzinho-message');
@@ -612,6 +662,7 @@ function bindEvents() {
     $('mrzinho-toggle').setAttribute('aria-expanded', String(open));
   });
   $('mrzinho-speak').addEventListener('click', () => speakMrzinho());
+  $('mrzinho-voice-select')?.addEventListener('change', (event) => { voicePreference = event.target.value || 'auto'; localStorage.setItem('w69-codelab:mrzinho-voice-name', voicePreference); assistantSay('Voz do Misterzinho atualizada. Ouve novamente para comparar o novo tom.', { speak: true }); });
   $('mrzinho-hint').addEventListener('click', () => {
     if (activeLesson) revealHint();
     else assistantSay('Ainda estamos a preparar o teu caminho. Diz-me o teu nome, escolhe um avatar e responde sem medo ao check-in.');
