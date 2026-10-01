@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "/api/radar-metrics"
+  to = "/.netlify/functions/radar-metrics"
+  status = 200
+  force = true

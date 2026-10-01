@@ -55,33 +55,48 @@ button {
 
 @media (max-width: 700px) {
   .site-header {
+    height: auto;
     min-height: 68px;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
     gap: 8px;
     padding-block: 9px;
   }
 
   .site-header .brand {
-    flex: 0 1 auto;
+    flex: 1 1 100%;
     min-width: 0;
   }
 
   .site-header .header-actions {
-    flex: 1 1 145px;
+    flex: 1 1 100%;
     min-width: 0;
-    gap: 6px;
+    width: 100%;
+    gap: 8px;
+    justify-content: stretch;
+  }
+
+  .site-header .header-actions > a {
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: none;
+    min-height: 44px;
   }
 
   .site-header .header-mrzinho {
-    display: inline-flex;
-    flex: 0 1 auto;
+    flex: 1 1 0;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     gap: 5px;
     max-width: 100%;
     min-height: 42px;
     padding: 7px 9px;
     font-size: clamp(9px, 2.7vw, 10px);
     line-height: 1.2;
+    word-break: normal;
+    overflow-wrap: normal;
     white-space: normal;
   }
 
@@ -98,10 +113,16 @@ button {
   }
 
   .site-header .codelab-link {
+    flex: 1 1 0;
     max-width: 100%;
+    min-width: 0;
+    min-height: 44px;
     padding: 8px 9px;
     font-size: clamp(9px, 2.7vw, 10px);
     line-height: 1.2;
+    text-align: center;
+    word-break: normal;
+    overflow-wrap: normal;
     white-space: normal;
   }
 
@@ -148,11 +169,16 @@ button {
 
 @media (max-width: 390px) {
   .site-header .header-actions {
-    flex-basis: 130px;
+    flex: 1 1 100%;
+    width: 100%;
     gap: 5px;
   }
 
   .site-header .header-mrzinho {
+    width: auto;
+    height: auto;
+    min-height: 44px;
+    flex: 1 1 0;
     gap: 4px;
     padding: 6px 7px;
     font-size: clamp(9px, 2.7vw, 10px);

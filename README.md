@@ -17,6 +17,12 @@ Montra digital em português para descobrir ferramentas, software e recursos út
 - `codelab-curriculum.js` — conteúdos de lógica, JavaScript, Python e C++ guiado.
 - `codelab-runner.js` — executor de JavaScript limitado ao interpretador educativo.
 - `codelab-python-sandbox.html` — executor Python Pyodide em iframe isolado com CSP.
+- `radar.html`, `radar.css`, `radar.js` — pesquisa responsiva de oportunidades, filtros locais e transparência das fontes.
+- `netlify.toml` — rewrite same-origin de `/api/radar-metrics` para a função Netlify.
+- `radar.generated.json` — índice estático leve, horários de atualização, estado das fontes e notas de cobertura.
+- `radar-details.generated.json` — excertos longos separados; o navegador só os pede quando o visitante abre “Ver detalhes”.
+- `scripts/update_radar.py` e `.github/workflows/radar-sync.yml` — recolha horária, normalização e atualização idempotente do feed.
+- `netlify/functions/radar-metrics.mjs` — métricas agregadas de visualizações e cliques na origem com Netlify Blobs.
 
 ## Como o catálogo automático funciona
 
@@ -34,6 +40,16 @@ Para executar localmente, com `gh` autenticado ou `GITHUB_TOKEN` definido:
 ```bash
 python3 scripts/update_catalog.py --batch-size 120 --target 1000 --per-source 10
 ```
+
+## Radar de oportunidades
+
+A homepage disponibiliza **Radar** no menu e **Encontrar oportunidades** na primeira tela. A página `radar.html` pesquisa localmente no índice leve por palavra-chave em português/inglês, país, área e data; ordena por atualidade/relevância, apresenta tempos relativos, pagina os resultados e liga sempre à origem. Descrições longas são pedidas apenas quando o visitante expande “Ver detalhes”. O Radar não recebe candidaturas nem promete que um anúncio está pago ou ativo; projetos do GitHub são contribuições open-source e não são tratados como trabalho remunerado.
+
+O workflow `.github/workflows/radar-sync.yml` consulta fontes oficiais/públicas de hora a hora e só grava `radar.generated.json` quando existe mudança. Uma execução dry-run em 1 de outubro de 2026 obteve **517 registos após deduplicação** de quatro feeds consultáveis: Jobicy (até uma chamada por hora), Remote OK, We Work Remotely e GitHub Issues. A API pública Bluesky respondeu 403 no ambiente de teste e permanece identificada como indisponível até uma execução do GitHub Actions a confirmar acesso. Reddit, Mastodon, LinkedIn, X, Instagram e Facebook não estão ligados: exigem credenciais/permissões ou não permitem cobertura global legítima; o site não faz scraping. USAJOBS, ReliefWeb e Greenhouse são mostradas como pendentes de credencial, appname pré-aprovado ou configuração do proprietário; Arbeitnow permanece desligada até haver certeza sobre os termos de redistribuição.
+
+As métricas da página são escritas apenas quando a Netlify Function `/api/radar-metrics` consegue confirmar gravação no Netlify Blobs; se o endpoint não estiver disponível, ordenação e números de views/cliques ficam desativados, sem contagens fictícias. Os eventos são deduplicados por um token aleatório do navegador e por dia UTC; o código do Radar não persiste IP, nome ou email. As contagens não identificam pessoas, não são antifraude e podem ser manipuladas ou reiniciadas ao limpar os dados do navegador. Limites diários por item/shard reduzem armazenamento excessivo, mas não substituem proteção contra abuso.
+
+Para validar recolha sem alterar os ficheiros, execute `python3 scripts/update_radar.py --dry-run`. Para atualizar os dois JSON, execute `python3 scripts/update_radar.py`. Para instalar a dependência do endpoint e executar os testes: `npm ci && npm test`. Em deploy Netlify, `netlify.toml` reescreve o caminho same-origin para `netlify/functions/radar-metrics.mjs`, que usa o armazenamento Netlify Blobs; os adaptadores opcionais só se ativam quando o proprietário configura as secrets/variables documentadas no workflow.
 
 ## Desenvolvimento local
 

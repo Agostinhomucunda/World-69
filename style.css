@@ -50,6 +50,8 @@ h1,h2,h3,p { margin-top: 0; }
 .button-primary:hover { transform: translateY(-2px); background: #d2ff81; }
 .button-quiet { border: 1px solid var(--line); color: var(--text); }
 .button-quiet:hover { transform: translateY(-2px); border-color: rgba(183,255,60,.5); }
+.button-radar { border: 1px solid rgba(91,214,255,.42); color: var(--blue); background: rgba(91,214,255,.06); }
+.button-radar:hover { transform: translateY(-2px); border-color: var(--blue); background: rgba(91,214,255,.12); }
 .hero-proof { display: flex; align-items: center; gap: 9px; color: var(--muted); font: 10px 'DM Mono',monospace; margin-top: 23px; max-width: 430px; }
 .proof-mark { display: grid; place-items: center; flex: 0 0 19px; width: 19px; height: 19px; border: 1px solid rgba(183,255,60,.45); border-radius: 50%; color: var(--lime); font-size: 11px; }
 .hero-orbit { width: min(38vw,420px); height: min(38vw,420px); min-width: 280px; min-height: 280px; margin: auto; position: relative; display: grid; place-items: center; }
