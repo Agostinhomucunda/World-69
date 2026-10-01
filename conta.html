@@ -1,40 +1,395 @@
 <!doctype html>
 <html lang="pt-PT">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#080a0d"><title>Conta do aluno — World 69</title>
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg"><link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080a0d">
+  <meta name="description" content="Entra ou cria a tua conta de estudante do World 69 CodeLab.">
+  <title>Entrar no CodeLab — World 69</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <style>
-    body{min-height:100vh;display:grid;place-items:center;padding:20px}.account-wrap{width:min(940px,100%);display:grid;grid-template-columns:1fr 1fr;background:var(--panel);border:1px solid var(--line);border-radius:22px;overflow:hidden}.account-intro{padding:55px 46px;background:linear-gradient(140deg,#17231a,#11151a 55%);display:flex;flex-direction:column;justify-content:space-between}.account-intro h1{font:600 clamp(42px,5vw,70px)/.95 'Space Grotesk';letter-spacing:-.07em;margin:65px 0 22px}.account-intro h1 em{color:var(--lime);font-style:normal}.account-intro p{color:var(--muted);max-width:310px;font-size:13px;line-height:1.7}.account-form{padding:55px 46px;display:flex;flex-direction:column;justify-content:center}.account-form h2{font:600 31px 'Space Grotesk';margin:0 0 8px}.account-form>p{color:var(--muted);font-size:13px;margin-bottom:22px}.account-field{display:block;color:var(--muted);font:10px 'DM Mono';text-transform:uppercase;letter-spacing:.1em;margin-bottom:14px}.account-field input{display:block;width:100%;margin-top:8px;border:1px solid var(--line);border-radius:9px;background:#0b0e11;color:var(--text);font:13px 'Plus Jakarta Sans';padding:14px;outline:0}.account-field input:focus{border-color:var(--lime);box-shadow:0 0 0 3px rgba(183,255,60,.12)}.account-form button{width:100%;margin-top:7px}.account-secondary{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:9px}.account-secondary button{margin:0}.google-button{background:#f4f7f5;color:#101318}.anon-button{border:1px solid rgba(183,255,60,.38);background:rgba(183,255,60,.08);color:var(--lime)}.account-divider{display:flex;align-items:center;gap:10px;color:var(--muted);font:9px 'DM Mono';margin:19px 0}.account-divider:before,.account-divider:after{content:'';height:1px;background:var(--line);flex:1}.account-status{min-height:21px;color:var(--lime);font:11px 'DM Mono';margin:14px 0 0!important}.account-error{color:var(--danger);font:11px 'DM Mono';margin:14px 0 0!important}.account-links{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:22px;color:var(--muted);font:11px 'DM Mono'}.account-links a:hover{color:var(--lime)}.account-session{padding:16px;border:1px solid rgba(183,255,60,.3);border-radius:12px;background:rgba(183,255,60,.05)}.account-session strong{display:block;margin-bottom:6px}.account-session small{display:block;color:var(--muted);line-height:1.6}.account-session button{margin-top:14px}.hidden{display:none!important}@media(max-width:700px){.account-wrap{grid-template-columns:1fr}.account-intro{padding:34px 27px}.account-intro h1{margin:42px 0 16px}.account-form{padding:34px 27px}}
+    body.account-page{min-height:100vh;display:grid;place-items:center;padding:24px;background:#080a0d;color:#f4f7f5}
+    .account-shell{width:min(440px,100%);padding:clamp(24px,6vw,42px);border:1px solid rgba(255,255,255,.11);border-radius:20px;background:#11151a;box-shadow:0 28px 90px rgba(0,0,0,.38)}
+    .account-brand{display:inline-flex;margin-bottom:35px}
+    .account-kicker{margin:0 0 9px;color:#b7ff3c;font:10px 'DM Mono',monospace;letter-spacing:.12em;text-transform:uppercase}
+    .account-shell h1{margin:0;font:600 clamp(30px,7vw,38px)/1.05 'Space Grotesk',sans-serif;letter-spacing:-.045em}
+    .account-intro{margin:10px 0 26px;color:#aab3b8;font-size:13px;line-height:1.65}
+    .account-form{display:grid;gap:15px}
+    .account-field{display:grid;gap:7px;color:#c0c8cc;font:10px 'DM Mono',monospace;letter-spacing:.08em;text-transform:uppercase}
+    .account-field input{width:100%;min-height:48px;padding:13px 14px;border:1px solid #3b454c;border-radius:10px;background:#090c0f;color:#f4f7f5;font:14px 'Plus Jakarta Sans',sans-serif;outline:0}
+    .account-field input::placeholder{color:#7f898f}
+    .account-field input:focus{border-color:#b7ff3c;box-shadow:0 0 0 3px rgba(183,255,60,.13)}
+    .account-button{display:flex;align-items:center;justify-content:center;gap:9px;width:100%;min-height:48px;padding:12px 16px;border:1px solid transparent;border-radius:10px;cursor:pointer;font:700 13px 'Plus Jakarta Sans',sans-serif;transition:background .18s,border-color .18s,transform .18s,color .18s}
+    .account-button:hover:not(:disabled){transform:translateY(-1px)}
+    .account-button:focus-visible{outline:3px solid rgba(91,214,255,.8);outline-offset:3px}
+    .account-button:disabled{cursor:wait;opacity:.62}
+    .account-primary{background:#b7ff3c;color:#101310}
+    .account-primary:hover:not(:disabled){background:#d0ff79}
+    .account-secondary{border-color:#566169;background:#1a2025;color:#f4f7f5}
+    .account-secondary:hover:not(:disabled){border-color:#b7ff3c;background:#20282c}
+    .account-google{border-color:#566169;background:#151a1e;color:#f4f7f5}
+    .account-google:hover:not(:disabled){border-color:#91a0a5;background:#1c2327}
+    .account-link-button{width:max-content;min-height:36px;padding:4px 0;border:0;background:transparent;color:#c6d0d3;text-align:left;font:11px 'DM Mono',monospace}
+    .account-link-button:hover:not(:disabled){color:#b7ff3c;transform:none}
+    .account-separator{display:flex;align-items:center;gap:12px;margin:2px 0;color:#7f898f;font:9px 'DM Mono',monospace;text-transform:uppercase}
+    .account-separator:before,.account-separator:after{content:'';height:1px;flex:1;background:#343d43}
+    .account-status{min-height:20px;margin:15px 0 0;color:#b7ff3c;font-size:12px;line-height:1.55}
+    .account-error{min-height:0;margin:5px 0 0;color:#ff9292;font-size:12px;line-height:1.55}
+    .account-panel{padding:17px;border:1px solid #38434a;border-radius:12px;background:#0c1013}
+    .account-panel h2{margin:0 0 8px;font:600 20px 'Space Grotesk',sans-serif}
+    .account-panel p{margin:0 0 16px;color:#b8c1c5;font-size:12px;line-height:1.65}
+    .account-panel strong{color:#f4f7f5;overflow-wrap:anywhere}
+    .account-panel .account-form{margin-top:16px}
+    .account-links{display:flex;justify-content:space-between;gap:12px;margin-top:25px;font:10px 'DM Mono',monospace}
+    .account-links a{color:#9aa5aa;text-decoration:none}
+    .account-links a:hover{color:#b7ff3c}
+    .account-hidden{display:none!important}
+    @media(max-width:480px){body.account-page{padding:16px}.account-shell{padding:24px 20px;border-radius:16px}.account-brand{margin-bottom:28px}.account-links{font-size:9px}}
   </style>
 </head>
-<body>
-  <main class="account-wrap">
-    <section class="account-intro"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><i></i><b></b></span><span><strong>WORLD 69</strong><small>digital discovery</small></span></a><div><p class="eyebrow">conta do aluno</p><h1>O teu caminho.<br><em>Em qualquer dispositivo.</em></h1><p>Guarda o teu progresso do CodeLab e continua as missões quando voltares. Também podes experimentar sem criar conta.</p></div><span class="login-tip">01 / STUDENT ACCESS</span></section>
-    <section class="account-form"><p class="eyebrow">02 / autenticação</p><h2 id="account-title">Entrar no CodeLab.</h2><p id="account-intro">Usa Google, email e senha, ou entra anonimamente para experimentar.</p>
-      <div id="session-box" class="account-session hidden"><strong id="session-name">Sessão ativa</strong><small id="session-detail"></small><button class="button button-primary" id="signout-btn" type="button">Sair <span>→</span></button></div>
-      <form id="account-form"><label class="account-field" for="account-email">Email<input id="account-email" type="email" autocomplete="email" placeholder="nome@gmail.com"></label><label class="account-field" for="account-password">Senha<input id="account-password" type="password" autocomplete="current-password" placeholder="Pelo menos 6 caracteres"></label><button class="button button-primary" id="email-btn" type="submit">Entrar com email <span>→</span></button><div class="account-secondary"><button class="button google-button" id="google-btn" type="button">Google <span>G</span></button><button class="button anon-button" id="anon-btn" type="button">Experimentar sem conta</button></div><div class="account-divider">ou</div><button class="button button-quiet" id="mode-btn" type="button">Ainda não tenho conta · criar senha</button><button class="button button-quiet" id="reset-btn" type="button">Esqueci a senha</button></form>
-      <p class="account-status" id="status" role="status"></p><p class="account-error" id="error" role="alert"></p><div class="account-links"><a href="codelab.html">← Voltar ao CodeLab</a><a href="index.html">Voltar ao catálogo</a></div>
+<body class="account-page">
+  <main class="account-shell">
+    <a class="brand account-brand" href="index.html" aria-label="World 69 — início">
+      <span class="brand-mark" aria-hidden="true"><i></i><b></b></span>
+      <span><strong>WORLD 69</strong><small>CODELAB / conta de estudante</small></span>
+    </a>
+
+    <section id="login-panel" aria-labelledby="account-title">
+      <p class="account-kicker">A tua sala de programação</p>
+      <h1 id="account-title">Entrar no CodeLab.</h1>
+      <p class="account-intro">Usa o teu email e senha. Ao criar uma conta, enviamos um link de confirmação para o Gmail. O progresso das missões continua guardado neste dispositivo.</p>
+      <form id="account-form" class="account-form">
+        <label class="account-field" for="account-email">Email
+          <input id="account-email" type="email" autocomplete="email" inputmode="email" placeholder="nome@gmail.com" required>
+        </label>
+        <label class="account-field" for="account-password">Senha
+          <input id="account-password" type="password" autocomplete="current-password" minlength="6" placeholder="Pelo menos 6 caracteres" required>
+        </label>
+        <button class="account-button account-primary" id="sign-in-button" type="submit">Iniciar sessão <span aria-hidden="true">→</span></button>
+        <button class="account-button account-secondary" id="create-account-button" type="button">Criar conta</button>
+        <button class="account-button account-link-button" id="reset-password-button" type="button">Esqueci-me da senha</button>
+        <div class="account-separator"><span>ou, se já usavas</span></div>
+        <button class="account-button account-google" id="google-button" type="button">Continuar com Google</button>
+      </form>
     </section>
+
+    <section id="verify-panel" class="account-panel account-hidden" aria-labelledby="verify-title" aria-live="polite">
+      <p class="account-kicker">Só falta confirmar</p>
+      <h2 id="verify-title">Confirma o teu email.</h2>
+      <p>Enviámos um link para <strong id="verify-email"></strong>. Abre-o no Gmail e confirma a conta; depois regressa aqui para continuar. Se não o encontrares, verifica o spam.</p>
+      <div class="account-form">
+        <button class="account-button account-primary" id="check-email-button" type="button">Já confirmei · continuar</button>
+        <button class="account-button account-secondary" id="resend-email-button" type="button">Reenviar link</button>
+        <button class="account-button account-link-button" id="change-email-button" type="button">Usar outro email</button>
+      </div>
+    </section>
+
+    <section id="profile-panel" class="account-panel account-hidden" aria-labelledby="profile-title">
+      <p class="account-kicker">Conta confirmada</p>
+      <h2 id="profile-title">Como te chamamos?</h2>
+      <p>Um nome ou nickname basta. Vais fazer este passo uma vez; depois entras diretamente no CodeLab.</p>
+      <form id="profile-form" class="account-form">
+        <label class="account-field" for="student-name">O teu nome
+          <input id="student-name" type="text" autocomplete="nickname" maxlength="24" placeholder="Ex.: Kito" required>
+        </label>
+        <button class="account-button account-primary" id="continue-button" type="submit">Prosseguir para o CodeLab <span aria-hidden="true">→</span></button>
+      </form>
+    </section>
+
+    <p class="account-status" id="account-status" role="status" aria-live="polite"></p>
+    <p class="account-error" id="account-error" role="alert" aria-live="assertive"></p>
+    <nav class="account-links" aria-label="Navegação">
+      <a href="codelab.html">← Voltar ao CodeLab</a>
+      <a href="index.html">Voltar ao catálogo</a>
+    </nav>
   </main>
+
   <script type="module">
     import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
-    import { getAuth, onAuthStateChanged, signInAnonymously, signInWithPopup, GoogleAuthProvider, signInWithEmailAndPassword, createUserWithEmailAndPassword, sendPasswordResetEmail, signOut } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js';
+    import {
+      browserLocalPersistence, createUserWithEmailAndPassword, getAuth,
+      onAuthStateChanged, reload, sendEmailVerification, sendPasswordResetEmail,
+      setPersistence, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider,
+      signOut, updateProfile
+    } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js';
     import { firebaseConfig } from './firebase-config.js';
-    const auth = getAuth(initializeApp(firebaseConfig));
-    const nextUrl=new URLSearchParams(location.search).get('next') || '';
-    const safeNext=nextUrl.startsWith('codelab.html') ? nextUrl : 'codelab.html';
-    const form=document.querySelector('#account-form'),email=document.querySelector('#account-email'),password=document.querySelector('#account-password'),emailBtn=document.querySelector('#email-btn'),googleBtn=document.querySelector('#google-btn'),anonBtn=document.querySelector('#anon-btn'),modeBtn=document.querySelector('#mode-btn'),resetBtn=document.querySelector('#reset-btn'),status=document.querySelector('#status'),error=document.querySelector('#error'),session=document.querySelector('#session-box'),sessionName=document.querySelector('#session-name'),sessionDetail=document.querySelector('#session-detail');
-    let createMode=false;
-    const message=err=>({ 'auth/invalid-credential':'Email ou senha incorretos.','auth/invalid-email':'Indica um email válido.','auth/email-already-in-use':'Este email já tem conta. Tenta entrar.','auth/weak-password':'Escolhe uma senha com pelo menos 6 caracteres.','auth/popup-closed-by-user':'A janela do Google foi fechada.','auth/unauthorized-domain':'Este domínio ainda não está autorizado no Firebase.','auth/operation-not-allowed':'Ativa este método em Authentication → Sign-in method no Firebase.','auth/too-many-requests':'Muitas tentativas. Aguarda um pouco e tenta novamente.'}[err.code] || 'Não foi possível concluir. Confirma a configuração do Firebase.');
-    const busy=(value)=>{[emailBtn,googleBtn,anonBtn,modeBtn,resetBtn].forEach(b=>b.disabled=value)};
-    onAuthStateChanged(auth,user=>{if(!user)return; if(nextUrl){ location.replace(safeNext); return; } session.classList.remove('hidden');form.classList.add('hidden');sessionName.textContent=user.isAnonymous?'Sessão anónima ativa':'Olá, '+(user.displayName||user.email||'explorador')+'!';sessionDetail.textContent=user.isAnonymous?'O progresso fica neste dispositivo. Podes criar uma conta mais tarde.':'Conta ativa. O teu progresso pode ser guardado com segurança.';});
-    form.addEventListener('submit',async e=>{e.preventDefault();error.textContent='';status.textContent='A validar…';busy(true);try{const action=createMode?createUserWithEmailAndPassword:signInWithEmailAndPassword;await action(auth,email.value.trim(),password.value); status.textContent=createMode?'Conta criada. A abrir o CodeLab…':'Login concluído. A abrir o CodeLab…'; location.replace(safeNext)}catch(err){error.textContent=message(err);status.textContent=''}finally{busy(false)}});
-    googleBtn.onclick=async()=>{error.textContent='';busy(true);try{await signInWithPopup(auth,new GoogleAuthProvider()); location.replace(safeNext)}catch(err){error.textContent=message(err)}finally{busy(false)}};
-    anonBtn.onclick=async()=>{error.textContent='';busy(true);try{await signInAnonymously(auth); location.replace(safeNext)}catch(err){error.textContent=message(err)}finally{busy(false)}};
-    modeBtn.onclick=()=>{createMode=!createMode;modeBtn.textContent=createMode?'Já tenho conta · entrar com senha':'Ainda não tenho conta · criar senha';emailBtn.innerHTML=createMode?'Criar conta <span>→</span>':'Entrar com email <span>→</span>'};
-    resetBtn.onclick=async()=>{error.textContent='';if(!email.value.trim()){error.textContent='Indica primeiro o teu email.';return}try{await sendPasswordResetEmail(auth,email.value.trim());status.textContent='Enviámos um link para redefinir a senha.'}catch(err){error.textContent=message(err)}};
-    document.querySelector('#signout-btn').onclick=()=>signOut(auth);
+
+    // A app Firebase com nome próprio mantém a sessão de estudante separada do login admin [DEFAULT].
+    const auth = getAuth(initializeApp(firebaseConfig, 'World69Student'));
+    auth.languageCode = 'pt';
+    const ready = setPersistence(auth, browserLocalPersistence).catch(() => {});
+    const params = new URLSearchParams(location.search);
+    const candidate = params.get('next') || 'codelab.html';
+    const candidateUrl = new URL(candidate, location.href);
+    const codelabPath = new URL('codelab.html', location.href).pathname;
+    const safeNext = candidateUrl.origin === location.origin && candidateUrl.pathname === codelabPath
+      ? `${candidateUrl.pathname}${candidateUrl.search}${candidateUrl.hash}`
+      : 'codelab.html';
+
+    const $ = (id) => document.getElementById(id);
+    const loginPanel = $('login-panel');
+    const verifyPanel = $('verify-panel');
+    const profilePanel = $('profile-panel');
+    const emailInput = $('account-email');
+    const passwordInput = $('account-password');
+    const status = $('account-status');
+    const error = $('account-error');
+    let currentUser = null;
+    let processingUid = '';
+    let redirecting = false;
+    const buttons = [...document.querySelectorAll('.account-button')];
+
+    function showPanel(name) {
+      loginPanel.classList.toggle('account-hidden', name !== 'login');
+      verifyPanel.classList.toggle('account-hidden', name !== 'verify');
+      profilePanel.classList.toggle('account-hidden', name !== 'profile');
+    }
+    function setBusy(isBusy) { buttons.forEach((button) => { button.disabled = isBusy; }); }
+    function setStatus(message = '') { status.textContent = message; }
+    function setError(message = '') { error.textContent = message; }
+    function authMessage(err) {
+      const messages = {
+        'auth/invalid-email': 'Escreve um email válido.',
+        'auth/invalid-credential': 'Email ou senha incorretos.',
+        'auth/invalid-login-credentials': 'Email ou senha incorretos.',
+        'auth/email-already-in-use': 'Este email já tem conta. Inicia sessão e confirma-o se for necessário.',
+        'auth/weak-password': 'A senha precisa de ter pelo menos 6 caracteres.',
+        'auth/operation-not-allowed': 'Este método ainda não está ativo no Firebase Authentication.',
+        'auth/unauthorized-domain': 'Este domínio ainda precisa de ser autorizado no Firebase Authentication.',
+        'auth/too-many-requests': 'Muitas tentativas seguidas. Aguarda um pouco e tenta novamente.',
+        'auth/network-request-failed': 'Sem ligação ao Firebase. Confere a Internet e tenta novamente.',
+        'auth/popup-closed-by-user': 'A janela do Google foi fechada. Podes tentar novamente.'
+      };
+      return messages[err?.code] || 'Não foi possível concluir agora. Confere os dados e tenta novamente.';
+    }
+
+    function verificationSettings() {
+      const url = new URL('conta.html', location.href);
+      url.search = '';
+      url.searchParams.set('next', safeNext);
+      url.searchParams.set('emailVerified', '1');
+      return { url: url.toString() };
+    }
+
+    function openProgressDb() {
+      return new Promise((resolve, reject) => {
+        if (!('indexedDB' in window)) return reject(new Error('IndexedDB indisponível'));
+        const request = indexedDB.open('world69-codelab', 1);
+        request.onupgradeneeded = () => {
+          if (!request.result.objectStoreNames.contains('documents')) request.result.createObjectStore('documents');
+        };
+        request.onsuccess = () => resolve(request.result);
+        request.onerror = () => reject(request.error || new Error('Não foi possível abrir o progresso local'));
+      });
+    }
+
+    function readFallbackState() {
+      try { return JSON.parse(localStorage.getItem('w69-codelab:guest') || 'null'); } catch (_) { return null; }
+    }
+
+    async function readProgressState() {
+      try {
+        const db = await openProgressDb();
+        const value = await new Promise((resolve, reject) => {
+          const request = db.transaction('documents', 'readonly').objectStore('documents').get('guest');
+          request.onsuccess = () => resolve(request.result || null);
+          request.onerror = () => reject(request.error);
+        });
+        db.close();
+        if (value) return value;
+      } catch (_) { /* localStorage fallback below */ }
+      return readFallbackState();
+    }
+
+    async function saveNameToCodeLab(name, overwriteName = false) {
+      const previous = await readProgressState() || {};
+      const oldProfile = previous.profile && typeof previous.profile === 'object' ? previous.profile : {};
+      const state = {
+        version: 2,
+        completed: [],
+        drafts: {},
+        diagnosticScore: null,
+        recommendedTrack: 'logic',
+        missionCursor: 0,
+        endlessProgress: {},
+        ...previous,
+        profile: {
+          name: overwriteName ? name : (oldProfile.name || name),
+          avatar: oldProfile.avatar || '🦊',
+          goal: oldProfile.goal || 'curious',
+          level: oldProfile.level || 'começo'
+        }
+      };
+      try {
+        const db = await openProgressDb();
+        await new Promise((resolve, reject) => {
+          const transaction = db.transaction('documents', 'readwrite');
+          transaction.objectStore('documents').put(state, 'guest');
+          transaction.oncomplete = resolve;
+          transaction.onerror = () => reject(transaction.error);
+          transaction.onabort = () => reject(transaction.error || new Error('A gravação do perfil foi cancelada'));
+        });
+        db.close();
+        return true;
+      } catch (_) {
+        try { localStorage.setItem('w69-codelab:guest', JSON.stringify(state)); return true; } catch (_) { return false; }
+      }
+    }
+
+    function redirectToLab() {
+      if (redirecting) return;
+      redirecting = true;
+      setStatus('Tudo pronto. A abrir o CodeLab…');
+      location.replace(safeNext);
+    }
+
+    async function continueVerifiedUser(user) {
+      let name = user.displayName?.trim() || '';
+      if (!name) {
+        const saved = await readProgressState();
+        name = saved?.profile?.name?.trim() || '';
+        if (name) await updateProfile(user, { displayName: name });
+      }
+      if (!name) {
+        $('student-name').value = '';
+        showPanel('profile');
+        setStatus('Email confirmado. Escolhe o nome que vai aparecer na tua sala.');
+        return;
+      }
+      const saved = await saveNameToCodeLab(name, false);
+      if (!saved) {
+        setError('O navegador bloqueou o armazenamento do perfil. Ativa o armazenamento local e tenta novamente.');
+        return;
+      }
+      redirectToLab();
+    }
+
+    async function handleSignedInUser(user) {
+      if (!user || processingUid === user.uid || redirecting) return;
+      processingUid = user.uid;
+      currentUser = user;
+      try {
+        await reload(user);
+        if (!user.emailVerified) {
+          $('verify-email').textContent = user.email || emailInput.value.trim();
+          showPanel('verify');
+          if (params.get('emailVerified') === '1') {
+            setStatus('Ainda não vemos a confirmação. Abre o link mais recente do Gmail e tenta outra vez.');
+          } else {
+            setStatus('Confirma o teu email para continuares.');
+          }
+          return;
+        }
+        await continueVerifiedUser(user);
+      } catch (err) {
+        setError(authMessage(err));
+      } finally {
+        processingUid = '';
+      }
+    }
+
+    onAuthStateChanged(auth, (user) => {
+      currentUser = user;
+      if (!user) {
+        showPanel('login');
+        if (params.get('emailVerified') === '1') setStatus('Email confirmado. Inicia sessão para continuares.');
+        return;
+      }
+      handleSignedInUser(user);
+    });
+
+    $('account-form').addEventListener('submit', async (event) => {
+      event.preventDefault();
+      if (!$('account-form').reportValidity()) return;
+      setError(''); setStatus('A iniciar sessão…'); setBusy(true);
+      try {
+        await ready;
+        const result = await signInWithEmailAndPassword(auth, emailInput.value.trim(), passwordInput.value);
+        await handleSignedInUser(result.user);
+      } catch (err) { setError(authMessage(err)); }
+      finally { setBusy(false); }
+    });
+
+    $('create-account-button').addEventListener('click', async () => {
+      if (!$('account-form').reportValidity()) return;
+      setError(''); setStatus('A criar a tua conta…'); setBusy(true);
+      try {
+        await ready;
+        const result = await createUserWithEmailAndPassword(auth, emailInput.value.trim(), passwordInput.value);
+        currentUser = result.user;
+        $('verify-email').textContent = result.user.email || emailInput.value.trim();
+        showPanel('verify');
+        setStatus('A enviar o link de confirmação para o teu Gmail…');
+        await sendEmailVerification(result.user, verificationSettings());
+        setStatus('Enviámos o link. Confirma o email e regressa aqui para escolheres o teu nome.');
+      } catch (err) { setError(authMessage(err)); }
+      finally { setBusy(false); }
+    });
+
+    $('resend-email-button').addEventListener('click', async () => {
+      if (!currentUser) return;
+      setError(''); setStatus('A reenviar o link…'); setBusy(true);
+      try {
+        await sendEmailVerification(currentUser, verificationSettings());
+        setStatus('Novo link enviado. Se não aparecer, verifica o spam.');
+      } catch (err) { setError(authMessage(err)); }
+      finally { setBusy(false); }
+    });
+
+    $('check-email-button').addEventListener('click', async () => {
+      if (!currentUser) return;
+      setError(''); setStatus('A confirmar…'); setBusy(true);
+      try { await handleSignedInUser(currentUser); }
+      catch (err) { setError(authMessage(err)); }
+      finally { setBusy(false); }
+    });
+
+    $('change-email-button').addEventListener('click', async () => {
+      setError(''); setStatus(''); setBusy(true);
+      try { await signOut(auth); showPanel('login'); passwordInput.value = ''; }
+      catch (err) { setError(authMessage(err)); }
+      finally { setBusy(false); }
+    });
+
+    $('profile-form').addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const name = $('student-name').value.trim().slice(0, 24);
+      if (!name || !currentUser) return;
+      setError(''); setStatus('A guardar o teu perfil…'); setBusy(true);
+      try {
+        await updateProfile(currentUser, { displayName: name });
+        const saved = await saveNameToCodeLab(name, true);
+        if (!saved) throw new Error('storage/unavailable');
+        redirectToLab();
+      } catch (err) {
+        setError(err?.message === 'storage/unavailable'
+          ? 'Não foi possível guardar o teu nome neste dispositivo. Ativa o armazenamento local e tenta novamente.'
+          : authMessage(err));
+      } finally { setBusy(false); }
+    });
+
+    $('google-button').addEventListener('click', async () => {
+      setError(''); setStatus('A abrir o acesso Google…'); setBusy(true);
+      try {
+        await ready;
+        await signInWithPopup(auth, new GoogleAuthProvider());
+      } catch (err) { setError(authMessage(err)); }
+      finally { setBusy(false); }
+    });
+
+    $('reset-password-button').addEventListener('click', async () => {
+      const email = emailInput.value.trim();
+      if (!email) { setError('Escreve primeiro o teu email.'); return; }
+      setError(''); setStatus('A enviar instruções…');
+      try {
+        await sendPasswordResetEmail(auth, email);
+        setStatus('Se existir uma conta com esse email, enviámos instruções para redefinir a senha.');
+      } catch (err) { setError(authMessage(err)); }
+    });
   </script>
 </body>
 </html>
