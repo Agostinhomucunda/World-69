@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explora oportunidades digitais, empregos, projetos, estágios e publicações públicas de vários países e plataformas.">
+  <meta name="theme-color" content="#080a0d">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="manifest" href="manifest.webmanifest">
+  <title>Radar de oportunidades — World 69</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
+  <link rel="stylesheet" href="radar.css">
+</head>
+<body class="radar-page">
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="World 69 — início">
+        <span class="brand-mark" aria-hidden="true"><i></i><b></b></span>
+        <span><strong>WORLD 69</strong><small>digital discovery</small></span>
+      </a>
+      <nav class="header-actions" aria-label="Navegação principal">
+        <a class="header-link" href="index.html#catalogo">Produtos</a>
+        <a class="header-link" href="index.html#cursos">Cursos</a>
+        <a class="header-link radar-nav-current" href="radar.html" aria-current="page">Radar <span>↗</span></a>
+        <a class="codelab-link" href="conta.html?next=codelab.html">CodeLab do aluno <span>↗</span></a>
+        <a class="header-mrzinho" href="codelab.html?teacher=1" aria-label="Ter aula com o Mrzinho"><span class="mrzinho-mini-head" aria-hidden="true"><i></i><b></b><em>&lt;/&gt;</em></span><span>Ter aula com o Mrzinho</span><b>↗</b></a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="radar-hero" aria-labelledby="radar-title">
+        <div class="radar-hero-copy">
+          <a class="radar-back-link" href="index.html">← Voltar ao World 69</a>
+          <p class="eyebrow radar-eyebrow"><span class="pulse-dot"></span> WORLD 69 / radar de oportunidades</p>
+          <h1 id="radar-title">O próximo passo<br><em>está em movimento.</em></h1>
+          <p class="radar-hero-lede">Encontra oportunidades digitais e profissionais recentes em vários países e plataformas. Pesquisa empregos, freelance, projetos open-source, estágios, tutoria e pistas públicas — sempre com link para a origem.</p>
+          <a class="button button-primary radar-hero-cta" href="#oportunidades">Encontrar oportunidades <span>↓</span></a>
+        </div>
+        <div class="radar-orbit-panel" aria-label="Resumo do Radar">
+          <div class="radar-orbit" aria-hidden="true"><span class="radar-orbit-dot"></span><span class="radar-orbit-core">69</span></div>
+          <div class="radar-stats">
+            <div><strong id="radar-opportunity-count">—</strong><span>oportunidades</span></div>
+            <div><strong id="radar-source-count">—</strong><span>fontes públicas ativas</span></div>
+            <div><strong id="radar-updated-at">A preparar</strong><span>última atualização publicada</span></div>
+          </div>
+          <span class="radar-panel-note">CONSULTA AUTOMÁTICA · INTERVALO 60 MIN</span>
+        </div>
+      </section>
+
+      <section class="radar-directory" id="oportunidades" aria-labelledby="opportunities-title">
+        <div class="radar-section-heading">
+          <div>
+            <p class="eyebrow">01 / encontra a tua próxima oportunidade</p>
+            <h2 id="opportunities-title">Pesquisa aberta.<br><em>Origem sempre à vista.</em></h2>
+            <p class="radar-section-intro">Combina palavra-chave, país, área e período. A pesquisa é local no feed já carregado — não faz chamadas externas a cada tecla.</p>
+          </div>
+          <p class="radar-refresh-note" id="radar-refresh-note" role="status" aria-live="polite">A carregar oportunidades…</p>
+        </div>
+
+        <div class="radar-workspace">
+          <aside class="radar-filter-panel" aria-label="Filtros de oportunidades">
+            <form id="radar-filter-form">
+              <label class="radar-control radar-search-control" for="radar-search">
+                <span>PALAVRA-CHAVE / PT OU EN</span>
+                <input id="radar-search" type="search" placeholder="Ex.: Python, designer, estágio…" autocomplete="off">
+              </label>
+              <label class="radar-control" for="radar-country">
+                <span>PAÍS / LOCALIZAÇÃO</span>
+                <select id="radar-country">
+                  <option value="all">Todos os países</option>
+                  <option>Angola</option>
+                  <option>Brasil</option>
+                  <option>Portugal</option>
+                  <option>Moçambique</option>
+                  <option>África do Sul</option>
+                  <option>Cabo Verde</option>
+                  <option>Estados Unidos</option>
+                  <option>Reino Unido</option>
+                  <option>Canadá</option>
+                  <option>Remoto/Global</option>
+                </select>
+              </label>
+              <label class="radar-control" for="radar-category">
+                <span>ÁREA / TIPO</span>
+                <select id="radar-category">
+                  <option value="all">Todas as áreas</option>
+                  <option value="programming">Programação</option>
+                  <option value="websites">Websites</option>
+                  <option value="applications">Aplicações</option>
+                  <option value="ai">IA</option>
+                  <option value="cybersecurity">Cibersegurança</option>
+                  <option value="design">Design</option>
+                  <option value="video">Vídeo</option>
+                  <option value="audio">Áudio</option>
+                  <option value="social">Redes sociais</option>
+                  <option value="teaching">Ensino / Tutoria</option>
+                  <option value="employment">Emprego</option>
+                  <option value="freelance">Freelance</option>
+                  <option value="internship">Estágio</option>
+                  <option value="projects">Projetos</option>
+                  <option value="remote">Remoto</option>
+                </select>
+              </label>
+              <label class="radar-control" for="radar-period">
+                <span>PUBLICADO</span>
+                <select id="radar-period">
+                  <option value="all">Qualquer período</option>
+                  <option value="1">Últimas 24 horas</option>
+                  <option value="7">Últimos 7 dias</option>
+                  <option value="30">Últimos 30 dias</option>
+                </select>
+              </label>
+              <label class="radar-control" for="radar-sort">
+                <span>ORDENAR POR</span>
+                <select id="radar-sort">
+                  <option value="newest">Mais recentes</option>
+                  <option value="relevance">Mais relevantes</option>
+                  <option value="views" disabled>Mais visualizadas · indisponível</option>
+                </select>
+              </label>
+              <button class="radar-clear-button" type="reset">Limpar filtros <span>↺</span></button>
+            </form>
+            <div class="radar-filter-footnote"><span aria-hidden="true">↳</span> Remuneração, localização e datas só aparecem quando a fonte as fornece. Projetos open-source não significam trabalho pago.</div>
+          </aside>
+
+          <section class="radar-results" aria-label="Resultados de oportunidades">
+            <div class="radar-quick-filters" role="group" aria-label="Filtros rápidos">
+              <button class="radar-chip is-active" type="button" data-quick-category="all">Tudo</button>
+              <button class="radar-chip" type="button" data-quick-category="employment">Emprego</button>
+              <button class="radar-chip" type="button" data-quick-category="freelance">Freelance</button>
+              <button class="radar-chip" type="button" data-quick-category="projects">Projetos</button>
+              <button class="radar-chip" type="button" data-quick-category="internship">Estágio</button>
+              <button class="radar-chip" type="button" data-quick-category="teaching">Ensino</button>
+            </div>
+            <div class="radar-results-bar">
+              <p id="radar-results-count" aria-live="polite">A preparar resultados…</p>
+              <span id="radar-sort-context">MAIS RECENTES</span>
+            </div>
+            <div class="radar-feed" id="radar-feed" aria-live="polite" aria-busy="true">
+              <div class="radar-skeleton" aria-hidden="true"><div class="radar-skeleton-card"><span></span><span></span><span></span></div><div class="radar-skeleton-card"><span></span><span></span><span></span></div><div class="radar-skeleton-card"><span></span><span></span><span></span></div></div>
+            </div>
+            <button class="radar-load-more" id="radar-load-more" type="button" hidden>Carregar mais <span>↓</span></button>
+          </section>
+        </div>
+      </section>
+
+      <section class="radar-sources-section" aria-labelledby="radar-sources-title">
+        <div class="radar-source-heading">
+          <div><p class="eyebrow">02 / transparência das fontes</p><h2 id="radar-sources-title">Vê de onde<br><em>vem cada pista.</em></h2></div>
+          <p>O Radar agrega feeds e APIs públicas. Uma fonte indisponível não bloqueia as outras; integrações que precisem de credenciais ou aprovação ficam claramente assinaladas.</p>
+        </div>
+        <div class="radar-source-grid" id="radar-source-list" aria-live="polite">
+          <div class="radar-source-placeholder">A carregar estado das fontes…</div>
+        </div>
+        <div class="radar-coverage-notes" id="radar-coverage-notes" hidden aria-live="polite"></div>
+        <p class="radar-disclaimer">Confirma sempre o anúncio, a data, a remuneração e as condições na publicação original antes de responder. O World 69 não representa empregadores, não valida cada proposta e não recebe candidaturas. Publicações sociais são pistas comunitárias, não ofertas verificadas. As métricas usam um token aleatório do navegador e contam cada item uma vez por navegador/dia UTC; não representam pessoas verificadas, não são antifraude e podem ser manipuladas ou reiniciadas ao limpar os dados do navegador. O código do Radar não persiste IP, nome ou email. Links externos abrem na fonte e não partilham dados do perfil com o Radar.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer radar-footer">
+      <div class="footer-brand"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><i></i><b></b></span><span><strong>WORLD 69</strong><small>digital discovery</small></span></a><p>Descobre. Aprende.<br>Encontra novas possibilidades.</p></div>
+      <div><p class="footer-label">NAVEGAR</p><a href="index.html#catalogo">Produtos</a><a href="index.html#cursos">Cursos</a><a href="radar.html" aria-current="page">Radar</a></div>
+      <div><p class="footer-label">APRENDER</p><a href="conta.html?next=codelab.html">CodeLab do aluno</a><a href="codelab.html?teacher=1">Ter aula com o Mrzinho</a></div>
+      <div class="footer-end"><span>© 2026 World 69</span><span>feito para quem faz</span></div>
+    </footer>
+  </div>
+
+  <script type="module" src="radar.js"></script>
+  <script>if ('serviceWorker' in navigator) window.addEventListener('load', () => navigator.serviceWorker.register('./sw-v2.js?v=20261002-radar-v1').catch(() => {}));</script>
+</body>
+</html>
