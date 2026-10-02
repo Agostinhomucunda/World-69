@@ -30,6 +30,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_OUTPUT = ROOT / "radar.generated.json"
 DEFAULT_DETAILS_OUTPUT = ROOT / "radar-details.generated.json"
 USER_AGENT = "World69-Radar/1.0 (+https://world69online.netlify.app/radar.html)"
+AGL_ANGOLA_FEED_URL = "https://acareerbyagl.talent-soft.com/handlers/offerRss.ashx?LCID=1033&Rss_JobCountry=37"
 MAX_DESCRIPTION = 2400
 MAX_SUMMARY = 420
 
@@ -51,6 +52,7 @@ SOURCE_REGISTRY = [
     OpportunitySource("jobicy", "Jobicy", "jobs", "public JSON API", ("Remoto/Global",), ("employment", "freelance", "remote"), 60, 100, "Fonte remota; consultar no máximo uma vez por hora."),
     OpportunitySource("remoteok", "Remote OK", "jobs", "public JSON API", ("Remoto/Global",), ("employment", "freelance", "remote"), 60, 250, "Atribuição e link dofollow para cada anúncio original."),
     OpportunitySource("weworkremotely", "We Work Remotely", "jobs", "public RSS", ("Remoto/Global",), ("employment", "remote"), 60, 100, "Preservar a atribuição e o link do feed original."),
+    OpportunitySource("agl_angola", "AGL Angola Careers", "jobs", "official RSS by country", ("Angola",), ("employment", "internship"), 60, 50, "Feed RSS oficial do portal de carreiras AGL, filtrada para Angola; manter o link original."),
     OpportunitySource("github", "GitHub Issues", "open_source", "official REST API", (), ("projects", "programming", "websites", "applications", "cybersecurity"), 60, 180, "Issues abertas com labels de contribuição; remuneração não presumida."),
     OpportunitySource("bluesky", "Bluesky", "social", "public AppView API", ("Todos os países",), ("social", "projects", "freelance", "employment"), 60, 120, "Pistas comunitárias não verificadas; conteúdo curto e sem perfil pessoal."),
     OpportunitySource("reliefweb", "ReliefWeb", "jobs_training", "official API v2", (), ("employment", "teaching", "internship"), 60, 100, "Requer appname pré-aprovado; não republicar corpo extenso de parceiros."),
@@ -100,33 +102,34 @@ CATEGORY_RULES: list[tuple[str, tuple[str, ...]]] = [
 
 
 class PlainTextParser(HTMLParser):
-    def __init__(self) -> None:
+    def __init__(self, preserve_blocks: bool = False) -> None:
         super().__init__(convert_charrefs=True)
         self.parts: list[str] = []
         self.blocked = 0
+        self.block_separator = "\n" if preserve_blocks else " "
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         if tag.lower() in {"script", "style", "iframe", "svg"}:
             self.blocked += 1
         elif tag.lower() in {"p", "br", "div", "li", "h1", "h2", "h3", "tr"} and not self.blocked:
-            self.parts.append(" ")
+            self.parts.append(self.block_separator)
 
     def handle_endtag(self, tag: str) -> None:
         if tag.lower() in {"script", "style", "iframe", "svg"} and self.blocked:
             self.blocked -= 1
         elif tag.lower() in {"p", "div", "li", "h1", "h2", "h3", "tr"} and not self.blocked:
-            self.parts.append(" ")
+            self.parts.append(self.block_separator)
 
     def handle_data(self, data: str) -> None:
         if not self.blocked:
             self.parts.append(data)
 
 
-def clean_text(value: Any, limit: int = MAX_DESCRIPTION) -> str:
+def clean_text(value: Any, limit: int = MAX_DESCRIPTION, *, preserve_blocks: bool = False) -> str:
     if value is None:
         return ""
     raw = html.unescape(str(value))
-    parser = PlainTextParser()
+    parser = PlainTextParser(preserve_blocks=preserve_blocks)
     try:
         parser.feed(raw)
         text = " ".join(parser.parts)
@@ -143,9 +146,15 @@ def clean_text(value: Any, limit: int = MAX_DESCRIPTION) -> str:
     for line in re.split(r"[\r\n]+", text):
         if re.search(r"\b(email|e-mail|phone|telephone|whatsapp|contact details|contact me at|contacto|telefone|telemóvel)\b", line, re.I):
             continue
-        cleaned_lines.append(line)
-    text = re.sub(r"[>*_`#~]+", " ", " ".join(cleaned_lines))
-    text = re.sub(r"\s+", " ", text).strip()
+        cleaned_lines.append(line.strip())
+    separator = "\n" if preserve_blocks else " "
+    text = re.sub(r"[>*_`#~]+", " ", separator.join(cleaned_lines))
+    if preserve_blocks:
+        text = re.sub(r"[ \t]+", " ", text)
+        text = re.sub(r"[ \t]*\n[ \t]*", "\n", text)
+        text = re.sub(r"\n{2,}", "\n", text).strip()
+    else:
+        text = re.sub(r"\s+", " ", text).strip()
     if len(text) > limit:
         text = text[:limit].rsplit(" ", 1)[0].rstrip(" .,:;—-") + "…"
     return text
@@ -254,7 +263,7 @@ def make_item(
     remote = bool(remote or location_remote)
     searchable = " ".join([clean_title, clean_text(description, 1500), " ".join(clean_tags), clean_text(employment_type, 80)])
     categories = classify_categories(searchable, source_id, employment_type, remote)
-    safe_description = clean_text(description, MAX_DESCRIPTION) if summary_allowed else ""
+    safe_description = clean_text(description, MAX_DESCRIPTION, preserve_blocks=True) if summary_allowed else ""
     summary = clean_text(safe_description, MAX_SUMMARY)
     clean_salary = clean_text(salary, 100)
     return {
@@ -283,7 +292,7 @@ def make_item(
 def classify_categories(text: str, source_id: str, employment_type: Any, remote: bool) -> list[str]:
     value = f" {text.casefold()} "
     categories = [name for name, terms in CATEGORY_RULES if any(term in value for term in terms)]
-    if source_id in {"jobicy", "remoteok", "weworkremotely", "reliefweb", "greenhouse", "usajobs"} and "employment" not in categories:
+    if source_id in {"jobicy", "remoteok", "weworkremotely", "agl_angola", "reliefweb", "greenhouse", "usajobs"} and "employment" not in categories:
         categories.append("employment")
     if source_id == "github" and "projects" not in categories:
         categories.append("projects")
@@ -301,6 +310,8 @@ def normalize_type(source_id: str, employment_type: Any, text: str) -> str:
         return "open-source contribution"
     if source_id == "bluesky":
         return "community post · unverified"
+    if source_id == "agl_angola":
+        return "employment"
     value = f"{employment_type} {text}".casefold()
     if "intern" in value or "estágio" in value or "estagio" in value:
         return "internship"
@@ -413,6 +424,24 @@ def fetch_weworkremotely() -> list[dict[str, Any]]:
         guid = entry.findtext("guid") or link
         published = entry.findtext("pubDate")
         item = make_item("weworkremotely", "We Work Remotely", guid, title, link, published, description, "", "Remoto/Global", [], "remote", "", True)
+        if item:
+            items.append(item)
+    return items
+
+
+def fetch_agl_angola() -> list[dict[str, Any]]:
+    root = ET.fromstring(request_bytes(AGL_ANGOLA_FEED_URL))
+    items = []
+    for entry in root.findall(".//item"):
+        title = clean_text(entry.findtext("title"), 240)
+        title = re.sub(r"^\d{4}-\d+\s*", "", title).lstrip(" -‐‑‒–—−").strip()
+        link = entry.findtext("link") or ""
+        description = entry.findtext("description") or ""
+        item = make_item(
+            "agl_angola", "AGL Angola Careers", entry.findtext("guid") or link,
+            title, link, entry.findtext("pubDate"), description,
+            "AGL (Africa Global Logistics)", "Angola", [], "employment", "", False,
+        )
         if item:
             items.append(item)
     return items
@@ -632,7 +661,7 @@ def merge_records(previous: list[dict[str, Any]], fresh: list[dict[str, Any]], n
             existing["country"] = "Remoto/Global"
         if len(clean_text(item.get("summary"), MAX_SUMMARY)) > len(clean_text(existing.get("summary"), MAX_SUMMARY)):
             existing["summary"] = clean_text(item.get("summary"), MAX_SUMMARY)
-            existing["description"] = clean_text(item.get("description"), MAX_DESCRIPTION)
+            existing["description"] = clean_text(item.get("description"), MAX_DESCRIPTION, preserve_blocks=True)
         if not existing.get("salary") and item.get("salary"):
             existing["salary"] = item["salary"]
         if not existing.get("company") and item.get("company"):
@@ -655,7 +684,7 @@ def split_feed_items(items: list[dict[str, Any]], fallback_descriptions: dict[st
         item = dict(source)
         item_id = str(item.get("id") or "")
         raw_description = item.pop("description", "") or fallback_descriptions.get(item_id, "")
-        description = clean_text(raw_description, 900)
+        description = clean_text(raw_description, 900, preserve_blocks=True)
         summary = clean_text(item.get("summary"), MAX_SUMMARY)
         item["summary"] = summary
         has_details = bool(description and len(description) > len(summary) + 40 and description.casefold() != summary.casefold())
@@ -711,6 +740,7 @@ def run_collection(output_path: Path, dry_run: bool = False, details_path: Path 
         ("jobicy", fetch_jobicy),
         ("remoteok", fetch_remoteok),
         ("weworkremotely", fetch_weworkremotely),
+        ("agl_angola", fetch_agl_angola),
         ("github", fetch_github_issues),
         ("bluesky", fetch_bluesky),
     ]
@@ -799,6 +829,7 @@ def run_collection(output_path: Path, dry_run: bool = False, details_path: Path 
         "sources": [statuses[s.id] for s in SOURCE_REGISTRY],
         "coverageNotes": [
             "O Radar agrega e encaminha; não verifica cada anúncio nem processa candidaturas.",
+            "AGL Angola Careers usa a feed RSS oficial filtrada para Angola; os anúncios mantêm um excerto e o link para a publicação original.",
             "Publicações Bluesky são pistas comunitárias não verificadas. Se a API estiver indisponível, nenhuma publicação é inventada.",
             "Reddit, Mastodon, LinkedIn, X, Instagram e Facebook não estão ativos: dependem de APIs oficiais, credenciais e permissões específicas; o site não faz scraping.",
             "Freelance remunerado, salário, localização e contactos só aparecem se a fonte os fornecer explicitamente.",

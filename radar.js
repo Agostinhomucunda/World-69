@@ -14,6 +14,42 @@ const TYPE_LABELS = {
   'freelance/contract': 'Freelance / contrato',
   internship: 'Estágio', training: 'Ensino / formação', employment: 'Emprego'
 };
+const CATEGORY_LABELS_EN = {
+  programming: 'Programming', websites: 'Websites', applications: 'Applications', ai: 'AI', cybersecurity: 'Cybersecurity',
+  design: 'Design', video: 'Video', audio: 'Audio', social: 'Social media', teaching: 'Teaching / Tutoring', employment: 'Employment',
+  freelance: 'Freelance', internship: 'Internship', projects: 'Projects', remote: 'Remote'
+};
+const TYPE_LABELS_EN = {
+  'open-source contribution': 'Open-source contribution',
+  'community post · unverified': 'Community lead · unverified',
+  'freelance/contract': 'Freelance / contract', internship: 'Internship', training: 'Training', employment: 'Employment'
+};
+const browserLanguage = typeof navigator !== 'undefined' ? (navigator.languages?.[0] || navigator.language || 'pt-PT') : 'pt-PT';
+const CARD_LANGUAGE = browserLanguage.toLowerCase().startsWith('en') ? 'en' : 'pt';
+const CARD_LOCALE = CARD_LANGUAGE === 'en' ? 'en-GB' : 'pt-PT';
+const CARD_COPY = CARD_LANGUAGE === 'en' ? {
+  unverified: 'Unverified', confirmSource: 'Confirm at source', missingSummary: 'The source does not provide a summary. Check the original listing for details.',
+  workHeading: 'What the role involves', projectHeading: 'What the project asks for', socialHeading: 'What the post says', opportunityHeading: 'About this opportunity',
+  detailsEmployment: 'Responsibilities and role profile', detailsProject: 'Full project brief', detailsSocial: 'More about this post', detailsOther: 'Read the full source description',
+  detailsHint: 'Open to load the full description.', loadingDetails: 'Loading description…', missingDetails: 'No additional details; check the original listing.', detailsError: 'Could not load details. Check the original listing.',
+  projectPrefix: 'Project:', remote: 'remote', sourceFound: 'Found in', source: 'Source:', otherSources: 'Other sources',
+  viewSource: 'View original', views: 'views', sourceClicks: 'source clicks', now: 'now', dateMissing: 'Date not provided', location: 'Location:'
+} : {
+  unverified: 'Não verificada', confirmSource: 'Confirma na fonte', missingSummary: 'A fonte não disponibiliza um resumo. Consulta a publicação original para ver os detalhes.',
+  workHeading: 'O que a função envolve', projectHeading: 'O que o projeto pede', socialHeading: 'O que a publicação diz', opportunityHeading: 'Sobre esta oportunidade',
+  detailsEmployment: 'Responsabilidades e perfil da função', detailsProject: 'Pedido completo do projeto', detailsSocial: 'Mais sobre esta publicação', detailsOther: 'Ver descrição completa da fonte',
+  detailsHint: 'Abre para carregar a descrição completa.', loadingDetails: 'A carregar a descrição…', missingDetails: 'Sem detalhes adicionais; consulta a publicação original.', detailsError: 'Não foi possível carregar os detalhes. Consulta a publicação original.',
+  projectPrefix: 'Projeto:', remote: 'remoto', sourceFound: 'Encontrada em', source: 'Fonte:', otherSources: 'Ver outras fontes',
+  viewSource: 'Ver na fonte', views: 'visualizações', sourceClicks: 'cliques na fonte', now: 'agora', dateMissing: 'Data não informada', location: 'Localização:'
+};
+const COUNTRY_FLAG_CODES = {
+  angola: 'AO', brasil: 'BR', brazil: 'BR', portugal: 'PT', mocambique: 'MZ', 'africa do sul': 'ZA', 'cabo verde': 'CV',
+  'estados unidos': 'US', 'united states': 'US', usa: 'US', 'reino unido': 'GB', 'united kingdom': 'GB', canada: 'CA',
+  alemanha: 'DE', germany: 'DE', filipinas: 'PH', philippines: 'PH', espanha: 'ES', spain: 'ES', mexico: 'MX',
+  polonia: 'PL', poland: 'PL', singapura: 'SG', singapore: 'SG', china: 'CN', franca: 'FR', france: 'FR',
+  argentina: 'AR', australia: 'AU', japao: 'JP', japan: 'JP', irlanda: 'IE', ireland: 'IE', 'paises baixos': 'NL', netherlands: 'NL',
+  hongkong: 'HK', hungria: 'HU', hungary: 'HU', noruega: 'NO', norway: 'NO', suecia: 'SE', sweden: 'SE', 'nova zelandia': 'NZ', 'new zealand': 'NZ', 'coreia do sul': 'KR', 'south korea': 'KR'
+};
 const SOURCE_STATUS = {
   ok: 'Disponível', degraded: 'Parcial', unavailable: 'Indisponível', approval_required: 'Aprovação necessária',
   not_configured: 'Não configurada', credentials_required: 'Credenciais necessárias', terms_pending: 'Termos por validar',
@@ -47,6 +83,58 @@ function normalize(value) {
   return String(value ?? '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase('pt-PT').replace(/\s+/g, ' ').trim();
 }
 
+function countryFlagEmoji(countryCode) {
+  if (!/^[A-Z]{2}$/.test(countryCode || '')) return '';
+  return [...countryCode].map((letter) => String.fromCodePoint(127397 + letter.charCodeAt(0))).join('');
+}
+
+function createCountryFlag(item) {
+  const countries = Array.isArray(item.countries) ? item.countries.map((value) => String(value).trim()).filter(Boolean) : [];
+  const country = String(item.country || '').trim();
+  const isGlobal = item.remote || normalize(country) === 'remoto/global';
+  let emoji = '';
+  if (countries.length === 1) emoji = countryFlagEmoji(COUNTRY_FLAG_CODES[normalize(countries[0])]);
+  else if (countries.length > 1 || isGlobal) emoji = '🌐';
+  else if (country && normalize(country) !== 'nao informado') emoji = countryFlagEmoji(COUNTRY_FLAG_CODES[normalize(country)]);
+  if (!emoji) return null;
+  const label = isGlobal ? (CARD_LANGUAGE === 'en' ? 'Remote or global opportunity' : 'Oportunidade remota ou global')
+    : `${CARD_COPY.location} ${countries.length ? countries.join(', ') : country}`;
+  const flag = document.createElement('span');
+  flag.className = 'radar-card-country-flag';
+  flag.setAttribute('role', 'img');
+  flag.setAttribute('aria-label', label);
+  flag.title = label;
+  flag.textContent = emoji;
+  return flag;
+}
+
+function localizeSourceHeadings(item, value) {
+  let text = String(value ?? '');
+  if (CARD_LANGUAGE !== 'pt') return text;
+  const commonHeadings = [
+    [/\bKey responsibilities\s*:/gi, 'Responsabilidades:'], [/\bResponsibilities\s*:/gi, 'Responsabilidades:'],
+    [/\bRequirements\s*:/gi, 'Requisitos:'], [/\bQualifications\s*:/gi, 'Qualificações:'],
+    [/\bJob description\s*:/gi, 'Descrição da função:'], [/\bAbout the role\s*:/gi, 'Sobre a função:']
+  ];
+  commonHeadings.forEach(([pattern, replacement]) => { text = text.replace(pattern, replacement); });
+  if (!normalize(item.sourceName).includes('agl')) return text;
+  text = text
+    .replace(/\bFunction\s*:/gi, 'Função:')
+    .replace(/\bType of contract\s*:/gi, 'Tipo de contrato:')
+    .replace(/\bJob details\s*:/gi, 'Responsabilidades:')
+    .replace(/\bContract Type\s*:/gi, 'Tipo de contrato:')
+    .replace(/\bJob Location\s*:/gi, 'Localização:')
+    .replace(/\bWorking Hours\s*:/gi, 'Horário de trabalho:')
+    .replace(/\bJob Title\s*:/gi, 'Título da função:')
+    .replace(/(^|\n)\s*Mission Description\s*(?=\n|$)/gim, '$1Descrição da missão')
+    .replace(/(^|\n)\s*Profile\s*(?=\n|$)/gim, '$1Perfil')
+    .replace(/(^|\n)\s*Job Title\s*(?=\n|$)/gim, '$1Título da função')
+    .replace(/(^|\n)\s*Contract Type\s*(?=\n|$)/gim, '$1Tipo de contrato')
+    .replace(/(^|\n)\s*Job Location\s*(?=\n|$)/gim, '$1Localização')
+    .replace(/(^|\n)\s*Working Hours\s*(?=\n|$)/gim, '$1Horário de trabalho');
+  return text;
+}
+
 function expandedQueries(query) {
   const normalized = normalize(query);
   if (!normalized) return [];
@@ -65,21 +153,21 @@ function safeDate(value) {
 
 function formatDate(value) {
   const date = safeDate(value);
-  if (!date) return 'Data não informada';
-  return new Intl.DateTimeFormat('pt-PT', { day: '2-digit', month: 'short', year: 'numeric', timeZone: 'UTC' }).format(date);
+  if (!date) return CARD_COPY.dateMissing;
+  return new Intl.DateTimeFormat(CARD_LOCALE, { day: '2-digit', month: 'short', year: 'numeric', timeZone: 'UTC' }).format(date);
 }
 
 function formatRelativeDate(value) {
   const date = safeDate(value);
-  if (!date) return 'Data não informada';
+  if (!date) return CARD_COPY.dateMissing;
   const ageMinutes = Math.floor(Math.max(0, Date.now() - date.getTime()) / 60000);
-  if (ageMinutes < 1) return 'agora';
-  if (ageMinutes < 60) return `há ${ageMinutes} min`;
+  if (ageMinutes < 1) return CARD_COPY.now;
+  if (ageMinutes < 60) return CARD_LANGUAGE === 'en' ? `${ageMinutes} min ago` : `há ${ageMinutes} min`;
   const ageHours = Math.floor(ageMinutes / 60);
-  if (ageHours < 24) return ageHours === 1 ? 'há 1 hora' : `há ${ageHours} horas`;
+  if (ageHours < 24) return CARD_LANGUAGE === 'en' ? `${ageHours} ${ageHours === 1 ? 'hour' : 'hours'} ago` : ageHours === 1 ? 'há 1 hora' : `há ${ageHours} horas`;
   const ageDays = Math.floor(ageHours / 24);
-  if (ageDays === 1) return 'ontem';
-  if (ageDays < 7) return `há ${ageDays} dias`;
+  if (ageDays === 1) return CARD_LANGUAGE === 'en' ? 'yesterday' : 'ontem';
+  if (ageDays < 7) return CARD_LANGUAGE === 'en' ? `${ageDays} days ago` : `há ${ageDays} dias`;
   return formatDate(date.toISOString());
 }
 
@@ -137,7 +225,8 @@ function getVisitorId() {
 }
 
 function classifyType(item) {
-  return TYPE_LABELS[item.type] || (item.type ? String(item.type) : 'Oportunidade');
+  const labels = CARD_LANGUAGE === 'en' ? TYPE_LABELS_EN : TYPE_LABELS;
+  return labels[item.type] || (item.type ? String(item.type) : (CARD_LANGUAGE === 'en' ? 'Opportunity' : 'Oportunidade'));
 }
 
 function createEmpty(title, description, error = false) {
@@ -245,7 +334,7 @@ function createSourceLinks(item) {
     return wrapper;
   }
   const label = document.createElement('span');
-  label.textContent = valid.length > 1 ? `Encontrada em ${valid.length} fontes · ` : 'Fonte: ';
+  label.textContent = valid.length > 1 ? `${CARD_COPY.sourceFound} ${valid.length} ${CARD_LANGUAGE === 'en' ? 'sources' : 'fontes'} · ` : `${CARD_COPY.source} `;
   wrapper.append(label);
   const anchor = document.createElement('a');
   anchor.href = valid[0].url;
@@ -257,7 +346,7 @@ function createSourceLinks(item) {
     const details = document.createElement('details');
     details.className = 'radar-more-sources';
     const summary = document.createElement('summary');
-    summary.textContent = 'Ver outras fontes';
+    summary.textContent = CARD_COPY.otherSources;
     const list = document.createElement('ul');
     valid.slice(1).forEach((source) => {
       const li = document.createElement('li');
@@ -285,18 +374,24 @@ function createCard(item) {
   const badges = document.createElement('div');
   badges.className = 'radar-card-badges';
   const categories = (Array.isArray(item.categories) ? item.categories : []).slice(0, 3);
-  categories.forEach((category) => badges.append(createBadge(CATEGORY_LABELS[category] || String(category), 'radar-badge-category')));
+  const cardCategoryLabels = CARD_LANGUAGE === 'en' ? CATEGORY_LABELS_EN : CATEGORY_LABELS;
+  categories.forEach((category) => badges.append(createBadge(cardCategoryLabels[category] || String(category), 'radar-badge-category')));
   if (!categories.length) badges.append(createBadge(classifyType(item), 'radar-badge-category'));
   const social = item.trustLevel === 'social_unverified';
-  if (social) badges.append(createBadge('Não verificada', 'radar-badge-social'));
-  else if (item.status === 'UNKNOWN') badges.append(createBadge('Confirma na fonte'));
+  if (social) badges.append(createBadge(CARD_COPY.unverified, 'radar-badge-social'));
+  else if (item.status === 'UNKNOWN') badges.append(createBadge(CARD_COPY.confirmSource));
   const date = document.createElement('time');
   date.className = 'radar-card-date';
   date.textContent = formatRelativeDate(item.publishedAt);
   date.title = formatDate(item.publishedAt);
   const published = safeDate(item.publishedAt);
   if (published) date.dateTime = published.toISOString();
-  top.append(badges, date);
+  const topRight = document.createElement('div');
+  topRight.className = 'radar-card-top-right';
+  const flag = createCountryFlag(item);
+  if (flag) topRight.append(flag);
+  topRight.append(date);
+  top.append(badges, topRight);
 
   const heading = document.createElement('h3');
   heading.textContent = String(item.title || 'Oportunidade sem título');
@@ -312,12 +407,12 @@ function createCard(item) {
     meta.append(company);
   } else if (item.project) {
     const project = document.createElement('span');
-    project.textContent = `Projeto: ${String(item.project)}`;
+    project.textContent = `${CARD_COPY.projectPrefix} ${String(item.project)}`;
     meta.append(project);
   }
   if (item.country && item.country !== 'Não informado') {
     const location = document.createElement('span');
-    location.textContent = item.remote && item.country !== 'Remoto/Global' ? `${item.country} · remoto` : String(item.country);
+    location.textContent = item.remote && item.country !== 'Remoto/Global' ? `${item.country} · ${CARD_COPY.remote}` : String(item.country);
     meta.append(location);
   }
   if (item.salary) {
@@ -328,27 +423,33 @@ function createCard(item) {
     meta.append(salary);
   }
 
+  const work = document.createElement('div');
+  work.className = 'radar-card-work';
+  const workLabel = document.createElement('p');
+  workLabel.className = 'radar-card-work-label';
+  workLabel.textContent = social ? CARD_COPY.socialHeading : item.trustLevel === 'community_project' || item.type === 'open-source contribution' ? CARD_COPY.projectHeading : item.type === 'employment' || item.type === 'internship' ? CARD_COPY.workHeading : CARD_COPY.opportunityHeading;
   const summary = document.createElement('p');
   summary.className = 'radar-card-summary';
-  summary.textContent = String(item.summary || 'A fonte não disponibiliza um resumo no feed. Consulta os detalhes na publicação original.');
+  summary.textContent = localizeSourceHeadings(item, item.summary || CARD_COPY.missingSummary);
+  work.append(workLabel, summary);
 
-  const content = [top, heading, meta, summary];
+  const content = [top, heading, meta, work];
   if (item.hasDetails) {
     const details = document.createElement('details');
     const summaryLabel = document.createElement('summary');
-    summaryLabel.textContent = 'Ver detalhes';
+    summaryLabel.textContent = social ? CARD_COPY.detailsSocial : item.trustLevel === 'community_project' || item.type === 'open-source contribution' ? CARD_COPY.detailsProject : item.type === 'employment' || item.type === 'internship' ? CARD_COPY.detailsEmployment : CARD_COPY.detailsOther;
     const paragraph = document.createElement('p');
-    paragraph.textContent = 'Abre para carregar os detalhes da oportunidade.';
+    paragraph.textContent = CARD_COPY.detailsHint;
     details.addEventListener('toggle', async () => {
       if (!details.open || details.dataset.loaded === 'true' || details.dataset.loading === 'true') return;
       details.dataset.loading = 'true';
-      paragraph.textContent = 'A carregar detalhes…';
+      paragraph.textContent = CARD_COPY.loadingDetails;
       try {
         const descriptions = await loadDescriptions();
-        paragraph.textContent = String(descriptions[escapeId(item.id)] || 'Sem detalhes adicionais; consulta a publicação original.');
+        paragraph.textContent = localizeSourceHeadings(item, descriptions[escapeId(item.id)] || CARD_COPY.missingDetails);
         details.dataset.loaded = 'true';
       } catch {
-        paragraph.textContent = 'Não foi possível carregar os detalhes. Consulta a publicação original.';
+        paragraph.textContent = CARD_COPY.detailsError;
       } finally {
         delete details.dataset.loading;
       }
@@ -365,9 +466,9 @@ function createCard(item) {
     const metrics = document.createElement('div');
     metrics.className = 'radar-card-metrics';
     const views = document.createElement('span');
-    views.textContent = `◉ ${Number(count.views) || 0} visualizações`;
+    views.textContent = `◉ ${Number(count.views) || 0} ${CARD_COPY.views}`;
     const clicks = document.createElement('span');
-    clicks.textContent = `↗ ${Number(count.sourceClicks) || 0} cliques na fonte`;
+    clicks.textContent = `↗ ${Number(count.sourceClicks) || 0} ${CARD_COPY.sourceClicks}`;
     metrics.append(views, clicks);
     bottom.append(metrics);
   }
@@ -377,7 +478,7 @@ function createCard(item) {
   open.href = originalUrl || '#';
   open.target = '_blank';
   open.rel = sourceLinkRel(item.sourceName || 'Fonte original');
-  open.textContent = 'Ver na fonte';
+  open.textContent = CARD_COPY.viewSource;
   const arrow = document.createElement('span');
   arrow.textContent = '↗';
   open.append(arrow);
