@@ -1,8 +1,4867 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-01T23:28:23Z",
+  "generatedAt": "2026-10-02T05:52:58Z",
   "refreshIntervalMinutes": 60,
   "items": [
+    {
+      "id": "github:5673480784",
+      "title": "ทะเบียน MCP อย่างเป็นทางการ",
+      "summary": "",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:52:25Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/intertechnumberlogythailand-oem/intertechnumberlogythailand-mcp/issues/3",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/intertechnumberlogythailand-oem/intertechnumberlogythailand-mcp/issues/3"
+        }
+      ],
+      "tags": [
+        "bug",
+        "accessibility",
+        "documentation",
+        "duplicate",
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "invalid",
+        "question",
+        "wontfix"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "intertechnumberlogythailand-oem/intertechnumberlogythailand-mcp",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5673465196",
+      "title": "[F8] Retry with backoff and typed network errors",
+      "summary": "Roadmap ID: F8 · Area: Technical debt · Status: blocked English, self-contained version of the F8 prompt in PROMPTS.md (branch refactoring , the file itself is in Italian). Context asteroidpy/scheduling.py:60 ( DEFAULT REQUEST TIMEOUT SEC = 30.0 ) is the only network control of the entire project. There is no retry, no backoff, no respect for Retry-After . The clients are three: requests ( :178 What's Observable…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:50:19Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/ziriuz84/asteroidpy/issues/148",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/ziriuz84/asteroidpy/issues/148"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "0 - Backlog"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "ziriuz84/asteroidpy",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673460619",
+      "title": "A throwing EffectiveViewportChanged handler leaves a null entry in the queue and wedges layout",
+      "summary": "Current behavior If an EffectiveViewportChanged handler throws, layout is permanently wedged. Every later layout pass throws a NullReferenceException from EventManager.RaiseEffectiveViewportChangedEvents , so new content never gets Loaded and the window stops updating. From the log of the repro below: The first exception is the handler's own. The NREs are the bug: they come from Uno's queue handling, not from user…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:49:42Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/unoplatform/uno/issues/24917",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/unoplatform/uno/issues/24917"
+        }
+      ],
+      "tags": [
+        "kind/bug",
+        "good first issue",
+        "triage/untriaged",
+        "area/skia ✏️",
+        "project/layout 🧱",
+        "platform/all",
+        "difficulty/starter 🚀"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "unoplatform/uno",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673456964",
+      "title": "[F4] Deduplicate the configuration tests",
+      "summary": "Roadmap ID: F4 · Area: Technical debt · Status: ready English, self-contained version of the F4 prompt in PROMPTS.md (branch refactoring , the file itself is in Italian). Context tests/test configuration.py (28 tests, pytest style) and tests/test configuration unittest.py (13 tests, unittest.TestCase , loaded with importlib.util.spec from file location ) largely cover the same ground; test configuration corrupted.py…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:49:12Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/ziriuz84/asteroidpy/issues/141",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/ziriuz84/asteroidpy/issues/141"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "1 - Ready"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "ziriuz84/asteroidpy",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673456683",
+      "title": "[F3] TUI tests with App.run test() and pilot",
+      "summary": "Roadmap ID: F3 · Area: Technical debt · Status: ready English, self-contained version of the F3 prompt in PROMPTS.md (branch refactoring , the file itself is in Italian). Context asteroidpy/interface/ tui screens.py is 1843 lines long with 21 Screen classes (20 screens plus the MenuScreen base) and no test instantiates any of them . tests/test tui screens.py already exists (7 tests) but covers only the pure helpers…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:49:09Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/ziriuz84/asteroidpy/issues/140",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/ziriuz84/asteroidpy/issues/140"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "1 - Ready"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "ziriuz84/asteroidpy",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673455263",
+      "title": "SplitButton uses the legacy RS1 template, so the chevron is a TextBlock instead of an AnimatedIcon (7.0)",
+      "summary": "Current behavior On Uno 7.0 (master), the SplitButton secondary (chevron) button uses the legacy WinUI 2 \"RS1\" template: its content is a plain TextBlock named ChevronTextBlock that swaps glyphs. The newer AnimatedIcon -based chevron template (the one WinUI ships today) is never applied, so the chevron doesn't animate on pointer over / press. DropDownButton , which uses the same chevron source, does animate. Runtime…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:48:59Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/unoplatform/uno/issues/24916",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/unoplatform/uno/issues/24916"
+        }
+      ],
+      "tags": [
+        "good first issue",
+        "triage/untriaged",
+        "kind/regression",
+        "area/theming",
+        "project/styling 👔",
+        "platform/all",
+        "difficulty/starter 🚀"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "unoplatform/uno",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673442490",
+      "title": "Clarify that the synthetic benchmark measures graph construction",
+      "summary": "Review scripts/benchmark.ts and the README benchmark section. Add a short worked interpretation with the actual emitted field names, three-build protocol and environment requirements. Acceptance: explains wall time/CPU/RSS fields, avoids treating graph-build timing as CI savings, and labels caller-assumption cost/energy/carbon estimates as modeled. Reproduce npm run benchmark and include the command in the PR.",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:47:17Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/DiffCI/core/issues/14",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/DiffCI/core/issues/14"
+        }
+      ],
+      "tags": [
+        "documentation",
+        "good first issue",
+        "help wanted",
+        "benchmark contribution"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "DiffCI/core",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5673442061",
+      "title": "Add a benchmark report template that retains unsuccessful attempts",
+      "summary": "Add docs/benchmark-report-template.md for a monthly roundup. Include attempted-repository denominator, revision pairs, completed measurements, refusals, failures, provenance invalidations, full fallbacks, net overhead and raw-artifact links. Acceptance: clearly separates static test selection from runtime evidence and modeled cost/carbon from measurements; includes limitations and next reproducible questions.",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:47:13Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/DiffCI/core/issues/13",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/DiffCI/core/issues/13"
+        }
+      ],
+      "tags": [
+        "documentation",
+        "good first issue",
+        "help wanted",
+        "benchmark contribution"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "DiffCI/core",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5673441342",
+      "title": "Reproduce a public-repository DiffCI pilot with raw artifacts",
+      "summary": "Use docs/contributing-fixtures.md and the published CLI to evaluate one public repository with maintainer consent before publication. Record exact base/head, CLI version, full/selected commands, runtime distributions, cache preparation, analysis overhead, provenance and limitations. Acceptance: at least three alternating cache-prepared repetitions for a controlled claim; failed/refused runs stay in the denominator…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:47:08Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/DiffCI/core/issues/12",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/DiffCI/core/issues/12"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "benchmark contribution"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "DiffCI/core",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673440759",
+      "title": "Add an advisory GitHub Actions Core planning example",
+      "summary": "Add a copyable example under examples/ that builds Core and runs node dist/cli.js plan with explicit base/head on a clean target checkout. Inspect src/cli.ts and docs/using-diffci.md for the contract. Acceptance: fetches required history, preserves required test jobs, uploads the JSON plan for review, grants only needed permissions, and clearly labels the plan advisory. Validate workflow syntax and document setup.",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects",
+        "employment"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:47:03Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/DiffCI/core/issues/11",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/DiffCI/core/issues/11"
+        }
+      ],
+      "tags": [
+        "documentation",
+        "good first issue",
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "DiffCI/core",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5673440090",
+      "title": "Add a shallow-checkout troubleshooting recipe",
+      "summary": "Add a recipe to docs/using-diffci.md for a missing base revision in a shallow Git clone. Show how to verify the base exists and fetch sufficient history, then run plan/check with explicit base/head. Acceptance: commands work against a public or local synthetic repository, head is checked out, and failures recommend full CI rather than implying safe selection.",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:46:57Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/DiffCI/core/issues/10",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/DiffCI/core/issues/10"
+        }
+      ],
+      "tags": [
+        "documentation",
+        "good first issue",
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "DiffCI/core",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5673439406",
+      "title": "Contribute a root Go-module test ownership fixture",
+      "summary": "Inspect src/repo/adapters/go.ts, go-test.ts and the Go cases in tests/repo/language-adapters.test.ts. Add a small root-module fixture with two packages and a transitive import. Acceptance: the changed package reaches the owning tests; unrelated-package behavior and unsupported/nested-module behavior are asserted conservatively. Run the contributor checks.",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:46:52Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/DiffCI/core/issues/9",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/DiffCI/core/issues/9"
+        }
+      ],
+      "tags": [
+        "good first issue",
+        "help wanted",
+        "adapter"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "DiffCI/core",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5673439308",
+      "title": "5770641",
+      "summary": "",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:46:51Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/AutomationSyncUserOrg/AutomationOrganizationRepository/issues/4515",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/AutomationSyncUserOrg/AutomationOrganizationRepository/issues/4515"
+        }
+      ],
+      "tags": [
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "AutomationSyncUserOrg/AutomationOrganizationRepository",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5673438805",
+      "title": "Document adapter detection and blocker handling with one worked example",
+      "summary": "Extend docs/adding-an-adapter.md with a minimal worked example based on the real RepositoryAdapter interface in src/repo/adapters/types.ts. Explain detect(), contribution(), and a global blocker for missing dependency resolution. Acceptance: code matches current types, distinguishes global from file-local uncertainty, and never presents an empty graph as successful analysis.",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:46:47Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/DiffCI/core/issues/8",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/DiffCI/core/issues/8"
+        }
+      ],
+      "tags": [
+        "documentation",
+        "good first issue",
+        "help wanted",
+        "adapter"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "DiffCI/core",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5673438191",
+      "title": "Add a Maven profile command-synthesis fixture",
+      "summary": "Add a small synthetic reactor case in tests/repo/language-adapters.test.ts or tests/planner/test-command.test.ts for a declared Maven goal and profile. Inspect src/repo/adapters/maven.ts and src/planner/test-command.ts first. Acceptance: selected command preserves the configured lifecycle goal and profile and covers the selected module dependencies; unsupported configuration stays conservative. Avoid a large…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:46:42Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/DiffCI/core/issues/7",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/DiffCI/core/issues/7"
+        }
+      ],
+      "tags": [
+        "good first issue",
+        "help wanted",
+        "adapter"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "DiffCI/core",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5673437527",
+      "title": "Add a transitive Vue component dependency regression fixture",
+      "summary": "Extend tests/repo/language-adapters.test.ts with a source → Vue component → importing test chain and an unrelated test. Use the existing fixture() and delta() helpers. Acceptance: exact affected-test membership is asserted, the unrelated test is excluded only when graph evidence is complete, and a deliberately unresolved variant broadens to fallback. Run the contributor checks.",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:46:37Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/DiffCI/core/issues/6",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/DiffCI/core/issues/6"
+        }
+      ],
+      "tags": [
+        "good first issue",
+        "help wanted",
+        "adapter"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "DiffCI/core",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5673437169",
+      "title": "Document a complete full-fallback example in the CLI quickstart",
+      "summary": "Add one reproducible unsupported-configuration example to docs/using-diffci.md. Start from docs/release-boundary.md and existing fallback regression tests. Include a minimal public/synthetic file tree, exact revision pair and command, observed fallback reason, and why full CI remains required. Acceptance: a maintainer can reproduce the documented fallback; no claimed runtime savings from selection counts.",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:46:34Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/DiffCI/core/issues/5",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/DiffCI/core/issues/5"
+        }
+      ],
+      "tags": [
+        "documentation",
+        "good first issue",
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "DiffCI/core",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5673427734",
+      "title": "Skia BorderVisual never disposes the RectangleClip s it replaces, leaving their cached paths to the finalizer",
+      "summary": "Current behavior 🐛 BorderVisual (Skia) replaces its RectangleClip objects whenever the border or corner radius geometry changes, but never disposes the old ones. In UpdatePathsAndCornerClip() , the old childClipCausedByCornerRadius and backgroundClip are just set to null and new clips are created (L203-L212, L330-L346). Since 24230, RectangleClip caches one geometry (a native SKPath ) and only releases it in…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects",
+        "employment"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:45:19Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/unoplatform/uno/issues/24915",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/unoplatform/uno/issues/24915"
+        }
+      ],
+      "tags": [
+        "kind/bug",
+        "good first issue",
+        "triage/untriaged",
+        "platform/all",
+        "difficulty/starter 🚀",
+        "area/performance 📈",
+        "area/skia/composition ✏️"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "unoplatform/uno",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673427572",
+      "title": "3959259",
+      "summary": "xXZbQvbcaTeTKM2u36Bh1lD",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:45:17Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/AutomationSyncUser/Unit_Automation_Issues/issues/21445",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/AutomationSyncUser/Unit_Automation_Issues/issues/21445"
+        }
+      ],
+      "tags": [
+        "bug",
+        "documentation",
+        "duplicate",
+        "good first issue",
+        "invalid",
+        "question"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "AutomationSyncUser/Unit_Automation_Issues",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5673420599",
+      "title": "Document coordinated TypeScript and Go client publish workflow",
+      "summary": "Summary Python tags/publish are automated ( .github/workflows/release.yml , publish.yml ). CHANGELOG/RELEASE note that TypeScript and Go clients are not published by the Python release and need separate approval. There is no workflow or runbook for bumping /sidecar-client / clients/go/vX.Y.Z . Clients remain on 0.1.1 while Python continues to ship; easy to drift when sidecar/ v1alpha1 behavior changes. Why this…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects",
+        "employment"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:44:22Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/mycelium-labs/mycelium/issues/255",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/mycelium-labs/mycelium/issues/255"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "area:ops",
+        "type:feature",
+        "design decision needed",
+        "area:clients",
+        "priority:p3"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "mycelium-labs/mycelium",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673420359",
+      "title": "Add a CODE OF CONDUCT and link it from CONTRIBUTING",
+      "summary": "Summary The repo has SECURITY.md and CONTRIBUTING.md with a short review/conduct note, but no CODE OF CONDUCT.md and no Community Standards link. Why this matters GitHub community health and new contributors usually expect a CoC. Low-cost hygiene next to 245 (label guide). Expected behavior - Add a standard Contributor Covenant (or equivalent) CODE OF CONDUCT.md - Link it from CONTRIBUTING and the GitHub Community…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:44:20Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/mycelium-labs/mycelium/issues/254",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/mycelium-labs/mycelium/issues/254"
+        }
+      ],
+      "tags": [
+        "documentation",
+        "good first issue",
+        "help wanted",
+        "type:docs",
+        "scope:community",
+        "priority:p3"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "mycelium-labs/mycelium",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673420122",
+      "title": "Add a CrewAI runnable example under sdk/examples",
+      "summary": "Summary CrewAI is a supported integration ( integrations.crewai , doctor checks, package extra), but sdk/examples has no CrewAI runnable example while LangGraph, failure cases, guards, and webhooks are present / smoke-tested. Why this matters Onboarding is uneven: Python hosts using CrewAI have no copy-paste path next to the LangGraph examples. Expected behavior Add a small self-contained example under sdk/examples/…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:44:18Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/mycelium-labs/mycelium/issues/253",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/mycelium-labs/mycelium/issues/253"
+        }
+      ],
+      "tags": [
+        "documentation",
+        "enhancement",
+        "good first issue",
+        "help wanted",
+        "area:sdk",
+        "type:docs",
+        "scope:docs",
+        "priority:p3"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "mycelium-labs/mycelium",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673419920",
+      "title": "Document coordinated audit-receipt cleanup with transition prune",
+      "summary": "Summary sdk/docs/LEDGER PAYLOAD STORAGE.md already notes that deleting a ledger row does not delete its audit receipt. Receipts are append-only ( FileAuditReceiptStorage / AtomicAuditReceiptStorage ). Operators who prune transitions for compliance can leave signed receipt payloads behind with no CLI or runbook procedure. Why this matters Compliance retention is incomplete if receipts outlive pruned transitions…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:44:16Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/mycelium-labs/mycelium/issues/252",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/mycelium-labs/mycelium/issues/252"
+        }
+      ],
+      "tags": [
+        "documentation",
+        "enhancement",
+        "help wanted",
+        "area:ops",
+        "type:docs",
+        "priority:p3"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "mycelium-labs/mycelium",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673419699",
+      "title": "Add outcome retention / prune path for Redis and Postgres outcome stores",
+      "summary": "Summary Action ledgers have prune transitions and mycelium transitions prune . Outcome storage is append-only ( list all / append in outcome emit.py ); Redis Streams and Postgres outcome backends have no delete/prune API or CLI. Outcomes grow without an operator lifecycle. Why this matters DTTR and exporters accumulate rows indefinitely. Operators who prune transitions for compliance still leave outcome evidence…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:44:14Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/mycelium-labs/mycelium/issues/251",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/mycelium-labs/mycelium/issues/251"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "area:sdk",
+        "area:ops",
+        "type:feature",
+        "scope:later",
+        "design decision needed",
+        "priority:p3"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "mycelium-labs/mycelium",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673419436",
+      "title": "Add a mycelium doctor check for state authority",
+      "summary": "Summary Doctor registers dedicated checks for completion, budget, secret args, entity guard, destructive confirm, authority window, and use time currency, but has no state authority coverage. Miswired canonical callable , missing production wiring, or empty tool selection can ship unnoticed until the superseded-state gate fails at runtime. Why this matters state authority is a pre-claim safety gate. Other opt-in…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "ai",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:44:12Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/mycelium-labs/mycelium/issues/250",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/mycelium-labs/mycelium/issues/250"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "area:sdk",
+        "area:ops",
+        "type:feature",
+        "scope:opt-in-guard",
+        "priority:p3"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "mycelium-labs/mycelium",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673417420",
+      "title": "Postgres pool min size / pool max size accept booleans and non-finite values",
+      "summary": "Summary Postgres ledger pool sizing uses bare int(...) conversion. Boolean true becomes 1 ; Infinity raises an opaque OverflowError instead of ConfigError . The mapping currently loads ( pool min size: True , pool max size: inf ). Building storage then fails poorly on Infinity. Why this matters Pool sizing affects production connection behavior. Silent bool coercion and non- ConfigError failures make operator…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:43:56Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/mycelium-labs/mycelium/issues/249",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/mycelium-labs/mycelium/issues/249"
+        }
+      ],
+      "tags": [
+        "bug",
+        "good first issue",
+        "help wanted",
+        "area:sdk",
+        "scope:core",
+        "config-validation",
+        "priority:p2"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "mycelium-labs/mycelium",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673416971",
+      "title": "budget.warn at accepts boolean true as 1.0",
+      "summary": "Summary build budget guard() converts warn at with float(...) then checks the (0, 1] range. YAML warn at: true becomes 1.0 and passes, so warnings only fire at 100% of ceiling. Why this matters A boolean looks like a typo or templating mistake, not an intentional “warn only when fully exhausted” setting. Other budget ceiling paths already reject booleans / non-finite values more strictly. Expected behavior warn at…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:43:54Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/mycelium-labs/mycelium/issues/248",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/mycelium-labs/mycelium/issues/248"
+        }
+      ],
+      "tags": [
+        "bug",
+        "good first issue",
+        "help wanted",
+        "area:sdk",
+        "scope:opt-in-guard",
+        "config-validation",
+        "priority:p2"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "mycelium-labs/mycelium",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673416723",
+      "title": "history guard accepts NaN warn at, boolean max tokens, and string detect duplicates",
+      "summary": "Summary history guard is stored as a raw mapping and passed straight into HistoryGuard( ...) with little validation. Invalid YAML currently builds successfully: Why this matters Boolean max tokens and NaN warn at break limit math ( tokens = max tokens warn at ). Quoted \"false\" leaves duplicate detection enabled when the operator meant to turn it off. Related: 244 covers the unused enabled key; this issue is about…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:43:52Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/mycelium-labs/mycelium/issues/247",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/mycelium-labs/mycelium/issues/247"
+        }
+      ],
+      "tags": [
+        "bug",
+        "good first issue",
+        "help wanted",
+        "area:sdk",
+        "scope:opt-in-guard",
+        "config-validation",
+        "priority:p2"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "mycelium-labs/mycelium",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673416488",
+      "title": "state flush.flush on complete treats quoted false as enabled",
+      "summary": "Summary build state flush() converts flush on complete with bool(...) , so a quoted YAML string enables flush-on-complete instead of disabling it. Currently becomes flush on complete is True because bool(\"false\") is True . Why this matters Operators who quote booleans think they skipped the post-complete flush; Mycelium still flushes. Same class of bug as the closed 130 / open 237. Expected behavior When present…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:43:50Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/mycelium-labs/mycelium/issues/246",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/mycelium-labs/mycelium/issues/246"
+        }
+      ],
+      "tags": [
+        "bug",
+        "good first issue",
+        "help wanted",
+        "area:sdk",
+        "config-validation",
+        "priority:p2"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "mycelium-labs/mycelium",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673410155",
+      "title": "fix(settings): PUT /workspace/config accepts resources.idleTimeoutMinutes but never applies it",
+      "summary": "What PUT /api/v1/workspace/config validates and accepts resources.idleTimeoutMinutes , answers 200 , and returns it on GET — but the value is never written . The merge-write closure in packages/cezar/src/server/server.ts (the mergeWriteWorkspaceConfig block, lines ) handles maxParallel , maxMonitoringSessions , monitoringWakeIntervalMinutes , autoResumeOnUsageLimit , memoryLimitMb , dispatchMaxConcurrent and…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:43:02Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/open-mercato/cezar/issues/1232",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/open-mercato/cezar/issues/1232"
+        }
+      ],
+      "tags": [
+        "bug",
+        "good first issue",
+        "priority-medium",
+        "risk-low"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "open-mercato/cezar",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673403316",
+      "title": "Add a short CONTRIBUTING section on issue labels",
+      "summary": "Summary The repo now has a richer label set ( area: , type: , scope: , config-validation , priority:p2 / p3 , area:clients , area:sidecar , scope:composite ) but CONTRIBUTING does not explain when to use which labels. Why this matters External contributors filing issues or PRs under-label or invent names; triage time goes up. Label meaning should live next to the contributor guide. Expected behavior A short section…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:42:06Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/mycelium-labs/mycelium/issues/245",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/mycelium-labs/mycelium/issues/245"
+        }
+      ],
+      "tags": [
+        "documentation",
+        "good first issue",
+        "help wanted",
+        "area:ops",
+        "type:docs",
+        "scope:community",
+        "priority:p3"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "mycelium-labs/mycelium",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673403097",
+      "title": "history guard.enabled is accepted but unused",
+      "summary": "Summary history guard accepts an enabled key and retains it, but HistoryGuard construction does not appear to honor it. CONFIG REFERENCE.md ’s HistoryGuard table lists only max tokens / max messages — no enabled . loads successfully with enabled: 'false' left in the mapping. Why this matters Same footgun as 238: operators think they disabled history guarding. Unlike message validator.enabled ( 237), this key is not…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:42:04Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/mycelium-labs/mycelium/issues/244",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/mycelium-labs/mycelium/issues/244"
+        }
+      ],
+      "tags": [
+        "bug",
+        "good first issue",
+        "help wanted",
+        "area:sdk",
+        "scope:opt-in-guard",
+        "config-validation",
+        "priority:p3"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "mycelium-labs/mycelium",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673402871",
+      "title": "Doctor should warn when Redis persistence is only operator-asserted",
+      "summary": "Summary Architecture and Verify docs state that Redis persistence is not introspected by Mycelium and remains operator-asserted ( ARCHITECTURE AND GUARANTEE MAP.md A3 / Verify limitations). File/SQLite evidence is labelled single-node; Redis durability is assumed. Operators can pass Doctor/Verify on Redis without any durable reminder that AOF/RDB (or equivalent) must be configured outside Mycelium. Why this matters…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:42:02Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/mycelium-labs/mycelium/issues/243",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/mycelium-labs/mycelium/issues/243"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "area:sdk",
+        "area:ops",
+        "type:feature",
+        "priority:p3"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "mycelium-labs/mycelium",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673401274",
+      "title": "Expose composite recovery through the language-neutral sidecar",
+      "summary": "Summary Composite parent-control recovery is Python-runtime-only today. Docs state it is not exposed by the language-neutral sidecar, and the shared PostgreSQL sidecar profile does not provide composite orchestration ( sdk/docs/COMPOSITE RECOVERY.md ). TypeScript and Go clients can claim/complete single transitions via v1alpha1 , but cannot drive a durable multi-step composite parent the way composite items(...)…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:41:49Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/mycelium-labs/mycelium/issues/242",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/mycelium-labs/mycelium/issues/242"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "area:sdk",
+        "type:feature",
+        "scope:later",
+        "design decision needed",
+        "area:clients",
+        "area:sidecar",
+        "scope:composite",
+        "priority:p3"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "mycelium-labs/mycelium",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673401030",
+      "title": "Design conditional-path and branching composite manifests",
+      "summary": "Summary Straight-line durable composite recovery is shipped ( composite items , parent lease/fence, pinned manifest). sdk/docs/COMPOSITE RECOVERY.md explicitly defers general workflow scheduling and conditional-path manifests until enforceable semantics exist. Why this matters Real agent workflows branch (retry alternate tools, skip optional steps, choose destinations). Without an enforceable conditional manifest…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:41:47Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/mycelium-labs/mycelium/issues/241",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/mycelium-labs/mycelium/issues/241"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "area:sdk",
+        "type:feature",
+        "scope:later",
+        "design decision needed",
+        "scope:composite",
+        "priority:p3"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "mycelium-labs/mycelium",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673400723",
+      "title": "Fill CONFIG REFERENCE gaps for opt-in guards and composite recovery",
+      "summary": "Summary sdk/docs/CONFIG REFERENCE.md documents Budget, Completion storage, Ledger, and a few integrations, but is missing or thin on field tables for several shipped opt-in controls that the README and templates already expose: - loop guard (consecutive soft, escalate after soft, unclassified policy, missing run id policy, storage) - scope guard (allowed tools / allowlist shape, on violation, auto bind, missing run…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:41:45Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/mycelium-labs/mycelium/issues/240",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/mycelium-labs/mycelium/issues/240"
+        }
+      ],
+      "tags": [
+        "documentation",
+        "help wanted",
+        "area:sdk",
+        "type:docs",
+        "scope:docs",
+        "priority:p3"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "mycelium-labs/mycelium",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673400346",
+      "title": "Reject unknown keys in budget, completion, loop guard, and scope guard YAML",
+      "summary": "Summary Several top-level guard mappings silently keep unknown keys. For example: loads successfully and stores totally fake in the parsed mapping. The same looseness lets typos such as invented completion flags survive into runtime config without error. Why this matters Typos and copy-paste from outdated docs look like successful configuration. Other sections (secret args, destructive confirm object/grant…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:41:42Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/mycelium-labs/mycelium/issues/239",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/mycelium-labs/mycelium/issues/239"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue",
+        "help wanted",
+        "area:sdk",
+        "config-validation",
+        "priority:p3"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "mycelium-labs/mycelium",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673397599",
+      "title": "Budget, loop guard, and scope guard accept enabled but ignore it",
+      "summary": "Summary Several opt-in guard sections accept an enabled key in YAML, keep it in the parsed mapping, and then ignore it when building/applying the guard. Observed behavior: build budget guard() still returns a live BudgetGuard with max steps=5 . budget guard applies(...) never consults enabled . The same pattern appears for: - loop guard.enabled — section presence alone builds a LoopGuard - scope guard.enabled: false…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:41:20Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/mycelium-labs/mycelium/issues/238",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/mycelium-labs/mycelium/issues/238"
+        }
+      ],
+      "tags": [
+        "bug",
+        "documentation",
+        "help wanted",
+        "area:sdk",
+        "scope:opt-in-guard",
+        "config-validation",
+        "priority:p2"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "mycelium-labs/mycelium",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673397362",
+      "title": "message validator.enabled treats quoted false as enabled",
+      "summary": "Summary message validator.enabled is converted with bool(...) , so a quoted YAML string enables the validator instead of disabling it. Currently becomes message validator=True because bool(\"false\") is True . Real YAML false correctly disables it. Why this matters Operators who quote booleans (common when templating YAML) think they turned the validator off; Mycelium silently turns it on. Same class of bug as 130…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:41:18Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/mycelium-labs/mycelium/issues/237",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/mycelium-labs/mycelium/issues/237"
+        }
+      ],
+      "tags": [
+        "bug",
+        "good first issue",
+        "help wanted",
+        "area:sdk",
+        "scope:opt-in-guard",
+        "config-validation",
+        "priority:p2"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "mycelium-labs/mycelium",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673397108",
+      "title": "Action ledger retention seconds and in flight ttl accept NaN, Infinity, and booleans",
+      "summary": "Summary Redis/Postgres action-ledger timing fields are converted with bare float(...) and are not checked for finiteness or boolean type. These currently load successfully: Why this matters in flight ttl is a primary-key TTL used for crash recovery; retention seconds supplies the default prune window. Non-finite or boolean values produce silent misconfiguration of retention and recovery timing. Expected behavior…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:41:16Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/mycelium-labs/mycelium/issues/236",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/mycelium-labs/mycelium/issues/236"
+        }
+      ],
+      "tags": [
+        "bug",
+        "good first issue",
+        "help wanted",
+        "area:sdk",
+        "scope:core",
+        "config-validation",
+        "priority:p2"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "mycelium-labs/mycelium",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673396892",
+      "title": "destructive confirm grant ttl seconds accepts NaN and +Infinity",
+      "summary": "Summary destructive confirm.tools. .grant.ttl seconds rejects booleans and non-positive numbers, but still accepts NaN and positive Infinity because the check is only value < = 0 (NaN comparisons are false; +inf < = 0 is false). These currently load successfully: Why this matters Grant TTL controls how long a destructive confirmation remains valid. A non-finite TTL can disable expiry or produce platform-dependent…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:41:14Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/mycelium-labs/mycelium/issues/235",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/mycelium-labs/mycelium/issues/235"
+        }
+      ],
+      "tags": [
+        "bug",
+        "good first issue",
+        "help wanted",
+        "area:sdk",
+        "scope:opt-in-guard",
+        "config-validation",
+        "priority:p2"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "mycelium-labs/mycelium",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673394929",
+      "title": "[Design] AI/planning and AI/spec-driven overlap — decide what each one is",
+      "summary": "First, please ⭐ star the repository. It is the only signal we have that this work is wanted, and it is what gets the next contributor to take the project seriously enough to read a standard before trusting it. It takes one click and it genuinely decides whether this registry is maintained next year. The problem AI/spec-driven is canonical, recent, and sharp. AI/planning is legacy, and covers a lot of the same ground…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:40:58Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Aaditya1273/Agent.md/issues/35",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Aaditya1273/Agent.md/issues/35"
+        }
+      ],
+      "tags": [
+        "documentation",
+        "help wanted",
+        "hacktoberfest",
+        "discussion"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Aaditya1273/Agent.md",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673388518",
+      "title": "[Report] Tell us which standard did not change your model's output",
+      "summary": "First, please ⭐ star the repository. It is the only signal we have that this work is wanted, and it is what gets the next contributor to take the project seriously enough to read a standard before trusting it. It takes one click and it genuinely decides whether this registry is maintained next year. The honest problem Some standards in this registry do not work. Not \"could be better\" — do not work. You load the…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:40:07Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Aaditya1273/Agent.md/issues/34",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Aaditya1273/Agent.md/issues/34"
+        }
+      ],
+      "tags": [
+        "good first issue",
+        "hacktoberfest",
+        "feedback"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Aaditya1273/Agent.md",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673384013",
+      "title": "[Verify] Frontend/tailwind against Tailwind CSS 4",
+      "summary": "First, please ⭐ star the repository. It is the only signal we have that this work is wanted, and it is what gets the next contributor to take the project seriously enough to read a standard before trusting it. It takes one click and it genuinely decides whether this registry is maintained next year. Why All 131 canonical standards carry reviewed-by: unreviewed , and 114 of them have not been checked since . Not one…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:39:31Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Aaditya1273/Agent.md/issues/33",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Aaditya1273/Agent.md/issues/33"
+        }
+      ],
+      "tags": [
+        "good first issue",
+        "hacktoberfest",
+        "verify"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Aaditya1273/Agent.md",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673379840",
+      "title": "[Verify] Database/prisma against Prisma 7",
+      "summary": "First, please ⭐ star the repository. It is the only signal we have that this work is wanted, and it is what gets the next contributor to take the project seriously enough to read a standard before trusting it. It takes one click and it genuinely decides whether this registry is maintained next year. Why All 131 canonical standards carry reviewed-by: unreviewed , and 114 of them have not been checked since . Not one…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:38:57Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Aaditya1273/Agent.md/issues/32",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Aaditya1273/Agent.md/issues/32"
+        }
+      ],
+      "tags": [
+        "good first issue",
+        "hacktoberfest",
+        "verify"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Aaditya1273/Agent.md",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673376245",
+      "title": "[Verify] Backend/nextjs against Next.js 16",
+      "summary": "First, please ⭐ star the repository. It is the only signal we have that this work is wanted, and it is what gets the next contributor to take the project seriously enough to read a standard before trusting it. It takes one click and it genuinely decides whether this registry is maintained next year. Why All 131 canonical standards carry reviewed-by: unreviewed , and 114 of them have not been checked since . Not one…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:38:29Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Aaditya1273/Agent.md/issues/31",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Aaditya1273/Agent.md/issues/31"
+        }
+      ],
+      "tags": [
+        "documentation",
+        "good first issue",
+        "hacktoberfest",
+        "verify"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Aaditya1273/Agent.md",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673372412",
+      "title": "Add zoom in/out control for the board 🔍",
+      "summary": "Add zoom in/out control for the board 🔍 File: client/src/pages/Dashboard.jsx With many columns board gets tiny 💀 No way to zoom in/out fr!! Fix: const [zoom, setZoom] = useState(100) // zoom controls in navbar: setZoom(z = Math.max(z-10, 60))} className=\"text-[ 666] hover:text-[ aaa] text-sm px-1\" − {zoom}% setZoom(z = Math.min(z+10, 130))} className=\"text-[ 666] hover:text-[ aaa] text-sm px-1\" + 10 lines! No…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:37:59Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/anoopcodehack/DevBoard/issues/577",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/anoopcodehack/DevBoard/issues/577"
+        }
+      ],
+      "tags": [
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "anoopcodehack/DevBoard",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673369606",
+      "title": "[Verify] Frontend/react against React 19",
+      "summary": "First, please ⭐ star the repository. It is the only signal we have that this work is wanted, and it is what gets the next contributor to take the project seriously enough to read a standard before trusting it. It takes one click and it genuinely decides whether this registry is maintained next year. Why All 131 canonical standards carry reviewed-by: unreviewed , and 114 of them have not been checked since . Not one…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:37:36Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Aaditya1273/Agent.md/issues/30",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Aaditya1273/Agent.md/issues/30"
+        }
+      ],
+      "tags": [
+        "documentation",
+        "good first issue",
+        "hacktoberfest",
+        "verify"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Aaditya1273/Agent.md",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673368244",
+      "title": "Navigate between tasks using arrow keys ⌨️",
+      "summary": "Navigate between tasks using arrow keys ⌨️ File: client/src/pages/Dashboard.jsx No keyboard navigation between tasks 💀 Power users love this fr!! Fix: const [focusedTaskIndex, setFocusedTaskIndex] = useState(-1) useEffect(() = { const handler = (e) = { if (e.target.matches('input, textarea')) return if (e.key === 'ArrowDown') { setFocusedTaskIndex(i = Math.min(i + 1, tasks.length - 1)) } if (e.key === 'ArrowUp') {…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:37:25Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/anoopcodehack/DevBoard/issues/576",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/anoopcodehack/DevBoard/issues/576"
+        }
+      ],
+      "tags": [
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "anoopcodehack/DevBoard",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673367433",
+      "title": "name: CI on: push: pull request: jobs: build: runs-on: ubuntu-latest steps: - uses: actions/checkout@v4 - name: Run a simple check run: echo \"Build passed\"",
+      "summary": "",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects",
+        "employment"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:37:19Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Denny-evidson/Manish-Kumar/issues/2",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Denny-evidson/Manish-Kumar/issues/2"
+        }
+      ],
+      "tags": [
+        "bug",
+        "accessibility",
+        "documentation",
+        "duplicate",
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "invalid",
+        "question",
+        "wontfix"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Denny-evidson/Manish-Kumar",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5673365007",
+      "title": "[Upgrade] Checklists/production-checklist to the canonical format",
+      "summary": "First, please ⭐ star the repository. It is the only signal we have that this work is wanted, and it is what gets the next contributor to take the project seriously enough to read a standard before trusting it. It takes one click and it genuinely decides whether this registry is maintained next year. What is wrong with this file Checklists/production-checklist predates the canonical format. It opens with Version…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:36:59Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Aaditya1273/Agent.md/issues/29",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Aaditya1273/Agent.md/issues/29"
+        }
+      ],
+      "tags": [
+        "good first issue",
+        "hacktoberfest",
+        "upgrade"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Aaditya1273/Agent.md",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673361457",
+      "title": "Add quick task templates for common task types 📝",
+      "summary": "Add quick task templates for common task types 📝 File: client/src/components/Task/TaskModal.jsx Every time you create a bug report or feature request you type the same thing 💀 Fix: add template buttons above title input: const TEMPLATES = [ { label: '🐛 Bug', title: 'Bug: ', tags: 'bug', priority: 'high' }, { label: '✨ Feature', title: 'Feat: ', tags: 'enhancement', priority: 'medium' }, { label: '📝 Docs', title…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:36:30Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/anoopcodehack/DevBoard/issues/575",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/anoopcodehack/DevBoard/issues/575"
+        }
+      ],
+      "tags": [
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "anoopcodehack/DevBoard",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673361361",
+      "title": "[Upgrade] Documentation/readme to the canonical format",
+      "summary": "First, please ⭐ star the repository. It is the only signal we have that this work is wanted, and it is what gets the next contributor to take the project seriously enough to read a standard before trusting it. It takes one click and it genuinely decides whether this registry is maintained next year. What is wrong with this file Documentation/readme predates the canonical format. It opens with Version: 1.0.0 and a…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:36:29Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Aaditya1273/Agent.md/issues/28",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Aaditya1273/Agent.md/issues/28"
+        }
+      ],
+      "tags": [
+        "good first issue",
+        "hacktoberfest",
+        "upgrade"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Aaditya1273/Agent.md",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673357078",
+      "title": "[Upgrade] Review/security-review to the canonical format",
+      "summary": "First, please ⭐ star the repository. It is the only signal we have that this work is wanted, and it is what gets the next contributor to take the project seriously enough to read a standard before trusting it. It takes one click and it genuinely decides whether this registry is maintained next year. What is wrong with this file Review/security-review predates the canonical format. It opens with Version: 1.0.0 and a…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:35:55Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Aaditya1273/Agent.md/issues/27",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Aaditya1273/Agent.md/issues/27"
+        }
+      ],
+      "tags": [
+        "documentation",
+        "good first issue",
+        "hacktoberfest",
+        "upgrade"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Aaditya1273/Agent.md",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673351589",
+      "title": "[Upgrade] Review/code-review to the canonical format",
+      "summary": "First, please ⭐ star the repository. It is the only signal we have that this work is wanted, and it is what gets the next contributor to take the project seriously enough to read a standard before trusting it. It takes one click and it genuinely decides whether this registry is maintained next year. What is wrong with this file Review/code-review predates the canonical format. It opens with Version: 1.0.0 and a…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:35:12Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Aaditya1273/Agent.md/issues/26",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Aaditya1273/Agent.md/issues/26"
+        }
+      ],
+      "tags": [
+        "documentation",
+        "good first issue",
+        "hacktoberfest",
+        "upgrade"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Aaditya1273/Agent.md",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673343808",
+      "title": "[Upgrade] AI/hallucination to the canonical format",
+      "summary": "First, please ⭐ star the repository. It is the only signal we have that this work is wanted, and it is what gets the next contributor to take the project seriously enough to read a standard before trusting it. It takes one click and it genuinely decides whether this registry is maintained next year. What is wrong with this file AI/hallucination predates the canonical format. It opens with Version: 1.0.0 and a Target…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:34:11Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Aaditya1273/Agent.md/issues/25",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Aaditya1273/Agent.md/issues/25"
+        }
+      ],
+      "tags": [
+        "documentation",
+        "good first issue",
+        "hacktoberfest",
+        "upgrade"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Aaditya1273/Agent.md",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673339200",
+      "title": "Add TypeScript types for auth",
+      "summary": "Feature request It would be great to have logging for api. Use case Many users need this functionality for production deployments. Implementation idea Add a new config option enable logging with default false .",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:33:35Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/yrn-dev/Operator/issues/30182",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/yrn-dev/Operator/issues/30182"
+        }
+      ],
+      "tags": [
+        "documentation",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "yrn-dev/Operator",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5673335832",
+      "title": "[Upgrade] AI/agent-rules to the canonical format",
+      "summary": "First, please ⭐ star the repository. It is the only signal we have that this work is wanted, and it is what gets the next contributor to take the project seriously enough to read a standard before trusting it. It takes one click and it genuinely decides whether this registry is maintained next year. What is wrong with this file AI/agent-rules predates the canonical format. It opens with Version: 1.0.0 and a Target…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:33:09Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Aaditya1273/Agent.md/issues/24",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Aaditya1273/Agent.md/issues/24"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "new standard",
+        "hacktoberfest"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Aaditya1273/Agent.md",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673328687",
+      "title": "[Standard] canonical/Backend/java.md — the CLI detects Java and recommends nothing",
+      "summary": "First, please ⭐ star the repository. It is the only signal we have that this work is wanted, and it is what gets the next contributor to take the project seriously enough to read a standard before trusting it. It takes one click and it genuinely decides whether this registry is maintained next year. The gap agentmd detect recognises Java in a project, and then installs nothing, because canonical/Backend/java.md does…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:32:12Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Aaditya1273/Agent.md/issues/23",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Aaditya1273/Agent.md/issues/23"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "new standard",
+        "hacktoberfest"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Aaditya1273/Agent.md",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673321941",
+      "title": "[Standard] canonical/Backend/fastify.md — the CLI detects Fastify and recommends nothing",
+      "summary": "First, please ⭐ star the repository. It is the only signal we have that this work is wanted, and it is what gets the next contributor to take the project seriously enough to read a standard before trusting it. It takes one click and it genuinely decides whether this registry is maintained next year. The gap agentmd detect recognises Fastify in a project, and then installs nothing, because…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:31:19Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Aaditya1273/Agent.md/issues/22",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Aaditya1273/Agent.md/issues/22"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "new standard",
+        "hacktoberfest"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Aaditya1273/Agent.md",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673315691",
+      "title": "[Standard] canonical/Backend/nestjs.md — the CLI detects NestJS and recommends nothing",
+      "summary": "First, please ⭐ star the repository. It is the only signal we have that this work is wanted, and it is what gets the next contributor to take the project seriously enough to read a standard before trusting it. It takes one click and it genuinely decides whether this registry is maintained next year. The gap agentmd detect recognises NestJS in a project, and then installs nothing, because canonical/Backend/nestjs.md…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:30:29Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Aaditya1273/Agent.md/issues/21",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Aaditya1273/Agent.md/issues/21"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "new standard",
+        "hacktoberfest"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Aaditya1273/Agent.md",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673311472",
+      "title": "InteractionTracker.MaxPosition reads as MinPosition inside ExpressionAnimation",
+      "summary": "Current behavior 🐛 InteractionTracker.GetAnimatableProperty returns MinPosition when asked for MaxPosition . Any ExpressionAnimation that reads tracker.MaxPosition therefore evaluates against the minimum bound. The CLR getter ( tracker.MaxPosition ) is fine, only the composition property lookup used by the expression engine is wrong. Expected behavior 🎯 An expression reading tracker.MaxPosition gets the tracker's…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects",
+        "employment"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:29:55Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/unoplatform/uno/issues/24913",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/unoplatform/uno/issues/24913"
+        }
+      ],
+      "tags": [
+        "kind/bug",
+        "good first issue",
+        "triage/untriaged",
+        "project/animations 🎡",
+        "platform/all",
+        "difficulty/starter 🚀",
+        "area/composition",
+        "area/skia/composition ✏️"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "unoplatform/uno",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673309102",
+      "title": "[Standard] canonical/Backend/rust.md — the CLI detects Rust and recommends nothing",
+      "summary": "First, please ⭐ star the repository. It is the only signal we have that this work is wanted, and it is what gets the next contributor to take the project seriously enough to read a standard before trusting it. It takes one click and it genuinely decides whether this registry is maintained next year. The gap agentmd detect recognises Rust in a project, and then installs nothing, because canonical/Backend/rust.md does…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:29:37Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Aaditya1273/Agent.md/issues/20",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Aaditya1273/Agent.md/issues/20"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "new standard",
+        "hacktoberfest"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Aaditya1273/Agent.md",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673303343",
+      "title": "[Standard] canonical/Frontend/angular.md — the CLI detects Angular and recommends nothing",
+      "summary": "First, please ⭐ star the repository. It is the only signal we have that this work is wanted, and it is what gets the next contributor to take the project seriously enough to read a standard before trusting it. It takes one click and it genuinely decides whether this registry is maintained next year. The gap agentmd detect recognises Angular in a project, and then installs nothing, because…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "teaching",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:28:50Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Aaditya1273/Agent.md/issues/19",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Aaditya1273/Agent.md/issues/19"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "new standard",
+        "hacktoberfest"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Aaditya1273/Agent.md",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673300057",
+      "title": "Remove the dead, uncompiled duplicate of BrowserPointerInputSource in Uno.UI",
+      "summary": "Current behavior There are two near-identical copies of BrowserPointerInputSource : - src/Uno.UI/Runtime/BrowserPointerInputSource.wasm.cs (namespace Uno.UI.Runtime , assembly Uno.UI ) - src/Uno.UI.Runtime.Skia.WebAssembly.Browser/Devices/Input/BrowserPointerInputSource.cs (namespace Uno.UI.Runtime.Skia , assembly Uno.UI.Runtime.Skia.WebAssembly.Browser ) Only the second one is compiled. The first one is dead code…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:28:23Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/unoplatform/uno/issues/24912",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/unoplatform/uno/issues/24912"
+        }
+      ],
+      "tags": [
+        "kind/enhancement",
+        "good first issue",
+        "platform/wasm 🌐",
+        "triage/untriaged",
+        "difficulty/starter 🚀"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "unoplatform/uno",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673297798",
+      "title": "Menu items with no renderer listener: Format SQL (Shift+Alt+F) does nothing",
+      "summary": "What The Format SQL menu item ( Shift+Alt+F , apps/desktop/src/main/menu.ts:211 ) sends menu:format-sql to the renderer, and the preload exposes window.api.menu.onFormatSql , but nothing in apps/desktop/src/renderer/src subscribes to it. Choosing it from the menu, or pressing Shift+Alt+F , does nothing. The working shortcut is Monaco's own Cmd/Ctrl+Shift+F command in sql-editor.tsx . This came up in 283, which…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:28:05Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Rohithgilla12/data-peek/issues/287",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Rohithgilla12/data-peek/issues/287"
+        }
+      ],
+      "tags": [
+        "bug",
+        "good first issue",
+        "tech-debt",
+        "hacktoberfest"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Rohithgilla12/data-peek",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673297552",
+      "title": "Data generator: random-date is still non-reproducible under a seed when bounds are unset",
+      "summary": "What Follow-up to 278 / 284. Seeded data-generator runs are now reproducible for nulls, enums, and FK picks, but random-date still isn't. When a column has no minValue / maxValue , generateValue in apps/desktop/src/main/data-generator.ts builds its window from Date.now() : The renderer heuristic ( apps/desktop/src/renderer/src/lib/data-gen-heuristics.ts ) emits a bare { generatorType: 'random-date' } for most…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:28:03Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Rohithgilla12/data-peek/issues/286",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Rohithgilla12/data-peek/issues/286"
+        }
+      ],
+      "tags": [
+        "bug",
+        "good first issue",
+        "hacktoberfest"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Rohithgilla12/data-peek",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673295774",
+      "title": "Move the OCSF sender's client choice into a helper",
+      "summary": "Body: What. (Sender).Send in internal/ocsf/send.go has a cyclomatic complexity of 11; the ceiling is 10. It is listed in .complexity-baseline . Part of that is choosing the HTTP client: the caller's Client , or a new one with Timeout (10 seconds when unset), always copied so a redirect is refused. The task. Move the client choice and the redirect refusal into a method such as (Sender).httpClient() http.Client , so…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:27:49Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/sebastienrousseau/passmcp/issues/37",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/sebastienrousseau/passmcp/issues/37"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "sebastienrousseau/passmcp",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673295589",
+      "title": "Remove the duplicate branches in readToken68",
+      "summary": "Body: What. readToken68 in auth/wwwauth.go has a cyclomatic complexity of 11; the ceiling is 10. It is listed in .complexity-baseline . Two of its branches ( j == i+1 && tail == \"\" and j == i+1 ) return exactly what the final return already returns, so they add complexity without changing the result. The task. Remove the redundant branches, keeping their explanatory comments next to the remaining return so the…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:27:48Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/sebastienrousseau/passmcp/issues/36",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/sebastienrousseau/passmcp/issues/36"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "sebastienrousseau/passmcp",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673295397",
+      "title": "Split the stdio branch out of connectWithCreds",
+      "summary": "Body: What. connectWithCreds in cmd/subcommands.go has a cognitive complexity of 16; the project's ceiling is 15. It is listed in .complexity-baseline , the committed list of existing offenders that may only shrink (see DEVELOPMENT.md , Complexity). The task. The function handles two cases in one body: a stdio target (start the command, connect, return) and an HTTP target (apply credentials, then connect or resume a…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:27:46Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/sebastienrousseau/passmcp/issues/35",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/sebastienrousseau/passmcp/issues/35"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "sebastienrousseau/passmcp",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673295279",
+      "title": "[Standard] canonical/Frontend/svelte.md — the CLI detects Svelte and recommends nothing",
+      "summary": "First, please ⭐ star the repository. It is the only signal we have that this work is wanted, and it is what gets the next contributor to take the project seriously enough to read a standard before trusting it. It takes one click and it genuinely decides whether this registry is maintained next year. The gap agentmd detect recognises Svelte in a project, and then installs nothing, because canonical/Frontend/svelte.md…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "teaching",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:27:45Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Aaditya1273/Agent.md/issues/18",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Aaditya1273/Agent.md/issues/18"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "new standard",
+        "hacktoberfest"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Aaditya1273/Agent.md",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673291989",
+      "title": "Workspace update skips the \"no stored config fingerprint\" reindex under a configured shared database",
+      "summary": "Summary update workspace decides whether a repo is stale from its state.json . One of the staleness inputs, \"this repo was indexed but never recorded a config fingerprint\", is detected by looking for a repo-local wiki.db . Under a configured shared database ( REPOWISE DB URL ) there is no repo-local wiki.db , so the check is always false and the repo is reported up to date…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:27:20Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/repowise-dev/repowise/issues/2897",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/repowise-dev/repowise/issues/2897"
+        }
+      ],
+      "tags": [
+        "bug",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "repowise-dev/repowise",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673283469",
+      "title": "[Standard] canonical/Frontend/vue.md - the CLI detects Vue and recommends nothing",
+      "summary": "First, please ⭐ star the repository. It is the only signal we have that this work is wanted, and it is what gets the next contributor to take the project seriously enough to read a standard before trusting it. It takes one click and it genuinely decides whether this registry is maintained next year. The gap agentmd detect recognises Vue in a project, and then installs nothing, because canonical/Frontend/vue.md does…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects",
+        "employment"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:26:11Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Aaditya1273/Agent.md/issues/17",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Aaditya1273/Agent.md/issues/17"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "new standard",
+        "hacktoberfest"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Aaditya1273/Agent.md",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673265908",
+      "title": "Update CreateUser resolver to invite user if not already exists",
+      "summary": "[ ] Add unit tests",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:23:54Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/theopenlane/core/issues/2860",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/theopenlane/core/issues/2860"
+        }
+      ],
+      "tags": [
+        "good first issue",
+        "go"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "theopenlane/core",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5673250783",
+      "title": "Achievement Helper: Issue",
+      "summary": "This is an automated issue created to help achieve GitHub achievements. - [ ] Task 1 - [ ] Task 2",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:21:46Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Duongk46/beginner_auto/issues/308",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Duongk46/beginner_auto/issues/308"
+        }
+      ],
+      "tags": [
+        "good first issue",
+        "achievement-helper"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Duongk46/beginner_auto",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5673250444",
+      "title": "🐛 bug: Can not copy-and-paste from Terminal window",
+      "summary": "What happened? This concerns the hive for FMA, dashboard at . When I open an agent's Terminal and try to copy-and-paste from that Terminal window, what gets pasted is not what I had selected in the Terminal. I suspect that the problem is that the copy is not really taking effect, perhaps because the Terminal web page is some special kind of thing. Following is a screen scape of what I see shortly after doing a copy…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:21:43Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/hivecommons/hive/issues/9941",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/hivecommons/hive/issues/9941"
+        }
+      ],
+      "tags": [
+        "bug",
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "hivecommons/hive",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673250219",
+      "title": "Replace mocked Recall@K in eval.py with a real FAISS retrieval evaluation",
+      "summary": "Context evaluation/eval.py currently has real BLEU and perplexity scoring, but evaluate retrieval accuracy() is hardcoded: It returns a mocked 0.85 regardless of how the actual FAISS index (built in data pipeline/build vector db.py ) performs. Ask Replace the mock with a real Recall@K computation: 1. Build (or load) a small held-out set of (question, ground-truth-doc-id) pairs from the gbharti/finance-alpaca…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "teaching",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:21:41Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/veerjain-1/finance-slm-rag/issues/1",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/veerjain-1/finance-slm-rag/issues/1"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "veerjain-1/finance-slm-rag",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673248954",
+      "title": "Add a dependency-aware readiness endpoint (Kafka + datastore checks)",
+      "summary": "Context HealthCheckController.java exists for basic liveness, but there's no /actuator -style readiness endpoint that checks the orchestrator's actual dependencies -- Kafka connectivity and whatever persistence layer backs the Stateful Workflow Manager. Right now \"the app started\" and \"the app can actually process a pipeline event\" are indistinguishable from the outside. Ask Add a /health/ready endpoint (or extend…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:21:30Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/veerjain-1/agentic-cicd-orchestrator/issues/5",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/veerjain-1/agentic-cicd-orchestrator/issues/5"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "veerjain-1/agentic-cicd-orchestrator",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673247628",
+      "title": "Add test coverage reporting + badge",
+      "summary": "Context The backend has expenses , recurring-expenses , and groups (balances/settlements) routes, each with their own Jest test files, but there's no CI badge or coverage report surfaced anywhere, and test/ currently has no coverage reporting configured in jest.config.js . Ask Enable coverage reporting in backend/jest.config.js ( collectCoverage: true , a sensible coverageThreshold , and coverageReporters including…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:21:19Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/veerjain-1/PaySplitApp/issues/8",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/veerjain-1/PaySplitApp/issues/8"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "veerjain-1/PaySplitApp",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673236289",
+      "title": "day 22 to page 220 phát sinh và ước lượng",
+      "summary": "Một ngày thành phố tiếp nhận bao nhiêu rác? Theo bạn thì 10 tấn rác là ít hay nhiều? Thử làm phép tính thế này: - 1 người: 1 g/ngày - 10 triệu người: 10.000 kg/ngày = 10 tấn/ngày - 1 năm: khoảng 3.650 tấn Đúng. Gần như không thể đưa lượng rác về 0 tuyệt đối , nhưng có thể giảm rất mạnh lượng rác phải chôn lấp hoặc đốt. Ví dụ của bạn hoàn toàn đúng: - 1 người: 1 g/ngày - 10 triệu người: 10.000 kg/ngày = 10 tấn/ngày…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:19:45Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/saturnzen/LambdaInformationColonData/issues/710",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/saturnzen/LambdaInformationColonData/issues/710"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "question"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "saturnzen/LambdaInformationColonData",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673215638",
+      "title": "Update validation documentation",
+      "summary": "Description Currently components lacks proper backup support. Proposed solution Add configurable backup with sensible defaults. Priority : Low/Medium",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:16:44Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/yrn-dev/Operator/issues/30173",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/yrn-dev/Operator/issues/30173"
+        }
+      ],
+      "tags": [
+        "documentation",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "yrn-dev/Operator",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5673204169",
+      "title": "Payment Module DataBase",
+      "summary": "As a system, I need to store payment transactions linked to each student so their payment history and balances stay accurate and can be retrieved when needed.",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:15:07Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Ezo1yakumo/EduVance-Academy-Enrollment-System/issues/20",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Ezo1yakumo/EduVance-Academy-Enrollment-System/issues/20"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Ezo1yakumo/EduVance-Academy-Enrollment-System",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5673196581",
+      "title": "Payment Module Backend",
+      "summary": "US-09 – Process Payments As a cashier, I want to record student payments so the system updates each student’s balance and keeps an accurate payment history.",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:14:05Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Ezo1yakumo/EduVance-Academy-Enrollment-System/issues/19",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Ezo1yakumo/EduVance-Academy-Enrollment-System/issues/19"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Ezo1yakumo/EduVance-Academy-Enrollment-System",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5673184337",
+      "title": "Add a GitHub Action that checks every sample with validate-output.sh",
+      "summary": "Add a GitHub Action that runs validate-output.sh on every page under samples/ for each pull request into main . PR added a check that three published samples fail, and nothing caught it before it merged. The idea came from which found those three samples and fixed them.",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:12:20Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/malav2110/explain-diff-html/issues/14",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/malav2110/explain-diff-html/issues/14"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "malav2110/explain-diff-html",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5673121116",
+      "title": "Refactor components for better readability",
+      "summary": "Problem When working with store, the error messages could be more descriptive. Suggestion Improve error handling and add detailed error messages. Context This would help with debugging and maintenance.",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:03:48Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/yrn-dev/Operator/issues/30168",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/yrn-dev/Operator/issues/30168"
+        }
+      ],
+      "tags": [
+        "documentation",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "yrn-dev/Operator",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5673111839",
+      "title": "Document WP version dependency of fullscreen editor CSS fix ( 328)",
+      "summary": "Follow-up to 328 (fixes 325). Task: document the WordPress version dependency The fullscreen editor fix in admin/css/wpfaevent-admin.css targets block-editor internal class names: - .edit-post-meta-boxes-main - .edit-post-meta-boxes-main liner - .interface-interface-skeleton content These are not a stable WordPress API and have been renamed in past releases. If they change again, the fullscreen bug from 325 will…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "websites",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:02:30Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/fossasia/WPFAevent/issues/332",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/fossasia/WPFAevent/issues/332"
+        }
+      ],
+      "tags": [
+        "documentation",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "fossasia/WPFAevent",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673100967",
+      "title": "[good first issue] 🎴 Add new Video Game Quote 917 (good-first-issue)",
+      "summary": "🟢 Good First Issue: Add Video Game Quote 91 — Beginner-Friendly Open Source Contribution 🟢 No prerequisites needed! You don't need to clone the repo, install anything, or write code. This entire contribution can be done from your browser in under 60 seconds. Labels: good first issue, help wanted, hacktoberfest Language: JSON (no coding required) Time: < 1 minute Skill Level: Absolute beginner --- Add Famous Japanese…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T05:00:56Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/lingdojo/kana-dojo/issues/31455",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/lingdojo/kana-dojo/issues/31455"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "good first issue",
+        "hacktoberfest",
+        "community",
+        "low hanging fruit",
+        "up-for-grabs",
+        "first-timers-only",
+        "good-first-issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "lingdojo/kana-dojo",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673077584",
+      "title": "[good first issue] 🥢 Add new Anime Quote 876 (good-first-issue)",
+      "summary": "🟢 Good First Issue: Add Anime Quote 87 — Beginner-Friendly Open Source Contribution 🟢 No prerequisites needed! You don't need to clone the repo, install anything, or write code. This entire contribution can be done from your browser in under 60 seconds. Labels: good first issue, help wanted, hacktoberfest Language: JSON (no coding required) Time: < 1 minute Skill Level: Absolute beginner --- 🎬 Add Famous Anime Quote…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T04:57:28Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/lingdojo/kana-dojo/issues/31454",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/lingdojo/kana-dojo/issues/31454"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "good first issue",
+        "hacktoberfest",
+        "community",
+        "low hanging fruit",
+        "up-for-grabs",
+        "first-timers-only",
+        "good-first-issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "lingdojo/kana-dojo",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673071807",
+      "title": "secret-scanner reports one key twice: the provider rule and generic-secret",
+      "summary": "A single OpenAI key assigned to a variable comes out of secret-scanner twice, on the same line, with the same redacted value: The provider rule matches the key, then the generic rule matches the NAME = \"value\" assignment around it. It is noise in the terminal, and since 1.3.0 it is two alerts in the GitHub Security tab for one secret, one of them at a lower severity that can look like a duplicate someone already…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T04:56:37Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/NovaCode37/claude-security-skills/issues/66",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/NovaCode37/claude-security-skills/issues/66"
+        }
+      ],
+      "tags": [
+        "bug",
+        "good first issue",
+        "hacktoberfest"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "NovaCode37/claude-security-skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673070538",
+      "title": "--min-severity for secret-scanner and dockerfile-scan, so the action's input applies to every engine",
+      "summary": "sast-lite , dependency-check , http-sec-audit and the other engines take --min-severity and agree on its default since 48. Two do not: secret-scanner and dockerfile-scan . That now shows up in the GitHub Action: its min-severity input cannot be passed to those two, so min-severity: high still fails a build on a medium Dockerfile finding or a medium generic-secret match. The README has to explain the exception. What…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T04:56:27Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/NovaCode37/claude-security-skills/issues/65",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/NovaCode37/claude-security-skills/issues/65"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue",
+        "hacktoberfest"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "NovaCode37/claude-security-skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673070323",
+      "title": "dependency-check: record where each dependency is declared, and emit SARIF",
+      "summary": "dependency-check is the engine whose findings most need to land on the pull request, since a vulnerable pin usually arrives in one, and it is the one without a location. Its JSON lists the package, version, advisory id and severity, but not where the package was declared. What to do: - When parsing requirements.txt , package.json and pyproject.toml , keep the file path and line number of each dependency, and carry…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T04:56:25Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/NovaCode37/claude-security-skills/issues/64",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/NovaCode37/claude-security-skills/issues/64"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "hacktoberfest"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "NovaCode37/claude-security-skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5670288185",
+      "title": "Status page: dark mode",
+      "summary": "What to do - Add a dark palette under (prefers-color-scheme: dark) in the page's inline CSS in src/status.ts . - Keep the warning and error lines ( .warn ) readable in both themes. - Add or update a check in test/status.test.ts if it fits. How to try it without a Wii or start.gg: follow \"Rehearsing the built relay without start.gg\" in docs/development.md. It runs the relay against the fake start.gg and drives it…",
+      "company": "",
+      "country": "Não informado",
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T04:56:19Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/PranavMin/LazyTO/issues/2",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/PranavMin/LazyTO/issues/2"
+        },
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/PranavMin/LazyTO/issues/7"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "PranavMin/LazyTO",
+      "hasDetails": true,
+      "countries": []
+    },
+    {
+      "id": "github:5673068680",
+      "title": "SARIF output for dockerfile-scan",
+      "summary": "1.3.0 added --sarif to secret-scanner and sast-lite ( 49). dockerfile-scan is the next obvious one: its findings already have a file, a line and a rule id, which is everything SARIF needs. What to do: - Add --sarif to skills/dockerfile-scan/scanner.py , next to --json in a mutually exclusive group, the way the other two engines do it. - Follow to sarif in skills/sast-lite/analyzer.py : one run, a rules array from…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T04:56:10Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/NovaCode37/claude-security-skills/issues/63",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/NovaCode37/claude-security-skills/issues/63"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue",
+        "hacktoberfest"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "NovaCode37/claude-security-skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673068435",
+      "title": "sast-lite: catch TLS verification disabled through the ssl module",
+      "summary": "sast-lite reports verify=False on requests , but not the standard-library ways of turning certificate checks off: Each of these accepts any certificate, so anyone in the path can read and change the traffic (CWE-295). The existing py.tls-verify-disabled rule is the right home. What to do: - Report py.tls-verify-disabled for a call to ssl. create unverified context . - Report it for an assignment of False to an…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T04:56:08Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/NovaCode37/claude-security-skills/issues/62",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/NovaCode37/claude-security-skills/issues/62"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue",
+        "hacktoberfest"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "NovaCode37/claude-security-skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673066747",
+      "title": "sast-lite: flag tarfile extraction without a filter (TarSlip)",
+      "summary": "sast-lite does not notice archive extraction that trusts the archive: A tar member named ../../home/user/.ssh/authorized keys or an absolute path lands outside dest (CWE-22). This is the \"TarSlip\" class behind CVE- , and it is still everywhere because it is the obvious way to unpack a file. Python 3.12 added filter=\"data\" to extractall , which refuses those members. What to do: - Report py.archive-extraction…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T04:55:54Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/NovaCode37/claude-security-skills/issues/61",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/NovaCode37/claude-security-skills/issues/61"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue",
+        "hacktoberfest"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "NovaCode37/claude-security-skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673066498",
+      "title": "sast-lite: flag requests calls without a timeout",
+      "summary": "sast-lite does not notice HTTP calls without a timeout: Without timeout , requests waits forever on a server that accepts the connection and never answers. In a web handler or a worker that is a hang, and enough of them is a denial of service (CWE-400). Bandit reports this as B113; it is one of the most common real findings in Python services. What to do: - In visit Call in skills/sast-lite/analyzer.py , report…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T04:55:52Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/NovaCode37/claude-security-skills/issues/60",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/NovaCode37/claude-security-skills/issues/60"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue",
+        "hacktoberfest"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "NovaCode37/claude-security-skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673061302",
+      "title": "Rust grouped use {a::x, b::y} gives every imported name the first module's I/O kind",
+      "summary": "Summary A Rust use statement with a brace group is classified as one unit. The first module in it that resolves to an I/O kind wins, and every identifier in the statement is bound to that kind. In use std::{fs::File, collections::HashMap}; the name HashMap is recorded as a filesystem import, and in use {std::fs, reqwest::Client}; the network client Client is recorded as filesystem…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T04:55:07Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/repowise-dev/repowise/issues/2894",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/repowise-dev/repowise/issues/2894"
+        }
+      ],
+      "tags": [
+        "bug",
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "repowise-dev/repowise",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673061053",
+      "title": "C has no dataflow dialect, so it gets no Extract Method plans",
+      "summary": "Summary C methods never get an Extract Method plan, however long or branchy they are. The dataflow layer only analyses a language that has a def/use dialect, and C has none, so every C function is silently skipped. The language-support table already says so: docs/layers/LANGUAGE SUPPORT.md:374 lists C Extract Method as later . packages/core/src/repowise/core/analysis/health/dataflow/dialects/ init .py:34-47…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T04:55:05Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/repowise-dev/repowise/issues/2893",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/repowise-dev/repowise/issues/2893"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "repowise-dev/repowise",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673060175",
+      "title": "Rust crate:: , self:: and super:: imports are classified as I/O",
+      "summary": "Summary A Rust import that points inside the same crate is classified as an I/O import whenever one of its path segments happens to match a name in the I/O table. use crate::request::Foo; becomes a network import because request is the Node HTTP client, use super::http::fetch; becomes network because of Dart's http , and use self::fs::helper; becomes filesystem . The leading crate , self or super segment says the…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T04:54:57Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/repowise-dev/repowise/issues/2892",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/repowise-dev/repowise/issues/2892"
+        }
+      ],
+      "tags": [
+        "bug",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "repowise-dev/repowise",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673059924",
+      "title": "Extract Method parameter lists name a loop variable declared inside the extracted span",
+      "summary": "Summary When a function has two C-style for loops that reuse the same counter name, and the extracted span holds the second loop, the plan lists the counter as a parameter of the new helper. The counter is declared inside the span by the loop header, so the helper would be handed a variable that does not exist at the call site and the plan would not compile…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T04:54:55Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/repowise-dev/repowise/issues/2891",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/repowise-dev/repowise/issues/2891"
+        }
+      ],
+      "tags": [
+        "bug",
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "repowise-dev/repowise",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673059661",
+      "title": "Swallowed-catch flags a try block that ends in fail() , the expected-exception test idiom",
+      "summary": "Summary A Java test that expects an exception is written as a try block whose last statement is fail(...) , followed by a catch that does nothing because the exception is the expected outcome. The swallowed catch detector flags that catch, because it only checks whether the catch body is empty. That is libs/lz4/src/test/java/org/elasticsearch/lz4/ESLZ4Tests.java:195-200 in elasticsearch. Another is…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T04:54:53Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/repowise-dev/repowise/issues/2890",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/repowise-dev/repowise/issues/2890"
+        }
+      ],
+      "tags": [
+        "bug",
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "repowise-dev/repowise",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673059432",
+      "title": "Perf plans name a test method as the place to move the I/O",
+      "summary": "Summary A blocking io under lock finding produces a refactoring plan whose first step is \"Move the I/O in out of the locked section\". The function named is the lock owner, taken from the first node of the call path. When the lock is held by a test method, the plan names that test method and is written under the test file. On elasticsearch the performance plan for the Translog I/O said \"Move the I/O in…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T04:54:51Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/repowise-dev/repowise/issues/2889",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/repowise-dev/repowise/issues/2889"
+        }
+      ],
+      "tags": [
+        "bug",
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "repowise-dev/repowise",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673059179",
+      "title": "Extract Method helper names are Python snake case in Java, TypeScript and Go code",
+      "summary": "Summary Extract Method proposes a name for the helper it asks you to lift out, and the name is always built as compute , whatever language the function is written in. A Java method gets compute average , a TypeScript function gets compute average , and a Go function gets compute average . None of those is how a developer in that language would write the name, so every plan outside Python and Rust starts with a…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T04:54:48Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/repowise-dev/repowise/issues/2888",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/repowise-dev/repowise/issues/2888"
+        }
+      ],
+      "tags": [
+        "bug",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "repowise-dev/repowise",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673058927",
+      "title": "Refactoring plans give npm run test as the validation command for C , C++ and Java files",
+      "summary": "Summary A refactoring plan's validation block lists the command to run after the change. For any file that is not Python, TypeScript or JavaScript, the command is hard-coded to npm run test , whether or not the repository has a package.json . On dotnet/runtime every served plan (C++ and C ) carried commands: [\"npm run test\"] , and that repo has no root package.json . The plan then tells an agent or a reviewer to run…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T04:54:46Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/repowise-dev/repowise/issues/2887",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/repowise-dev/repowise/issues/2887"
+        }
+      ],
+      "tags": [
+        "bug",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "repowise-dev/repowise",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673047510",
+      "title": "break cycle reports cycles built from dynamic uses hint edges between same-named classes",
+      "summary": "Summary Break-cycle plans are emitted for two files that only \"depend\" on each other through dynamic uses hint edges. The .NET hint extractor creates those edges on purpose to every file that declares a type with a matching short name, so two unrelated classes with the same name in different projects form a two-file cycle. In an audit of PowerToys, 68 break cycle opportunities were reported and 5 of 5 sampled were…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T04:53:11Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/repowise-dev/repowise/issues/2886",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/repowise-dev/repowise/issues/2886"
+        }
+      ],
+      "tags": [
+        "bug",
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "repowise-dev/repowise",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673047255",
+      "title": "split file proposes precompiled-header names like pch 2.cpp and lists the same function twice in one group",
+      "summary": "Summary The split-file refactoring names each proposed file after the module its symbols call into most. For C++ that module is usually the precompiled header, so the plan proposes pch.cpp and pch 2.cpp , which say nothing about what the group does. Separately, a group can list the same function name twice when the file holds overloads. Both were seen on one real plan in an audit of PowerToys (…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T04:53:09Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/repowise-dev/repowise/issues/2885",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/repowise-dev/repowise/issues/2885"
+        }
+      ],
+      "tags": [
+        "bug",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "repowise-dev/repowise",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673041049",
+      "title": "[ci-maintainer] publish.yml has never fired: no v tag exists, npm still ) with 15 unreleased src commits and 6 changelog.d fragments",
+      "summary": "CI Issue publish.yml (added for 89 via 90, hardened in 92/ 96/ 107) is tag-triggered on v , but the repository has never had a v tag pushed , so the workflow has never run and the npm package is still exactly where 89 found it. - npm /pluk dist-tags.latest = 0.8.6 , published — still the only version ever published (30 days ago as of filing). - git tag on main → empty; gh api repos/hivecommons/pluk/tags → [] . - gh…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T04:52:14Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/hivecommons/pluk/issues/121",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/hivecommons/pluk/issues/121"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "hive/hosted-available-oke-11-placeholder-r05x",
+        "ci",
+        "agent/ci-maintainer",
+        "hive/likely-done"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "hivecommons/pluk",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5673038918",
+      "title": "MCP servers",
+      "summary": "",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T04:51:54Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/intertechnumberlogythailand-oem/intertechnumberlogythailand-mcp/issues/2",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/intertechnumberlogythailand-oem/intertechnumberlogythailand-mcp/issues/2"
+        }
+      ],
+      "tags": [
+        "bug",
+        "accessibility",
+        "documentation",
+        "duplicate",
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "invalid",
+        "question",
+        "wontfix"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "intertechnumberlogythailand-oem/intertechnumberlogythailand-mcp",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5672984866",
+      "title": "Move HTTP retry tunables into app config.dart and fix stale comments",
+      "summary": "Problem A handful of small leftovers that go against the conventions in CLAUDE.md. Tunables outside app config.dart - lib/core/http/json http client.dart:26-27 has maxRetries = 2 and baseBackoff = 500 ms as constructor defaults. This is the guide §15 retry policy, and the timeout next to them already comes from AppTimings.httpTimeout . Stale or wrong comments - lib/features/bus arrival/presentation/option…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T04:44:17Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/WeeJC8954/sg-smart-commute/issues/18",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/WeeJC8954/sg-smart-commute/issues/18"
+        }
+      ],
+      "tags": [
+        "documentation",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "WeeJC8954/sg-smart-commute",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5672972723",
+      "title": "[TODO] 添加跑操次数减免方法",
+      "summary": "据我所知，学校有各种跑操减免政策，比如参加某些体育竞赛，健身房的看管，某些社团部门",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T04:42:30Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/NJUPT-NAVI/NJUPT-Survival-Guide/issues/129",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/NJUPT-NAVI/NJUPT-Survival-Guide/issues/129"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "NJUPT-NAVI/NJUPT-Survival-Guide",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5672955594",
+      "title": "Typed payloads for each event",
+      "summary": "Why webhook() and buildEvent() return payload: Record . A handler written in TypeScript has to describe the shape of charge.success , refund.processed and the rest for itself, and a test that reads a field from a fixture needs a cast. The templates in src/providers/ already hold the shapes. Proposed Export a type per event, taken from the templates, and have webhook(\"paystack\", \"charge.success\") return a payload of…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T04:40:00Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/omoyolab/paylocal/issues/14",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/omoyolab/paylocal/issues/14"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "omoyolab/paylocal",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5672884133",
+      "title": "chore(pomodoro): Improve Styling of Session Running in Another Tab Message",
+      "summary": "Improve the visual presentation of the message displayed when a session is running in another tab by using the correct alert container styling for better consistency and visual hierarchy. Considerations - Use proper alert container component for the message display - Apply consistent styling with other alert messages throughout the app - Ensure message is visually prominent and easy to notice - Maintain consistent…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T04:29:34Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/srteerra/pitmydoro/issues/161",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/srteerra/pitmydoro/issues/161"
+        }
+      ],
+      "tags": [
+        "good first issue",
+        "patch",
+        "pomodoro"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "srteerra/pitmydoro",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5672876893",
+      "title": "Кулдаун приветствия не сохраняется",
+      "summary": "Проблема. В MessageManager ветки с return True выходят до await db.commit() , запись MeetingCooldowns не сохраняется. Тест: 3 сообщения подряд из одного чата дали 3 приветствия и 0 записей в БД. Решение. Коммит до возврата. Тест на повторные сообщения в пределах кулдауна.",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T04:28:30Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/funpayx/FunPayX/issues/14",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/funpayx/FunPayX/issues/14"
+        }
+      ],
+      "tags": [
+        "bug",
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "funpayx/FunPayX",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5672861556",
+      "title": "Авторизация проверяется только в common.py",
+      "summary": "Проблема. is authorized есть в 3 местах common.py , а в settings , plugin , lot manager , events , global settings проверок нет (по счёту grep : 0 проверок в 56 хендлерах вне common ). Защита держится на том, что кнопки получают только авторизованные. Решение. Один outer-middleware на уровне диспетчера, пропускающий неавторизованных только к /start и вводу пароля.",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T04:26:18Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/funpayx/FunPayX/issues/13",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/funpayx/FunPayX/issues/13"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "funpayx/FunPayX",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5672842069",
+      "title": "Add a small synthetic multilingual search corpus",
+      "summary": "Findrail tokenizes literal words with SQLite FTS5. We need small, inspectable examples of remembered-word searches in languages beyond the English demo and current Russian notes. This task adds fictional documents and human-labeled queries, not a new search engine or a claim that stemming / semantic search is supported. Start here: - Read docs/local-alpha.md and internal/search/search.go for current literal AND-term…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T04:23:34Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Lephiziel/findrail/issues/5",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Lephiziel/findrail/issues/5"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Lephiziel/findrail",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5672841452",
+      "title": "Document a first run on Apple Silicon using the release archive",
+      "summary": "The alpha ships a darwin-arm64 archive, but we need a reproducible first-run report from an actual Apple Silicon Mac. CI tests macOS; that alone does not establish the experience with a downloaded unsigned archive. This is a documentation contribution. You do not need to change the search engine or add a dependency. Scope: - Download the current alpha archive from Releases and check its SHA256 value. - Follow…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T04:23:28Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Lephiziel/findrail/issues/4",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Lephiziel/findrail/issues/4"
+        }
+      ],
+      "tags": [
+        "documentation",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Lephiziel/findrail",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5672836918",
+      "title": "Try the local alpha: installation and first-search feedback",
+      "summary": "Findrail's first local alpha is ready for volunteer testing. The most useful feedback is whether you can install it and recover a document you already know. Start with the release archives and the three-document demo. The alpha supports UTF-8 notes, code and text PDFs; it does not include OCR or semantic search. Please try: 1. Install an archive using the README. 2. Search for idempotency in the fictional demo and…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T04:22:48Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Lephiziel/findrail/issues/3",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Lephiziel/findrail/issues/3"
+        }
+      ],
+      "tags": [
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Lephiziel/findrail",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5672826438",
+      "title": "Hacer pipeline si cabe",
+      "summary": "Utilizar los MOFs y contaminantes distribuidos por el profesor para poder determinar si el contaminante cabe en el MOF",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T04:21:15Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Juanfft01/Capstone/issues/6",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Juanfft01/Capstone/issues/6"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Juanfft01/Capstone",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5672814908",
+      "title": "Quick Ask palette: selected row text contrast dropped to 3.7:1",
+      "summary": "Follow-up to 454 (which lands the selection accent bar from 361). The problem The selected Quick Ask row is now filled 0x987858 , and the row text is 0xE6E6E6 . That pair is about 3.7:1 , below the 4.5:1 WCAG AA asks for at the palette's 14 DIP normal-weight text. Before 454 it was about 9.3:1. This is a spec problem, not a mistake in 454: 361 asked for the selected row to be at least 3:1 against the 0x262626…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T04:19:40Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Raaif-Yousuf/Wingman/issues/476",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Raaif-Yousuf/Wingman/issues/476"
+        }
+      ],
+      "tags": [
+        "accessibility",
+        "good first issue",
+        "area:ui",
+        "P3"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Raaif-Yousuf/Wingman",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5672804246",
+      "title": "feature(profile): Add GitHub Social Account with Link Validation",
+      "summary": "Add GitHub to the social media links in the user profile edit section. Implement proper URL validation to ensure only valid GitHub profile links are accepted and saved. Considerations - Add GitHub link field to social accounts in profile edit section - Implement URL validation to accept only GitHub profile links (github.com/username format) - Display appropriate error message for invalid GitHub URLs - Add GitHub…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "social",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T04:18:08Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/srteerra/pitmydoro/issues/159",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/srteerra/pitmydoro/issues/159"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue",
+        "account / profile"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "srteerra/pitmydoro",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5672803240",
+      "title": "Security: Fix High Severity TLS Certificate Validation Bypass in undici (CVE- )",
+      "summary": "Description Dependabot telah mendeteksi celah keamanan tingkat tinggi ( High Severity ) pada repositori ini terkait pustaka undici yang terdeteksi di dalam file frontend/pnpm-lock.yaml . Vulnerability: TLS certificate validation bypass via dropped connect options in BalancedPool. CVE ID: CVE- Affected File: frontend/pnpm-lock.yaml Celah keamanan ini terjadi karena opsi koneksi kustom TLS (seperti checkServerIdentity…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T04:18:00Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/nlfts/Lions-Pos/issues/288",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/nlfts/Lions-Pos/issues/288"
+        }
+      ],
+      "tags": [
+        "bug",
+        "help wanted",
+        "need fixed",
+        "Security"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "nlfts/Lions-Pos",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5672781793",
+      "title": "About Us: remove the commits and PRs-opened stat fields the backend no longer sends",
+      "summary": "Problem The About Us GitHub Activity section still lists commits and prsOpened in REPO STAT FIELDS ( pages/aboutus/index.js ), and the comment above formatRepoStats still shows \"100 commits · 14 PRs opened · 1 PR merged · 31 reviews\" as the example. The backend stopped sending those two fields in ReduxISU/Redux 585: ContributorRepoStats now only has prsMerged and reviews , and contributorInfo.json no longer contains…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T04:15:03Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/ReduxISU/Redux_GUI/issues/335",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/ReduxISU/Redux_GUI/issues/335"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "ReduxISU/Redux_GUI",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5672781589",
+      "title": "About Us: remove the commits and PRs-opened stat fields the backend no longer sends",
+      "summary": "Problem The contributor dialog's GitHub Activity section still lists commits and prsOpened in REPO STAT FIELDS ( components/aboutus/ContributorDialog.js ), and the comment above formatRepoStats still shows \"100 commits, 14 PRs opened, 79 PRs merged, 31 reviews\" as the example. The backend stopped sending those two fields in ReduxISU/Redux 585: ContributorRepoStats now only has prsMerged and reviews , and…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T04:15:01Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/ReduxISU/Redux_Frontend/issues/183",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/ReduxISU/Redux_Frontend/issues/183"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "ReduxISU/Redux_Frontend",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5672781396",
+      "title": "About Us: GitHub Activity says \"1 PRs merged\" and \"1 reviews\"",
+      "summary": "Problem The GitHub Activity section in the contributor dialog uses the plural label for every count, so a contributor with one merged PR or one review sees \"1 PRs merged\" or \"1 reviews\". components/aboutus/ContributorDialog.js : REPO STAT FIELDS has a single label per field, and formatRepoStats always renders ${value} ${label} . Fix Give each field a singular and a plural form and pick by value, the way Redux GUI…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T04:14:59Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/ReduxISU/Redux_Frontend/issues/182",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/ReduxISU/Redux_Frontend/issues/182"
+        }
+      ],
+      "tags": [
+        "bug",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "ReduxISU/Redux_Frontend",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5672765386",
+      "title": "Create featured offerings and verify Specials end to end",
+      "summary": "Parent Owner: Vedika. Support: Aditi for management UI, Sofie for behavior checks. What to build A team member marks a new offering as special in the management form and sees the persisted entry on both Menu and Specials. The ordinary-offering flow remains unchanged. Acceptance criteria - [ ] Provide an accessible special-offering checkbox in the creation form and send an actual JSON boolean. - [ ] A new special…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T04:12:47Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/BrianLiDesign/coffee-shop/issues/17",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/BrianLiDesign/coffee-shop/issues/17"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue",
+        "frontend"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "BrianLiDesign/coffee-shop",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5672757999",
+      "title": "Add a loading GIF to the initial review progress comment",
+      "summary": "Problem / motivation The initial \"Review in progress\" comment currently displays text and the roborak logo. Add the supplied loading animation so readers can immediately see that the review is still running. Proposed solution Display KYwOA.gif (220 x 220) in the initial review progress comment, alongside the existing status text. Use a durable image URL that renders for readers on both GitHub PRs and GitLab MRs…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T04:11:41Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/rdlugs/roborak/issues/101",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/rdlugs/roborak/issues/101"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "rdlugs/roborak",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5672743000",
+      "title": "Add in a block comment feature",
+      "summary": "Inside of the scanner.c code, there is a portion of the code that skips over the \"/\" character in a source string, extend the skipWhiteSpace() function in order to pass over several different lines whenever a \"/ \" (or whatever you would like the syntax to be) is encountered, making sure to update the inner state like the line count and what not. Please add in test cases for your addition inside of the testcases…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T04:09:31Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/NateTheGrappler/OliNat-Programming-Language/issues/12",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/NateTheGrappler/OliNat-Programming-Language/issues/12"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "NateTheGrappler/OliNat-Programming-Language",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5672679195",
+      "title": "Consolidate native data generation and publish an official MC/DC library",
+      "summary": "- Keep separate neutron, electron, and proton generators targeting MCDC LIB , preserving other particles’ data during updates. - Validate shared metadata, record provenance, and resolve temperature compatibility for coupled transport. - Document preparation instructions and source links, including LANL Lib81, EPRDATA14, TENDL, and PSTAR. - Generate and validate an official library; confirm source-data redistribution…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T04:00:20Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/mcdc-project/mcdc/issues/551",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/mcdc-project/mcdc/issues/551"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "continuous energy",
+        "neutron",
+        "proton",
+        "photon",
+        "multi-particle",
+        "electron",
+        "packaging"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "mcdc-project/mcdc",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5672674890",
+      "title": "EP2000: Home Assistant support (beta, behind EP2000 CONFIRMED)",
+      "summary": "Home Assistant side of the EP2000 profile (register data: bluetti-registers 42 and 0.0.50; library: bluetti-modbus 0.37.0). Back on main behind EP2000 CONFIRMED = False : the profile is BLUETTI's own EBOX register sheet, read in full on a real unit and corrected against that read, but it has never run in Home Assistant. Every field is read-only - nothing on the EP2000 has been written to. Before you start - how the…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T03:59:42Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/bluetti-community/hassio-bluetti-modbus/issues/145",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/bluetti-community/hassio-bluetti-modbus/issues/145"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "bluetti-community/hassio-bluetti-modbus",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5672592586",
+      "title": "ASII-07 — Forma del objeto patient en respuestas de otras áreas",
+      "summary": "Para: María de los Ángeles López (área 2) Desde: área 7 · Laboratorio Contexto Las órdenes de laboratorio muestran datos del paciente. Hoy no existe GET /patients/{id} y cada área podría devolver el paciente con campos distintos. En que solicito ayuda: - [ ] Los campos mínimos del paciente cuando aparece anidado en una respuesta de otra área (p. ej. id , code , first name , last name , birth date , gender ). - [ ]…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T03:48:17Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/AxelHerrera11/sistema-hospitalario-integrado/issues/13",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/AxelHerrera11/sistema-hospitalario-integrado/issues/13"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "AxelHerrera11/sistema-hospitalario-integrado",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5672582690",
+      "title": "ASII-07 — Límites de responsabilidad sobre critical alerts",
+      "summary": "Para: Cindy Ruano (área 8) Desde: área 7 · Laboratorio Contexto La tabla critical alerts está en la migración de laboratorio, pero el módulo de alertas es tuyo. Propuesta (sección 10 y RF-VAL-03 de docs/modulo-laboratorio.md ) - Laboratorio solo inserta la alerta valor critico lab , en la misma transacción en que el bioquímico valida un resultado crítico, dirigida al médico que ordenó ( ordered by ). - El área 8…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T03:46:48Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/AxelHerrera11/sistema-hospitalario-integrado/issues/12",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/AxelHerrera11/sistema-hospitalario-integrado/issues/12"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "AxelHerrera11/sistema-hospitalario-integrado",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5672566282",
+      "title": "ASII-07 — Servicio común de auditoría y datos demo de laboratorio",
+      "summary": "Para: María Lindo (área 1) Desde: área 7 · Laboratorio 1. Servicio de auditoría El README pide que toda área registre en audit logs sus acciones sobre datos clínicos, pero hoy solo el seeder escribe ahí, con DB::table() . - [ ] Un servicio común (p. ej. AuditLogger ) con la misma firma para las 9 áreas. Acciones que laboratorio necesita registrar: crear y cancelar orden, recibir y descartar muestra, ingresar y…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T03:44:25Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/AxelHerrera11/sistema-hospitalario-integrado/issues/9",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/AxelHerrera11/sistema-hospitalario-integrado/issues/9"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "AxelHerrera11/sistema-hospitalario-integrado",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5672351065",
+      "title": "docs: refresh the Japanese and Chinese README translations",
+      "summary": "README ja.md and README zh.md both record source commit e8db438 ( ). The English README has changed since — it gained the limitations section and the DuckDB/Polars comparison. Per docs/TRANSLATING.md , a translation that can't be reviewed should not silently advance its source commit. What to do - Compare the English README against the translated entry pages and update anything that drifted (commands, feature…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T03:13:27Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/x1zzdev/Xazz/issues/277",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/x1zzdev/Xazz/issues/277"
+        }
+      ],
+      "tags": [
+        "documentation",
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "x1zzdev/Xazz",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5672255760",
+      "title": "[good first issue] 🧧 Add new Japan Fact 132 (good-first-issue)",
+      "summary": "🟢 Good First Issue: Add Japan Fact 13 — Beginner-Friendly Open Source Contribution 🟢 No prerequisites needed! You don't need to clone the repo, install anything, or write code. This entire contribution can be done from your browser in under 60 seconds. Labels: good first issue, help wanted, hacktoberfest Language: JSON (no coding required) Time: < 1 minute Skill Level: Absolute beginner --- 🎋 Add New Japan Fact…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T03:00:56Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/lingdojo/kana-dojo/issues/31446",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/lingdojo/kana-dojo/issues/31446"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "good first issue",
+        "hacktoberfest",
+        "community",
+        "low hanging fruit",
+        "up-for-grabs",
+        "first-timers-only",
+        "good-first-issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "lingdojo/kana-dojo",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5672252168",
+      "title": "Executive Focus",
+      "summary": "Strategic planning session👉 To take this issue, comment: /assign",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T03:00:27Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/almadhlom/master-life-os-General-Version/issues/113",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/almadhlom/master-life-os-General-Version/issues/113"
+        }
+      ],
+      "tags": [
+        "bug",
+        "documentation",
+        "duplicate",
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "invalid",
+        "question",
+        "wontfix"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "almadhlom/master-life-os-General-Version",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5672229446",
+      "title": "[good first issue] 🐡 Add new Theme: Wasanbon (good-first-issue)",
+      "summary": "🟢 Good First Issue: Add Color Theme: Wasanbon — Beginner-Friendly Open Source Contribution 🟢 No prerequisites needed! You don't need to clone the repo, install anything, or write code. This entire contribution can be done from your browser in under 60 seconds. Labels: good first issue, help wanted, hacktoberfest Language: JSON (no coding required) Time: < 1 minute Skill Level: Absolute beginner --- 🎨 Add New Color…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T02:57:28Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/lingdojo/kana-dojo/issues/31445",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/lingdojo/kana-dojo/issues/31445"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "good first issue",
+        "hacktoberfest",
+        "community",
+        "low hanging fruit",
+        "up-for-grabs",
+        "first-timers-only",
+        "good-first-issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "lingdojo/kana-dojo",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5672215586",
+      "title": "⚠️ Kontrol Edilmesi Gereken Yayınlar",
+      "summary": "Kanallar/KekikAkademi.m3u | AD | HATA | YAYIN | |----|------|-------| | TRT 2 | 403 | | | Haber Türk | 403 | | | CNN Türk | ConnectError | | | NTV | 403 | | | Haber Global | 403 | | | TV 100 | ConnectError | | | Sözcü TV | ConnectError | | | Bloomberg HT | 403 | | | TRT Belgesel | 403 | | | TLC | 403 | | | DMax | 403 | | | TGRT Belgesel | 404 | | | Star TV | 403 | | | ATV | 404 | | | Show TV | 403 | | | TV 8 | 403 |…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T02:55:49Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/bscandua/IPTV_YenirMi/issues/45",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/bscandua/IPTV_YenirMi/issues/45"
+        }
+      ],
+      "tags": [
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "bscandua/IPTV_YenirMi",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5672214445",
+      "title": "🐛 copilot: picker offers claude-sonnet-5-5 / claude-opus-5-5 but Copilot CLI 1.0.88 rejects both and falls back to claude-sonnet-5",
+      "summary": "What happened On a v5 hive, I picked Sonnet 5.5 for the copilot backend from the model pick list and opened the agent terminal. Copilot CLI printed: Picking Opus 5.5 does the same thing: the agent also ends up on claude-sonnet-5 . So the dashboard offers models the pinned Copilot CLI doesn't accept, and the agent quietly runs on Sonnet 5 instead of the model that was chosen. (The same terminal also showed MCP…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T02:55:40Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/hivecommons/hive/issues/9927",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/hivecommons/hive/issues/9927"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "priority/medium",
+        "kind/bug",
+        "hive/verified-open"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "hivecommons/hive",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5672199808",
+      "title": "Check Type A–E crystallography and diagnose static relaxation failures",
+      "summary": "Goal Verify that the KNbO3 constructions implement the intended Burgers vectors, line directions and glide planes from the SrTiO3 framework of Klomp et al. Evidence See model status. A stops at static stage 4, C at stage 2, and D at shells fixed cores. D.zip omits CONFIG.D even though its README mentions it. B source recovery is a prerequisite for its review. E uses an older stabilization protocol that also needs…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T02:53:50Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/yhj114548/KNbO3-dislocation/issues/3",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/yhj114548/KNbO3-dislocation/issues/3"
+        }
+      ],
+      "tags": [
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "yhj114548/KNbO3-dislocation",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5671916978",
+      "title": "[radar] SN open bounty 2026-10-02T02:17",
+      "summary": "New SN OPEN BOUNTY detected:",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T02:17:14Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/relayhop/sn-monetization-runtime/issues/1226",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/relayhop/sn-monetization-runtime/issues/1226"
+        }
+      ],
+      "tags": [
+        "radar",
+        "sn",
+        "bounty"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "relayhop/sn-monetization-runtime",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5671865277",
+      "title": "[radar] SN open bounty 2026-10-02T02:11",
+      "summary": "New SN OPEN BOUNTY detected:",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-02T02:11:01Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/relayhop/sn-monetization-runtime/issues/1225",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/relayhop/sn-monetization-runtime/issues/1225"
+        }
+      ],
+      "tags": [
+        "radar",
+        "sn",
+        "bounty"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "relayhop/sn-monetization-runtime",
+      "hasDetails": false
+    },
+    {
+      "id": "weworkremotely:https-weworkremotely.com-remote-jobs-clover-health-chief-actuary",
+      "title": "Clover Health: Chief Actuary",
+      "summary": "Headquarters: NY, United States URL: Chief Actuary Remote - USA The Finance team at Clover Health is a group of strategic partners providing financial and operational insights that drive informed decision-making and efficient capital allocation. Guided by our core values of excellence, accountability, and collaboration, we provide actionable recommendations to improve health outcomes and reduce costs while ensuring…",
+      "company": "",
+      "country": "Remoto/Global",
+      "countries": [],
+      "remote": true,
+      "categories": [
+        "projects",
+        "employment",
+        "remote"
+      ],
+      "type": "employment",
+      "salary": "",
+      "publishedAt": "2026-10-02T01:24:37Z",
+      "sourceName": "We Work Remotely",
+      "sourceUrl": "https://weworkremotely.com/remote-jobs/clover-health-chief-actuary",
+      "sourceLinks": [
+        {
+          "name": "We Work Remotely",
+          "url": "https://weworkremotely.com/remote-jobs/clover-health-chief-actuary"
+        }
+      ],
+      "tags": [],
+      "status": "UNKNOWN",
+      "trustLevel": "source_listing",
+      "language": "unknown",
+      "hasDetails": true
+    },
     {
       "id": "github:5670597517",
       "title": "Help wanted: OWON CM2100B verification (real hardware needed)",
@@ -2326,38 +7185,6 @@
       "language": "unknown",
       "project": "PranavMin/LazyTO",
       "hasDetails": false,
-      "countries": []
-    },
-    {
-      "id": "github:5670288185",
-      "title": "Status page: dark mode",
-      "summary": "What to do - Add a dark palette under (prefers-color-scheme: dark) in the page's inline CSS in src/status.ts . - Keep the warning and error lines ( .warn ) readable in both themes. - Add or update a check in test/status.test.ts if it fits. How to try it without a Wii or start.gg: follow \"Rehearsing the built relay without start.gg\" in docs/development.md. It runs the relay against the fake start.gg and drives it…",
-      "company": "",
-      "country": "Não informado",
-      "remote": false,
-      "categories": [
-        "projects"
-      ],
-      "type": "open-source contribution",
-      "salary": "",
-      "publishedAt": "2026-10-01T22:50:24Z",
-      "sourceName": "GitHub Issues",
-      "sourceUrl": "https://github.com/PranavMin/LazyTO/issues/2",
-      "sourceLinks": [
-        {
-          "name": "GitHub Issues",
-          "url": "https://github.com/PranavMin/LazyTO/issues/2"
-        }
-      ],
-      "tags": [
-        "enhancement",
-        "good first issue"
-      ],
-      "status": "UNKNOWN",
-      "trustLevel": "community_project",
-      "language": "unknown",
-      "project": "PranavMin/LazyTO",
-      "hasDetails": true,
       "countries": []
     },
     {
@@ -16920,6 +21747,39 @@
       "countries": []
     },
     {
+      "id": "github:5549109539",
+      "title": "[radar] SN open bounty 2026-09-23T05:13",
+      "summary": "New SN OPEN BOUNTY detected:",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-09-23T05:13:40Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/relayhop/sn-monetization-runtime/issues/1183",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/relayhop/sn-monetization-runtime/issues/1183"
+        }
+      ],
+      "tags": [
+        "radar",
+        "sn",
+        "bounty"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "relayhop/sn-monetization-runtime",
+      "hasDetails": false
+    },
+    {
       "id": "remoteok:1137421",
       "title": "Technical Product Manager AI Stockbroking App",
       "summary": "About KIRA Our mission is to make money smart, reliable and within reach for everyone. Â In 2019, we built the first mobile-first, insurance platform, enabling insurance to be accessible online by millions in the region. Today, it's the leading insurance platform in Southeast Asia. Â Today, we are expanding ways to help people in Asia and it includes spending, saving, investing, exchanging, travelling, and more. Our…",
@@ -19233,7 +24093,7 @@
       "frequencyMinutes": 60,
       "limit": 100,
       "status": "ok",
-      "lastSyncAt": "2026-10-01T23:28:23Z",
+      "lastSyncAt": "2026-10-02T05:52:58Z",
       "itemsFound": 100,
       "note": "Fonte remota; consultar no máximo uma vez por hora."
     },
@@ -19253,7 +24113,7 @@
       "frequencyMinutes": 60,
       "limit": 250,
       "status": "ok",
-      "lastSyncAt": "2026-10-01T23:28:23Z",
+      "lastSyncAt": "2026-10-02T05:52:58Z",
       "itemsFound": 99,
       "note": "Atribuição e link dofollow para cada anúncio original."
     },
@@ -19272,7 +24132,7 @@
       "frequencyMinutes": 60,
       "limit": 100,
       "status": "ok",
-      "lastSyncAt": "2026-10-01T23:28:23Z",
+      "lastSyncAt": "2026-10-02T05:52:58Z",
       "itemsFound": 87,
       "note": "Preservar a atribuição e o link do feed original."
     },
@@ -19292,8 +24152,8 @@
       "frequencyMinutes": 60,
       "limit": 180,
       "status": "ok",
-      "lastSyncAt": "2026-10-01T23:28:23Z",
-      "itemsFound": 271,
+      "lastSyncAt": "2026-10-02T05:52:58Z",
+      "itemsFound": 239,
       "note": "Issues abertas com labels de contribuição; remuneração não presumida."
     },
     {
