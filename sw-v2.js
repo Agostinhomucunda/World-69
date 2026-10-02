@@ -1,4 +1,4 @@
-const CACHE = 'world69-shell-v22';
+const CACHE = 'world69-shell-v23';
 const SHELL = ['./', './index.html', './radar.html', './radar.css', './radar.js', './codelab.html', './conta.html', './login.html', './admin.html', './firebase-config.js', './admin-access.js', './style.css', './codelab.css', './codelab-ide.css', './responsive.css', './codelab.js', './codelab-missions.js', './codelab-ide.js', './codelab-storage.js', './codelab-curriculum.js', './codelab-runner.js', './free-products.js', './free-products.generated.js', './manifest.webmanifest', './assets/favicon.svg', './assets/world69-commercial.mp4', './assets/world69-commercial-poster.jpg'];
 const RADAR_DATA_FILES = ['/radar.generated.json', '/radar-details.generated.json'];
 
