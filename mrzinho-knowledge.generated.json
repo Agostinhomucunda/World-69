@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-07T02:45:48Z",
+  "updatedAt": "2026-10-07T10:34:21Z",
   "sources": [
     {
       "id": "javascript-mdn",
@@ -18,7 +18,7 @@
       "status": "ok",
       "title": "JavaScript | MDN",
       "contentHash": "e89b5c1602775400",
-      "checkedAt": "2026-10-07T02:45:48Z"
+      "checkedAt": "2026-10-07T10:34:21Z"
     },
     {
       "id": "python-docs",
@@ -35,8 +35,8 @@
       "resolvedUrl": "https://docs.python.org/3/tutorial/",
       "status": "ok",
       "title": "The Python Tutorial &#8212; Python 3.14.8 documentation",
-      "contentHash": "6c58a808f718cd78",
-      "checkedAt": "2026-10-07T02:45:48Z"
+      "contentHash": "600ed80828b8576a",
+      "checkedAt": "2026-10-07T10:34:21Z"
     },
     {
       "id": "cpp-isocpp",
@@ -49,11 +49,8 @@
         "biblioteca standard",
         "boas práticas"
       ],
-      "resolvedUrl": "https://isocpp.org/get-started",
-      "status": "ok",
-      "title": "Get Started! : Standard C++",
-      "contentHash": "40923d16d35ae0e3",
-      "checkedAt": "2026-10-07T02:45:48Z"
+      "status": "unavailable",
+      "checkedAt": "2026-10-07T10:34:21Z"
     },
     {
       "id": "web-standards-mdn",
@@ -70,10 +67,15 @@
       "status": "ok",
       "title": "Learn web development | MDN",
       "contentHash": "8b30a914ca0cdf75",
-      "checkedAt": "2026-10-07T02:45:48Z"
+      "checkedAt": "2026-10-07T10:34:21Z"
     }
   ],
-  "failures": [],
+  "failures": [
+    {
+      "id": "cpp-isocpp",
+      "error": "HTTP Error 403: Forbidden"
+    }
+  ],
   "lessons": {
     "javascript": {
       "focus": "Explicar valores, decisões e efeitos no navegador com exemplos pequenos.",
