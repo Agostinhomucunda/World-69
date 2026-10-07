@@ -267,7 +267,7 @@ def main() -> int:
     import argparse
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--batch-size", type=int, default=40)
-    parser.add_argument("--target", type=int, default=1000)
+    parser.add_argument("--target", type=int, default=100000)
     parser.add_argument("--per-source", type=int, default=4)
     args = parser.parse_args()
     if args.batch_size < 1 or args.target < 1 or args.per_source < 1:

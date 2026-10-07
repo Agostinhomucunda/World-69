@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "description": "Fontes públicas e oficiais usadas pela rotina de atualização da memória pedagógica do MrZinho.",
+  "sources": [
+    {
+      "id": "javascript-mdn",
+      "language": "javascript",
+      "label": "MDN JavaScript",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+      "topics": ["valores", "variáveis", "funções", "assíncrono", "APIs web"]
+    },
+    {
+      "id": "python-docs",
+      "language": "python",
+      "label": "Python Documentation",
+      "url": "https://docs.python.org/3/tutorial/",
+      "topics": ["sintaxe", "controlo de fluxo", "estruturas de dados", "módulos", "testes"]
+    },
+    {
+      "id": "cpp-isocpp",
+      "language": "cpp",
+      "label": "Standard C++ / ISO C++",
+      "url": "https://isocpp.org/get-started",
+      "topics": ["compiladores", "linguagem moderna", "biblioteca standard", "boas práticas"]
+    },
+    {
+      "id": "web-standards-mdn",
+      "language": "logic",
+      "label": "MDN Web Docs",
+      "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development",
+      "topics": ["decomposição", "acessibilidade", "web", "debugging"]
+    }
+  ]
+}

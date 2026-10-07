@@ -29,7 +29,7 @@ Montra digital em português para descobrir ferramentas, software e recursos út
 A rotina consulta a API pública de pesquisa do GitHub por tópicos de desenvolvimento, design, produtividade, segurança, educação, IA, vídeo, áudio e outros. Só aceita repositórios públicos, ativos, não-forks, com descrição, pelo menos 20 estrelas e licença SPDX reconhecida. Cada cartão aponta para o site oficial (quando informado), inclui a origem do projeto e identifica a licença. Os produtos existentes são preservados; identificadores estáveis, cursores por tópico e filtragem de duplicados tornam os lotes idempotentes.
 
 - O primeiro lote acrescenta mais de 100 recursos quando as fontes públicas têm resultados suficientes.
-- A rotina agendada acrescenta até 40 recursos por execução horária e para ao atingir o limite de 1.000 recursos no total (incluindo a lista curada original).
+- A rotina agendada acrescenta até 40 recursos por execução horária e para ao atingir o limite de 100.000 recursos no total (incluindo a lista curada original).
 - A agenda do GitHub Actions é de melhor esforço: o GitHub pode atrasar execuções em períodos de alta carga. O prazo de cerca de um dia para alcançar o limite depende da disponibilidade e da diversidade de itens nas fontes; não é uma garantia de horário.
 - O módulo do catálogo usa uma versão de cache por minuto para que os lotes publicados não fiquem presos a uma cópia antiga do navegador.
 - O processo não usa scraping de páginas privadas, não exige chave de terceiros e não publica links sem origem. Só os dados do catálogo e o cursor são gravados pelo workflow.
@@ -38,7 +38,7 @@ A rotina consulta a API pública de pesquisa do GitHub por tópicos de desenvolv
 Para executar localmente, com `gh` autenticado ou `GITHUB_TOKEN` definido:
 
 ```bash
-python3 scripts/update_catalog.py --batch-size 120 --target 1000 --per-source 10
+python3 scripts/update_catalog.py --batch-size 120 --target 100000 --per-source 10
 ```
 
 ## Radar de oportunidades
@@ -80,3 +80,6 @@ A aplicação usa agora o projeto Firebase `world-69` através de `firebase-conf
 - Antes de publicar produtos no novo projeto, confirmar as regras do Firestore para permitir apenas utilizadores admin; uma verificação de email no cliente, sozinha, não é segurança suficiente.
 
 O próximo passo recomendado é criar regras owner-only e, depois, transferir/sincronizar o progresso do CodeLab por `request.auth.uid`, sem misturar a coleção `products` com os dados privados dos alunos.
+
+## Memória pedagógica do MrZinho
+A tela **Ter aula com o Mrzinho** mantém uma memória pedagógica pública e separada das missões. A rotina `scripts/update_mrzinho.py` verifica diariamente fontes oficiais de MDN JavaScript, Python Documentation, Standard C++/ISO C++ e MDN Web Docs, guarda apenas metadados, hash do conteúdo e orientações pedagógicas curadas, e publica a data e a fonte usada na aula. O navegador não envia código, perfil ou dados pessoais para essas fontes; o conteúdo de execução continua local.

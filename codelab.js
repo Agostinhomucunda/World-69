@@ -1,5 +1,6 @@
 import { tracks, placementQuestions } from './codelab-curriculum.js?v=20260930-code-only-v1';
 import { createEndlessMission } from './codelab-missions.js';
+import { mrzinhoKnowledge } from './mrzinho-knowledge.generated.js';
 
 const $ = (id) => document.getElementById(id);
 
@@ -718,6 +719,24 @@ function updateCodeHighlight() {
   if (editor && highlight) highlight.innerHTML = `${highlightCode(editor.value)}\n`;
 }
 
+
+function teacherLanguageKey(language) {
+  return language === 'javascript' ? 'javascript' : language === 'python' ? 'python' : language === 'cpp' ? 'cpp' : 'logic';
+}
+
+function teacherMemoryFor(language) {
+  return mrzinhoKnowledge.lessons?.[teacherLanguageKey(language)] || {};
+}
+
+function renderTeacherMemory(language) {
+  const key = teacherLanguageKey(language);
+  const memory = teacherMemoryFor(key);
+  const source = (mrzinhoKnowledge.sources || []).find((item) => item.language === key && item.status !== 'unavailable');
+  const note = $('teacher-source-note');
+  if (!note) return;
+  const when = mrzinhoKnowledge.updatedAt ? new Date(mrzinhoKnowledge.updatedAt).toLocaleDateString('pt-PT') : 'a preparar';
+  note.innerHTML = `<strong>MEMÓRIA DO MRZINHO · ${escapeHtml(when)}</strong><span>${escapeHtml(memory.focus || 'A explicar com exemplos pequenos e verificáveis.')}</span><span>${source ? `Fonte oficial: <a href="${escapeHtml(source.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(source.label)}</a>` : 'Fontes oficiais a sincronizar na próxima atualização.'}</span>`;
+}
 
 const teacherLessons = {
   "javascript": {
@@ -2964,7 +2983,9 @@ async function renderTeacherStep(announce = true) {
   $('teacher-focus-label').textContent = `FOCO: ${step.focusLabel.toUpperCase()}`;
   $('teacher-step-title').textContent = step.title;
   $('teacher-step-copy').textContent = step.copy;
-  $('teacher-explanation').textContent = step.explanation;
+  const memory = teacherMemoryFor(teacherLanguage);
+  $('teacher-explanation').textContent = `${step.explanation} ${memory.tip || ''}`.trim();
+  renderTeacherMemory(teacherLanguage);
   $('teacher-understood-state').textContent = teacherStepIndex === lesson.steps.length - 1 ? 'Último passo desta aula.' : 'Ouve a explicação do Mrzinho. Quando estiver claro, avança no teu ritmo.';
   $('teacher-understood').innerHTML = teacherStepIndex === lesson.steps.length - 1 ? 'Terminei a aula <span>✓</span>' : 'Entendi <span>→</span>';
   $('teacher-code').setAttribute('aria-label', `Exemplo de código. Foco: ${step.focusLabel}`);
@@ -2995,6 +3016,7 @@ function renderTeacherIntroduction() {
   $('teacher-progress').textContent = `INTRODUÇÃO · ${lesson.steps.length} PASSOS`;
   $('teacher-language-label').textContent = language;
   $('teacher-focus-label').textContent = 'COMO VAI FUNCIONAR';
+  renderTeacherMemory(teacherLanguage);
   $('teacher-step-title').textContent = 'Antes de começar';
   $('teacher-step-copy').textContent = `Vou acompanhar-te em ${lesson.steps.length} passos: fundamentos, prática, conceitos intermédios e temas avançados.`;
   $('teacher-explanation').textContent = 'Ouve a introdução, observa o formato e avança quando estiveres pronto. Cada passo tem código, explicação e voz do Mrzinho.';
