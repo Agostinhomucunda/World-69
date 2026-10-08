@@ -1,13 +1,13 @@
 {
-  "next_source": 7,
+  "next_source": 2,
   "sources": {
     "developer-tools": {
       "page": 2,
-      "offset": 0
+      "offset": 8
     },
     "code-editor": {
       "page": 1,
-      "offset": 87
+      "offset": 89
     },
     "web-development": {
       "page": 1,
@@ -31,49 +31,49 @@
     },
     "productivity": {
       "page": 1,
-      "offset": 72
+      "offset": 77
     },
     "cybersecurity": {
       "page": 1,
-      "offset": 92
+      "offset": 99
     },
     "self-hosted": {
-      "page": 1,
-      "offset": 97
+      "page": 2,
+      "offset": 0
     },
     "education": {
       "page": 1,
-      "offset": 92
+      "offset": 98
     },
     "artificial-intelligence": {
       "page": 1,
-      "offset": 83
+      "offset": 93
     },
     "machine-learning": {
       "page": 2,
-      "offset": 7
+      "offset": 11
     },
     "social-media": {
       "page": 1,
-      "offset": 75
+      "offset": 81
     },
     "ecommerce": {
       "page": 1,
-      "offset": 84
+      "offset": 94
     },
     "finance": {
       "page": 1,
-      "offset": 72
+      "offset": 76
     },
     "open-source": {
-      "page": 1,
-      "offset": 97
+      "page": 2,
+      "offset": 0
     },
     "linux": {
-      "page": 1,
-      "offset": 99
+      "page": 2,
+      "offset": 0
     }
   },
-  "runs": 26,
-  "updated_at": "2026-10-07T21:07:27Z"
+  "runs": 27,
+  "updated_at": "2026-10-08T01:39:00Z"
 }
