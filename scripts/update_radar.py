@@ -54,7 +54,7 @@ SOURCE_REGISTRY = [
     OpportunitySource("weworkremotely", "We Work Remotely", "jobs", "public RSS", ("Remoto/Global",), ("employment", "remote"), 60, 100, "Preservar a atribuição e o link do feed original."),
     OpportunitySource("agl_angola", "AGL Angola Careers", "jobs", "official RSS by country", ("Angola",), ("employment", "internship"), 60, 50, "Feed RSS oficial do portal de carreiras AGL, filtrada para Angola; manter o link original."),
     OpportunitySource("github", "GitHub Issues", "open_source", "official REST API", (), ("projects", "programming", "websites", "applications", "cybersecurity"), 60, 180, "Issues abertas com labels de contribuição; remuneração não presumida."),
-    OpportunitySource("bluesky", "Bluesky", "social", "public AppView API", ("Todos os países",), ("social", "projects", "freelance", "employment"), 60, 120, "Pistas comunitárias não verificadas; conteúdo curto e sem perfil pessoal."),
+    OpportunitySource("bluesky", "Bluesky", "social", "public AppView API", ("Todos os países",), ("social", "projects", "freelance", "employment", "service_requests"), 60, 120, "Pistas comunitárias não verificadas; inclui pedidos explícitos de serviços e não extrai contactos pessoais."),
     OpportunitySource("reliefweb", "ReliefWeb", "jobs_training", "official API v2", (), ("employment", "teaching", "internship"), 60, 100, "Requer appname pré-aprovado; não republicar corpo extenso de parceiros."),
     OpportunitySource("greenhouse", "Greenhouse boards", "jobs", "official job-board API", (), ("employment", "internship"), 60, 100, "Apenas boards de carreiras oficiais configurados pelo proprietário."),
     OpportunitySource("usajobs", "USAJOBS", "jobs", "official API", ("Estados Unidos",), ("employment", "internship"), 60, 100, "Requer API key e User-Agent configurados em secrets."),
@@ -298,6 +298,8 @@ def classify_categories(text: str, source_id: str, employment_type: Any, remote:
         categories.append("projects")
     if source_id == "bluesky" and "social" not in categories:
         categories.append("social")
+    if source_id == "bluesky" and _looks_like_service_request(text) and "service_requests" not in categories:
+        categories.append("service_requests")
     if any(term in str(employment_type).casefold() for term in ("intern", "trainee")) and "internship" not in categories:
         categories.append("internship")
     if remote and "remote" not in categories:
@@ -482,7 +484,7 @@ def fetch_github_issues() -> list[dict[str, Any]]:
 
 
 def fetch_bluesky() -> list[dict[str, Any]]:
-    terms = ("hiring developer", "freelance developer", "programming opportunity")
+    terms = ("hiring developer", "freelance developer", "preciso de ajuda")
     items: list[dict[str, Any]] = []
     seen_uris: set[str] = set()
     errors = 0
@@ -522,8 +524,63 @@ def fetch_bluesky() -> list[dict[str, Any]]:
 
 def _looks_like_opportunity(text: str) -> bool:
     value = f" {clean_text(text, 2000).casefold()} "
+    if _is_account_transfer_request(value) or _requests_credentials(value):
+        return False
     keywords = (" hiring ", " hire ", " job ", " jobs ", " vacancy ", " vacancies ", " freelance ", " freelancer ", " contract ", " internship ", " intern ", " opportunity ", " opportunities ", " looking for a developer ", " procura-se ", " vaga ", " vagas ", " emprego ", " estágio ", " estagio ", " projeto pago ", " paid project ", " teacher ", " tutor ")
-    return any(term in value for term in keywords)
+    return any(term in value for term in keywords) or _looks_like_service_request(value)
+
+
+def _requests_credentials(text: str) -> bool:
+    value = f" {clean_text(text, 2000).casefold()} "
+    risky_phrases = (
+        "send your password", "share your password", "send me your password", "give me your password",
+        "send the verification code", "share the verification code", "send me the code", "give me the code",
+        "send me the otp", "send otp", "share your otp", "send your login details", "provide your login",
+        "envia a tua palavra-passe", "envie a sua palavra-passe", "partilha a tua palavra-passe",
+        "envia-me o código", "envia o código", "manda o código", "envia o otp", "partilha o código",
+    )
+    return any(phrase in value for phrase in risky_phrases)
+
+
+def _looks_like_service_request(text: str) -> bool:
+    value = f" {clean_text(text, 2000).casefold()} "
+    if _is_account_transfer_request(value) or _requests_credentials(value):
+        return False
+    request_phrases = (
+        "procuro ", "procura-se ", "preciso de ", "precisamos de ", "necessito de ",
+        "alguém para ", "alguem para ", "estou à procura ", "estou a procura ",
+        "looking for ", "need someone ", "need a ", "need help with ", "seeking ",
+        "looking to hire ", "help wanted ", "anyone know ", "can anyone ",
+    )
+    service_terms = (
+        "social media", "redes sociais", "community manager", "instagram", "facebook page", "facebook ads", "tiktok",
+        "consultoria", "consulting", "marketing", "graphic design", "design gráfico", "design grafico", "logo", "flyer",
+        "video editing", "edição de vídeo", "edicao de video", "translation", "tradução", "traducao", "tutoring", "aulas", "lesson",
+        "technical support", "tech support", "technical issue", "problema técnico", "problema tecnico", "computer repair", "laptop repair",
+        "reparação", "reparacao", "reparar", "repair", "cleaning", "limpeza", "delivery", "entrega", "electrician", "eletricista",
+        "plumber", "canalizador", "babysitter", "babá", "baba", "gardening", "jardinagem", "cuidar de idosos", "elder care",
+        "clean the house", "house cleaning", "mecânico", "mecanico", "mechanic", "carpinteiro", "carpenter", "pedreiro", "masonry",
+        "account recovery", "recover my account", "recover instagram account", "recuperação de conta", "recuperacao de conta",
+        "recuperação da conta", "recuperacao da conta", "recuperar conta", "recuperar a minha conta", "recuperar minha conta",
+        "conta bloqueada", "conta invadida", "conta hackeada", "blocked account", "my account was hacked", "help with my account",
+        "ajuda com a conta", "account setup", "set up my own account", "configurar a minha conta", "criar a minha própria conta",
+        "accounting", "contabilidade", "bookkeeping", "hairdresser", "cabeleireiro", "makeup", "maquilhagem", "moving help",
+        "mudança", "mudanca", "photographer", "fotógrafo", "fotografo", "eventos", "catering", "costura", "sewing", "lavandaria",
+    )
+    service_offers = ("i offer ", "we offer ", "ofereço serviços", "ofereco servicos", "prestamos serviços", "prestamos servicos", "available for hire")
+    if any(phrase in value for phrase in service_offers):
+        return False
+    return any(phrase in value for phrase in request_phrases) and any(term in value for term in service_terms)
+
+
+def _is_account_transfer_request(text: str) -> bool:
+    value = f" {clean_text(text, 2000).casefold()} "
+    account_terms = (
+        "instagram account", "facebook account", "tiktok account", "conta de instagram", "conta do instagram", "conta instagram",
+        "perfil instagram", "conta de facebook", "conta facebook", "perfil facebook", "conta de tiktok", "conta tiktok",
+    )
+    transfer_terms = (" for sale", "selling ", "sell my ", "buying ", "buy a ", " à venda", " a venda", "vendo ", "venda de ", "compro ", "comprar ", "vender ")
+    return any(term in value for term in account_terms) and any(term in value for term in transfer_terms)
 
 
 def _mentions_remote(text: str) -> bool:

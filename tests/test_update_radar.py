@@ -92,6 +92,25 @@ class RadarPipelineTests(unittest.TestCase):
         self.assertTrue(radar._looks_like_opportunity("We are hiring a Python developer remotely"))
         self.assertFalse(radar._looks_like_opportunity("A nice sunset over Luanda"))
 
+    def test_bluesky_accepts_explicit_small_service_requests_but_not_service_ads_or_account_sales(self) -> None:
+        self.assertTrue(radar._looks_like_opportunity("Preciso de ajuda com as redes sociais do meu negócio; procuro alguém para gerir o Instagram."))
+        self.assertTrue(radar._looks_like_opportunity("Need someone to repair a laptop in Luanda."))
+        self.assertTrue(radar._looks_like_opportunity("Procuro alguém para cuidar da jardinagem em Luanda."))
+        self.assertTrue(radar._looks_like_opportunity("Preciso de ajuda para recuperar a minha conta do Instagram bloqueada."))
+        self.assertFalse(radar._looks_like_opportunity("I offer social media management services in Luanda."))
+        self.assertFalse(radar._looks_like_opportunity("Selling my Instagram account, available now."))
+        self.assertFalse(radar._looks_like_opportunity("Need help recovering my Instagram account? Send me your password and verification code."))
+
+    def test_explicit_bluesky_service_request_gets_its_own_category(self) -> None:
+        item = radar.make_item(
+            "bluesky", "Bluesky", "service-test", "Preciso de ajuda com redes sociais",
+            "https://bsky.app/profile/example.bsky.social/post/service-test",
+            description="Procuro alguém para gerir o Instagram do meu negócio em Angola.", country="Angola",
+        )
+        self.assertIsNotNone(item)
+        self.assertIn("social", item["categories"])
+        self.assertIn("service_requests", item["categories"])
+
     def test_agl_angola_rss_creates_a_linked_angola_employment_item(self) -> None:
         feed = b'''<?xml version="1.0" encoding="UTF-8"?>
         <rss version="2.0"><channel><item>

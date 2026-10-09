@@ -97,6 +97,7 @@
                   <option value="video">Vídeo</option>
                   <option value="audio">Áudio</option>
                   <option value="social">Redes sociais</option>
+                  <option value="service_requests">Serviços / ajuda do dia a dia</option>
                   <option value="teaching">Ensino / Tutoria</option>
                   <option value="employment">Emprego</option>
                   <option value="freelance">Freelance</option>
@@ -132,10 +133,34 @@
               <button class="radar-chip is-active" type="button" data-quick-category="all">Tudo</button>
               <button class="radar-chip" type="button" data-quick-category="employment">Emprego</button>
               <button class="radar-chip" type="button" data-quick-category="freelance">Freelance</button>
+              <button class="radar-chip" type="button" data-quick-category="service_requests">Serviços / ajuda</button>
               <button class="radar-chip" type="button" data-quick-category="projects">Projetos</button>
               <button class="radar-chip" type="button" data-quick-category="internship">Estágio</button>
               <button class="radar-chip" type="button" data-quick-category="teaching">Ensino</button>
             </div>
+            <aside class="radar-public-search" aria-labelledby="radar-public-search-title">
+              <div class="radar-public-search-copy">
+                <p class="eyebrow">PEDIDOS / PESQUISA DIRETA</p>
+                <h3 id="radar-public-search-title">Encontra pedidos de ajuda e serviços do dia a dia</h3>
+                <p>Abre resultados públicos indexados e segue o link da publicação original. Estes resultados não são copiados nem somados ao feed do Radar.</p>
+              </div>
+              <div class="radar-public-search-tools">
+                <label class="radar-public-search-control" for="radar-public-search-term">
+                  <span>O QUE PROCURAS?</span>
+                  <input id="radar-public-search-term" type="search" value="procuro gestor de redes sociais" placeholder="Ex.: consultoria, reparação, aulas…" autocomplete="off">
+                </label>
+                <p class="radar-public-search-hint">Usa o país selecionado; em “Todos”, começa por Angola. Algumas redes podem pedir sessão.</p>
+                <nav class="radar-public-search-links" aria-label="Pesquisar publicações públicas através do Google">
+                  <a data-public-search-site="facebook.com" href="https://www.google.com/search?q=site%3Afacebook.com+procuro+gestor+de+redes+sociais+Angola" target="_blank" rel="nofollow noopener noreferrer">Facebook ↗</a>
+                  <a data-public-search-site="instagram.com" href="https://www.google.com/search?q=site%3Ainstagram.com+procuro+gestor+de+redes+sociais+Angola" target="_blank" rel="nofollow noopener noreferrer">Instagram ↗</a>
+                  <a data-public-search-site="x.com" href="https://www.google.com/search?q=site%3Ax.com+procuro+gestor+de+redes+sociais+Angola" target="_blank" rel="nofollow noopener noreferrer">X ↗</a>
+                  <a data-public-search-site="tiktok.com" href="https://www.google.com/search?q=site%3Atiktok.com+procuro+gestor+de+redes+sociais+Angola" target="_blank" rel="nofollow noopener noreferrer">TikTok ↗</a>
+                  <a data-public-search-site="t.me" href="https://www.google.com/search?q=site%3At.me+procuro+gestor+de+redes+sociais+Angola" target="_blank" rel="nofollow noopener noreferrer">Telegram ↗</a>
+                  <a data-public-search-site="*" href="https://www.google.com/search?q=procuro+gestor+de+redes+sociais+Angola" target="_blank" rel="nofollow noopener noreferrer">Web geral ↗</a>
+                </nav>
+                <p class="radar-public-search-safety">Para recuperar ou configurar uma conta, usa os canais oficiais e nunca partilhes palavras-passe ou códigos.</p>
+              </div>
+            </aside>
             <div class="radar-results-bar">
               <p id="radar-results-count" aria-live="polite">A preparar resultados…</p>
               <span id="radar-sort-context">MAIS RECENTES</span>
@@ -168,6 +193,8 @@
             <a href="https://www.caglobalint.com/angola/" target="_blank" rel="nofollow noopener noreferrer">CA Global ↗</a>
             <a href="https://reliefweb.int/jobs?list=Angola%20Jobs&amp;advanced-search=%28C19%29" target="_blank" rel="nofollow noopener noreferrer">ReliefWeb ↗</a>
             <a href="https://untalent.org/locations/angola" target="_blank" rel="nofollow noopener noreferrer">UN Talent ↗</a>
+            <a href="https://www.careerjet.co.ao/" target="_blank" rel="nofollow noopener noreferrer">Careerjet Angola ↗</a>
+            <a href="https://ambo.market/" target="_blank" rel="nofollow noopener noreferrer">Ambo Market · serviços ↗</a>
           </nav>
         </aside>
         <div class="radar-coverage-notes" id="radar-coverage-notes" hidden aria-live="polite"></div>
@@ -184,6 +211,6 @@
   </div>
 
   <script type="module" src="radar.js"></script>
-  <script>if ('serviceWorker' in navigator) window.addEventListener('load', () => navigator.serviceWorker.register('./sw-v2.js?v=20261002-radar-v2').catch(() => {}));</script>
+  <script>if ('serviceWorker' in navigator) window.addEventListener('load', () => navigator.serviceWorker.register('./sw-v2.js?v=20261009-radar-services').catch(() => {}));</script>
 </body>
 </html>
