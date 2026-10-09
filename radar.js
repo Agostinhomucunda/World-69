@@ -5,7 +5,7 @@ const PAGE_SIZE = 24;
 const DEFAULT_COUNTRIES = ['Angola', 'Brasil', 'Portugal', 'Moçambique', 'África do Sul', 'Cabo Verde', 'Estados Unidos', 'Reino Unido', 'Canadá', 'Remoto/Global'];
 const CATEGORY_LABELS = {
   programming: 'Programação', websites: 'Websites', applications: 'Aplicações', ai: 'IA', cybersecurity: 'Cibersegurança',
-  design: 'Design', video: 'Vídeo', audio: 'Áudio', social: 'Redes sociais', teaching: 'Ensino / Tutoria', employment: 'Emprego',
+  design: 'Design', video: 'Vídeo', audio: 'Áudio', social: 'Redes sociais', service_requests: 'Serviços / ajuda do dia a dia', teaching: 'Ensino / Tutoria', employment: 'Emprego',
   freelance: 'Freelance', internship: 'Estágio', projects: 'Projetos', remote: 'Remoto'
 };
 const TYPE_LABELS = {
@@ -16,7 +16,7 @@ const TYPE_LABELS = {
 };
 const CATEGORY_LABELS_EN = {
   programming: 'Programming', websites: 'Websites', applications: 'Applications', ai: 'AI', cybersecurity: 'Cybersecurity',
-  design: 'Design', video: 'Video', audio: 'Audio', social: 'Social media', teaching: 'Teaching / Tutoring', employment: 'Employment',
+  design: 'Design', video: 'Video', audio: 'Audio', social: 'Social media', service_requests: 'Services / everyday help', teaching: 'Teaching / Tutoring', employment: 'Employment',
   freelance: 'Freelance', internship: 'Internship', projects: 'Projects', remote: 'Remote'
 };
 const TYPE_LABELS_EN = {
@@ -29,14 +29,14 @@ const CARD_LANGUAGE = browserLanguage.toLowerCase().startsWith('en') ? 'en' : 'p
 const CARD_LOCALE = CARD_LANGUAGE === 'en' ? 'en-GB' : 'pt-PT';
 const CARD_COPY = CARD_LANGUAGE === 'en' ? {
   unverified: 'Unverified', confirmSource: 'Confirm at source', missingSummary: 'The source does not provide a summary. Check the original listing for details.',
-  workHeading: 'What the role involves', projectHeading: 'What the project asks for', socialHeading: 'What the post says', opportunityHeading: 'About this opportunity',
+  workHeading: 'What the role involves', projectHeading: 'What the project asks for', socialHeading: 'What the post says', serviceRequestHeading: 'Service request — verify at source', opportunityHeading: 'About this opportunity',
   detailsEmployment: 'Responsibilities and role profile', detailsProject: 'Full project brief', detailsSocial: 'More about this post', detailsOther: 'Read the full source description',
   detailsHint: 'Open to load the full description.', loadingDetails: 'Loading description…', missingDetails: 'No additional details; check the original listing.', detailsError: 'Could not load details. Check the original listing.',
   projectPrefix: 'Project:', remote: 'remote', sourceFound: 'Found in', source: 'Source:', otherSources: 'Other sources',
   viewSource: 'View original', views: 'views', sourceClicks: 'source clicks', now: 'now', dateMissing: 'Date not provided', location: 'Location:'
 } : {
   unverified: 'Não verificada', confirmSource: 'Confirma na fonte', missingSummary: 'A fonte não disponibiliza um resumo. Consulta a publicação original para ver os detalhes.',
-  workHeading: 'O que a função envolve', projectHeading: 'O que o projeto pede', socialHeading: 'O que a publicação diz', opportunityHeading: 'Sobre esta oportunidade',
+  workHeading: 'O que a função envolve', projectHeading: 'O que o projeto pede', socialHeading: 'O que a publicação diz', serviceRequestHeading: 'Pedido de serviço — confirma na fonte', opportunityHeading: 'Sobre esta oportunidade',
   detailsEmployment: 'Responsabilidades e perfil da função', detailsProject: 'Pedido completo do projeto', detailsSocial: 'Mais sobre esta publicação', detailsOther: 'Ver descrição completa da fonte',
   detailsHint: 'Abre para carregar a descrição completa.', loadingDetails: 'A carregar a descrição…', missingDetails: 'Sem detalhes adicionais; consulta a publicação original.', detailsError: 'Não foi possível carregar os detalhes. Consulta a publicação original.',
   projectPrefix: 'Projeto:', remote: 'remoto', sourceFound: 'Encontrada em', source: 'Fonte:', otherSources: 'Ver outras fontes',
@@ -184,6 +184,55 @@ function safeExternalUrl(value) {
   } catch {
     return '';
   }
+}
+
+function updatePublicSearchLinks() {
+  const input = document.querySelector('#radar-public-search-term');
+  if (!input || !els.country) return;
+  const fallback = CARD_LANGUAGE === 'en' ? 'looking for social media help' : 'procuro gestor de redes sociais';
+  const term = input.value.trim() || fallback;
+  const selectedCountry = els.country.value;
+  const country = selectedCountry === 'all' ? 'Angola' : selectedCountry === 'Remoto/Global' ? 'remote' : selectedCountry;
+  document.querySelectorAll('[data-public-search-site]').forEach((link) => {
+    const site = link.dataset.publicSearchSite;
+    const query = [site && site !== '*' ? `site:${site}` : '', term, country].filter(Boolean).join(' ');
+    const url = new URL('https://www.google.com/search');
+    url.searchParams.set('q', query);
+    link.href = url.href;
+  });
+}
+
+function localizePublicSearchPanel() {
+  const panel = document.querySelector('.radar-public-search');
+  if (!panel) return;
+  const english = CARD_LANGUAGE === 'en';
+  panel.lang = english ? 'en' : 'pt-PT';
+  const text = (selector, value) => {
+    const element = panel.querySelector(selector);
+    if (element) element.textContent = value;
+  };
+  if (english) {
+    text('.radar-public-search-copy .eyebrow', 'REQUESTS / DIRECT SEARCH');
+    text('#radar-public-search-title', 'Find requests for everyday help and small services');
+    text('.radar-public-search-copy>p:last-child', 'Search publicly indexed results and open the original post. These results are not copied or counted in the Radar feed.');
+    text('.radar-public-search-control>span', 'WHAT ARE YOU LOOKING FOR?');
+    text('.radar-public-search-hint', 'Uses the selected country; with “All countries”, it starts with Angola. Some networks may require sign-in.');
+    text('.radar-public-search-safety', 'For your own accounts, use official recovery or setup channels; never share passwords or verification codes.');
+    const input = panel.querySelector('#radar-public-search-term');
+    if (input) {
+      input.placeholder = 'e.g., social media manager, consulting, repairs, lessons…';
+      if (input.value === 'procuro gestor de redes sociais') input.value = 'looking for social media help';
+    }
+    const links = panel.querySelector('.radar-public-search-links');
+    links?.setAttribute('aria-label', 'Search public posts through Google');
+    text('[data-public-search-site="*"]', 'General web ↗');
+  } else {
+    text('.radar-public-search-safety', 'Para contas próprias, usa os canais oficiais de recuperação ou configuração; nunca partilhes palavras-passe ou códigos.');
+  }
+  const serviceOption = document.querySelector('#radar-category option[value="service_requests"]');
+  if (serviceOption && english) serviceOption.textContent = 'Services / everyday help';
+  const serviceChip = document.querySelector('[data-quick-category="service_requests"]');
+  if (serviceChip && english) serviceChip.textContent = 'Services / help';
 }
 
 function sourceLinkRel(sourceName) {
@@ -427,7 +476,7 @@ function createCard(item) {
   work.className = 'radar-card-work';
   const workLabel = document.createElement('p');
   workLabel.className = 'radar-card-work-label';
-  workLabel.textContent = social ? CARD_COPY.socialHeading : item.trustLevel === 'community_project' || item.type === 'open-source contribution' ? CARD_COPY.projectHeading : item.type === 'employment' || item.type === 'internship' ? CARD_COPY.workHeading : CARD_COPY.opportunityHeading;
+  workLabel.textContent = social && item.categories?.includes('service_requests') ? CARD_COPY.serviceRequestHeading : social ? CARD_COPY.socialHeading : item.trustLevel === 'community_project' || item.type === 'open-source contribution' ? CARD_COPY.projectHeading : item.type === 'employment' || item.type === 'internship' ? CARD_COPY.workHeading : CARD_COPY.opportunityHeading;
   const summary = document.createElement('p');
   summary.className = 'radar-card-summary';
   summary.textContent = localizeSourceHeadings(item, item.summary || CARD_COPY.missingSummary);
@@ -661,6 +710,7 @@ async function refreshFeed({ announce = true } = {}) {
     state.sources = Array.isArray(data.sources) ? data.sources : [];
     state.coverageNotes = Array.isArray(data.coverageNotes) ? data.coverageNotes : [];
     updateCountryOptions();
+    updatePublicSearchLinks();
     renderSourceList();
     renderCoverageNotes();
     const updated = safeDate(data.generatedAt);
@@ -684,15 +734,17 @@ els.search.addEventListener('input', () => {
   window.clearTimeout(searchTimer);
   searchTimer = window.setTimeout(() => { state.page = 1; render(); }, 120);
 });
-els.form.addEventListener('change', () => { state.page = 1; render(); });
+els.form.addEventListener('change', () => { state.page = 1; render(); updatePublicSearchLinks(); });
 els.form.addEventListener('reset', () => {
   window.setTimeout(() => {
     state.quickCategory = 'all';
     state.page = 1;
     updateQuickChips();
     render();
+    updatePublicSearchLinks();
   }, 0);
 });
+document.querySelector('#radar-public-search-term')?.addEventListener('input', updatePublicSearchLinks);
 document.querySelectorAll('[data-quick-category]').forEach((button) => {
   button.addEventListener('click', () => {
     state.quickCategory = button.dataset.quickCategory || 'all';
@@ -704,6 +756,8 @@ document.querySelectorAll('[data-quick-category]').forEach((button) => {
 });
 els.more.addEventListener('click', () => { state.page += 1; render(); });
 
+localizePublicSearchPanel();
+updatePublicSearchLinks();
 refreshFeed();
 window.setInterval(() => refreshFeed({ announce: false }), 5 * 60 * 1000);
 document.addEventListener('visibilitychange', () => {
