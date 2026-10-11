@@ -92,6 +92,24 @@ class RadarPipelineTests(unittest.TestCase):
         self.assertTrue(radar._looks_like_opportunity("We are hiring a Python developer remotely"))
         self.assertFalse(radar._looks_like_opportunity("A nice sunset over Luanda"))
 
+    def test_youtube_help_filter_prioritizes_account_incidents(self) -> None:
+        self.assertTrue(radar._looks_like_immediate_help("Perdi acesso à minha conta e fui burlado, alguém pode ajudar?"))
+        self.assertTrue(radar._looks_like_immediate_help("My account was hacked and I cannot login"))
+        self.assertFalse(radar._looks_like_immediate_help("Gostei muito deste vídeo, obrigado pela explicação."))
+
+    def test_youtube_fetch_links_the_matching_comment(self) -> None:
+        now = datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
+        payloads = [
+            {"items": [{"id": {"videoId": "video123"}, "snippet": {"title": "Como proteger a conta", "channelTitle": "Canal de ajuda"}}]},
+            {"items": [{"id": "comment123", "snippet": {"topLevelComment": {"id": "comment123", "snippet": {"textOriginal": "Perdi acesso à minha conta, preciso de ajuda", "publishedAt": now}}}}]},
+        ]
+        with patch.dict(radar.os.environ, {"YOUTUBE_API_KEY": "test-key", "YOUTUBE_SEARCH_QUERIES": "test"}, clear=False), patch.object(radar, "request_json", side_effect=payloads):
+            items = radar.fetch_youtube()
+        self.assertEqual(len(items), 1)
+        self.assertIn("lc=comment123", items[0]["sourceUrl"])
+        self.assertIn("https://www.youtube.com/watch?v=video123", items[0]["sourceLinks"][1]["url"])
+        self.assertIn("needs", items[0]["categories"])
+
 
     def test_stackexchange_questions_are_marked_as_immediate_help(self) -> None:
         payload = {"items": [{

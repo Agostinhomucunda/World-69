@@ -60,6 +60,7 @@ SOURCE_REGISTRY = [
     OpportunitySource("usajobs", "USAJOBS", "jobs", "official API", ("Estados Unidos",), ("employment", "internship"), 60, 100, "Requer API key e User-Agent configurados em secrets."),
     OpportunitySource("arbeitnow", "Arbeitnow", "jobs", "public JSON API", ("Europa",), ("employment", "internship"), 60, 100, "Termos de republicação por confirmar; não ativada."),
     OpportunitySource("stackexchange", "Stack Exchange · pedidos de ajuda", "community_help", "official public API", ("Todos os países",), ("needs", "programming", "applications", "websites", "ai", "cybersecurity"), 60, 180, "Perguntas públicas recentes; responde na fonte original. Não são ofertas pagas."),
+    OpportunitySource("youtube", "YouTube · comentários de ajuda", "community_help", "official YouTube Data API", ("Todos os países",), ("needs", "social", "applications", "cybersecurity"), 60, 180, "Vídeos e comentários públicos recentes; requer YOUTUBE_API_KEY e não publica respostas automaticamente."),
 ]
 
 COUNTRY_ALIASES = {
@@ -303,6 +304,10 @@ def classify_categories(text: str, source_id: str, employment_type: Any, remote:
     if source_id == "stackexchange":
         if "needs" not in categories:
             categories.append("needs")
+    if source_id == "youtube":
+        for category in ("needs", "social"):
+            if category not in categories:
+                categories.append(category)
     if any(term in str(employment_type).casefold() for term in ("intern", "trainee")) and "internship" not in categories:
         categories.append("internship")
     if remote and "remote" not in categories:
@@ -313,7 +318,7 @@ def classify_categories(text: str, source_id: str, employment_type: Any, remote:
 def normalize_type(source_id: str, employment_type: Any, text: str) -> str:
     if source_id == "github":
         return "open-source contribution"
-    if source_id in {"bluesky", "stackexchange"}:
+    if source_id in {"bluesky", "stackexchange", "youtube"}:
         return "community post · unverified"
     if source_id == "agl_angola":
         return "employment"
@@ -572,6 +577,87 @@ def fetch_bluesky() -> list[dict[str, Any]]:
     return items
 
 
+YOUTUBE_DEFAULT_QUERIES = (
+    "perdi acesso conta bloqueada fui burlado",
+    "recuperar conta Facebook Instagram problema",
+    "não consigo entrar conta preciso de ajuda",
+    "account hacked blocked scammed need help",
+)
+
+
+def fetch_youtube() -> list[dict[str, Any]]:
+    """Fetch recent public YouTube comments that look like immediate help requests."""
+    api_key = os.environ.get("YOUTUBE_API_KEY", "").strip()
+    if not api_key:
+        return []
+    lookback_hours = max(1, min(int(os.environ.get("YOUTUBE_LOOKBACK_HOURS", "48")), 168))
+    since = datetime.now(timezone.utc) - timedelta(hours=lookback_hours)
+    configured = os.environ.get("YOUTUBE_SEARCH_QUERIES", "").strip()
+    queries = tuple(x.strip() for x in configured.split("|") if x.strip()) if configured else YOUTUBE_DEFAULT_QUERIES
+    items: list[dict[str, Any]] = []
+    seen_comments: set[str] = set()
+    seen_videos: set[str] = set()
+    for query in queries[:8]:
+        search_params = urllib.parse.urlencode({
+            "part": "snippet", "q": query, "type": "video", "order": "date",
+            "publishedAfter": since.isoformat().replace("+00:00", "Z"),
+            "maxResults": 25, "relevanceLanguage": "pt", "safeSearch": "moderate", "key": api_key,
+        })
+        payload = request_json(f"https://www.googleapis.com/youtube/v3/search?{search_params}")
+        for result in payload.get("items", []) if isinstance(payload, dict) else []:
+            video_id = ((result.get("id") or {}).get("videoId") or "").strip()
+            snippet = result.get("snippet") or {}
+            if not video_id or video_id in seen_videos:
+                continue
+            seen_videos.add(video_id)
+            video_url = f"https://www.youtube.com/watch?v={urllib.parse.quote(video_id, safe='')}"
+            comment_params = urllib.parse.urlencode({
+                "part": "snippet", "videoId": video_id, "order": "time", "maxResults": 100,
+                "textFormat": "plainText", "key": api_key,
+            })
+            comment_payload = request_json(f"https://www.googleapis.com/youtube/v3/commentThreads?{comment_params}")
+            for thread in comment_payload.get("items", []) if isinstance(comment_payload, dict) else []:
+                thread_snippet = thread.get("snippet") or {}
+                comment = thread_snippet.get("topLevelComment") or {}
+                comment_id = str(comment.get("id") or thread.get("id") or "").strip()
+                comment_data = comment.get("snippet") or {}
+                comment_text = comment_data.get("textOriginal") or comment_data.get("textDisplay") or ""
+                comment_date = parse_datetime(comment_data.get("publishedAt"))
+                if not comment_id or comment_id in seen_comments or not comment_date:
+                    continue
+                if datetime.fromisoformat(comment_date.replace("Z", "+00:00")) < since or not _looks_like_immediate_help(comment_text):
+                    continue
+                seen_comments.add(comment_id)
+                comment_url = f"{video_url}&lc={urllib.parse.quote(comment_id, safe='')}"
+                title = f"Pedido de ajuda num comentário: {snippet.get('title') or 'vídeo recente'}"
+                item = make_item(
+                    "youtube", "YouTube · comentários de ajuda", comment_id, title, comment_url,
+                    comment_date, comment_text, snippet.get("channelTitle") or "", "Não informado",
+                    [], "community help", "", False, "social_unverified",
+                )
+                if item:
+                    item["summary"] = clean_text(comment_text, MAX_SUMMARY)
+                    item["description"] = clean_text(comment_text, 1200)
+                    item["company"] = clean_text(snippet.get("channelTitle") or "", 120)
+                    item["project"] = clean_text(snippet.get("channelTitle") or "YouTube", 120)
+                    item["sourceLinks"] = [
+                        {"name": "Comentário original", "url": comment_url},
+                        {"name": "Vídeo original", "url": video_url},
+                    ]
+                    item["tags"] = ["youtube", "comentário", "ajuda imediata"]
+                    items.append(item)
+                    if len(items) >= 180:
+                        return items
+    return items
+
+
+def _looks_like_immediate_help(text: str) -> bool:
+    value = f" {clean_text(text, 2000).casefold()} "
+    need = ("preciso de ajuda", "need help", "help me", "alguém pode ajudar", "alguem pode ajudar", "socorro", "não consigo", "nao consigo", "how do i", "how can i", "can someone help")
+    problem = ("perdi acesso", "perdi a conta", "conta bloqueada", "conta bloqueou", "conta invadida", "fui burlado", "fui enganado", "hacke", "blocked account", "account hacked", "scammed", "can't log in", "cannot login", "não entra", "nao entra", "recuperar conta")
+    return any(term in value for term in need) or any(term in value for term in problem)
+
+
 def _looks_like_opportunity(text: str) -> bool:
     value = f" {clean_text(text, 2000).casefold()} "
     keywords = (" hiring ", " hire ", " job ", " jobs ", " vacancy ", " vacancies ", " freelance ", " freelancer ", " contract ", " internship ", " intern ", " opportunity ", " opportunities ", " looking for a developer ", " procura-se ", " vaga ", " vagas ", " emprego ", " estágio ", " estagio ", " projeto pago ", " paid project ", " teacher ", " tutor ")
@@ -797,6 +883,8 @@ def run_collection(output_path: Path, dry_run: bool = False, details_path: Path 
         ("stackexchange", fetch_stackexchange),
         ("bluesky", fetch_bluesky),
     ]
+    if os.environ.get("YOUTUBE_API_KEY", "").strip():
+        fetchers.append(("youtube", fetch_youtube))
     for source_id, fetcher in fetchers:
         source = definitions[source_id]
         try:
@@ -850,6 +938,9 @@ def run_collection(output_path: Path, dry_run: bool = False, details_path: Path 
 
     statuses["arbeitnow"] = static_source_status(definitions["arbeitnow"], "terms_pending", "A API não foi ativada porque os termos de republicação ainda não estão claros.")
 
+    if "youtube" not in statuses:
+        statuses["youtube"] = static_source_status(definitions["youtube"], "credentials_required", "Configurar YOUTUBE_API_KEY como secret; a fonte não é consultada sem a chave da YouTube Data API.")
+
     if successes == 0:
         raise RuntimeError("Todas as fontes consultáveis falharam; o dataset anterior foi preservado.")
 
@@ -884,6 +975,7 @@ def run_collection(output_path: Path, dry_run: bool = False, details_path: Path 
             "O Radar agrega e encaminha; não verifica cada anúncio nem processa candidaturas.",
             "AGL Angola Careers usa a feed RSS oficial filtrada para Angola; os anúncios mantêm um excerto e o link para a publicação original.",
             "Publicações Bluesky são pistas comunitárias não verificadas. Se a API estiver indisponível, nenhuma publicação é inventada.",
+            "YouTube consulta vídeos e comentários públicos recentes através da API oficial quando YOUTUBE_API_KEY está configurada; o Radar aponta para o comentário original e não responde automaticamente.",
             "Reddit, Mastodon, LinkedIn, X, Instagram e Facebook não estão ativos: dependem de APIs oficiais, credenciais e permissões específicas; o site não faz scraping.",
             "Freelance remunerado, salário, localização e contactos só aparecem se a fonte os fornecer explicitamente.",
         ],

@@ -32,6 +32,7 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
           RELIEFWEB_APPNAME: ${{ secrets.RELIEFWEB_APPNAME }}
           GREENHOUSE_BOARDS: ${{ vars.GREENHOUSE_BOARDS }}
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         run: python3 scripts/update_radar.py
       - name: Guardar feed atualizado
         run: |
