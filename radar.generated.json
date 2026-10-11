@@ -1,8 +1,253 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-11T10:36:45Z",
+  "generatedAt": "2026-10-11T10:48:18Z",
   "refreshIntervalMinutes": 60,
   "items": [
+    {
+      "id": "github:5800359120",
+      "title": "Add tests for update readme stats()",
+      "summary": "update readme stats() in scripts/radar.py rewrites the stats block in the README between and . It has no tests yet. What to add in scripts/test radar.py : - point radar.ROOT at a temp dir ( unittest.mock.patch.object ) with a small README that has text before and after the markers - check only the block between the markers changes, and the counts are formatted with thousands separators ( 3,321 ) - check the language…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T10:47:57Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/TanbirRamim/open-source-radar/issues/101",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/TanbirRamim/open-source-radar/issues/101"
+        }
+      ],
+      "tags": [
+        "good first issue",
+        "pipeline",
+        "hacktoberfest"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "TanbirRamim/open-source-radar",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5800355655",
+      "title": "Security boundaries and approval gates: Add filesystem sandboxing, secret redaction, and approval controls",
+      "summary": "Overview Trove generates files on a developer's machine and is intended to support increasingly automated workflows, including natural-language planning, MCP integrations, and post-generation verification. These capabilities introduce security risks. Incorrect path handling could allow writes outside the intended project directory. A generation operation could overwrite existing work. Automated verification could…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "ai",
+        "projects",
+        "needs"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T10:47:24Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Akshay1018/trove/issues/48",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Akshay1018/trove/issues/48"
+        }
+      ],
+      "tags": [
+        "documentation",
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "feature",
+        "problem-solving",
+        "critical-thinking"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Akshay1018/trove",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5800347730",
+      "title": "docs: Kotlin annotations example",
+      "summary": "- [ ] Add example Kotlin project with declarative MCP feature configuration via annotations - [ ] update documentation (+snips)",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T10:46:11Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/tachyonmcp/tachyon/issues/465",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/tachyonmcp/tachyon/issues/465"
+        }
+      ],
+      "tags": [
+        "documentation",
+        "good first issue",
+        "examples"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "tachyonmcp/tachyon",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5800315592",
+      "title": "[FEAT] Display All Supported SMS Providers in Webhook Endpoints & Inbound Simulator",
+      "summary": "1. Problem Summary Under SMS Settings - Inbound Webhooks & Simulator (SmsWebhookDiagnostics.tsx), only 4 providers plus Universal Inbound are listed: - Twilio - AWS SNS / Pinpoint - Sinch - Gupshup - Universal Inbound However, both the backend (sms-inbound.controller.ts) and provider catalog (packages/constants/src/sms.ts) already implement adapters and webhook routes for all 9 SMS carriers : - Infobip (…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects",
+        "needs"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T10:41:20Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/trybrokeros/BrokerOS/issues/1084",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/trybrokeros/BrokerOS/issues/1084"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue",
+        "ui",
+        "web app",
+        "api"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "trybrokeros/BrokerOS",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5800311734",
+      "title": "Post-generation verification and self-repair; feat(agentic): Add post-generation verification and bounded self-repair",
+      "summary": "Overview Generating project files is only the first step in delivering a usable backend. A generated project should also install its dependencies, compile successfully, pass its available tests, and provide clear diagnostics when something fails. Differences in dependency versions, missing type definitions, incorrect scripts, and configuration mistakes can prevent a freshly generated project from running…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects",
+        "needs"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T10:40:44Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Akshay1018/trove/issues/47",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Akshay1018/trove/issues/47"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "feature",
+        "problem-solving",
+        "critical-thinking"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Akshay1018/trove",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5800293876",
+      "title": "Вычитать перевод серий 1–10",
+      "summary": "Нужен свежий взгляд носителя русского языка: опечатки, неестественные фразы, неточности перевода. Что сделать 1. Открыть книгу — там серии идут сплошным текстом с переводом. 2. Прочитать серии 1–10 вместе с переводом. 3. Каждую ошибку — отдельным комментарием или через форму «Ошибка в тексте или переводе»: серия, как сейчас, как надо. Пожалуйста, без спойлеров дальше 10-й серии.",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T10:38:04Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/phloya/wordkeep/issues/3",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/phloya/wordkeep/issues/3"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "phloya/wordkeep",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5800285125",
+      "title": "Сверить названия пунктов меню в README с настоящими Anki и AnkiDroid",
+      "summary": "В README русские названия пунктов меню («Импортировать конфигурации колод», «Параметры», «Список», «Правка» и другие) не сверены с самими приложениями. Что сделать 1. Открыть Anki на компьютере и/или AnkiDroid с русским интерфейсом. 2. Пройти по шагам из разделов «Как установить» и «Настройка». 3. Написать в комментарии, какие названия отличаются, и как они называются на самом деле (с версией приложения).",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T10:36:42Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/phloya/wordkeep/issues/2",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/phloya/wordkeep/issues/2"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "phloya/wordkeep",
+      "hasDetails": false
+    },
     {
       "id": "github:5800277475",
       "title": "Проверить импорт на iPhone или iPad (AnkiMobile)",
@@ -313148,7 +313393,7 @@
       "frequencyMinutes": 60,
       "limit": 100,
       "status": "ok",
-      "lastSyncAt": "2026-10-11T10:36:45Z",
+      "lastSyncAt": "2026-10-11T10:48:18Z",
       "itemsFound": 98,
       "note": "Fonte remota; consultar no máximo uma vez por hora."
     },
@@ -313168,7 +313413,7 @@
       "frequencyMinutes": 60,
       "limit": 250,
       "status": "ok",
-      "lastSyncAt": "2026-10-11T10:36:45Z",
+      "lastSyncAt": "2026-10-11T10:48:18Z",
       "itemsFound": 99,
       "note": "Atribuição e link dofollow para cada anúncio original."
     },
@@ -313187,7 +313432,7 @@
       "frequencyMinutes": 60,
       "limit": 100,
       "status": "ok",
-      "lastSyncAt": "2026-10-11T10:36:45Z",
+      "lastSyncAt": "2026-10-11T10:48:18Z",
       "itemsFound": 89,
       "note": "Preservar a atribuição e o link do feed original."
     },
@@ -313206,7 +313451,7 @@
       "frequencyMinutes": 60,
       "limit": 50,
       "status": "ok",
-      "lastSyncAt": "2026-10-11T10:36:45Z",
+      "lastSyncAt": "2026-10-11T10:48:18Z",
       "itemsFound": 4,
       "note": "Feed RSS oficial do portal de carreiras AGL, filtrada para Angola; manter o link original."
     },
@@ -313226,8 +313471,8 @@
       "frequencyMinutes": 60,
       "limit": 180,
       "status": "ok",
-      "lastSyncAt": "2026-10-11T10:36:45Z",
-      "itemsFound": 277,
+      "lastSyncAt": "2026-10-11T10:48:18Z",
+      "itemsFound": 275,
       "note": "Issues abertas com labels de contribuição; remuneração não presumida."
     },
     {
@@ -313343,7 +313588,7 @@
       "frequencyMinutes": 60,
       "limit": 180,
       "status": "ok",
-      "lastSyncAt": "2026-10-11T10:36:45Z",
+      "lastSyncAt": "2026-10-11T10:48:18Z",
       "itemsFound": 68,
       "note": "Perguntas públicas recentes; responde na fonte original. Não são ofertas pagas."
     },
@@ -313364,7 +313609,7 @@
       "frequencyMinutes": 60,
       "limit": 180,
       "status": "ok",
-      "lastSyncAt": "2026-10-11T10:36:45Z",
+      "lastSyncAt": "2026-10-11T10:48:18Z",
       "itemsFound": 0,
       "note": "Vídeos e comentários públicos recentes; requer YOUTUBE_API_KEY e não publica respostas automaticamente."
     }
