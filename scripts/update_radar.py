@@ -578,10 +578,11 @@ def fetch_bluesky() -> list[dict[str, Any]]:
 
 
 YOUTUBE_DEFAULT_QUERIES = (
-    "perdi acesso conta bloqueada fui burlado",
-    "recuperar conta Facebook Instagram problema",
-    "não consigo entrar conta preciso de ajuda",
-    "account hacked blocked scammed need help",
+    "perdi acesso|conta bloqueada|fui burlado|preciso de ajuda|não consigo entrar|preciso criar meu site|precisamos de um desenvolvedor|precisamos de um programador",
+    "Facebook monetizado|monetização Facebook|gestor de página|verificação urgente|verificação em dois fatores|vende número estrangeiro|preciso de alguém|golpista",
+    "lost access|account blocked|I was scammed|need help|cannot log in|need a website|need a developer|need a programmer|urgent verification|two factor authentication",
+    "perdí el acceso|cuenta bloqueada|fui estafado|necesito ayuda|no puedo entrar|necesito un sitio web|necesito un desarrollador|busco programador",
+    "j'ai perdu l'accès|compte bloqué|j'ai été arnaqué|j'ai besoin d'aide|je ne peux pas me connecter|besoin d'un site|besoin d'un développeur",
 )
 
 
@@ -593,15 +594,16 @@ def fetch_youtube() -> list[dict[str, Any]]:
     lookback_hours = max(1, min(int(os.environ.get("YOUTUBE_LOOKBACK_HOURS", "48")), 168))
     since = datetime.now(timezone.utc) - timedelta(hours=lookback_hours)
     configured = os.environ.get("YOUTUBE_SEARCH_QUERIES", "").strip()
-    queries = tuple(x.strip() for x in configured.split("|") if x.strip()) if configured else YOUTUBE_DEFAULT_QUERIES
+    queries = tuple(x.strip() for x in re.split(r"\s*;;\s*|\n+", configured) if x.strip()) if configured else YOUTUBE_DEFAULT_QUERIES
     items: list[dict[str, Any]] = []
     seen_comments: set[str] = set()
     seen_videos: set[str] = set()
-    for query in queries[:8]:
+    for query_index, query in enumerate(queries[:8]):
+        relevance_language = ("pt", "pt", "en", "es", "fr")[query_index % 5]
         search_params = urllib.parse.urlencode({
             "part": "snippet", "q": query, "type": "video", "order": "date",
             "publishedAfter": since.isoformat().replace("+00:00", "Z"),
-            "maxResults": 25, "relevanceLanguage": "pt", "safeSearch": "moderate", "key": api_key,
+            "maxResults": 25, "relevanceLanguage": relevance_language, "safeSearch": "moderate", "key": api_key,
         })
         payload = request_json(f"https://www.googleapis.com/youtube/v3/search?{search_params}")
         for result in payload.get("items", []) if isinstance(payload, dict) else []:
@@ -640,11 +642,16 @@ def fetch_youtube() -> list[dict[str, Any]]:
                     item["description"] = clean_text(comment_text, 1200)
                     item["company"] = clean_text(snippet.get("channelTitle") or "", 120)
                     item["project"] = clean_text(snippet.get("channelTitle") or "YouTube", 120)
+                    item["language"] = _help_language(comment_text)
+                    item["priority"] = _help_priority(comment_text, item["language"])
+                    item["priorityLabel"] = _priority_label(item["priority"])
+                    item["tags"] = ["youtube", "comentário", "ajuda imediata"]
+                    if any(term in clean_text(comment_text, 2000).casefold() for term in ("hacker", "hackear", "hack", "invadir", "password", "senha")):
+                        item["tags"].append("revisão de segurança")
                     item["sourceLinks"] = [
                         {"name": "Comentário original", "url": comment_url},
                         {"name": "Vídeo original", "url": video_url},
                     ]
-                    item["tags"] = ["youtube", "comentário", "ajuda imediata"]
                     items.append(item)
                     if len(items) >= 180:
                         return items
@@ -653,9 +660,52 @@ def fetch_youtube() -> list[dict[str, Any]]:
 
 def _looks_like_immediate_help(text: str) -> bool:
     value = f" {clean_text(text, 2000).casefold()} "
-    need = ("preciso de ajuda", "need help", "help me", "alguém pode ajudar", "alguem pode ajudar", "socorro", "não consigo", "nao consigo", "how do i", "how can i", "can someone help")
-    problem = ("perdi acesso", "perdi a conta", "conta bloqueada", "conta bloqueou", "conta invadida", "fui burlado", "fui enganado", "hacke", "blocked account", "account hacked", "scammed", "can't log in", "cannot login", "não entra", "nao entra", "recuperar conta")
-    return any(term in value for term in need) or any(term in value for term in problem)
+    need = ("preciso de ajuda", "need help", "help me", "alguém pode ajudar", "alguem pode ajudar", "socorro", "não consigo", "nao consigo", "how do i", "how can i", "can someone help", "necesito ayuda", "necesito ayuda", "j'ai besoin d'aide")
+    problem = ("perdi acesso", "perdi a conta", "conta bloqueada", "conta bloqueou", "conta invadida", "fui burlado", "fui enganado", "hacke", "blocked account", "account hacked", "scammed", "can't log in", "cannot login", "não entra", "nao entra", "recuperar conta", "lost access", "cuenta bloqueada", "fui estafado", "perdí el acceso", "compte bloqué", "j'ai été arnaqué")
+    service = ("facebook monetizado", "monetização", "monetization", "gestor de página", "page manager", "verificação urgente", "urgent verification", "verificação em dois fatores", "two factor authentication", "vende número estrangeiro", "foreign number", "criar meu site", "create my website", "desenvolvedor", "developer", "programador", "programmer", "golpista", "scammer", "estafado", "arnaqué")
+    return any(term in value for term in need) or any(term in value for term in problem) or any(term in value for term in service)
+
+
+def _help_language(text: str) -> str:
+    value = clean_text(text, 2000).casefold()
+    scores = {
+        "pt": sum(value.count(term) for term in ("preciso", "ajuda", "conta", "acesso", "bloqueada", "burlado", "desenvolvedor", "programador", "site")),
+        "en": sum(value.count(term) for term in ("need", "help", "account", "blocked", "scammed", "developer", "programmer", "website")),
+        "es": sum(value.count(term) for term in ("necesito", "ayuda", "cuenta", "bloqueada", "estafado", "desarrollador", "programador", "sitio")),
+        "fr": sum(value.count(term) for term in ("besoin", "aide", "compte", "bloqué", "arnaqué", "développeur", "site")),
+    }
+    language, score = max(scores.items(), key=lambda entry: entry[1])
+    return language if score else "unknown"
+
+
+def _help_priority(text: str, language: str = "unknown") -> int:
+    value = clean_text(text, 2000).casefold()
+    score = 40
+    if any(term in value for term in ("perdi acesso", "perdi a conta", "conta invadida", "account hacked", "lost access", "perdí el acceso", "j'ai perdu l'accès")):
+        score = 100
+    elif any(term in value for term in ("fui burlado", "fui enganado", "scammed", "fui estafado", "j'ai été arnaqué", "golpista", "scammer")):
+        score = 95
+    elif any(term in value for term in ("conta bloqueada", "blocked account", "cuenta bloqueada", "compte bloqué", "não consigo entrar", "cannot login", "no puedo entrar")):
+        score = 90
+    elif any(term in value for term in ("verificação urgente", "urgent verification", "verificação em dois fatores", "two factor authentication", "vender número", "foreign number")):
+        score = 80
+    elif any(term in value for term in ("desenvolvedor", "developer", "programador", "programmer", "criar meu site", "create my website", "need a website")):
+        score = 70
+    elif any(term in value for term in ("monetização", "monetization", "gestor de página", "page manager")):
+        score = 60
+    if language == "pt":
+        score = min(100, score + 5)
+    return score
+
+
+def _priority_label(priority: int) -> str:
+    if priority >= 90:
+        return "Urgente"
+    if priority >= 70:
+        return "Alta"
+    if priority >= 60:
+        return "Média"
+    return "Normal"
 
 
 def _looks_like_opportunity(text: str) -> bool:

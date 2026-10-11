@@ -109,6 +109,13 @@ class RadarPipelineTests(unittest.TestCase):
         self.assertIn("lc=comment123", items[0]["sourceUrl"])
         self.assertIn("https://www.youtube.com/watch?v=video123", items[0]["sourceLinks"][1]["url"])
         self.assertIn("needs", items[0]["categories"])
+        self.assertEqual(items[0]["language"], "pt")
+        self.assertEqual(items[0]["priorityLabel"], "Urgente")
+
+    def test_youtube_service_keywords_are_detected_without_promoting_abuse(self) -> None:
+        self.assertTrue(radar._looks_like_immediate_help("Preciso criar o meu site, alguém conhece um programador?"))
+        self.assertTrue(radar._looks_like_immediate_help("Preciso de um hacker urgente para entrar numa conta"))
+        self.assertGreaterEqual(radar._help_priority("fui burlado e perdi acesso à conta", "pt"), 95)
 
 
     def test_stackexchange_questions_are_marked_as_immediate_help(self) -> None:

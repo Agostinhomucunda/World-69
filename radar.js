@@ -263,6 +263,7 @@ function itemRelevance(item, queryTerms, selectedCategory, selectedCountry) {
   if (selectedCategory !== 'all' && item.categories?.includes(selectedCategory)) score += 2;
   const countryNames = Array.isArray(item.countries) ? item.countries : [item.country].filter(Boolean);
   if (selectedCountry !== 'all' && countryNames.some((name) => normalize(name) === normalize(selectedCountry))) score += 1;
+  if (Number.isFinite(Number(item.priority))) score += Number(item.priority) / 25;
   const published = safeDate(item.publishedAt);
   if (published) score += Math.max(0, 1 - (Date.now() - published.getTime()) / (30 * 86400000));
   return score;
@@ -376,6 +377,7 @@ function createCard(item) {
   const categories = (Array.isArray(item.categories) ? item.categories : []).slice(0, 3);
   const cardCategoryLabels = CARD_LANGUAGE === 'en' ? CATEGORY_LABELS_EN : CATEGORY_LABELS;
   categories.forEach((category) => badges.append(createBadge(cardCategoryLabels[category] || String(category), 'radar-badge-category')));
+  if (item.priorityLabel) badges.append(createBadge(`Prioridade ${item.priorityLabel}`, 'radar-badge-category'));
   if (!categories.length) badges.append(createBadge(classifyType(item), 'radar-badge-category'));
   const social = item.trustLevel === 'social_unverified';
   if (social) badges.append(createBadge(CARD_COPY.unverified, 'radar-badge-social'));
