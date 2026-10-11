@@ -92,6 +92,26 @@ class RadarPipelineTests(unittest.TestCase):
         self.assertTrue(radar._looks_like_opportunity("We are hiring a Python developer remotely"))
         self.assertFalse(radar._looks_like_opportunity("A nice sunset over Luanda"))
 
+
+    def test_stackexchange_questions_are_marked_as_immediate_help(self) -> None:
+        payload = {"items": [{
+            "question_id": 123, "title": "How do I recover a broken Python login flow?",
+            "link": "https://stackoverflow.com/questions/123/example",
+            "last_activity_date": 1791580000, "tags": ["python", "authentication"],
+            "body_markdown": "I need help understanding this error."
+        }]}
+        with patch.object(radar, "request_json", return_value=payload):
+            items = radar.fetch_stackexchange()
+        self.assertEqual(len(items), len(radar.STACKEXCHANGE_SITES))
+        first = items[0]
+        self.assertIn("needs", first["categories"])
+        self.assertIn("programming", first["categories"])
+        self.assertEqual(first["type"], "community post · unverified")
+        self.assertEqual(first["salary"], "")
+        self.assertFalse(first["remote"])
+        self.assertEqual(first["country"], "Não informado")
+        self.assertIn("stackoverflow.com/questions/123", first["sourceUrl"])
+
     def test_agl_angola_rss_creates_a_linked_angola_employment_item(self) -> None:
         feed = b'''<?xml version="1.0" encoding="UTF-8"?>
         <rss version="2.0"><channel><item>

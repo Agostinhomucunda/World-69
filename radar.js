@@ -4,7 +4,7 @@ const METRICS_URL = new URL('api/radar-metrics', window.location.href).toString(
 const PAGE_SIZE = 24;
 const DEFAULT_COUNTRIES = ['Angola', 'Brasil', 'Portugal', 'Moçambique', 'África do Sul', 'Cabo Verde', 'Estados Unidos', 'Reino Unido', 'Canadá', 'Remoto/Global'];
 const CATEGORY_LABELS = {
-  programming: 'Programação', websites: 'Websites', applications: 'Aplicações', ai: 'IA', cybersecurity: 'Cibersegurança',
+  programming: 'Programação', websites: 'Websites', applications: 'Aplicações', needs: 'Ajuda imediata', ai: 'IA', cybersecurity: 'Cibersegurança',
   design: 'Design', video: 'Vídeo', audio: 'Áudio', social: 'Redes sociais', teaching: 'Ensino / Tutoria', employment: 'Emprego',
   freelance: 'Freelance', internship: 'Estágio', projects: 'Projetos', remote: 'Remoto'
 };
@@ -15,7 +15,7 @@ const TYPE_LABELS = {
   internship: 'Estágio', training: 'Ensino / formação', employment: 'Emprego'
 };
 const CATEGORY_LABELS_EN = {
-  programming: 'Programming', websites: 'Websites', applications: 'Applications', ai: 'AI', cybersecurity: 'Cybersecurity',
+  programming: 'Programming', websites: 'Websites', applications: 'Applications', needs: 'Immediate help', ai: 'AI', cybersecurity: 'Cybersecurity',
   design: 'Design', video: 'Video', audio: 'Audio', social: 'Social media', teaching: 'Teaching / Tutoring', employment: 'Employment',
   freelance: 'Freelance', internship: 'Internship', projects: 'Projects', remote: 'Remote'
 };

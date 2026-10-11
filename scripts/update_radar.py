@@ -59,6 +59,7 @@ SOURCE_REGISTRY = [
     OpportunitySource("greenhouse", "Greenhouse boards", "jobs", "official job-board API", (), ("employment", "internship"), 60, 100, "Apenas boards de carreiras oficiais configurados pelo proprietário."),
     OpportunitySource("usajobs", "USAJOBS", "jobs", "official API", ("Estados Unidos",), ("employment", "internship"), 60, 100, "Requer API key e User-Agent configurados em secrets."),
     OpportunitySource("arbeitnow", "Arbeitnow", "jobs", "public JSON API", ("Europa",), ("employment", "internship"), 60, 100, "Termos de republicação por confirmar; não ativada."),
+    OpportunitySource("stackexchange", "Stack Exchange · pedidos de ajuda", "community_help", "official public API", ("Todos os países",), ("needs", "programming", "applications", "websites", "ai", "cybersecurity"), 60, 180, "Perguntas públicas recentes; responde na fonte original. Não são ofertas pagas."),
 ]
 
 COUNTRY_ALIASES = {
@@ -98,6 +99,7 @@ CATEGORY_RULES: list[tuple[str, tuple[str, ...]]] = [
     ("freelance", ("freelance", "freelancer", "contractor", "contract role", "independent contractor", "gig", "freelancer")),
     ("projects", ("open source", "open-source", "good first issue", "help wanted", "bounty", "project", "projeto", "collaboration", "contribution")),
     ("employment", ("job", "career", "employment", "hiring", "vacancy", "position", "full-time", "part-time", "emprego", "vaga")),
+    ("needs", ("need help", "help me", "how do i", "how can i", "como faço", "como faco", "preciso de ajuda", "problema", "problem", "help with", "não consigo", "nao consigo")),
 ]
 
 
@@ -298,6 +300,9 @@ def classify_categories(text: str, source_id: str, employment_type: Any, remote:
         categories.append("projects")
     if source_id == "bluesky" and "social" not in categories:
         categories.append("social")
+    if source_id == "stackexchange":
+        if "needs" not in categories:
+            categories.append("needs")
     if any(term in str(employment_type).casefold() for term in ("intern", "trainee")) and "internship" not in categories:
         categories.append("internship")
     if remote and "remote" not in categories:
@@ -308,7 +313,7 @@ def classify_categories(text: str, source_id: str, employment_type: Any, remote:
 def normalize_type(source_id: str, employment_type: Any, text: str) -> str:
     if source_id == "github":
         return "open-source contribution"
-    if source_id == "bluesky":
+    if source_id in {"bluesky", "stackexchange"}:
         return "community post · unverified"
     if source_id == "agl_angola":
         return "employment"
@@ -478,6 +483,53 @@ def fetch_github_issues() -> list[dict[str, Any]]:
                 item["summary"] = clean_text(issue.get("body"), MAX_SUMMARY)
                 item["description"] = clean_text(issue.get("body"), MAX_DESCRIPTION)
                 items.append(item)
+    return items
+
+
+STACKEXCHANGE_SITES = (
+    ("stackoverflow", ("python", "javascript", "html", "css", "openai", "chatgpt", "wordpress")),
+    ("superuser", ("windows-10", "windows-11", "android", "internet", "facebook")),
+    ("webapps", ("facebook", "google-account", "gmail", "social-media", "accounts")),
+    ("askubuntu", ("software-installation", "networking", "accounts", "permissions")),
+    ("serverfault", ("authentication", "linux", "networking", "active-directory")),
+    ("ai", ("artificial-intelligence", "machine-learning", "generative-ai")),
+    ("android", ("android", "authentication", "accounts")),
+)
+
+def fetch_stackexchange() -> list[dict[str, Any]]:
+    """Fetch recent public help questions through Stack Exchange's official API."""
+    since = int((datetime.now(timezone.utc) - timedelta(days=14)).timestamp())
+    items: list[dict[str, Any]] = []
+    seen: set[tuple[str, int]] = set()
+    for site, tags in STACKEXCHANGE_SITES:
+        for tag in tags:
+            params = urllib.parse.urlencode({
+                "site": site, "tagged": tag, "sort": "activity", "order": "desc",
+                "fromdate": since, "pagesize": 10, "filter": "default",
+            })
+            payload = request_json(f"https://api.stackexchange.com/2.3/questions?{params}")
+            for question in payload.get("items", []) if isinstance(payload, dict) else []:
+                question_id = question.get("question_id")
+                link = question.get("link")
+                identity = (site, question_id)
+                if not question_id or identity in seen:
+                    continue
+                seen.add(identity)
+                question_tags = question.get("tags") or []
+                title = question.get("title") or ""
+                excerpt = question.get("body_markdown") or question.get("body") or ""
+                item = make_item(
+                    "stackexchange", "Stack Exchange · pedidos de ajuda", f"{site}-{question_id}",
+                    title, link, question.get("last_activity_date") or question.get("creation_date"),
+                    excerpt, "", "Não informado", question_tags, "community help", "", False, "social_unverified",
+                )
+                if item:
+                    item["summary"] = clean_text(title, MAX_SUMMARY)
+                    item["description"] = clean_text(excerpt, 1200)
+                    item["company"] = ""
+                    item["project"] = site
+                    item["tags"] = [site, *question_tags][:12]
+                    items.append(item)
     return items
 
 
@@ -742,6 +794,7 @@ def run_collection(output_path: Path, dry_run: bool = False, details_path: Path 
         ("weworkremotely", fetch_weworkremotely),
         ("agl_angola", fetch_agl_angola),
         ("github", fetch_github_issues),
+        ("stackexchange", fetch_stackexchange),
         ("bluesky", fetch_bluesky),
     ]
     for source_id, fetcher in fetchers:
