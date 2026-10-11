@@ -1,8 +1,1182 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-11T10:09:49Z",
+  "generatedAt": "2026-10-11T10:32:17Z",
   "refreshIntervalMinutes": 60,
   "items": [
+    {
+      "id": "github:5800247953",
+      "title": "[E-053] Let report read a report from standard input",
+      "summary": "Canonical Inventory ID E-053 (Crosswalk ID: E-053 ) Complexity Tier & Points Trivial (100 pts) Bank Assignment & Dependencies - Bank : Bank A - Prerequisites : None (ready to begin) Description Let report read a report from standard input. Why This Matters Improves protocol compatibility coverage, contributor verification tooling, and pipeline predictability across the StellarCanary ecosystem. Implementation Scope…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T10:31:01Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/StellarCanary/Protocol-Canary/issues/493",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/StellarCanary/Protocol-Canary/issues/493"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "StellarCanary/Protocol-Canary",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5800246807",
+      "title": "[E-051] Add a --fail-on-warning flag to check",
+      "summary": "Canonical Inventory ID E-051 (Crosswalk ID: E-051 ) Complexity Tier & Points Trivial (100 pts) Bank Assignment & Dependencies - Bank : Bank A - Prerequisites : None (ready to begin) Description Add a --fail-on-warning flag to check. Why This Matters Improves protocol compatibility coverage, contributor verification tooling, and pipeline predictability across the StellarCanary ecosystem. Implementation Scope…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T10:30:50Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/StellarCanary/Protocol-Canary/issues/491",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/StellarCanary/Protocol-Canary/issues/491"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "StellarCanary/Protocol-Canary",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5800246028",
+      "title": "[E-050] Add a cache clear subcommand",
+      "summary": "Canonical Inventory ID E-050 (Crosswalk ID: E-050 ) Complexity Tier & Points Trivial (100 pts) Bank Assignment & Dependencies - Bank : Bank A - Prerequisites : None (ready to begin) Description Add a cache clear subcommand. Why This Matters Improves protocol compatibility coverage, contributor verification tooling, and pipeline predictability across the StellarCanary ecosystem. Implementation Scope - Target…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T10:30:44Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/StellarCanary/Protocol-Canary/issues/490",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/StellarCanary/Protocol-Canary/issues/490"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "StellarCanary/Protocol-Canary",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5800245365",
+      "title": "[E-049] Add --cache-dir to check",
+      "summary": "Canonical Inventory ID E-049 (Crosswalk ID: E-049 ) Complexity Tier & Points Trivial (100 pts) Bank Assignment & Dependencies - Bank : Bank A - Prerequisites : None (ready to begin) Description Add --cache-dir to check. Why This Matters Improves protocol compatibility coverage, contributor verification tooling, and pipeline predictability across the StellarCanary ecosystem. Implementation Scope - Target…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T10:30:38Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/StellarCanary/Protocol-Canary/issues/489",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/StellarCanary/Protocol-Canary/issues/489"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "StellarCanary/Protocol-Canary",
+      "hasDetails": true
+    },
+    {
+      "id": "stackexchange:stackoverflow-80009197",
+      "title": "Python script that copies certain lines and writes to other file",
+      "summary": "Python script that copies certain lines and writes to other file",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "needs"
+      ],
+      "type": "community post · unverified",
+      "salary": "",
+      "publishedAt": "2026-10-11T10:30:21Z",
+      "sourceName": "Stack Exchange · pedidos de ajuda",
+      "sourceUrl": "https://stackoverflow.com/questions/80009197/python-script-that-copies-certain-lines-and-writes-to-other-file",
+      "sourceLinks": [
+        {
+          "name": "Stack Exchange · pedidos de ajuda",
+          "url": "https://stackoverflow.com/questions/80009197/python-script-that-copies-certain-lines-and-writes-to-other-file"
+        }
+      ],
+      "tags": [
+        "stackoverflow",
+        "python"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "social_unverified",
+      "language": "unknown",
+      "project": "stackoverflow",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5800243159",
+      "title": "[A-020] Reject reports with duplicate result identities",
+      "summary": "Canonical Inventory ID A-020 (Crosswalk ID: NW-A2 ) Complexity Tier & Points Trivial (100 pts) Bank Assignment & Dependencies - Bank : Bank A - Prerequisites : None (ready to begin) Description Reject reports with duplicate result identities. Why This Matters Improves protocol compatibility coverage, contributor verification tooling, and pipeline predictability across the StellarCanary ecosystem. Implementation…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T10:30:20Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/StellarCanary/ProtocolCanary-Action/issues/349",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/StellarCanary/ProtocolCanary-Action/issues/349"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "StellarCanary/ProtocolCanary-Action",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5800242441",
+      "title": "[E-044] mdBook pages for fixtures --format json and inspect --format json",
+      "summary": "Canonical Inventory ID E-044 (Crosswalk ID: NW-E21 ) Complexity Tier & Points Trivial (100 pts) Bank Assignment & Dependencies - Bank : Bank B - Prerequisites : E-036, E-040 Description mdBook pages for fixtures --format json and inspect --format json. Why This Matters Improves protocol compatibility coverage, contributor verification tooling, and pipeline predictability across the StellarCanary ecosystem…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T10:30:14Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/StellarCanary/Protocol-Canary/issues/487",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/StellarCanary/Protocol-Canary/issues/487"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "StellarCanary/Protocol-Canary",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5800235935",
+      "title": "Optimize api for large datasets",
+      "summary": "Description Currently config lacks proper pagination support. Proposed solution Add configurable pagination with sensible defaults. Priority : Low/Medium",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T10:29:17Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/yrn-dev/Operator/issues/35446",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/yrn-dev/Operator/issues/35446"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "yrn-dev/Operator",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5800234975",
+      "title": "[E-020] Classify JSON-RPC -32601 as method not available",
+      "summary": "Canonical Inventory ID E-020 (Crosswalk ID: NW-C2 ) Complexity Tier & Points Trivial (100 pts) Bank Assignment & Dependencies - Bank : Bank A - Prerequisites : None (ready to begin) Description Classify JSON-RPC -32601 as method not available. Why This Matters Improves protocol compatibility coverage, contributor verification tooling, and pipeline predictability across the StellarCanary ecosystem. Implementation…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T10:29:08Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/StellarCanary/Protocol-Canary/issues/480",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/StellarCanary/Protocol-Canary/issues/480"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "StellarCanary/Protocol-Canary",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5800234142",
+      "title": "Port Rectangle.In and demonstrate rejecting crop requests that need clipping",
+      "summary": "A caller may want to reject an out-of-bounds crop request instead of silently accepting its clipped intersection. The existing CropPlan deliberately computes the intersection; leave that behavior unchanged. Go also uses Rectangle.In to reject a GIF frame outside its configured screen bounds [1]. This is a coordinate-validation example, not a GIF encoder or pixel-processing feature. Scope - Add a native…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T10:29:00Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/kimjooyoon/gooo-go-ports/issues/43",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/kimjooyoon/gooo-go-ports/issues/43"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "kimjooyoon/gooo-go-ports",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5800231571",
+      "title": "[E-056] Reject duplicate result identities when parsing a report",
+      "summary": "Canonical Inventory ID E-056 (Crosswalk ID: NW-E10 ) Complexity Tier & Points Trivial (100 pts) Bank Assignment & Dependencies - Bank : Bank A - Prerequisites : None (ready to begin) Description Reject duplicate result identities when parsing a report. Why This Matters Improves protocol compatibility coverage, contributor verification tooling, and pipeline predictability across the StellarCanary ecosystem…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T10:28:36Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/StellarCanary/Protocol-Canary/issues/475",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/StellarCanary/Protocol-Canary/issues/475"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "StellarCanary/Protocol-Canary",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5800230212",
+      "title": "[E-062] Document ScVal in the fixture contract and authoring pages",
+      "summary": "Canonical Inventory ID E-062 (Crosswalk ID: NW-E6 ) Complexity Tier & Points Trivial (100 pts) Bank Assignment & Dependencies - Bank : Bank A - Prerequisites : None (ready to begin) Description Document ScVal in the fixture contract and authoring pages. Why This Matters Improves protocol compatibility coverage, contributor verification tooling, and pipeline predictability across the StellarCanary ecosystem…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T10:28:23Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/StellarCanary/Protocol-Canary/issues/473",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/StellarCanary/Protocol-Canary/issues/473"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "StellarCanary/Protocol-Canary",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5800229425",
+      "title": "[F-016] Accept the ScVal XDR type in the validator and schema",
+      "summary": "Canonical Inventory ID F-016 (Crosswalk ID: NW-F6 ) Complexity Tier & Points Trivial (100 pts) Bank Assignment & Dependencies - Bank : Bank A - Prerequisites : None (ready to begin) Description Accept the ScVal XDR type in the validator and schema. Why This Matters Improves protocol compatibility coverage, contributor verification tooling, and pipeline predictability across the StellarCanary ecosystem…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T10:28:16Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/StellarCanary/ProtocolCanary-Fixtures/issues/281",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/StellarCanary/ProtocolCanary-Fixtures/issues/281"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "StellarCanary/ProtocolCanary-Fixtures",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5800224582",
+      "title": "[ci-maintainer] Fuzz workflow failing: SanitizeControlChars truncation splits multi-byte UTF-8 rune",
+      "summary": "CI Issue The weekly/on-push Fuzz workflow job fuzz (./pkg/security/sanitize/, FuzzSanitizeControlChars) fails on main. SanitizeControlChars in pkg/security/sanitize/sanitize.go truncates with a plain byte slice ( s[:200] ), which can split a multi-byte UTF-8 rune at the 200-byte boundary, producing invalid UTF-8 output. The companion fuzz test FuzzSanitizeControlChars (added specifically to catch this class of bug…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects",
+        "employment"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T10:27:33Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/kubestellar/kubestellar-mcp/issues/1259",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/kubestellar/kubestellar-mcp/issues/1259"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "ci",
+        "hive/hosted-kubestellar-console-4vkt",
+        "agent/ci-maintainer",
+        "hive/covered-by-pr"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "kubestellar/kubestellar-mcp",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5800218889",
+      "title": "Windows: check whether the shared Manager server keeps the first run's working directory in use",
+      "summary": "Summary On Windows the shared Manager server presumably keeps the directory that was the working directory at the first MULTIPROCESSING run in use until the interpreter exits; this is not reproduced and needs a Windows machine. Motivation A spawned child changes into the parent's working directory at start ( multiprocessing.spawn.prepare ), and Windows does not let a directory be deleted or renamed while a process…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T10:26:41Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/mloda-ai/mloda/issues/1950",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/mloda-ai/mloda/issues/1950"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "mloda-ai/mloda",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5800207921",
+      "title": "\"Daten exportieren\" produces invalid JSON and omits vocabulary and learning plans",
+      "summary": "Description Settings.loadData() builds the export by concatenating two JSON strings: allData = todos + diary . The result looks like [...][...] , which is not valid JSON and cannot be parsed. Vocabulary ( vocabulary ) and learning plans ( learnPlans ) are not included at all. The preview is labelled \"data.txt\", but a plain String is shared, not a file. Location Schoolify/Settings.swift , loadData() (L229–233) and…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T10:25:14Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/hoffmann-paul/schoolify/issues/6",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/hoffmann-paul/schoolify/issues/6"
+        }
+      ],
+      "tags": [
+        "bug",
+        "enhancement",
+        "good first issue",
+        "invalid"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "hoffmann-paul/schoolify",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5800200606",
+      "title": "Missing input validation in several forms (empty names, whitespace-only text, no rating)",
+      "summary": "Description Several forms accept invalid input and still show a success message. - createTheme.saveTheme() has no validation at all. An empty theme name is saved and the alert \"Thema wurde erstellt\" appears. ( createTheme.swift L84–117) - createLearnPlan.submitLearnPlan() accepts an empty plan name and a plan with zero themes. ( createLearnPlan.swift L135–161) - Homework.addToDo() only checks field.isEmpty , so a…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T10:24:17Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/hoffmann-paul/schoolify/issues/5",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/hoffmann-paul/schoolify/issues/5"
+        }
+      ],
+      "tags": [
+        "bug",
+        "enhancement",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "hoffmann-paul/schoolify",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5800193118",
+      "title": "Unsaved themes leak into the next learning plan (\"temporaryThemes\" is never cleared on cancel)",
+      "summary": "Description Themes added in \"Neues Thema\" are stored in the global UserDefaults key temporaryThemes . The key is only cleared in submitLearnPlan() . If the user adds themes and then leaves \"Neuer Lernplan\" without saving, the themes stay in storage and show up in the next new plan, even after an app restart. Steps to reproduce 1. Learning tab → \"Neuer Lernplan\" → \"Neues Thema\" → add \"Algebra\". 2. Go back twice…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T10:23:17Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/hoffmann-paul/schoolify/issues/4",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/hoffmann-paul/schoolify/issues/4"
+        }
+      ],
+      "tags": [
+        "bug",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "hoffmann-paul/schoolify",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5800181686",
+      "title": "Deleting a vocabulary / theme removes the wrong item when names are duplicated",
+      "summary": "Description Both delete actions look the item up by its text instead of its id , using firstIndex(where:) . If two entries share the same name, swiping the second one deletes the first one. Locations - Schoolify/EditVocabulary.swift : removeVocabel(String:) (L154–159) matches on german - Schoolify/createLearnPlan.swift : removeTheme(String:) (L121–126) matches on name Steps to reproduce (vocabulary) 1. Add \"gehen →…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T10:21:48Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/hoffmann-paul/schoolify/issues/3",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/hoffmann-paul/schoolify/issues/3"
+        }
+      ],
+      "tags": [
+        "bug",
+        "help wanted",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "hoffmann-paul/schoolify",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5800172347",
+      "title": "Vocabulary session ends early – up to 5 cards in the queue are never asked",
+      "summary": "Description updateQueue() shows the end alert as soon as the last card has been moved from possibleVocabulary into queue (L232–239) and returns before askVocabulary() . At that point up to 5 cards are still waiting in queue and are never shown. Cards answered wrong are not repeated either. Steps to reproduce 1. Add exactly 6 vocabulary entries. 2. Start \"Durchgang starten\". 3. Answer the first card with \"Gewusst\"…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T10:20:28Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/hoffmann-paul/schoolify/issues/2",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/hoffmann-paul/schoolify/issues/2"
+        }
+      ],
+      "tags": [
+        "bug",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "hoffmann-paul/schoolify",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5800164226",
+      "title": "Error rate in vocabulary session summary uses integer division",
+      "summary": "Description calculateProcent() computes wrong / correct 100 with Int operands. The division truncates before the multiplication, so the \"Fehlerquote\" shown in the end-of-session alert is wrong in most cases. It also divides by correct , not by the total number of answers. Location Schoolify/StartVocabularyQueue.swift , calculateProcent() (L254–256) Examples - 3 wrong / 5 correct → shows 0% (3/5 = 0 in integer math)…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T10:19:19Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/hoffmann-paul/schoolify/issues/1",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/hoffmann-paul/schoolify/issues/1"
+        }
+      ],
+      "tags": [
+        "bug",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "hoffmann-paul/schoolify",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5800164186",
+      "title": "Handle edge cases in pagination",
+      "summary": "Description Currently helpers lacks proper compression support. Proposed solution Add configurable compression with sensible defaults. Priority : Low/Medium",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T10:19:18Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/yrn-dev/Operator/issues/35439",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/yrn-dev/Operator/issues/35439"
+        }
+      ],
+      "tags": [
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "yrn-dev/Operator",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5800158015",
+      "title": "[E-081] Document reproducing a run from lock, pack and project revision",
+      "summary": "Canonical Inventory ID E-081 (Crosswalk ID: PC-56 ) Complexity Tier & Points Trivial (100 pts) Bank Assignment & Dependencies - Bank : Bank B - Prerequisites : E-073, E-074 Description Document reproducing a run from lock, pack and project revision. Why This Matters Improves protocol compatibility coverage, contributor verification tooling, and pipeline predictability across the StellarCanary ecosystem…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T10:18:29Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/StellarCanary/Protocol-Canary/issues/470",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/StellarCanary/Protocol-Canary/issues/470"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "StellarCanary/Protocol-Canary",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5800148921",
+      "title": "[E-088] Viewer: light and dark themes",
+      "summary": "Canonical Inventory ID E-088 (Crosswalk ID: PC-48 ) Complexity Tier & Points Trivial (100 pts) Bank Assignment & Dependencies - Bank : Bank B - Prerequisites : E-084 Description Viewer: light and dark themes. Why This Matters Improves protocol compatibility coverage, contributor verification tooling, and pipeline predictability across the StellarCanary ecosystem. Implementation Scope - Target: viewer/ - Repository…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T10:17:16Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/StellarCanary/Protocol-Canary/issues/464",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/StellarCanary/Protocol-Canary/issues/464"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "StellarCanary/Protocol-Canary",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5800134527",
+      "title": "feat(mcp): Add a native Model Context Protocol server for Trove",
+      "summary": "Overview Trove provides a CLI for scaffolding backend applications from supported technology configurations. To make these capabilities accessible to AI coding assistants, Trove should expose a native Model Context Protocol (MCP) server. MCP provides a standardized interface through which compatible AI clients can discover tools, submit structured inputs, and consume structured results. With this integration…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "ai",
+        "projects",
+        "needs"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T10:15:24Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Akshay1018/trove/issues/45",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Akshay1018/trove/issues/45"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "question",
+        "feature"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Akshay1018/trove",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5800133165",
+      "title": "[A-008] Expose resolved pack identity as outputs",
+      "summary": "Canonical Inventory ID A-008 (Crosswalk ID: AC-08 ) Complexity Tier & Points Trivial (100 pts) Bank Assignment & Dependencies - Bank : Bank B - Prerequisites : A-007 Description Expose resolved pack identity as outputs. Why This Matters Improves protocol compatibility coverage, contributor verification tooling, and pipeline predictability across the StellarCanary ecosystem. Implementation Scope - Target…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T10:15:13Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/StellarCanary/ProtocolCanary-Action/issues/340",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/StellarCanary/ProtocolCanary-Action/issues/340"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "StellarCanary/ProtocolCanary-Action",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5800127716",
+      "title": "Report: running on Windows with Docker Desktop (WSL 2)",
+      "summary": "Nobody has run Aflow on Windows yet. Docker Desktop on Windows runs Linux containers through WSL 2, so the appliance itself should work. The open questions are around the edges: - the release bundle's scripts ( appliance-smoke.sh , backup and restore) are shell scripts, so they need WSL or Git Bash; - the host lane confines commands with /sandbox-runtime , which supports macOS and Linux. On native Windows it reports…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T10:14:33Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aflowai/aflow/issues/102",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aflowai/aflow/issues/102"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "question"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aflowai/aflow",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5800126859",
+      "title": "Local models through an OpenAI-compatible provider (Ollama, LM Studio, vLLM)",
+      "summary": "Models are reached through provider APIs: Anthropic, OpenAI, Google, xAI, Fireworks AI and OpenRouter. There is a local provider value in the AI client, but it throws Provider local is not yet supported ( packages/ai-client/src/client.ts ). Proposal An OpenAI-compatible provider with a configurable base URL. That covers Ollama, LM Studio, vLLM and llama.cpp's server with one adapter. The OpenAI adapter already…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "ai",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T10:14:27Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aflowai/aflow/issues/100",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aflowai/aflow/issues/100"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aflowai/aflow",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5800126577",
+      "title": "Measure OpenCode's headless flags for the host lane profile",
+      "summary": "The host lane runs coding agents on your machine. Each agent has a profile of measured command-line flags in apps/aflow-executor-host/src/harnessDiscovery.ts . Claude Code's profile was measured against the installed CLI. OpenCode's was not, because it wasn't installed when the profile was written. So its modelArgs , mcpArgs , turnsArgs , sessionArgs and resumeArgs are empty, and a run that names a model is refused…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T10:14:25Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aflowai/aflow/issues/99",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aflowai/aflow/issues/99"
+        }
+      ],
+      "tags": [
+        "good first issue",
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aflowai/aflow",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5800126414",
+      "title": "Qualify the appliance on Linux",
+      "summary": "Aflow is qualified on macOS with Docker Desktop. Linux is expected to work, since the containers are Linux either way, but nobody has run the qualification there yet ( docs/dev/local-appliance.md ). What qualification means 1. Install from the release bundle: download aflow-appliance- .tgz , then run docker compose up -d in its folder. 2. Run ./scripts/appliance-smoke.sh . It needs only Docker. 3. Open connect a…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T10:14:23Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aflowai/aflow/issues/98",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aflowai/aflow/issues/98"
+        }
+      ],
+      "tags": [
+        "documentation",
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aflowai/aflow",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5800113678",
+      "title": "[F-025] Check source reference format",
+      "summary": "Canonical Inventory ID F-025 (Crosswalk ID: EX-090 ) Complexity Tier & Points Trivial (100 pts) Bank Assignment & Dependencies - Bank : Bank C - Prerequisites : None (ready to begin) Description Check source reference format. Why This Matters Improves protocol compatibility coverage, contributor verification tooling, and pipeline predictability across the StellarCanary ecosystem. Implementation Scope - Target: docs/…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T10:12:44Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/StellarCanary/ProtocolCanary-Fixtures/issues/267",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/StellarCanary/ProtocolCanary-Fixtures/issues/267"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "StellarCanary/ProtocolCanary-Fixtures",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5800110370",
+      "title": "[E-091] Viewer: guidance for unsupported schema versions",
+      "summary": "Canonical Inventory ID E-091 (Crosswalk ID: EX-064 ) Complexity Tier & Points Trivial (100 pts) Bank Assignment & Dependencies - Bank : Bank B - Prerequisites : E-084 Description Viewer: guidance for unsupported schema versions. Why This Matters Improves protocol compatibility coverage, contributor verification tooling, and pipeline predictability across the StellarCanary ecosystem. Implementation Scope - Target…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T10:12:18Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/StellarCanary/Protocol-Canary/issues/437",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/StellarCanary/Protocol-Canary/issues/437"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "StellarCanary/Protocol-Canary",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5800104921",
+      "title": "Fehler: Fehlerbericht von Hand erstellt",
+      "summary": "Bitte hier den kopierten Fehlerbericht einfügen (Strg+V) und kurz schreiben, was du gerade gemacht hast. Fixen! PKMessenger error report - Version: 0.20.0 - System: win32 x64, Electron 44.6.0 - Where: manuell (Einstellungen → Hilfe) - Error: Fehlerbericht von Hand erstellt Last log lines",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T10:11:36Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Morni-Team/pkmessenger/issues/138",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Morni-Team/pkmessenger/issues/138"
+        }
+      ],
+      "tags": [
+        "bug",
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Morni-Team/pkmessenger",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5800104318",
+      "title": "Make search case-insensitive",
+      "summary": "The book search should match titles and authors regardless of letter case. Training branch: practice-search-case-bug Repro: 1. Open samples/book-app-web . 2. Run npm run dev . 3. Search for hobbit . Expected result: The Hobbit appears in the results. Learner goal: Ask Copilot to find the search logic, write or update a test, and make the smallest safe fix.",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "teaching",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T10:11:32Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/alexandersusha/copilot-app-for-beginners/issues/1",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/alexandersusha/copilot-app-for-beginners/issues/1"
+        }
+      ],
+      "tags": [
+        "bug",
+        "good first issue",
+        "book-app-web"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "alexandersusha/copilot-app-for-beginners",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5800099453",
+      "title": "tests/init/scoped-replan.test.ts sometimes fails to remove its scratch folder (ENOTEMPTY)",
+      "summary": "npm test sometimes fails on CI with no change to the code. On 34, verify (24) failed and verify (22) passed on the same commit. Re-running the job passed. One test failed, and the other 2,523 passed: The test's assertions passed. Removing its scratch repository failed: afterEach in tests/init/pack-fixture.ts calls removeTree in tests/helpers.ts , which is rmSync(root, { recursive: true, force: true }) . ENOTEMPTY…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects",
+        "employment"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T10:10:51Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/djazairdev/detent/issues/35",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/djazairdev/detent/issues/35"
+        }
+      ],
+      "tags": [
+        "bug",
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "djazairdev/detent",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5800096249",
+      "title": "Class a foreign key RESTRICT stop on PostgreSQL as dbkit.ErrForeignKey",
+      "summary": "Downstream applications need one error class for a delete that a foreign key stops, whatever the engine. Current state: dbkit/sqlite classes a RESTRICT stop (SQLITE CONSTRAINT TRIGGER with the text FOREIGN KEY constraint failed) as dbkit.ErrForeignKey. dbkit/postgres classes 23503 but not 23001 (restrict violation), which PostgreSQL raises when an ON DELETE RESTRICT key stops a delete. So the same delete carries a…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T10:10:23Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/gopherium/framework/issues/67",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/gopherium/framework/issues/67"
+        }
+      ],
+      "tags": [
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "gopherium/framework",
+      "hasDetails": true
+    },
     {
       "id": "github:5800092797",
       "title": "[F-024] Add the upstream version matrix to the Protocol 28 and 29 docs",
@@ -7980,39 +9154,6 @@
       "hasDetails": true
     },
     {
-      "id": "stackexchange:stackoverflow-80009197",
-      "title": "Python script that copies certain lines and writes to other file",
-      "summary": "Python script that copies certain lines and writes to other file",
-      "company": "",
-      "country": "Não informado",
-      "countries": [],
-      "remote": false,
-      "categories": [
-        "programming",
-        "needs"
-      ],
-      "type": "community post · unverified",
-      "salary": "",
-      "publishedAt": "2026-10-11T07:47:57Z",
-      "sourceName": "Stack Exchange · pedidos de ajuda",
-      "sourceUrl": "https://stackoverflow.com/questions/80009197/python-script-that-copies-certain-lines-and-writes-to-other-file",
-      "sourceLinks": [
-        {
-          "name": "Stack Exchange · pedidos de ajuda",
-          "url": "https://stackoverflow.com/questions/80009197/python-script-that-copies-certain-lines-and-writes-to-other-file"
-        }
-      ],
-      "tags": [
-        "stackoverflow",
-        "python"
-      ],
-      "status": "UNKNOWN",
-      "trustLevel": "social_unverified",
-      "language": "unknown",
-      "project": "stackoverflow",
-      "hasDetails": false
-    },
-    {
       "id": "github:5799128427",
       "title": "s3: a bucket path ending in a slash is answered as an object whose key is empty, where real answers it as the bucket",
       "summary": "Found while reviewing an open pull request. Source and commit — s3 , main at 78c06e5 . /s3/{bucket}/ matches object get 's route /{bucket}/{key:path} in backlot/routers/s3.py with key the empty string, so it is answered as a key the bucket does not hold, and a selector on it is dispatched as a selector on a key. bucket get and head bucket are routed at /{bucket} alone. How you know — measured against…",
@@ -10315,7 +11456,7 @@
       "title": "Senior Software Engineer, Data Product",
       "summary": "Build a Safer World. TRM Labs provides AI-powered intelligence solutions that help public and private sector agencies investigate and disrupt crime. TRM's platforms enable investigators to trace illicit activity, build cases, and construct operating pictures of threat networks. Leading agencies and businesses worldwide rely on TRM to make the world safer and more secure. The Data Product team collaborates with an…",
       "company": "TRM Labs",
-      "country": "Não informado",
+      "country": "Remoto/Global",
       "countries": [],
       "remote": true,
       "categories": [
@@ -10448,7 +11589,7 @@
       "title": "Senior Software Engineer, Backend | Product Engineering",
       "summary": "Build a Safer World. TRM Labs provides AI-powered intelligence solutions that help public and private sector agencies investigate and disrupt crime. TRM's platforms enable investigators to trace illicit activity, build cases, and construct operating pictures of threat networks. Leading agencies and businesses worldwide rely on TRM to make the world safer and more secure. The Product Engineering team is responsible…",
       "company": "TRM Labs",
-      "country": "Não informado",
+      "country": "Remoto/Global",
       "countries": [],
       "remote": true,
       "categories": [
@@ -10593,7 +11734,7 @@
       "title": "Engineering Manager/Network Team Lead",
       "summary": "About Nebius : Nebius is leading a new era in cloud infrastructure for the global AI economy. We are building a full-stack AI cloud platform that supports developers and enterprises from data and model training through to production deployment, without the cost and complexity of building large in-house AI/ML infrastructure. Built by engineers, for engineers. From large-scale GPU orchestration to inference…",
       "company": "Nebius",
-      "country": "Não informado",
+      "country": "Remoto/Global",
       "countries": [],
       "remote": true,
       "categories": [
@@ -10629,7 +11770,7 @@
       "title": "Compliance Analyst / Senior Compliance Analyst (Special Investigations)",
       "summary": "Who We Are At OKX , we believe that the future will be reshaped by crypto, and ultimately contribute to every individual's freedom. OKX is a leading crypto exchange, and the developer of OKX Wallet, giving millions access to crypto trading and decentralized crypto applications (dApps). OKX is also a trusted brand by hundreds of large institutions seeking access to crypto markets. We are safe and reliable, backed by…",
       "company": "OKX",
-      "country": "Não informado",
+      "country": "Remoto/Global",
       "countries": [],
       "remote": true,
       "categories": [
@@ -10870,7 +12011,7 @@
       "title": "Head of Growth & Product",
       "summary": "This role is part of our Advanced Shipping Manager (ASM) team, one of our brands at saas.group . Advanced Shipping Manager gives e-commerce merchants real-time, rules-based shipping rates and accurate delivery estimates at checkout — across parcel and LTL freight, with FedEx, UPS, USPS and other carriers, on Shopify, BigCommerce, WooCommerce, Magento, Wix, Turbify, Miva Merchant, and Shift4Shop. For 21 years and…",
       "company": "saas.group",
-      "country": "Não informado",
+      "country": "Remoto/Global",
       "countries": [],
       "remote": true,
       "categories": [
@@ -10938,7 +12079,7 @@
       "title": "Solutions Consultant, Digital Assets",
       "summary": "About the Company Born from groundbreaking research at Columbia University and Yale University, CertiK is a leading Web3 security company focused on securing blockchain protocols, smart contracts, and decentralized applications through cutting-edge security research, formal verification, and AI-powered technology. Founded in 2017 and headquartered in New York City, CertiK provides end-to-end security solutions…",
       "company": "CertiK",
-      "country": "Não informado",
+      "country": "Remoto/Global",
       "countries": [],
       "remote": true,
       "categories": [
@@ -11079,7 +12220,7 @@
       "title": "AI Lead / Engineering Manager",
       "summary": "This role is part of our Usersnap team, one of our growing brands at saas.group . Profile Overview Usersnap is building AI-driven capabilities into the core of the product, from automated setup to intelligent surveys, contextual analysis, and reporting that generates itself based on connectors. We're looking for a hands-on AI Lead / Engineering Manager to lead the small engineering team that ships these…",
       "company": "saas.group",
-      "country": "Não informado",
+      "country": "Remoto/Global",
       "countries": [],
       "remote": true,
       "categories": [
@@ -11188,7 +12329,7 @@
       "title": "Senior Data Scientist - Personalization & Predictions",
       "summary": "Bloomreach is building the world’s premier agentic platform for personalization .We’re revolutionizing how businesses connect with their customers, building and deploying AI agents to personalize the entire customer journey. We're taking autonomous search mainstream, making product discovery more intuitive and conversational for customers, and more profitable for businesses. We’re making conversational shopping a…",
       "company": "Bloomreach",
-      "country": "Não informado",
+      "country": "Remoto/Global",
       "countries": [],
       "remote": true,
       "categories": [
@@ -11747,7 +12888,7 @@
       "title": "Sales Development - Middle East",
       "summary": "About ElevenLabs ElevenLabs is an AI research and product company transforming how we interact with technology. We launched in January 2023 with the first human-like AI voice model. Today, we serve millions of users and thousands of businesses - from fast-growing startups to large enterprises like Deutsche Telekom and Meta. Our investors are some of the world's most prominent, including Andreessen Horowitz, ICONIQ…",
       "company": "Elevenlabs",
-      "country": "Não informado",
+      "country": "Remoto/Global",
       "countries": [],
       "remote": true,
       "categories": [
@@ -11882,7 +13023,7 @@
       "title": "Compensation & Analytics Partner",
       "summary": "From Fivetran ’s founding until now, our mission has remained the same: to make access to data as simple and reliable as electricity. With Fivetran, customer data arrives in their warehouses, canonical and ready to query, with no engineering or maintenance required. We’re proud that more organizations continue to leverage our technology every day to become truly data-driven. About the Role We are looking for a Staff…",
       "company": "Fivetran",
-      "country": "Não informado",
+      "country": "Remoto/Global",
       "countries": [],
       "remote": true,
       "categories": [
@@ -12125,7 +13266,7 @@
       "title": "Analyst, GTM Analytics",
       "summary": "From Fivetran ’s founding until now, our mission has remained the same: to make access to data as simple and reliable as electricity. With Fivetran, customer data arrives in their warehouses, canonical and ready to query, with no engineering or maintenance required. We’re proud that more organizations continue to leverage our technology every day to become truly data-driven. About Us Fivetran and dbt Labs are…",
       "company": "Fivetran",
-      "country": "Não informado",
+      "country": "Remoto/Global",
       "countries": [],
       "remote": true,
       "categories": [
@@ -311703,7 +312844,7 @@
       "frequencyMinutes": 60,
       "limit": 100,
       "status": "ok",
-      "lastSyncAt": "2026-10-11T10:09:49Z",
+      "lastSyncAt": "2026-10-11T10:32:17Z",
       "itemsFound": 98,
       "note": "Fonte remota; consultar no máximo uma vez por hora."
     },
@@ -311723,7 +312864,7 @@
       "frequencyMinutes": 60,
       "limit": 250,
       "status": "ok",
-      "lastSyncAt": "2026-10-11T10:09:49Z",
+      "lastSyncAt": "2026-10-11T10:32:17Z",
       "itemsFound": 99,
       "note": "Atribuição e link dofollow para cada anúncio original."
     },
@@ -311742,7 +312883,7 @@
       "frequencyMinutes": 60,
       "limit": 100,
       "status": "ok",
-      "lastSyncAt": "2026-10-11T10:09:49Z",
+      "lastSyncAt": "2026-10-11T10:32:17Z",
       "itemsFound": 89,
       "note": "Preservar a atribuição e o link do feed original."
     },
@@ -311761,7 +312902,7 @@
       "frequencyMinutes": 60,
       "limit": 50,
       "status": "ok",
-      "lastSyncAt": "2026-10-11T10:09:49Z",
+      "lastSyncAt": "2026-10-11T10:32:17Z",
       "itemsFound": 4,
       "note": "Feed RSS oficial do portal de carreiras AGL, filtrada para Angola; manter o link original."
     },
@@ -311781,8 +312922,8 @@
       "frequencyMinutes": 60,
       "limit": 180,
       "status": "ok",
-      "lastSyncAt": "2026-10-11T10:09:49Z",
-      "itemsFound": 283,
+      "lastSyncAt": "2026-10-11T10:32:17Z",
+      "itemsFound": 282,
       "note": "Issues abertas com labels de contribuição; remuneração não presumida."
     },
     {
@@ -311898,7 +313039,7 @@
       "frequencyMinutes": 60,
       "limit": 180,
       "status": "ok",
-      "lastSyncAt": "2026-10-11T10:09:49Z",
+      "lastSyncAt": "2026-10-11T10:32:17Z",
       "itemsFound": 68,
       "note": "Perguntas públicas recentes; responde na fonte original. Não são ofertas pagas."
     },
