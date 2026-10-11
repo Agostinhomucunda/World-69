@@ -1,8 +1,1943 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-11T00:52:14Z",
+  "generatedAt": "2026-10-11T01:59:37Z",
   "refreshIntervalMinutes": 60,
   "items": [
+    {
+      "id": "github:5797114841",
+      "title": "[good first issue, hacktoberfest] 🎎 Add new False Friend Pair 291 (good-first-issue)",
+      "summary": "🟢 Good First Issue: Add False Friend Pair 29 — Beginner-Friendly Open Source Contribution 🟢 No prerequisites needed! You don't need to clone the repo, install anything, or write code. This entire contribution can be done from your browser in under 60 seconds. Labels: good first issue, help wanted, hacktoberfest Language: JSON (no coding required) Time: < 1 minute Skill Level: Absolute beginner --- Add Japanese False…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T01:57:31Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/lingdojo/kana-dojo/issues/32099",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/lingdojo/kana-dojo/issues/32099"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "good first issue",
+        "hacktoberfest",
+        "community",
+        "low hanging fruit",
+        "up-for-grabs",
+        "first-timers-only",
+        "good-first-issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "lingdojo/kana-dojo",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5797075932",
+      "title": "[BUG] doctor: status tags use mixed case ( [ ok ] , [warn] , [FAIL] )",
+      "summary": "Bug Description A sweep script matching the tags case-sensitively reported \"8 ok / 1 warn\" on repos whose real problem was a [FAIL] line. doctor --json exists and is the right interface for automation, but neither doctor --help nor the wiki presents it that way. Expected Behavior Use uniform tag casing, and document --json as the stable, machine-readable interface.",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects",
+        "needs"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T01:50:16Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/dfrostar/neuralmind/issues/639",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/dfrostar/neuralmind/issues/639"
+        }
+      ],
+      "tags": [
+        "bug",
+        "documentation",
+        "good first issue",
+        "question",
+        "priority: low"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "dfrostar/neuralmind",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5797052403",
+      "title": "Player Can Get Under the Water Volume and Fall Out of the Map",
+      "summary": "Summary During the swimming section between the tutorial text for the Wander and Ascend ballast modes, if the player swims downwards, toward the lights and away from the Ascend tutorial text, they will drop out of the bottom of the water volume. There is also a missing piece of geometry there, which allows them to walk out and then fall into the skybox. Build 0.1.0 Reproduction Rate 3/3 Steps to Reproduce 1) Start…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "teaching",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T01:45:54Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/ASGC-Game-Jam/asgc-gamejam-2026/issues/291",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/ASGC-Game-Jam/asgc-gamejam-2026/issues/291"
+        }
+      ],
+      "tags": [
+        "good first issue",
+        "bug"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "ASGC-Game-Jam/asgc-gamejam-2026",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5797025221",
+      "title": "Auto-select the product collection when a scene has only one candidate",
+      "summary": "Right now the user has to pick the product collection manually before rendering, even in simple scenes where there is only one collection containing mesh objects. Task - When the panel opens (or before the first render), if exactly one collection contains mesh objects (ignoring the temporary floor/lights the add-on creates), select it automatically. - If there are several candidates, keep the current behavior and…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T01:41:03Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/tiandaoyouchang-png/wondful-ai-renderer/issues/7",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/tiandaoyouchang-png/wondful-ai-renderer/issues/7"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "good first issue",
+        "hacktoberfest"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "tiandaoyouchang-png/wondful-ai-renderer",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5797025129",
+      "title": "Add a CONTRIBUTING.md with dev setup and test instructions",
+      "summary": "New contributors need a short guide. Task Create CONTRIBUTING.md covering: - How to install the add-on from source into Blender (symlink or zip the wondful ai renderer/ folder). - Which Blender versions are supported. - How to run the existing tests in tests/ . - Code style and how to open a PR (small, focused PRs; describe what you tested). Link it from the README. Hacktoberfest 2026 PRs welcome.",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "ai",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T01:41:02Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/tiandaoyouchang-png/wondful-ai-renderer/issues/6",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/tiandaoyouchang-png/wondful-ai-renderer/issues/6"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "good first issue",
+        "hacktoberfest"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "tiandaoyouchang-png/wondful-ai-renderer",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5797025025",
+      "title": "Translate docs/CASES.md (showcase case studies) into English",
+      "summary": "docs/CASES.md documents every showcase case (shoe, watch, camera, lamp) with prompts, references, settings and metrics, but it is written in Chinese. Task - Add docs/CASES.en.md with an English translation. - Keep image paths, tables and metrics unchanged; prompts inside docs/cases/ /prompt.md can stay as they are. - Add a link to the English version at the top of docs/CASES.md and in the README. Hacktoberfest 2026…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T01:41:01Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/tiandaoyouchang-png/wondful-ai-renderer/issues/5",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/tiandaoyouchang-png/wondful-ai-renderer/issues/5"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "good first issue",
+        "hacktoberfest"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "tiandaoyouchang-png/wondful-ai-renderer",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5797024928",
+      "title": "Add English translations for the add-on UI panel",
+      "summary": "The Wondful AI Renderer panel in Blender is currently mostly in Chinese, which makes it hard for non-Chinese users to try. Task - Use Blender's built-in translation system ( bpy.app.translations ) to add English strings for the panel labels, buttons and tooltips in wondful ai renderer/ . - English should show when Blender's interface language is English; Chinese stays the default for zh HANS. Good first issue : no…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "ai",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T01:41:00Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/tiandaoyouchang-png/wondful-ai-renderer/issues/4",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/tiandaoyouchang-png/wondful-ai-renderer/issues/4"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "good first issue",
+        "hacktoberfest"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "tiandaoyouchang-png/wondful-ai-renderer",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5797019979",
+      "title": "Adicionar arquivos base e códigos do menu normal",
+      "summary": "",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T01:40:07Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Vini150cius/bootcamp-abutua-modulo02-capitulo02-menu_bootstrap/issues/1",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Vini150cius/bootcamp-abutua-modulo02-capitulo02-menu_bootstrap/issues/1"
+        }
+      ],
+      "tags": [
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Vini150cius/bootcamp-abutua-modulo02-capitulo02-menu_bootstrap",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5796975613",
+      "title": "Player Unable to Walk Off Certain Ledges In Descent Mode",
+      "summary": "Summary Most of the ledges in the game function properly, and the player can walk off ledges and continues to descend. There are some ledges where this is not the case. Build 0.1.0 Reproduction Rate 3/3 Steps to Reproduce 1) Start Game 2) Activate Descend mode 3) Walk toward the tutorial text, and to the ledge beyond the first pillar Severity S4 - Low Discipline Tech Upload Attachments Screen Recording .mp4…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "teaching",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T01:32:12Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/ASGC-Game-Jam/asgc-gamejam-2026/issues/290",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/ASGC-Game-Jam/asgc-gamejam-2026/issues/290"
+        }
+      ],
+      "tags": [
+        "good first issue",
+        "bug"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "ASGC-Game-Jam/asgc-gamejam-2026",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5796965019",
+      "title": "UI Tweak - Inconsistent Sentence or Title Case Used for Headings",
+      "summary": "The app uses inconsistent cases for headings, even headings of the same level. Most of the app uses sentence case for all none text content; however every \"Recommended Steps\" heading uses the title case. Which approach seems best: - fastest: make all \"Recommended Steps\" use sentence case: \"Recommended steps\"? - make all headings title case? - determine which level headings should have a title case and which should…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T01:30:16Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/open-source-accessibility/Open-Source-Accessibility-Framework/issues/34",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/open-source-accessibility/Open-Source-Accessibility-Framework/issues/34"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue",
+        "question"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "open-source-accessibility/Open-Source-Accessibility-Framework",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5796958663",
+      "title": "Show selected-layer metadata in the Data I/O tab",
+      "summary": "Could we show a compact summary of the selected layer in Data I/O (or another suitable place)? - Grid dimensions and voxel spacing. - Number of timepoints and sampling frequency. - Whether temporal sampling is uniform, with a brief jitter/gap indicator. This would help users check their data before preprocessing without adding clutter to each analysis tab. do you think this would be useful, and would Data I/O be the…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T01:29:07Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/confusius-tools/confusius/issues/495",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/confusius-tools/confusius/issues/495"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "napari"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "confusius-tools/confusius",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5796955052",
+      "title": "Compose volume rules: also match identity-keyed paths",
+      "summary": "Preparation for keying Compose volumes by mount target (deferred in 238). Today one removed mount reads as a changed plus a removed , because the list diffs by position (pavlof01/jslab 58). That can't be fixed safely yet: two security rules in src/packs/compose.json match only index paths: If volumes were keyed ( volumes[\"/var/run/docker.sock\"] ), these would silently stop firing. Fix (pack JSON only) Widen both…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects",
+        "employment"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T01:28:27Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/myselfsiddharth/Flecto/issues/247",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/myselfsiddharth/Flecto/issues/247"
+        }
+      ],
+      "tags": [
+        "good first issue",
+        "policies"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "myselfsiddharth/Flecto",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5796954937",
+      "title": "PR comment: mark a file that is new in this PR",
+      "summary": "With --new-files added (4.2.0), a file the base commit does not have is reported with every key added . The terminal says so ( [warn] x.yaml is not in : reporting it as a new file ), but the PR comment does not. It shows which reads like an edit to an existing file. Real example: myselfsiddharth/openoncology 1. Fix - In the ci loop in index.js , where before === NEW FILE is handled, record that the file is new (e.g…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T01:28:26Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/myselfsiddharth/Flecto/issues/246",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/myselfsiddharth/Flecto/issues/246"
+        }
+      ],
+      "tags": [
+        "good first issue",
+        "core"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "myselfsiddharth/Flecto",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5796954817",
+      "title": "PR comment: say when findings are advisory instead of 'Check passing' above '2 errors'",
+      "summary": "With --fail-on set so policy findings don't gate (the Action's fail-on: \"\" , a common way to adopt Flecto), the comment reads: A reviewer sees a green check directly above two errors and can't tell whether something is broken. Real example: myselfsiddharth/openoncology 1. Fix In src/pr-comment.js (around the Policy: line, L202), when options.failed === false and there are findings, add one short sentence, e.g…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T01:28:24Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/myselfsiddharth/Flecto/issues/245",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/myselfsiddharth/Flecto/issues/245"
+        }
+      ],
+      "tags": [
+        "good first issue",
+        "core"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "myselfsiddharth/Flecto",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5796954673",
+      "title": "The .flectorc refusal for newFiles explains snapshotRef instead",
+      "summary": "newFiles is refused from .flectorc ( 223), which is right, but the error gives the snapshotRef reason: newFiles doesn't point at anything. The actual risk: a renamed file looks new , so a pull request that renames prod.yaml and sets newFiles: added turns every changed into an added , which --fail-on policy,error does not gate. Fix In assertSnapshotRefFromCli ( src/config.js ), give each option its own reason…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T01:28:23Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/myselfsiddharth/Flecto/issues/244",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/myselfsiddharth/Flecto/issues/244"
+        }
+      ],
+      "tags": [
+        "good first issue",
+        "core"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "myselfsiddharth/Flecto",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5796954553",
+      "title": "Publish workflow: fail fast when the release tag doesn't match package.json",
+      "summary": "The v4.1.2 release was tagged without bumping package.json . .github/workflows/publish.yml installed, ran the full test suite, and only then failed at npm publish with: So the GitHub release said 4.1.2 while npm stayed on 4.1.1, and the message never says why . Fix Add a step right after Checkout that compares the tag to the package version and fails with a clear message: Acceptance - A release whose tag differs…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T01:28:21Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/myselfsiddharth/Flecto/issues/243",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/myselfsiddharth/Flecto/issues/243"
+        }
+      ],
+      "tags": [
+        "good first issue",
+        "ci"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "myselfsiddharth/Flecto",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5796954444",
+      "title": "node-runtime pack misses NODE OPTIONS and NODE TLS REJECT UNAUTHORIZED in Compose's list form",
+      "summary": "Compose writes environment as a map or as a list of KEY=VALUE , and means the same by both. The node-runtime pack only catches the map form: Since ) a list item's path is services.api.environment[\"NODE OPTIONS\"] and its value is the whole string NODE OPTIONS=--inspect=... . The rules in src/packs/node-runtime.json match the path (^|\\.)NODE OPTIONS$ and the bare value, so neither shape matches. Fix (pack…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T01:28:20Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/myselfsiddharth/Flecto/issues/242",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/myselfsiddharth/Flecto/issues/242"
+        }
+      ],
+      "tags": [
+        "bug",
+        "good first issue",
+        "policies"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "myselfsiddharth/Flecto",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5796923750",
+      "title": "chore(build): gitignore the per-platform library directories setup-deepfilter writes",
+      "summary": "Summary scripts/setup/setup-deepfilter.sh (and .ps1 ) stage a per-platform library under third party/deepfilter/lib/ / , and .gitignore has no rule for those directories. Running the documented setup step on any platform whose library is not committed leaves an untracked binary in git status , unlike the sibling setup scripts, whose staging directories are all ignored. Evidence On macOS arm64, main (26.10.1), after…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T01:22:52Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aethersdr/AetherSDR/issues/6360",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aethersdr/AetherSDR/issues/6360"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue",
+        "maintainer-review"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aethersdr/AetherSDR",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5796916570",
+      "title": "Camera Changes Post Processing Effects Based on Camera Location Instead of Player Location",
+      "summary": "Summary If you tilt the camera up while on land, if the camera drops below the water level, it will activate the water effects, even though the player is on land. Build 0.1.0 Reproduction Rate 3/3 Steps to Reproduce 1) Start Game 2) Descend down 3) Ascend up and out of the water 4) Stand on the lower area around the entrance to the water 5) Tilt the camera to face upwards towards the sky Severity S4 - Low Discipline…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T01:21:37Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/ASGC-Game-Jam/asgc-gamejam-2026/issues/289",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/ASGC-Game-Jam/asgc-gamejam-2026/issues/289"
+        }
+      ],
+      "tags": [
+        "good first issue",
+        "bug"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "ASGC-Game-Jam/asgc-gamejam-2026",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5796894997",
+      "title": "Player Controls for Ballast Non-Fuctional on Land",
+      "summary": "Summary Whenever the player is registered as standing on dry land, the current ballast state is unable to be changed. Unsure if behavior should be to revert to a preset mode, or if the player should still be able to control this to determine the ballast state when re-entering the water. Build 0.1.0 Reproduction Rate 3/3 Steps to Reproduce 1) Start game 2) Descend into the water 3) Change to ascend, then land outside…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T01:17:57Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/ASGC-Game-Jam/asgc-gamejam-2026/issues/288",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/ASGC-Game-Jam/asgc-gamejam-2026/issues/288"
+        }
+      ],
+      "tags": [
+        "good first issue",
+        "bug"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "ASGC-Game-Jam/asgc-gamejam-2026",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5796864869",
+      "title": "[Refactor♻️] Rename ExpectedLifecycleOutcome to ExpectedLifecycleRejectionKind",
+      "summary": "Target Code Cargo package: rocketmq-transport . Current declaration: ExpectedLifecycleOutcome . Canonical name: ExpectedLifecycleRejectionKind . Scope: Test-only declaration; it is not part of the production public API. Tracking issue: 11410. This issue owns one Outcome declaration only . Other Outcome types in the same files have separate tasks; use their current canonical names if those changes have already…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects",
+        "needs"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T01:12:55Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/mxsm/rocketmq-rust/issues/11431",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/mxsm/rocketmq-rust/issues/11431"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "good first issue",
+        "refactor♻️",
+        "rust",
+        "Difficulty level/Easy"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "mxsm/rocketmq-rust",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5796864749",
+      "title": "[Refactor♻️] Rename WriterEnqueueOutcome to WriterEnqueueResult",
+      "summary": "Target Code Cargo package: rocketmq-transport . Current declaration: WriterEnqueueOutcome . Canonical name: WriterEnqueueResult . Scope: Private production helper; it is not part of the public Transport facade. Tracking issue: 11410. This issue owns one Outcome declaration only . Other Outcome types in the same files have separate tasks; use their current canonical names if those changes have already merged. File…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects",
+        "needs"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T01:12:54Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/mxsm/rocketmq-rust/issues/11430",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/mxsm/rocketmq-rust/issues/11430"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "good first issue",
+        "refactor♻️",
+        "rust",
+        "Difficulty level/Moderate"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "mxsm/rocketmq-rust",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5796864597",
+      "title": "[Refactor♻️] Replace TransportGoAwayOutcome with an explicit received-event method",
+      "summary": "Target Code Cargo package: rocketmq-transport . Current declaration: TransportGoAwayOutcome . Replacement: record go away received() . Scope: Private production helper; it is not part of the public Transport facade. Tracking issue: 11410. This issue owns one Outcome declaration only . Other Outcome types in the same files have separate tasks; use their current canonical names if those changes have already merged…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects",
+        "needs"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T01:12:52Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/mxsm/rocketmq-rust/issues/11429",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/mxsm/rocketmq-rust/issues/11429"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "good first issue",
+        "refactor♻️",
+        "rust",
+        "Difficulty level/Easy"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "mxsm/rocketmq-rust",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5796864512",
+      "title": "[Refactor♻️] Rename ServerRequestOutcome to ServerRequestResult",
+      "summary": "Target Code Cargo package: rocketmq-transport . Current declaration: ServerRequestOutcome . Canonical name: ServerRequestResult . Scope: Public API, exported through the curated Transport facade. Tracking issue: 11410. This issue owns one Outcome declaration only . Other Outcome types in the same files have separate tasks; use their current canonical names if those changes have already merged. File checklist…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T01:12:51Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/mxsm/rocketmq-rust/issues/11428",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/mxsm/rocketmq-rust/issues/11428"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "good first issue",
+        "refactor♻️",
+        "rust",
+        "Difficulty level/Moderate"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "mxsm/rocketmq-rust",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5796864419",
+      "title": "[Refactor♻️] Rename SessionCloseOutcome to SessionCloseStatus",
+      "summary": "Target Code Cargo package: rocketmq-transport . Current declaration: SessionCloseOutcome . Canonical name: SessionCloseStatus . Scope: Public API, exported through the curated Transport facade. Tracking issue: 11410. This issue owns one Outcome declaration only . Other Outcome types in the same files have separate tasks; use their current canonical names if those changes have already merged. File checklist…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects",
+        "needs"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T01:12:50Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/mxsm/rocketmq-rust/issues/11427",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/mxsm/rocketmq-rust/issues/11427"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "good first issue",
+        "refactor♻️",
+        "rust",
+        "Difficulty level/Moderate"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "mxsm/rocketmq-rust",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5796864327",
+      "title": "[Refactor♻️] Rename ServerPushOutcome to ServerPushResult",
+      "summary": "Target Code Cargo package: rocketmq-transport . Current declaration: ServerPushOutcome . Canonical name: ServerPushResult . Scope: Public API, exported through the curated Transport facade. Tracking issue: 11410. This issue owns one Outcome declaration only . Other Outcome types in the same files have separate tasks; use their current canonical names if those changes have already merged. File checklist…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects",
+        "needs"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T01:12:49Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/mxsm/rocketmq-rust/issues/11426",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/mxsm/rocketmq-rust/issues/11426"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "good first issue",
+        "refactor♻️",
+        "rust",
+        "Difficulty level/Moderate"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "mxsm/rocketmq-rust",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5796864224",
+      "title": "[Refactor♻️] Rename ResponseWriteOutcome to ResponseDeliveryEvent",
+      "summary": "Target Code Cargo package: rocketmq-transport . Current declaration: ResponseWriteOutcome . Canonical name: ResponseDeliveryEvent . Scope: Public API, exported through the curated Transport facade. Tracking issue: 11410. This issue owns one Outcome declaration only . Other Outcome types in the same files have separate tasks; use their current canonical names if those changes have already merged. File checklist…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T01:12:48Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/mxsm/rocketmq-rust/issues/11425",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/mxsm/rocketmq-rust/issues/11425"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "good first issue",
+        "refactor♻️",
+        "rust",
+        "Difficulty level/Moderate"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "mxsm/rocketmq-rust",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5796864130",
+      "title": "[Refactor♻️] Rename ResponseObservationOutcome to ResponseLifecycleEvent",
+      "summary": "Target Code Cargo package: rocketmq-transport . Current declaration: ResponseObservationOutcome . Canonical name: ResponseLifecycleEvent . Scope: Public API, exported through the curated Transport facade. Tracking issue: 11410. This issue owns one Outcome declaration only . Other Outcome types in the same files have separate tasks; use their current canonical names if those changes have already merged. File…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects",
+        "needs"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T01:12:47Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/mxsm/rocketmq-rust/issues/11424",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/mxsm/rocketmq-rust/issues/11424"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "good first issue",
+        "refactor♻️",
+        "rust",
+        "Difficulty level/Moderate"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "mxsm/rocketmq-rust",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5796864010",
+      "title": "[Refactor♻️] Rename OutboundRequestOutcome to OutboundRequestResult",
+      "summary": "Target Code Cargo package: rocketmq-transport . Current declaration: OutboundRequestOutcome . Canonical name: OutboundRequestResult . Scope: Public API, exported through the curated Transport facade. Tracking issue: 11410. This issue owns one Outcome declaration only . Other Outcome types in the same files have separate tasks; use their current canonical names if those changes have already merged. File checklist…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T01:12:46Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/mxsm/rocketmq-rust/issues/11423",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/mxsm/rocketmq-rust/issues/11423"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "good first issue",
+        "refactor♻️",
+        "rust",
+        "Difficulty level/Moderate"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "mxsm/rocketmq-rust",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5796863904",
+      "title": "[Refactor♻️] Rename ResponseSendOutcome to ResponseSendResult",
+      "summary": "Target Code Cargo package: rocketmq-transport . Current declaration: ResponseSendOutcome . Canonical name: ResponseSendResult . Scope: Private production helper; it is not part of the public Transport facade. Tracking issue: 11410. This issue owns one Outcome declaration only . Other Outcome types in the same files have separate tasks; use their current canonical names if those changes have already merged. File…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects",
+        "needs"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T01:12:45Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/mxsm/rocketmq-rust/issues/11422",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/mxsm/rocketmq-rust/issues/11422"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "good first issue",
+        "refactor♻️",
+        "rust",
+        "Difficulty level/Moderate"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "mxsm/rocketmq-rust",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5796863799",
+      "title": "[Refactor♻️] Rename ResponseCompletionOutcome to ResponseCompletionResult",
+      "summary": "Target Code Cargo package: rocketmq-transport . Current declaration: ResponseCompletionOutcome . Canonical name: ResponseCompletionResult . Scope: Public API, exported through the curated Transport facade. Tracking issue: 11410. This issue owns one Outcome declaration only . Other Outcome types in the same files have separate tasks; use their current canonical names if those changes have already merged. File…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T01:12:44Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/mxsm/rocketmq-rust/issues/11421",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/mxsm/rocketmq-rust/issues/11421"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "good first issue",
+        "refactor♻️",
+        "rust",
+        "Difficulty level/Moderate"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "mxsm/rocketmq-rust",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5796863120",
+      "title": "[Refactor♻️] Remove the single-variant InternalProcessorOutcome wrapper",
+      "summary": "Target Code Cargo package: rocketmq-transport . Current declaration: InternalProcessorOutcome . Replacement: use the existing ResponseAction directly. Scope: Private production helper; it is not part of the public Transport facade. Tracking issue: 11410. This issue owns one Outcome declaration only . Other Outcome types in the same files have separate tasks; use their current canonical names if those changes have…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects",
+        "needs"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T01:12:37Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/mxsm/rocketmq-rust/issues/11420",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/mxsm/rocketmq-rust/issues/11420"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "good first issue",
+        "refactor♻️",
+        "rust",
+        "Difficulty level/Moderate"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "mxsm/rocketmq-rust",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5796863049",
+      "title": "[Refactor♻️] Rename EmbeddedResolvedOutcome to EmbeddedResponseAction",
+      "summary": "Target Code Cargo package: rocketmq-transport . Current declaration: EmbeddedResolvedOutcome . Canonical name: EmbeddedResponseAction . Scope: Private production helper; it is not part of the public Transport facade. Tracking issue: 11410. This issue owns one Outcome declaration only . Other Outcome types in the same files have separate tasks; use their current canonical names if those changes have already merged…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects",
+        "needs"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T01:12:36Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/mxsm/rocketmq-rust/issues/11419",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/mxsm/rocketmq-rust/issues/11419"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "good first issue",
+        "refactor♻️",
+        "rust",
+        "Difficulty level/Moderate"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "mxsm/rocketmq-rust",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5796862956",
+      "title": "[Refactor♻️] Rename EmbeddedDispatchOutcome to EmbeddedDispatchResult",
+      "summary": "Target Code Cargo package: rocketmq-transport . Current declaration: EmbeddedDispatchOutcome . Canonical name: EmbeddedDispatchResult . Scope: Public API, exported through the curated Transport facade. Tracking issue: 11410. This issue owns one Outcome declaration only . Other Outcome types in the same files have separate tasks; use their current canonical names if those changes have already merged. File checklist…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T01:12:35Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/mxsm/rocketmq-rust/issues/11418",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/mxsm/rocketmq-rust/issues/11418"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "good first issue",
+        "refactor♻️",
+        "rust",
+        "Difficulty level/Moderate"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "mxsm/rocketmq-rust",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5796862869",
+      "title": "[Refactor♻️] Rename DeferredSessionCleanupCloseOutcome to DeferredSessionCleanupCloseStatus",
+      "summary": "Target Code Cargo package: rocketmq-transport . Current declaration: DeferredSessionCleanupCloseOutcome . Canonical name: DeferredSessionCleanupCloseStatus . Scope: Private production helper; it is not part of the public Transport facade. Tracking issue: 11410. This issue owns one Outcome declaration only . Other Outcome types in the same files have separate tasks; use their current canonical names if those changes…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects",
+        "needs"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T01:12:34Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/mxsm/rocketmq-rust/issues/11417",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/mxsm/rocketmq-rust/issues/11417"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "good first issue",
+        "refactor♻️",
+        "rust",
+        "Difficulty level/Moderate"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "mxsm/rocketmq-rust",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5796862782",
+      "title": "[Refactor♻️] Rename SessionCleanupInstallOutcome to SessionCleanupInstallResult",
+      "summary": "Target Code Cargo package: rocketmq-transport . Current declaration: SessionCleanupInstallOutcome . Canonical name: SessionCleanupInstallResult . Scope: Test-only declaration; it is not part of the production public API. Tracking issue: 11410. This issue owns one Outcome declaration only . Other Outcome types in the same files have separate tasks; use their current canonical names if those changes have already…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects",
+        "needs"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T01:12:33Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/mxsm/rocketmq-rust/issues/11416",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/mxsm/rocketmq-rust/issues/11416"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "good first issue",
+        "refactor♻️",
+        "rust",
+        "Difficulty level/Easy"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "mxsm/rocketmq-rust",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5796862609",
+      "title": "[Refactor♻️] Rename DeferredResumeEnqueueOutcome to DeferredResumeSubmissionResult",
+      "summary": "Target Code Cargo package: rocketmq-transport . Current declaration: DeferredResumeEnqueueOutcome . Canonical name: DeferredResumeSubmissionResult . Scope: Private production helper; it is not part of the public Transport facade. Tracking issue: 11410. This issue owns one Outcome declaration only . Other Outcome types in the same files have separate tasks; use their current canonical names if those changes have…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects",
+        "needs"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T01:12:32Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/mxsm/rocketmq-rust/issues/11414",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/mxsm/rocketmq-rust/issues/11414"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "good first issue",
+        "refactor♻️",
+        "rust",
+        "Difficulty level/Moderate"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "mxsm/rocketmq-rust",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5796862687",
+      "title": "[Refactor♻️] Rename the local resume HandlerOutcome to ResumeHandlerCompletion",
+      "summary": "Target Code Cargo package: rocketmq-transport . Current declaration: HandlerOutcome . Canonical name: ResumeHandlerCompletion . Scope: Function-local production helper; it is not a public processor contract. Tracking issue: 11410. This issue owns one Outcome declaration only . Other Outcome types in the same files have separate tasks; use their current canonical names if those changes have already merged. File…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects",
+        "needs"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T01:12:32Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/mxsm/rocketmq-rust/issues/11415",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/mxsm/rocketmq-rust/issues/11415"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "good first issue",
+        "refactor♻️",
+        "rust",
+        "Difficulty level/Easy"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "mxsm/rocketmq-rust",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5796862503",
+      "title": "[Refactor♻️] Rename ResponseStateOutcome to ResponseTransitionResult",
+      "summary": "Target Code Cargo package: rocketmq-transport . Current declaration: ResponseStateOutcome . Canonical name: ResponseTransitionResult . Scope: Private production helper; it is not part of the public Transport facade. Tracking issue: 11410. This issue owns one Outcome declaration only . Other Outcome types in the same files have separate tasks; use their current canonical names if those changes have already merged…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T01:12:30Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/mxsm/rocketmq-rust/issues/11413",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/mxsm/rocketmq-rust/issues/11413"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "good first issue",
+        "refactor♻️",
+        "rust",
+        "Difficulty level/Moderate"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "mxsm/rocketmq-rust",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5796862390",
+      "title": "[Refactor♻️] Rename DeferredResponseOutcome to DeferredResponseResult",
+      "summary": "Target Code Cargo package: rocketmq-transport . Current declaration: DeferredResponseOutcome . Canonical name: DeferredResponseResult . Scope: Public API, exported through the curated Transport facade. Tracking issue: 11410. This issue owns one Outcome declaration only . Other Outcome types in the same files have separate tasks; use their current canonical names if those changes have already merged. File checklist…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T01:12:29Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/mxsm/rocketmq-rust/issues/11412",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/mxsm/rocketmq-rust/issues/11412"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "good first issue",
+        "refactor♻️",
+        "rust",
+        "Difficulty level/Moderate"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "mxsm/rocketmq-rust",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5796862301",
+      "title": "[Refactor♻️] Rename DeferredResponderOutcome to DeferredResponderTakeResult",
+      "summary": "Target Code Cargo package: rocketmq-transport . Current declaration: DeferredResponderOutcome . Canonical name: DeferredResponderTakeResult . Scope: Public API, exported through the curated Transport facade. Tracking issue: 11410. This issue owns one Outcome declaration only . Other Outcome types in the same files have separate tasks; use their current canonical names if those changes have already merged. File…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T01:12:28Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/mxsm/rocketmq-rust/issues/11411",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/mxsm/rocketmq-rust/issues/11411"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "good first issue",
+        "refactor♻️",
+        "rust",
+        "Difficulty level/Moderate"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "mxsm/rocketmq-rust",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5796850214",
+      "title": "Field-test the provider adapters (GitHub writes, Jira, Azure DevOps, Bitbucket)",
+      "summary": "v1.1.0 adds GitHub, Jira, Azure DevOps and Bitbucket support. Status: | Provider | Verified | |---|---| | GitLab | operations checked against @ schemas | | GitHub | read operations run live ( issue.get/list , ci. , project.check ), plus a full trace it through the plugin. Write paths (create/edit/comment/close, labels, release-asset attachments) not yet run live | | Jira | documented REST v2 + Atlassian MCP. Not run…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T01:10:20Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/GhassenAZZOUZ/claude-qa-agent/issues/9",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/GhassenAZZOUZ/claude-qa-agent/issues/9"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "GhassenAZZOUZ/claude-qa-agent",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5796849845",
+      "title": "Borrar ramas de codeownes y issues de regla-capas",
+      "summary": "pipipi Hay que borrar estas ramas que ya fueron mergeadas a develop, las ramas estan en casi todos los repositorios y son llamas chore/codeowners y feature/issue-N-regla-capas",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T01:10:18Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/PDF-extract-organization/pdf-extractext/issues/71",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/PDF-extract-organization/pdf-extractext/issues/71"
+        }
+      ],
+      "tags": [
+        "duplicate",
+        "help wanted",
+        "difficulty: 1"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "PDF-extract-organization/pdf-extractext",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5796837186",
+      "title": "ROS2 bridge: expose ROS2 actions and topics as CrossTalk skills",
+      "summary": "Background: how CrossTalk works today New to the project? Read this first. It describes the code as it is now, not as this issue proposes. - Channel: a conversation with an address like xt … . Its members are agents: AI coding agents, people, local models, devices. Members post messages, send DMs, set a status, and take locks . A lock is a short-lived claim on a name, such as a file path: \"I'm editing this, don't…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "applications",
+        "ai",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T01:08:33Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/ajokhai/cross-talk/issues/7",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/ajokhai/cross-talk/issues/7"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "ajokhai/cross-talk",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5796837014",
+      "title": "AI camera modules as channel members (text detections, not images)",
+      "summary": "Background: how CrossTalk works today New to the project? Read this first. It describes the code as it is now, not as this issue proposes. - Channel: a conversation with an address like xt … . Its members are agents: AI coding agents, people, local models, devices. Members post messages, send DMs, set a status, and take locks . A lock is a short-lived claim on a name, such as a file path: \"I'm editing this, don't…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "applications",
+        "ai",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T01:08:31Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/ajokhai/cross-talk/issues/6",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/ajokhai/cross-talk/issues/6"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "ajokhai/cross-talk",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5796836833",
+      "title": "Robot skills: token-light robot control any model can drive",
+      "summary": "Background: how CrossTalk works today New to the project? Read this first. It describes the code as it is now, not as this issue proposes. - Channel: a conversation with an address like xt … . Its members are agents: AI coding agents, people, local models, devices. Members post messages, send DMs, set a status, and take locks . A lock is a short-lived claim on a name, such as a file path: \"I'm editing this, don't…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "applications",
+        "ai",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T01:08:29Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/ajokhai/cross-talk/issues/5",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/ajokhai/cross-talk/issues/5"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "ajokhai/cross-talk",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5796836492",
+      "title": "No mandatory cloud: local discovery and fully offline meshes",
+      "summary": "Background: how CrossTalk works today New to the project? Read this first. It describes the code as it is now, not as this issue proposes. - Channel: a conversation with an address like xt … . Its members are agents: AI coding agents, people, local models, devices. Members post messages, send DMs, set a status, and take locks . A lock is a short-lived claim on a name, such as a file path: \"I'm editing this, don't…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "applications",
+        "ai",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T01:08:27Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/ajokhai/cross-talk/issues/4",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/ajokhai/cross-talk/issues/4"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "ajokhai/cross-talk",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5796836156",
+      "title": "Hub failover: another hub takes over a channel when its hub disappears",
+      "summary": "Background: how CrossTalk works today New to the project? Read this first. It describes the code as it is now, not as this issue proposes. - Channel: a conversation with an address like xt … . Its members are agents: AI coding agents, people, local models, devices. Members post messages, send DMs, set a status, and take locks . A lock is a short-lived claim on a name, such as a file path: \"I'm editing this, don't…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "applications",
+        "ai",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T01:08:23Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/ajokhai/cross-talk/issues/3",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/ajokhai/cross-talk/issues/3"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "ajokhai/cross-talk",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5796835950",
+      "title": "Hub peering: hubs link over any medium and relay multi-hop",
+      "summary": "Background: how CrossTalk works today New to the project? Read this first. It describes the code as it is now, not as this issue proposes. - Channel: a conversation with an address like xt … . Its members are agents: AI coding agents, people, local models, devices. Members post messages, send DMs, set a status, and take locks . A lock is a short-lived claim on a name, such as a file path: \"I'm editing this, don't…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "applications",
+        "ai",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T01:08:21Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/ajokhai/cross-talk/issues/2",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/ajokhai/cross-talk/issues/2"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "ajokhai/cross-talk",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5796815562",
+      "title": "Translations wanted",
+      "summary": "Control Kill is available in English, Portuguese (Brazil) and Spanish. More languages are welcome: German, French, Italian, Chinese (Simplified), Russian, Turkish, Polish, Japanese... There are 32 short strings, most of them in the preferences window. How: see CONTRIBUTING.md → Translating. In short: 1. cp po/control-kill.pot po/ .po and fill in the header and every msgstr . 2. Use the terms GNOME already uses in…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T01:05:08Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/lucaswotta/control-kill/issues/5",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/lucaswotta/control-kill/issues/5"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "lucaswotta/control-kill",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5796790783",
+      "title": "[good first issue, hacktoberfest] 🍜 Add new Japanese Idiom 1078 (good-first-issue)",
+      "summary": "🟢 Good First Issue: Add Japanese Idiom 107 — Beginner-Friendly Open Source Contribution 🟢 No prerequisites needed! You don't need to clone the repo, install anything, or write code. This entire contribution can be done from your browser in under 60 seconds. Labels: good first issue, help wanted, hacktoberfest Language: JSON (no coding required) Time: < 1 minute Skill Level: Absolute beginner --- Add New Japanese…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T01:01:00Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/lingdojo/kana-dojo/issues/32098",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/lingdojo/kana-dojo/issues/32098"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "good first issue",
+        "hacktoberfest",
+        "community",
+        "low hanging fruit",
+        "up-for-grabs",
+        "first-timers-only",
+        "good-first-issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "lingdojo/kana-dojo",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5796771344",
+      "title": "[good first issue, hacktoberfest] 🍛 Add new Video Game Quote 1071 (good-first-issue)",
+      "summary": "🟢 Good First Issue: Add Video Game Quote 107 — Beginner-Friendly Open Source Contribution 🟢 No prerequisites needed! You don't need to clone the repo, install anything, or write code. This entire contribution can be done from your browser in under 60 seconds. Labels: good first issue, help wanted, hacktoberfest Language: JSON (no coding required) Time: < 1 minute Skill Level: Absolute beginner --- Add Famous…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T00:57:33Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/lingdojo/kana-dojo/issues/32097",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/lingdojo/kana-dojo/issues/32097"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "good first issue",
+        "hacktoberfest",
+        "community",
+        "low hanging fruit",
+        "up-for-grabs",
+        "first-timers-only",
+        "good-first-issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "lingdojo/kana-dojo",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5786102329",
+      "title": "Optimize utils for large datasets",
+      "summary": "Problem When working with config, the error messages could be more descriptive. Suggestion Improve error handling and add detailed error messages. Context This would help with debugging and maintenance.",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T00:56:49Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/yrn-dev/Operator/issues/34627",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/yrn-dev/Operator/issues/34627"
+        },
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/yrn-dev/Operator/issues/35230"
+        }
+      ],
+      "tags": [
+        "documentation",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "yrn-dev/Operator",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5796761465",
+      "title": "Add SECURITY.md and CONTRIBUTING.md",
+      "summary": "- SECURITY.md : how to report a vulnerability privately (GitHub private vulnerability reporting). - CONTRIBUTING.md : how to set up the project, run flutter analyze and flutter test , and the preference for small, single-purpose pull requests.",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T00:56:08Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/pablolambo/FlashRead/issues/18",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/pablolambo/FlashRead/issues/18"
+        }
+      ],
+      "tags": [
+        "documentation",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "pablolambo/FlashRead",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5796760824",
+      "title": "Remove the template README in src/flash read",
+      "summary": "src/flash read/README.md is the default \"A new Flutter project\" text. Delete it or replace it with a pointer to the root README.",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T00:56:03Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/pablolambo/FlashRead/issues/15",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/pablolambo/FlashRead/issues/15"
+        }
+      ],
+      "tags": [
+        "documentation",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "pablolambo/FlashRead",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5796745219",
+      "title": "CI: keep the module reference in sync with the code (regenerate on deploy, check examples on PRs)",
+      "summary": "The module reference ( docs/org/reference/ , published under /PINNeAPPle/org/reference/ ) is generated by two scripts: - scripts/reference/build.py reads every package with ast (nothing imported, a few seconds) and writes the API data, the submodule tree and the page. It refuses to build when a curated example changed and was not rerun (hash check against scripts/reference/examples output.json )…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-11T00:53:51Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/PINNeAPPle-Labs/PINNeAPPle/issues/451",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/PINNeAPPle-Labs/PINNeAPPle/issues/451"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "priority: P1",
+        "effort: S",
+        "area: release-quality"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "PINNeAPPle-Labs/PINNeAPPle",
+      "hasDetails": true
+    },
     {
       "id": "github:5796713784",
       "title": "pp.compare: accept already-solved Solution objects in methods (now fails with \"unhashable type: 'Solution'\")",
@@ -685,7 +2620,7 @@
       "trustLevel": "community_project",
       "language": "unknown",
       "project": "open-coder-ai/agentseam",
-      "hasDetails": true
+      "hasDetails": false
     },
     {
       "id": "github:5796598529",
@@ -34867,38 +36802,6 @@
       "language": "unknown",
       "project": "JoanAbad82/github-hidden-gems",
       "hasDetails": true
-    },
-    {
-      "id": "github:5786102329",
-      "title": "Optimize utils for large datasets",
-      "summary": "Problem When working with config, the error messages could be more descriptive. Suggestion Improve error handling and add detailed error messages. Context This would help with debugging and maintenance.",
-      "company": "",
-      "country": "Não informado",
-      "countries": [],
-      "remote": false,
-      "categories": [
-        "projects"
-      ],
-      "type": "open-source contribution",
-      "salary": "",
-      "publishedAt": "2026-10-09T23:46:32Z",
-      "sourceName": "GitHub Issues",
-      "sourceUrl": "https://github.com/yrn-dev/Operator/issues/34627",
-      "sourceLinks": [
-        {
-          "name": "GitHub Issues",
-          "url": "https://github.com/yrn-dev/Operator/issues/34627"
-        }
-      ],
-      "tags": [
-        "documentation",
-        "good first issue"
-      ],
-      "status": "UNKNOWN",
-      "trustLevel": "community_project",
-      "language": "unknown",
-      "project": "yrn-dev/Operator",
-      "hasDetails": false
     },
     {
       "id": "github:5786070558",
@@ -296033,7 +297936,7 @@
       "frequencyMinutes": 60,
       "limit": 100,
       "status": "ok",
-      "lastSyncAt": "2026-10-11T00:52:14Z",
+      "lastSyncAt": "2026-10-11T01:59:37Z",
       "itemsFound": 100,
       "note": "Fonte remota; consultar no máximo uma vez por hora."
     },
@@ -296053,7 +297956,7 @@
       "frequencyMinutes": 60,
       "limit": 250,
       "status": "ok",
-      "lastSyncAt": "2026-10-11T00:52:14Z",
+      "lastSyncAt": "2026-10-11T01:59:37Z",
       "itemsFound": 99,
       "note": "Atribuição e link dofollow para cada anúncio original."
     },
@@ -296072,7 +297975,7 @@
       "frequencyMinutes": 60,
       "limit": 100,
       "status": "ok",
-      "lastSyncAt": "2026-10-11T00:52:14Z",
+      "lastSyncAt": "2026-10-11T01:59:37Z",
       "itemsFound": 89,
       "note": "Preservar a atribuição e o link do feed original."
     },
@@ -296091,7 +297994,7 @@
       "frequencyMinutes": 60,
       "limit": 50,
       "status": "ok",
-      "lastSyncAt": "2026-10-11T00:52:14Z",
+      "lastSyncAt": "2026-10-11T01:59:37Z",
       "itemsFound": 4,
       "note": "Feed RSS oficial do portal de carreiras AGL, filtrada para Angola; manter o link original."
     },
@@ -296111,8 +298014,8 @@
       "frequencyMinutes": 60,
       "limit": 180,
       "status": "ok",
-      "lastSyncAt": "2026-10-11T00:52:14Z",
-      "itemsFound": 271,
+      "lastSyncAt": "2026-10-11T01:59:37Z",
+      "itemsFound": 251,
       "note": "Issues abertas com labels de contribuição; remuneração não presumida."
     },
     {
@@ -296228,7 +298131,7 @@
       "frequencyMinutes": 60,
       "limit": 180,
       "status": "ok",
-      "lastSyncAt": "2026-10-11T00:52:14Z",
+      "lastSyncAt": "2026-10-11T01:59:37Z",
       "itemsFound": 68,
       "note": "Perguntas públicas recentes; responde na fonte original. Não são ofertas pagas."
     }
