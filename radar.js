@@ -269,6 +269,20 @@ function itemRelevance(item, queryTerms, selectedCategory, selectedCountry) {
   return score;
 }
 
+function feedPriority(item) {
+  const source = normalize(item.sourceName || '');
+  const categories = Array.isArray(item.categories) ? item.categories : [];
+  let score = 0;
+  if (categories.includes('needs')) score += 80;
+  if (categories.includes('social')) score += 20;
+  if (source.includes('youtube')) score += 45;
+  else if (source.includes('stack exchange')) score += 40;
+  else if (source.includes('bluesky') || source.includes('reddit') || source.includes('telegram') || source.includes('facebook') || source.includes('instagram')) score += 35;
+  else if (source.includes('github')) score += 5;
+  else if (categories.includes('employment') || categories.includes('freelance')) score += 15;
+  return score + Math.min(20, Number(item.priority || 0) / 5);
+}
+
 function matchesFilters(item) {
   const query = els.search.value.trim();
   const queries = expandedQueries(query);
@@ -310,6 +324,10 @@ function getFilteredItems() {
     if (sort === 'relevance') {
       const scoreDiff = itemRelevance(b, queryTerms, selectedCategory, selectedCountry) - itemRelevance(a, queryTerms, selectedCategory, selectedCountry);
       if (scoreDiff) return scoreDiff;
+    }
+    if (sort === 'newest') {
+      const feedPriorityDiff = feedPriority(b) - feedPriority(a);
+      if (feedPriorityDiff) return feedPriorityDiff;
     }
     const aDate = safeDate(a.publishedAt)?.getTime() ?? 0;
     const bDate = safeDate(b.publishedAt)?.getTime() ?? 0;
