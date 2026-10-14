@@ -1,8 +1,3564 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-13T23:19:52Z",
+  "generatedAt": "2026-10-14T01:59:30Z",
   "refreshIntervalMinutes": 60,
   "items": [
+    {
+      "id": "github:5840608867",
+      "title": "[good first issue, hacktoberfest] 🎴 Hacktoberfest Task - Add new False Friend Pair 870 (good-first-issue)",
+      "summary": "🟢 Good First Issue: Add False Friend Pair 87 — Beginner-Friendly Open Source Contribution 🟢 No prerequisites needed! You don't need to clone the repo, install anything, or write code. This entire contribution can be done from your browser in under 60 seconds. Labels: good first issue, help wanted, hacktoberfest Language: JSON (no coding required) Time: < 1 minute Skill Level: Absolute beginner --- Add Japanese False…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T01:57:29Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/lingdojo/kana-dojo/issues/32373",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/lingdojo/kana-dojo/issues/32373"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "good first issue",
+        "hacktoberfest",
+        "community",
+        "low hanging fruit",
+        "up-for-grabs",
+        "first-timers-only",
+        "good-first-issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "lingdojo/kana-dojo",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5840600296",
+      "title": "More SQL sources: SQL Server and DuckDB",
+      "summary": "PostgreSQL, MySQL/MariaDB and SQLite are supported. SQL Server and DuckDB are the most requested next engines. Each needs: a lexer dialect with the engine's real quoting and comment rules (src/sources/sql/lexer.ts), the parser build if node-sql-parser has one (it does for transactsql), read-only enforcement at the database level, a timeout, a row limit, introspection, privileges() , and the shared SQL integration…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T01:56:31Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/albert-canfield/apitame/issues/27",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/albert-canfield/apitame/issues/27"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "albert-canfield/apitame",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5840600099",
+      "title": "Per-tool rate limits",
+      "summary": "Today limits.maxCallsPerMinute and limits.maxWritesPerMinute apply to the whole server (src/safety/guardrails.ts). Some APIs have stricter limits on specific endpoints (search, exports). Proposal Reuse RateLimiter ; refuse with the same message format; add tests next to tests/unit/guardrails.test.ts.",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T01:56:30Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/albert-canfield/apitame/issues/26",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/albert-canfield/apitame/issues/26"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "albert-canfield/apitame",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5840599679",
+      "title": "Publish a tool-selection eval: curated tools vs one tool per endpoint vs search-only",
+      "summary": "apitame claims that a small set of task-level tools works better than one tool per endpoint, and better than a bare search-and-call surface. That should be measured, not asserted. Proposal - A set of realistic tasks per example API (Petstore, the GitHub subset, the shop database), each with the expected operation sequence. - Run each task against three surfaces generated from the same spec: curated (default), one…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T01:56:27Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/albert-canfield/apitame/issues/24",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/albert-canfield/apitame/issues/24"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "albert-canfield/apitame",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5840542656",
+      "title": "Prototipação de Site",
+      "summary": "Criar um protótipo de site que será refinado para a entrega final do projeto",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T01:50:00Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/giovanesoldera-dev/Certificadora-de-Compet-ncia-UTFPR/issues/1",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/giovanesoldera-dev/Certificadora-de-Compet-ncia-UTFPR/issues/1"
+        }
+      ],
+      "tags": [
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "giovanesoldera-dev/Certificadora-de-Compet-ncia-UTFPR",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5840523494",
+      "title": "Feature Request: Add MQTT Bridging support (Broker-to-Broker routing)",
+      "summary": "Summary Implement an outbound MQTT bridge engine allowing WolfiMQ to connect as a client to upstream remote brokers (e.g., AWS IoT Core, HiveMQ, or central Mosquitto instances). Motivation In edge computing and industrial IoT architectures, local brokers must forward telemetry data to cloud infrastructure and receive command topics from upstream servers while buffering messages during network partitions. Proposed…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T01:47:47Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/taha2samy-3/mqttwolfi/issues/2",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/taha2samy-3/mqttwolfi/issues/2"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "taha2samy-3/mqttwolfi",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5840519430",
+      "title": "Feature Request: Add MQTT over WebSockets support",
+      "summary": "Summary Add support for MQTT over WebSockets (WS/WSS) to allow direct browser-based clients (such as React, Vue, and IoT web dashboards) to connect to the broker. Motivation Currently, WolfiMQ only accepts raw TCP, TLS 1.3, and MQTT-SN UDP connections. Modern web applications cannot establish direct raw TCP sockets and require WebSocket framing to communicate with MQTT brokers. Proposed Solution - Introduce a…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T01:47:20Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/taha2samy-3/mqttwolfi/issues/1",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/taha2samy-3/mqttwolfi/issues/1"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "taha2samy-3/mqttwolfi",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5840474630",
+      "title": "More thorough testing with synthesized examples from causal inference textbooks",
+      "summary": "It would be nice to re-create any existing findings/results/datasets about identifiable effects from causal inference textbooks or papers. Thus far, we have been testing mostly from examples we reason through. It would be interesting to create a benchmark of these examples to assess how well we cover interesting/important cases. Identifiability may not be something that existing benchmarks (e.g., from DoWhy) target…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T01:42:15Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/ucla-cdl/planet-lang/issues/32",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/ucla-cdl/planet-lang/issues/32"
+        }
+      ],
+      "tags": [
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "ucla-cdl/planet-lang",
+      "hasDetails": false
+    },
+    {
+      "id": "stackexchange:stackoverflow-80009744",
+      "title": "How do I force multiple pygame windows to be unable to minimize?",
+      "summary": "How do I force multiple pygame windows to be unable to minimize?",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "needs"
+      ],
+      "type": "community post · unverified",
+      "salary": "",
+      "publishedAt": "2026-10-14T01:39:20Z",
+      "sourceName": "Stack Exchange · pedidos de ajuda",
+      "sourceUrl": "https://stackoverflow.com/questions/80009744/how-do-i-force-multiple-pygame-windows-to-be-unable-to-minimize",
+      "sourceLinks": [
+        {
+          "name": "Stack Exchange · pedidos de ajuda",
+          "url": "https://stackoverflow.com/questions/80009744/how-do-i-force-multiple-pygame-windows-to-be-unable-to-minimize"
+        }
+      ],
+      "tags": [
+        "stackoverflow",
+        "python",
+        "pygame"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "social_unverified",
+      "language": "unknown",
+      "project": "stackoverflow",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5751761253",
+      "title": "Consider deprecating old config API",
+      "summary": "Feature request It would be great to have pagination for validation. Use case Many users need this functionality for production deployments. Implementation idea Add a new config option enable pagination with default false .",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T01:36:50Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/yrn-dev/Operator/issues/33416",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/yrn-dev/Operator/issues/33416"
+        },
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/yrn-dev/Operator/issues/35669"
+        },
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/yrn-dev/Operator/issues/36928"
+        }
+      ],
+      "tags": [
+        "documentation",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "yrn-dev/Operator",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5840425137",
+      "title": "[P1] Install corepack through npm so install-toolchain activates pnpm on Node 26",
+      "summary": "Problem The native toolchain installer fails at its pnpm step. scripts/install-toolchain line 171 runs corepack enable pnpm . Node 26 does not contain Corepack. Node stopped distributing Corepack in Node 25, and it remains available only as a separate installation. On Node 26 the command fails with corepack: command not found . The script runs under set -euo pipefail , so the run stops there. By that point the…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects",
+        "needs"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T01:36:30Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/peasant-labs/polyrepo/issues/31",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/peasant-labs/polyrepo/issues/31"
+        }
+      ],
+      "tags": [
+        "bug",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "peasant-labs/polyrepo",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5840416249",
+      "title": "Standardize + provide more information in the warnings",
+      "summary": "Inspired by this PR: It would be nice if there were some way to suggest which plans are problematic, maybe alongside a visualization or something?",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects",
+        "needs"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T01:35:27Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/ucla-cdl/planet-lang/issues/31",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/ucla-cdl/planet-lang/issues/31"
+        }
+      ],
+      "tags": [
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "ucla-cdl/planet-lang",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5840390989",
+      "title": "Reader: expose merged cells and hyperlinks",
+      "summary": "ExcelReader returns values only. Imports sometimes need to know merged ranges (to read a value once) or the URL behind a link. Idea: reader.ReadMergedRanges(sheet) and reader.ReadHyperlinks(sheet) that scan the elements after sheetData (and the sheet's relationships for external URLs). Done when: both round-trip a workbook written by SheetStream, with tests.",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T01:32:35Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/P4Software/SheetStream/issues/6",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/P4Software/SheetStream/issues/6"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "P4Software/SheetStream",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5840390651",
+      "title": "Templates: add new sheets to a filled template",
+      "summary": "ExcelPackage.OpenTemplate fills existing sheets only ( Worksheets.Add throws). Supporting new sheets means appending entries to the copied workbook.xml , new relationships in workbook.xml.rels and overrides in [Content Types].xml (see ExcelPackage.Template.cs ). Done when: a template filled with an extra sheet opens in Excel without repair, with tests in TemplateTests.cs .",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T01:32:34Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/P4Software/SheetStream/issues/5",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/P4Software/SheetStream/issues/5"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "P4Software/SheetStream",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5840390469",
+      "title": "Sparklines",
+      "summary": "Sparklines are written in the worksheet extLst (x14 namespace). Add sheet.AddSparklines(SparklineType.Line, dataRange, locationRange) writing the x14:sparklineGroups extension after tableParts . Done when: line, column and win/loss sparklines open in Excel without repair, with a validator test (Office2010+ file format version).",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T01:32:32Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/P4Software/SheetStream/issues/4",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/P4Software/SheetStream/issues/4"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "P4Software/SheetStream",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5840390259",
+      "title": "Combo charts: column + line on a secondary axis",
+      "summary": "Charts live in src/SheetStream/Features/Drawings.cs . A common business chart is revenue as columns with margin % as a line on a secondary axis. Sketch: allow a series to choose ChartType.Line and SecondaryAxis = true on a column chart, writing a second plot ( lineChart ) with its own value axis that crosses at max. Done when: the chart validates with the Open XML SDK validator and opens in Excel without repair (see…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T01:32:31Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/P4Software/SheetStream/issues/3",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/P4Software/SheetStream/issues/3"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "P4Software/SheetStream",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5840390047",
+      "title": "Number format helpers for currencies and cultures",
+      "summary": "Add helpers to NumberFormats ( src/SheetStream/Styles/StyleOptions.cs ) such as NumberFormats.Currency(\"EUR\") or NumberFormats.Currency(CultureInfo) that return a correct Excel format code (symbol, position, decimals, negative style). Done when: codes for USD, EUR, GBP and PAB render as expected in Excel and are covered by tests.",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects",
+        "employment"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T01:32:29Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/P4Software/SheetStream/issues/2",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/P4Software/SheetStream/issues/2"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "P4Software/SheetStream",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5840389825",
+      "title": "AutoFit: weight narrow and wide characters",
+      "summary": "AutoFit estimates widths from character counts ( Worksheet.Features.cs , Observe and ApplyAutoFitWidths ). Narrow glyphs (i, l, 1, .) and wide ones (W, M, @) are counted the same, so columns of digits or capitals are slightly off. Idea: a small per-character width table for Calibri (relative units), used in LongestLine . No font files or System.Drawing. Done when: a test shows a column of WWWW is wider than a column…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T01:32:28Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/P4Software/SheetStream/issues/1",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/P4Software/SheetStream/issues/1"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "P4Software/SheetStream",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5840387587",
+      "title": "index",
+      "summary": "",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T01:32:15Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/majidzarkar-code/sarbari/issues/1",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/majidzarkar-code/sarbari/issues/1"
+        }
+      ],
+      "tags": [
+        "bug",
+        "accessibility",
+        "duplicate",
+        "good first issue",
+        "invalid",
+        "wontfix"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "majidzarkar-code/sarbari",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5840351743",
+      "title": "[shared-ci] docker (hive) failing across hivecommons/hive",
+      "summary": "CI Issue v2 CI jobs docker (hive) and overlayfs-exec-guard fail intermittently with an anonymous-pull quota error from ECR Public while resolving the pinned base images in src/Dockerfile ( public.ecr.aws/docker/library/golang:1.27-alpine@sha256:8a5910f3… , …/node:26-slim@sha256:ec7758ee… ): ECR Public meters unauthenticated pulls per source IP; GitHub-hosted runners share egress IPs, so hive's PRs get throttled by…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects",
+        "employment"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T01:28:07Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/hivecommons/hive/issues/11757",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/hivecommons/hive/issues/11757"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "agent/ci-maintainer",
+        "hive/hosted-available-oke-11-placeholder-r05x",
+        "ci",
+        "needs-decision"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "hivecommons/hive",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5840345905",
+      "title": "Object GC: reclaim changesets and objects nothing points at",
+      "summary": "Some operations leave unreferenced data on the server: - a land that loses its compare-and-swap race and retries, - a rebase that hits a conflict, - a commit that is never landed. Each leaves behind changesets, trees, unodes and blobs that no ref reaches. Content addressing makes this harmless, but storage only grows. Idea - kudzu gc --store DIR --keep 30d marks everything reachable from refs, plus anything created…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects",
+        "employment"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T01:27:26Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/garyships/kudzu/issues/6",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/garyships/kudzu/issues/6"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "garyships/kudzu",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5840345254",
+      "title": "Revision syntax: support rev^2 and chained N",
+      "summary": "Repo.Resolve understands a ref or changeset ID prefix plus a single N (for example main 3 ). Two common git forms don't work yet: - rev^2 : the second parent of a merge ( ^ alone is the first parent). - Chained suffixes such as main 2^2 1 . Where : Resolve in internal/repo/ancestry.go . Parse the suffixes left to right. N already uses the skip list ( NthAncestor ); ^N just picks Parents[N-1] of the changeset. Tests…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T01:27:21Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/garyships/kudzu/issues/5",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/garyships/kudzu/issues/5"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "garyships/kudzu",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5840344603",
+      "title": "Export to git: keep a git mirror in sync with main",
+      "summary": "Kudzu imports from git incrementally ( kudzu import , kudzu up ), but there is no way back. A one-way export would let teams keep existing git tooling (GitHub UI, CI that clones, code search) running while agents work in Kudzu. Idea - kudzu export --git /path/to/bare.git --ref main writes git commits for changesets that are not yet mapped. Reuse the mapping table in reverse ( changeset → git sha ). - Imported…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T01:27:17Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/garyships/kudzu/issues/4",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/garyships/kudzu/issues/4"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "garyships/kudzu",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5840343853",
+      "title": "Postgres backend for store.Meta and S3/GCS for store.Objects",
+      "summary": "Kudzu uses SQLite for metadata (the changeset log, refs, derived data) and a local directory for objects. That means one authoritative server process. To run several stateless servers behind a load balancer, as the post's design intends, both stores need shared backends. Tasks - store.Meta on Postgres. Append is INSERT ... ON CONFLICT DO NOTHING ; CASRef is a conditional UPDATE ... WHERE target = $old that checks…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T01:27:12Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/garyships/kudzu/issues/3",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/garyships/kudzu/issues/3"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "garyships/kudzu",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5840343194",
+      "title": "Auth and per-directory access control",
+      "summary": "Today anyone who can reach a Kudzu server can read and write everything. Anthropic's post describes rich access control on repositories, including permissions on individual directories, so sensitive code can live in the monorepo. Proposal - Bearer-token auth on the server. Tokens map to principals, and principals to path-prefix rules ( read / write / land per directory prefix). - Enforce the rules in internal/server…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T01:27:07Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/garyships/kudzu/issues/2",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/garyships/kudzu/issues/2"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "garyships/kudzu",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5840342415",
+      "title": "Virtualized checkout: materialize files on first read (FUSE)",
+      "summary": "Anthropic's post describes virtualized checkouts that materialize files on demand, so a job pays only for what it actually reads. Kudzu's protocol already supports this: objects are immutable and fetched by ID. What's missing is the client side. Idea - kudzu mount --sparse dir REMOTE MOUNTPOINT presents the tree of a revision as a read-only FUSE filesystem. Directory listings come from tree objects, file contents…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects",
+        "employment"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T01:27:02Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/garyships/kudzu/issues/1",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/garyships/kudzu/issues/1"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "garyships/kudzu",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5840336010",
+      "title": "Update Their Respective Folders",
+      "summary": "Continuining the setup process of the Issue 4 . Update their respective folders with content",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T01:26:18Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/The-Bachelors/Community/issues/5",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/The-Bachelors/Community/issues/5"
+        }
+      ],
+      "tags": [
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "The-Bachelors/Community",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5840329876",
+      "title": "Use XDG STATE HOME for application logs",
+      "summary": "",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T01:25:36Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/akyriako/o7k/issues/137",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/akyriako/o7k/issues/137"
+        }
+      ],
+      "tags": [
+        "bug",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "akyriako/o7k",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5840298570",
+      "title": "Add configuration options for backup",
+      "summary": "Description Currently api lacks proper filtering support. Proposed solution Add configurable filtering with sensible defaults. Priority : Low/Medium",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T01:21:59Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/yrn-dev/Operator/issues/36924",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/yrn-dev/Operator/issues/36924"
+        },
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/yrn-dev/Operator/issues/36893"
+        }
+      ],
+      "tags": [
+        "documentation",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "yrn-dev/Operator",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5840295635",
+      "title": "Building Selection UI",
+      "summary": "Now the mcs-ball-api carries data about the middle school and high school: We need a SUPER-OBVIOUS User Interface element to let users choose their building. Ideally, use the list of buildings to populate some kind of dropdown selector. A quick-change is ideal, as there are several staff that go between buildings.",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T01:21:38Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/RiceC-at-MasonHS/bell-tracker-extension/issues/11",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/RiceC-at-MasonHS/bell-tracker-extension/issues/11"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "RiceC-at-MasonHS/bell-tracker-extension",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5840282810",
+      "title": "Scanln only accepts a bare y + clear the stream",
+      "summary": "What Want to increase the accept/reject options and clear the stream. Where files.go and command.go Fixes Want to accept 'yes' and 1, reject 'no', 0. Also if someone writes 'y please' it sees the y accepts but the please stays in the stream. Makes sure that it is cleared from the stream",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T01:20:09Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Edwin-metcalf/MetCode/issues/16",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Edwin-metcalf/MetCode/issues/16"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Edwin-metcalf/MetCode",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5840256946",
+      "title": "[Refactor♻️] Rename SqlPersistence to SqlDashboardStore in Web Dashboard",
+      "summary": "Target Code SqlPersistence in rocketmq-dashboard/rocketmq-dashboard-web/backend/src/persistence/sql store.rs and its consumers in the standalone rocketmq-dashboard-web-backend package. Affected files (12): - [ ] rocketmq-dashboard/rocketmq-dashboard-web/backend/src/persistence.rs - [ ] rocketmq-dashboard/rocketmq-dashboard-web/backend/src/persistence/audit sql store.rs - [ ]…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects",
+        "needs"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T01:17:08Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/mxsm/rocketmq-rust/issues/11507",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/mxsm/rocketmq-rust/issues/11507"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "good first issue",
+        "refactor♻️",
+        "rust",
+        "Difficulty level/Easy"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "mxsm/rocketmq-rust",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5840256738",
+      "title": "[Refactor♻️] Rename FilePersistence to FileDashboardStore in Web Dashboard",
+      "summary": "Target Code FilePersistence in rocketmq-dashboard/rocketmq-dashboard-web/backend/src/persistence/file store.rs and its consumers in the standalone rocketmq-dashboard-web-backend package. Affected files (10): - [ ] rocketmq-dashboard/rocketmq-dashboard-web/backend/src/persistence.rs - [ ] rocketmq-dashboard/rocketmq-dashboard-web/backend/src/persistence/audit file store.rs - [ ]…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects",
+        "needs"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T01:17:07Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/mxsm/rocketmq-rust/issues/11506",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/mxsm/rocketmq-rust/issues/11506"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "good first issue",
+        "refactor♻️",
+        "rust",
+        "Difficulty level/Easy"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "mxsm/rocketmq-rust",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5840240828",
+      "title": "Try the LingTube Chrome plugin. It does voice translation (AI dubbing) for videos on YouTube, Coursera, Udemy, Bilibili, and TikTok so you can watch them in your language. :)",
+      "summary": "Is your feature request related to a problem? Please describe. Try the LingTube Chrome plugin. It does voice translation (AI dubbing) for videos on YouTube, Coursera, Udemy, Bilibili, and TikTok so you can watch them in your language. :) Describe the solution you'd like Try the LingTube Chrome plugin. It does voice translation (AI dubbing) for videos on YouTube, Coursera, Udemy, Bilibili, and TikTok so you can watch…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects",
+        "needs"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T01:15:19Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/SakiRinn/LiveCaptions-Translator/issues/293",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/SakiRinn/LiveCaptions-Translator/issues/293"
+        }
+      ],
+      "tags": [
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "SakiRinn/LiveCaptions-Translator",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5840240289",
+      "title": "Load-test the ledger's concurrent-writer safety",
+      "summary": "Threat: concurrent-writer safety is currently asserted by the exclusive fcntl.flock and exercised by unit tests — but never load-tested under real multi-process contention. Task: spawn N writer processes appending disjoint record sets to one ledger; assert final line count, idempotency on (source, id), and zero torn lines. Report the breaking point if one exists. Done = a hermetic stress test in tests/ plus a…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T01:15:16Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/marsojuji-cmyk/porcupine/issues/4",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/marsojuji-cmyk/porcupine/issues/4"
+        }
+      ],
+      "tags": [
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "marsojuji-cmyk/porcupine",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5840240087",
+      "title": "Label the evaluation set (120 sampled rows) so precision@10 becomes measurable",
+      "summary": "Threat: precision claims without labeled ground truth. Right now classifier precision is unmeasured — the eval harness exists but has no human labels. Task: 1. Generate the sheet: python3 eval/sample.py --csv source-evidence/canadabuys-reference.csv --n 120 --seed 7 --out eval/to label.csv 2. Label each opportunity × component pair per eval/RUBRIC.md — every label needs an exact evidence quote; disagreements resolve…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T01:15:14Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/marsojuji-cmyk/porcupine/issues/3",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/marsojuji-cmyk/porcupine/issues/3"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "marsojuji-cmyk/porcupine",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5840239899",
+      "title": "Repair IDEaS HTML source captures (federal CSV is primary; HTML is partial)",
+      "summary": "Threat: phantom coverage in reverse — a source we know is partial must stay visibly partial, and repairing it removes a known blind spot. Current state: direct fetches of the IDEaS competitive-projects index and challenge pages timed out at 25s ( ). Coverage today is the federal CanadaBuys open-tender CSV plus configured public sources; IDEaS HTML remains partial/failed in feed health — never displayed as healthy…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T01:15:13Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/marsojuji-cmyk/porcupine/issues/2",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/marsojuji-cmyk/porcupine/issues/2"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "marsojuji-cmyk/porcupine",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5840239714",
+      "title": "Transport hardening: extend netguard coverage to fetch redirects",
+      "summary": "Threat: allowed url validates card links only — fetch redirects are not guarded on the live path, so a redirect chain can still steer a fetch somewhere the initial URL check never approved. Current state: transport hardening: unresolved (stated in the Honesty Ledger since ). porcupine/netguard.py validates the initial URL and every redirect hop for the guarded opener; the remaining gap is wiring/coverage on all…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T01:15:12Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/marsojuji-cmyk/porcupine/issues/1",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/marsojuji-cmyk/porcupine/issues/1"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "marsojuji-cmyk/porcupine",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5840230413",
+      "title": "The Console UI reads wallet, usage, fee records and announcements from the retained Control Plane, which rejects every CloudIdentity session with 401, so the first-launch customer journey cannot run",
+      "summary": "Context The Console UI calls six groups of product reads that the current BFF does not serve, so every one of them resolves against the retained legacy Control Plane on the same origin instead of the CloudIdentity-authenticated BFF. A session minted by /api/v2/auth/login is not a session the Control Plane recognises, and those reads return 401 {\"error\":\"not authenticated\"} for the whole life of an authenticated…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T01:14:08Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/gaofeng21cn/one-person-lab-cloud/issues/840",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/gaofeng21cn/one-person-lab-cloud/issues/840"
+        }
+      ],
+      "tags": [
+        "bug",
+        "help wanted",
+        "codex-automation"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "gaofeng21cn/one-person-lab-cloud",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5840212636",
+      "title": "vite-consumer-check: informational unconfigured run can fail CI",
+      "summary": "From the GPT review of 29: in scripts/vite-consumer-check.mjs ( line 143) the 'no optimizeDeps config' dev run is informational, but module-load timeouts or rejected fetches throw out of runDev and exit non-zero even when both required checks pass. Catch around that repro and emit a warning; keep failures from the required dev and production checks. --- Opened by the Hyperdrive coordinator agent.",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T01:12:06Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/hyperdrive-technology/holodeck/issues/48",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/hyperdrive-technology/holodeck/issues/48"
+        }
+      ],
+      "tags": [
+        "good first issue",
+        "area:holodeck",
+        "area:ci",
+        "priority:p2",
+        "review-finding"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "hyperdrive-technology/holodeck",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5840211092",
+      "title": "[Refactor♻️] Rename PersistenceBackend to DashboardDataStore in Web Dashboard",
+      "summary": "Target Code The enum in rocketmq-dashboard/rocketmq-dashboard-web/backend/src/persistence/backend.rs and its consumers in the standalone rocketmq-dashboard-web-backend package. Affected files (10): - [ ] rocketmq-dashboard/rocketmq-dashboard-web/backend/src/persistence.rs - [ ] rocketmq-dashboard/rocketmq-dashboard-web/backend/src/persistence/audit repository.rs - [ ]…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects",
+        "needs"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T01:11:54Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/mxsm/rocketmq-rust/issues/11505",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/mxsm/rocketmq-rust/issues/11505"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "good first issue",
+        "refactor♻️",
+        "rust",
+        "Difficulty level/Easy"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "mxsm/rocketmq-rust",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5840179315",
+      "title": "[Refactor♻️] Rename StorageBackend to StorageEngine in Web Dashboard",
+      "summary": "Target Code The persistence-engine selector enum in rocketmq-dashboard/rocketmq-dashboard-web/backend/src/model/config model.rs and its corresponding TypeScript union in rocketmq-dashboard/rocketmq-dashboard-web/frontend/src/types/config.ts . Affected files (34): - [ ] rocketmq-dashboard/rocketmq-dashboard-web/backend/src/api/health api.rs - [ ] rocketmq-dashboard/rocketmq-dashboard-web/backend/src/api/router.rs - […",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T01:08:15Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/mxsm/rocketmq-rust/issues/11504",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/mxsm/rocketmq-rust/issues/11504"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "good first issue",
+        "refactor♻️",
+        "rust",
+        "Difficulty level/Easy"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "mxsm/rocketmq-rust",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5840178399",
+      "title": "[Refactor♻️] Rename StorageBackend to KeyValueStore in rocketmq-controller",
+      "summary": "Target Code The public storage trait in rocketmq-controller/src/storage/mod.rs , its public re-export, concrete implementations, and OpenRaft consumers. Affected files (10): - [ ] rocketmq-controller/src/lib.rs - [ ] rocketmq-controller/src/openraft/log store.rs - [ ] rocketmq-controller/src/openraft/persistence/log repository.rs - [ ] rocketmq-controller/src/openraft/persistence/state repository.rs - [ ]…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects",
+        "employment",
+        "needs"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T01:08:09Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/mxsm/rocketmq-rust/issues/11503",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/mxsm/rocketmq-rust/issues/11503"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "good first issue",
+        "refactor♻️",
+        "rust",
+        "Difficulty level/Easy"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "mxsm/rocketmq-rust",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5840172568",
+      "title": "Snake game is bugged (you can't move the snake)",
+      "summary": "Caused by commit 1f2e3e25b26e50279d97a707d042a864bf122506 . Reminder to self.",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T01:07:30Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/GLideKS/SRB2-Banpyura/issues/57",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/GLideKS/SRB2-Banpyura/issues/57"
+        }
+      ],
+      "tags": [
+        "bug",
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "GLideKS/SRB2-Banpyura",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5840153527",
+      "title": "Type-check docs code samples in CI",
+      "summary": "Planned work for a pre-alpha project. See ROADMAP.md. Context Keep docs and API consistent. Acceptance criteria - [ ] Code blocks in docs/ .md extracted and type-checked against the packages - [ ] CI fails on drift",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T01:05:18Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/MrLouisWright/next-tongue/issues/16",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/MrLouisWright/next-tongue/issues/16"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "type: docs",
+        "area: infra",
+        "priority: normal"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "MrLouisWright/next-tongue",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5840149978",
+      "title": "Repo scaffolding: pnpm workspace, TS, Vitest, lint, CI, changesets",
+      "summary": "Planned work for a pre-alpha project. See ROADMAP.md. Context Set up packages/next-tongue , packages/compiler , packages/cli , examples/ per CONTRIBUTING.md. Acceptance criteria - [ ] pnpm install && pnpm test && pnpm typecheck && pnpm lint pass on a clean clone - [ ] GitHub Actions CI on Node 20 and 22 - [ ] Changesets configured; no publish step enabled (pre-alpha)",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T01:04:54Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/MrLouisWright/next-tongue/issues/1",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/MrLouisWright/next-tongue/issues/1"
+        }
+      ],
+      "tags": [
+        "good first issue",
+        "type: chore",
+        "area: infra",
+        "priority: high"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "MrLouisWright/next-tongue",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5840116467",
+      "title": "[good first issue, hacktoberfest] 🥟 Hacktoberfest Task - Add new Dialect Entry 577 (good-first-issue)",
+      "summary": "🟢 Good First Issue: Add Dialect Entry 57 — Beginner-Friendly Open Source Contribution 🟢 No prerequisites needed! You don't need to clone the repo, install anything, or write code. This entire contribution can be done from your browser in under 60 seconds. Labels: good first issue, help wanted, hacktoberfest Language: JSON (no coding required) Time: < 1 minute Skill Level: Absolute beginner --- Add New Regional…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T01:00:56Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/lingdojo/kana-dojo/issues/32372",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/lingdojo/kana-dojo/issues/32372"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "good first issue",
+        "hacktoberfest",
+        "community",
+        "low hanging fruit",
+        "up-for-grabs",
+        "first-timers-only",
+        "good-first-issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "lingdojo/kana-dojo",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5840115308",
+      "title": "Clean out Smartpass entirely",
+      "summary": "The Smartpass dependency was complex. it needs fully weeded out of this extension.",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T01:00:48Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/RiceC-at-MasonHS/bell-tracker-extension/issues/9",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/RiceC-at-MasonHS/bell-tracker-extension/issues/9"
+        }
+      ],
+      "tags": [
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "RiceC-at-MasonHS/bell-tracker-extension",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5840107270",
+      "title": "Migrate from Smartpass to the public MCS Bell Schedule API",
+      "summary": "Mason City School District, just created a public API for us to pull today's bell schedule. [!TIP] It is now a high priority to migrate this extension to use the public API as the single source of truth for the bell schedule on a given day. This should simplify things substantially, and tighten the feedback between the school district and this extension. It also removes a third-party site from the dependencies…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T00:59:54Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/RiceC-at-MasonHS/bell-tracker-extension/issues/8",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/RiceC-at-MasonHS/bell-tracker-extension/issues/8"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "RiceC-at-MasonHS/bell-tracker-extension",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5840087294",
+      "title": "Dev server reloads when agent worktrees change",
+      "summary": "What happens Agent git worktrees live under .claude/worktrees/ , inside the repo and so inside Vite's watch root. Any edit an agent makes in a worktree triggers a full page reload in every dev server running from the main checkout, which throws away the game state and the camera in the browser. Repro 1. Run npm run dev in the main checkout and open the game. 2. Create a worktree under .claude/worktrees/ and edit any…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T00:57:32Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/allurco/caribbean-adventure/issues/153",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/allurco/caribbean-adventure/issues/153"
+        }
+      ],
+      "tags": [
+        "bug",
+        "good first issue",
+        "ready-for-agent"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "allurco/caribbean-adventure",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5840086729",
+      "title": "[good first issue, hacktoberfest] 🍘 Hacktoberfest Task - Add new Japanese Idiom 944 (good-first-issue)",
+      "summary": "🟢 Good First Issue: Add Japanese Idiom 94 — Beginner-Friendly Open Source Contribution 🟢 No prerequisites needed! You don't need to clone the repo, install anything, or write code. This entire contribution can be done from your browser in under 60 seconds. Labels: good first issue, help wanted, hacktoberfest Language: JSON (no coding required) Time: < 1 minute Skill Level: Absolute beginner --- Add New Japanese…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T00:57:28Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/lingdojo/kana-dojo/issues/32371",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/lingdojo/kana-dojo/issues/32371"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "good first issue",
+        "hacktoberfest",
+        "community",
+        "low hanging fruit",
+        "up-for-grabs",
+        "first-timers-only",
+        "good-first-issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "lingdojo/kana-dojo",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5840073417",
+      "title": "Fix the docs/cockpit.md path in the cockpit release workflow",
+      "summary": "Why this matters .github/workflows/cockpit-release.yml points readers to docs/cockpit.md twice: in its header comment, and in the release notes it publishes. That file no longer exists; the Fleet Cockpit docs are now a section under docs/cockpit/ . Anyone who downloads a signed build follows a dead link. Scope Two lines in one file: - Line 10, the header comment: point to docs/cockpit/development.md . - Line 117…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T00:55:55Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/addisdev/actions-runners/issues/84",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/addisdev/actions-runners/issues/84"
+        }
+      ],
+      "tags": [
+        "documentation",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "addisdev/actions-runners",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5840072967",
+      "title": "Add unit tests for the capacity headroom gate",
+      "summary": "Why this matters headroom() in dashboard/lib/capacity.js decides whether the fleet may add a runner, and every reason it returns is shown in the UI word for word. The gate is expected to refuse often, so a reason that is wrong or missing reads as a bug. It is only exercised once, indirectly, in placement.test.js . Scope Add dashboard/test/capacity.test.js using the existing node:test and node:assert/strict style. No…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T00:55:52Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/addisdev/actions-runners/issues/83",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/addisdev/actions-runners/issues/83"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "addisdev/actions-runners",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5840072570",
+      "title": "Add unit tests for the workflow YAML parser",
+      "summary": "Why this matters dashboard/lib/yaml.js is a small YAML subset parser that the Lint tab and the concurrency advisor read every workflow file with. Its header explains the one construct it must get right: a block scalar ( run: | ) whose contents look like YAML. A parser that reads runs-on: out of a shell heredoc reports a job that doesn't exist, and one false finding like that is enough for people to stop trusting the…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects",
+        "employment"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T00:55:49Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/addisdev/actions-runners/issues/82",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/addisdev/actions-runners/issues/82"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "addisdev/actions-runners",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5840069177",
+      "title": "[PERFORMANCE] Establish Backend Performance Baselines",
+      "summary": "Measure endpoint latency and throughput. Identify slow database queries. Test concurrent equests and resource consumption. Document baseline metrics and performance targets.",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T00:55:26Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/ApoiaMaisTech/ApoiaMaisBackEnd/issues/31",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/ApoiaMaisTech/ApoiaMaisBackEnd/issues/31"
+        }
+      ],
+      "tags": [
+        "documentation",
+        "help wanted",
+        "performace"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "ApoiaMaisTech/ApoiaMaisBackEnd",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5840062525",
+      "title": "The autogen example cannot run because ag2 1.0.0 removed the autogen module",
+      "summary": "Summary The autogen example cannot run. examples/python/autogen-tool-agent/requirements.txt pins ag2[Gemini] =0.11.5 with no upper bound, and ag2 deleted the autogen module at 1.0.0. A fresh install resolves to 1.1.2, so main.py fails on its first import. docs/integrations/autogen.mdx is broken the same way — every snippet on the page imports autogen . Nothing in CI could have caught this: no job installs or imports…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects",
+        "employment"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T00:54:50Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/traceroot-ai/traceroot/issues/2564",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/traceroot-ai/traceroot/issues/2564"
+        }
+      ],
+      "tags": [
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "traceroot-ai/traceroot",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5840035988",
+      "title": "Add .gitattributes for consistent line endings",
+      "summary": "Context The repository has no .gitattributes , so line-ending handling depends on each contributor's Git settings. On Windows with core.autocrlf=true , every commit prints \"LF will be replaced by CRLF\" warnings, and editors on different platforms can introduce mixed line endings. Proposed approach Add a .gitattributes , for example: Then run git add --renormalize . and confirm the diff is empty, or only fixes line…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T00:52:12Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/sgerace/lemma/issues/3",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/sgerace/lemma/issues/3"
+        }
+      ],
+      "tags": [
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "sgerace/lemma",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5840035813",
+      "title": "Display definitions with spacing around :=",
+      "summary": "Context Typing : in a math region inserts := (Mathcad's shortcut), right where the caret is. So typing w: 2 kN/m produces and displays w:= 2 kN/m , while hand-typed definitions usually look like w := 2 kN/m . Mathcad lays this out automatically. Proposed approach Normalize spacing around := in the non-editing display, e.g. in prettify() in src/app/WorksheetCanvas.cpp , so the source text is left exactly as typed…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects",
+        "employment"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T00:52:11Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/sgerace/lemma/issues/2",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/sgerace/lemma/issues/2"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "sgerace/lemma",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5840035597",
+      "title": "Show unit-mismatch errors in named units",
+      "summary": "Context Unit-mismatch errors describe dimensions in SI base units, which is hard to read for common quantities. For example, 1 N + 1 kg = currently reports: Units don't match: kg·m/s² and kg The dimension-to-text conversion happens in describe() in src/core/src/evaluator.cpp and in a similar lambda in src/core/src/worksheet.cpp . Both call Dimension::toString() directly. Proposed approach Add a helper in src/core…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T00:52:10Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/sgerace/lemma/issues/1",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/sgerace/lemma/issues/1"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "sgerace/lemma",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5840028608",
+      "title": "[DATABASE] Validate MySQL Migrations and Schema Integrity",
+      "summary": "Review Alembic migrations and database constraints. Validate foreign keys, indexes, nullability, and relationships. Test fresh database installations and upgrades from existing schemas. Ensure migrations work consistently in Docker environments.",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T00:51:20Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/ApoiaMaisTech/ApoiaMaisBackEnd/issues/28",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/ApoiaMaisTech/ApoiaMaisBackEnd/issues/28"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "database"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "ApoiaMaisTech/ApoiaMaisBackEnd",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5840016008",
+      "title": "1D intercept of length 1 is accepted as fix params in population GLM with more than 1 unit",
+      "summary": "Describe the bug A single entry intercept doesn't raise in a population GLM fitting more than one neuron. To Reproduce Expected behavior Fit should raise a shape mismatch error, n neurons=3, but a single intercept is provided.",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T00:49:52Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/flatironinstitute/nemos/issues/642",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/flatironinstitute/nemos/issues/642"
+        }
+      ],
+      "tags": [
+        "bug",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "flatironinstitute/nemos",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5840011073",
+      "title": "[SECURITY] Implement Comprehensive Authorization Tests",
+      "summary": "Validate permissions for student, teacher, admin, and doctor roles. Test unauthorized access to other users' resources. Prevent privilege escalation and horizontal access violations. Cover all protected endpoints",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "teaching",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T00:49:18Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/ApoiaMaisTech/ApoiaMaisBackEnd/issues/27",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/ApoiaMaisTech/ApoiaMaisBackEnd/issues/27"
+        }
+      ],
+      "tags": [
+        "good first issue",
+        "SECURITY"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "ApoiaMaisTech/ApoiaMaisBackEnd",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5839973860",
+      "title": "Docs: review index says 37 decision records, but docs/decisions/INDEX.md lists 73",
+      "summary": "docs/review/INDEX.md (line 38) says: \"lists the 37 records (13 fixed, 16 open, 7 blocked, 1 no-change)\". The decision index docs/decisions/INDEX.md states \"73 records: 15 fixed, 16 open, 41 blocked, 1 no-change\". Task: correct the review index sentence to match the decision index (take the counts from the decision index, and say which snapshot they are from). Acceptance: the two documents give the same totals…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T00:45:10Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/JacksonSibold/ntpers-research/issues/113",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/JacksonSibold/ntpers-research/issues/113"
+        }
+      ],
+      "tags": [
+        "good first issue",
+        "docs",
+        "P3"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "JacksonSibold/ntpers-research",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5839973203",
+      "title": "Docs: kernel-nt.md summary table does not match its finding headings",
+      "summary": "docs/review/kernel-nt.md has a Summary table (lines 9 to 17) with High 8, Medium 10, Low 19, Info 1. Counting the finding headings ( ID [Severity] Title ) in the same file gives High 9, Medium 18, Low 21, Info 1. The review index already notes that the table is out of date. Task: replace the table with the counts from the headings, and note the date of the count. Acceptance: the four numbers equal the heading…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T00:45:05Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/JacksonSibold/ntpers-research/issues/112",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/JacksonSibold/ntpers-research/issues/112"
+        }
+      ],
+      "tags": [
+        "good first issue",
+        "docs",
+        "P3"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "JacksonSibold/ntpers-research",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5839964429",
+      "title": "Golden corpus: probe sharemode direct is reported with no golden, but a golden file is present",
+      "summary": "GOLDEN.md section 8.2 lists probe sharemode direct with reason unsafe-on-host and \"No golden\". The directory tests/differential/golden/windows- / contains probe sharemode direct.json.gz , and DIFFERENTIAL-RESULTS.md compares this probe against a golden of 462451 leaves. Task: check the file's build, hash and capture date against the manifest, then correct section 8.2 and the policy table in GOLDEN.md so the two…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T00:44:06Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/JacksonSibold/ntpers-research/issues/99",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/JacksonSibold/ntpers-research/issues/99"
+        }
+      ],
+      "tags": [
+        "good first issue",
+        "docs",
+        "differential",
+        "P3"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "JacksonSibold/ntpers-research",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5839958998",
+      "title": "[Feature Request] More specific RMP summary errors",
+      "summary": "Overview Currently the RMP summary route can return errors for things like API keys not being defined, but also for there not being any reviews on a RMP page. All these errors display as \"Problem loading AI RMP Summary\". See: which only has 2 reviews so in src\\app\\api\\rmpSummary\\route.ts the below is returned: but in src\\components\\common\\RmpSummary\\RmpSummary.tsx only the below is rendered. Proposal Update the…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "ai",
+        "projects",
+        "needs"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T00:43:28Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/UTDNebula/utd-trends/issues/662",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/UTDNebula/utd-trends/issues/662"
+        }
+      ],
+      "tags": [
+        "Good First Issue",
+        "Type: Feature Request",
+        "Dashboard"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "UTDNebula/utd-trends",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5839935523",
+      "title": "ntdll CRT-2 (remaining part): snprintf returns the bytes written, not the length it would need",
+      "summary": "Source: src/ntdll/msvcrt.c, line 237. Finding CRT-2 in docs/review/ntdll.md, line 277. The NUL guard is done: if(outsz) out[pos]='\\0'; at line 237 means snprintf(NULL, 0, fmt) no longer writes to address 0. The status table in the same report marks CRT-2 as partly fixed: the return value still counts the bytes written, not the length required by C99. Task: return the number of characters that would have been written…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T00:40:44Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/JacksonSibold/ntpers-research/issues/54",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/JacksonSibold/ntpers-research/issues/54"
+        }
+      ],
+      "tags": [
+        "bug",
+        "good first issue",
+        "ntdll",
+        "P3"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "JacksonSibold/ntpers-research",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5839916991",
+      "title": "docs: add provider guide for",
+      "summary": "What Add a short setup guide for at docs/providers/ .md , matching the existing exemplar at docs/providers/openai.md . The provider is already supported by any-llm. This issue adds the deeper \"how to set it up, and the gotchas\" page for Otari. Why Each provider has its own auth, base URL, and model-naming quirks. A per-provider page saves the next user from rediscovering them, and it's a small, well-scoped way for a…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T00:38:34Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/mozilla-ai/otari/issues/2282",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/mozilla-ai/otari/issues/2282"
+        }
+      ],
+      "tags": [
+        "documentation",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "mozilla-ai/otari",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5839900369",
+      "title": "My first issue",
+      "summary": "Here is a list of my tasks: - [ ] Task 2 - [ ] Task 3",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T00:36:41Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/shiowbah/PracticeRepo/issues/1",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/shiowbah/PracticeRepo/issues/1"
+        }
+      ],
+      "tags": [
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "shiowbah/PracticeRepo",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5839898891",
+      "title": "Wanted: AMD Ryzen AI Max+ 395 (Strix Halo) results",
+      "summary": "The comparison page has QuietBox 2 and DGX Spark results, but nothing from AMD yet. A Ryzen AI Max+ 395 (\"Strix Halo\") machine with 128 GB is the obvious AMD counterpart to a DGX Spark: same price range, 128 GB of unified memory, small and quiet. Framework Desktop, GMKtec EVO-X2, HP Z2 Mini G1a, ASUS ROG Flow Z13 and similar all qualify. What you need - A Ryzen AI Max+ 395 machine, ideally with 128 GB. 128 GB runs…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "ai",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T00:36:30Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/rothgar/qb2-vs-spark/issues/2",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/rothgar/qb2-vs-spark/issues/2"
+        }
+      ],
+      "tags": [
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "rothgar/qb2-vs-spark",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5839885266",
+      "title": "Verify the Platform warning on real Windows ARM64 hardware",
+      "summary": "Summary PR 98 (Refs 89) adds a non-blocking step-1 Platform warning. On Windows, the x64 build detects a native ARM64 CPU by reading the machine-wide PROCESSOR ARCHITECTURE value from the registry ( native arch() in crates/sh-core/src/platform.rs ), because an emulated x64 process reports x86 64 through std::env::consts::ARCH and its own environment. That registry read has only been unit-tested against canned reg…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T00:34:55Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Strike48-public/strikehub/issues/128",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Strike48-public/strikehub/issues/128"
+        }
+      ],
+      "tags": [
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Strike48-public/strikehub",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5839878440",
+      "title": "Release v0.1.0 — Initial public release",
+      "summary": "Tóm tắt - Phiên bản: v0.1.0 - Mục tiêu: Phát hành bản 0.1 ổn định đầu tiên, bao gồm các tính năng cơ bản, bản build cho môi trường production và tài liệu hướng dẫn cài đặt sử dụng. - Ngày phát hành (dự kiến): 01/01/2027 Những gì có trong release này - Tính năng chính (thay bằng danh sách thực tế): - Đăng ký / Đăng nhập người dùng - CRUD cho thực thể A (tên thực tế) - Giao diện chính: Dashboard, Trang quản lý - API…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T00:34:13Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/duongcongcao-0312/duannhom5-main/issues/21",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/duongcongcao-0312/duannhom5-main/issues/21"
+        }
+      ],
+      "tags": [
+        "accessibility",
+        "enhancement",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "duongcongcao-0312/duannhom5-main",
+      "hasDetails": true
+    },
+    {
+      "id": "stackexchange:stackoverflow-80009842",
+      "title": "in Wordpress what's the simplest snippet hook to populate a WPForms dropdown",
+      "summary": "in Wordpress what's the simplest snippet hook to populate a WPForms dropdown",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "websites",
+        "needs"
+      ],
+      "type": "community post · unverified",
+      "salary": "",
+      "publishedAt": "2026-10-14T00:34:13Z",
+      "sourceName": "Stack Exchange · pedidos de ajuda",
+      "sourceUrl": "https://stackoverflow.com/questions/80009842/in-wordpress-whats-the-simplest-snippet-hook-to-populate-a-wpforms-dropdown",
+      "sourceLinks": [
+        {
+          "name": "Stack Exchange · pedidos de ajuda",
+          "url": "https://stackoverflow.com/questions/80009842/in-wordpress-whats-the-simplest-snippet-hook-to-populate-a-wpforms-dropdown"
+        }
+      ],
+      "tags": [
+        "stackoverflow",
+        "wordpress",
+        "code-snippets",
+        "wpforms"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "social_unverified",
+      "language": "unknown",
+      "project": "stackoverflow",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5839876912",
+      "title": "Modularized Localization",
+      "summary": "Currently fonts are recreated based on only the text used, plan is to make this module and improve it.",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T00:34:02Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/OpenHandheldCollective/OpenABL/issues/1",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/OpenHandheldCollective/OpenABL/issues/1"
+        }
+      ],
+      "tags": [
+        "good first issue",
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "OpenHandheldCollective/OpenABL",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5839805020",
+      "title": "Test matrix: Python 3.10–3.13 in CI",
+      "summary": "pyproject.toml says Python = 3.10, but CI only runs 3.12. Done when the tests workflow runs on 3.10, 3.11, 3.12 and 3.13, and anything that breaks is fixed.",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T00:26:01Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/barnabys-drew/tapwatch/issues/13",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/barnabys-drew/tapwatch/issues/13"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "barnabys-drew/tapwatch",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5839804408",
+      "title": "Stats page refreshes itself",
+      "summary": "The case desk's stats page is rendered server-side and goes stale while open. Do add a (60 s) to the stats page only; pages with forms must not refresh. A strict CSP allows no scripts, so it can't be done in JavaScript. Done when the stats page refreshes and a test shows no other page does.",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T00:25:57Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/barnabys-drew/tapwatch/issues/11",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/barnabys-drew/tapwatch/issues/11"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "barnabys-drew/tapwatch",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5839803995",
+      "title": "Screenshots of the case desk on synthetic data for the README",
+      "summary": "The README describes the case desk but shows nothing. Screenshots must not come from a real network. Do generate cases from eval/make synthetic pcap.py (or a fixture DB), run tapwatch ui , and capture the queue, a case page with evidence, and the stats page. Store them under docs/img/ and check them by eye for anything real. Done when the README shows the case desk and the images contain only synthetic data.",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T00:25:54Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/barnabys-drew/tapwatch/issues/9",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/barnabys-drew/tapwatch/issues/9"
+        }
+      ],
+      "tags": [
+        "documentation",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "barnabys-drew/tapwatch",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5839731754",
+      "title": "Review ELD standards",
+      "summary": "Compare CSV of ELD standards to published ELD standards document (latest) from CA standards.",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T00:17:39Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/kleinbuild/catch_the_standards/issues/2",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/kleinbuild/catch_the_standards/issues/2"
+        }
+      ],
+      "tags": [
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "kleinbuild/catch_the_standards",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5839724861",
+      "title": "Determine if CSV for math has a complete set of standards",
+      "summary": "Compare CSV of math standards to CA standards latest published document.",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T00:16:51Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/kleinbuild/catch_the_standards/issues/1",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/kleinbuild/catch_the_standards/issues/1"
+        }
+      ],
+      "tags": [
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "kleinbuild/catch_the_standards",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5684981910",
+      "title": "Fix JavaScript lint errors",
+      "summary": "JavaScript Linting Failures Linting failures were detected in the automated JavaScript lint workflow run. Workflow Details - Run: - Type: JavaScript Linting - Date: :11:11 UTC Error Details Pull Request Instructions - Please use the following PR title format: \"chore: fix JavaScript lint errors (issue )\". - Reference this issue in the \"Related Issues\" section of the PR body as \"resolves \".",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T00:10:42Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/stdlib-js/stdlib/issues/15831",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/stdlib-js/stdlib/issues/15831"
+        },
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/stdlib-js/stdlib/issues/15944"
+        },
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/stdlib-js/stdlib/issues/15970"
+        },
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/stdlib-js/stdlib/issues/15995"
+        },
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/stdlib-js/stdlib/issues/16021"
+        },
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/stdlib-js/stdlib/issues/16126"
+        }
+      ],
+      "tags": [
+        "Good First Issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "stdlib-js/stdlib",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5839641049",
+      "title": "e2e: sparkconnect query test.go runs its query on a local Classic session, never on the Spark Connect server",
+      "summary": "test/e2e/sparkconnect query test.go starts a client pod and runs this through spark-shell --master 'local[1]' : In Spark 4.x, spark-shell is a Classic REPL, and this call never reaches the server. The range(100) query and the ROW COUNT=100 / VALIDATE=14 assertions all run in the client pod's own JVM. The test would still pass with no server listening.",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T00:07:23Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/kubeflow/spark-operator/issues/3238",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/kubeflow/spark-operator/issues/3238"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "kubeflow/spark-operator",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5839613745",
+      "title": "[Bug]: Null prices and totals render as 0.00",
+      "summary": "What happened? src/utils/number.ts coerces null and NaN to 0, so a NULL price per unit or total price displays as ฿0.00, indistinguishable from free or actually zero. The schema allows NULL for both. Steps to reproduce 1. Insert an order without a price and view it in History or the order list. Expected behavior Missing values render as a dash or \"ไม่ระบุ\", never as a number. Actual behavior Unknown is displayed as…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T00:04:24Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/suradet-ps/tracker/issues/120",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/suradet-ps/tracker/issues/120"
+        }
+      ],
+      "tags": [
+        "bug",
+        "good first issue",
+        "low"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "suradet-ps/tracker",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5839613375",
+      "title": "[Bug]: .gitignore misses .vercel CLI state",
+      "summary": "What happened? .gitignore covers .env , dist , node modules , .firebase/ , and supabase/.temp/ , but not .vercel/ , which is created by the documented vercel link flow and stores org and project ids. Steps to reproduce 1. Run vercel link locally and git status . Expected behavior CLI state directories are ignored on both hosting paths. Actual behavior git add . can commit local Vercel project metadata. Area affected…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T00:04:21Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/suradet-ps/tracker/issues/119",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/suradet-ps/tracker/issues/119"
+        }
+      ],
+      "tags": [
+        "bug",
+        "good first issue",
+        "low"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "suradet-ps/tracker",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5839613005",
+      "title": "[Bug]: CI runs the type-check twice on every push",
+      "summary": "What happened? .github/workflows/ci.yml runs npm run type-check as a standalone step and then npm run build , whose script already runs vue-tsc --build . The deploy workflow repeats both. The type-check itself is real, it is just duplicated. Steps to reproduce 1. Look at the CI run steps and timings. Expected behavior The type-check runs once per pipeline. Actual behavior Roughly double the type-check wall time for…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T00:04:19Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/suradet-ps/tracker/issues/118",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/suradet-ps/tracker/issues/118"
+        }
+      ],
+      "tags": [
+        "bug",
+        "good first issue",
+        "low"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "suradet-ps/tracker",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5839612497",
+      "title": "[Bug]: Telegram MarkdownV2 escaping misses backslashes and control characters",
+      "summary": "What happened? src/components/OrderSummaryModal.vue escapes Telegram's special characters but not \\ or control characters. A drug or supplier value ending in a backslash can consume the next structural character (such as the newline), and Thai characters preceded by a raw backslash can produce an invalid escape, making Telegram reject the whole message with 400. Steps to reproduce 1. Enter a drug name ending with a…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T00:04:15Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/suradet-ps/tracker/issues/117",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/suradet-ps/tracker/issues/117"
+        }
+      ],
+      "tags": [
+        "bug",
+        "good first issue",
+        "low"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "suradet-ps/tracker",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5839612184",
+      "title": "[Bug]: Router has no catch-all route and login drops the deep-link target",
+      "summary": "What happened? src/router/index.ts defines five routes with no /:pathMatch(. ) , so unknown URLs render an empty shell with HTTP 200 on both hosts. The auth guard also redirects to Auth without a redirect query and AuthView always pushes / after login, so deep links are lost. Steps to reproduce 1. Open any typo path: blank shell. 2. Open /history while signed out, log in: land on / instead of /history . Expected…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T00:04:13Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/suradet-ps/tracker/issues/116",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/suradet-ps/tracker/issues/116"
+        }
+      ],
+      "tags": [
+        "bug",
+        "good first issue",
+        "low"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "suradet-ps/tracker",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5839611927",
+      "title": "[Bug]: localStorage is accessed unguarded and can blank the app",
+      "summary": "What happened? src/App.vue , src/composables/use-theme.ts , and the inline script in index.html read and write localStorage without a guard. In browsers that block storage (Safari lockdown, some webviews) the access itself throws, aborting app setup. Steps to reproduce 1. Disable site storage and load the app. Expected behavior Reads and writes fall back to memory without throwing. Actual behavior Blank page before…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T00:04:11Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/suradet-ps/tracker/issues/115",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/suradet-ps/tracker/issues/115"
+        }
+      ],
+      "tags": [
+        "bug",
+        "good first issue",
+        "low"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "suradet-ps/tracker",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5839611652",
+      "title": "[Bug]: Required fields accept whitespace-only values",
+      "summary": "What happened? src/components/AddOrderForm.vue uses HTML required , which accepts \" \" . Trim happens later, so blank supplier and drug names are written. Steps to reproduce 1. Enter only spaces in the supplier or drug name and submit. Expected behavior Validation rejects values with no non-whitespace content and shows an inline message. Actual behavior Blank records pollute filters, dedupe, and Telegram salutations…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T00:04:09Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/suradet-ps/tracker/issues/114",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/suradet-ps/tracker/issues/114"
+        }
+      ],
+      "tags": [
+        "bug",
+        "good first issue",
+        "low"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "suradet-ps/tracker",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5703308242",
+      "title": "Add configuration options for sorting",
+      "summary": "Problem When working with middleware, the error messages could be more descriptive. Suggestion Improve error handling and add detailed error messages. Context This would help with debugging and maintenance.",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T00:03:39Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/yrn-dev/Operator/issues/31696",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/yrn-dev/Operator/issues/31696"
+        },
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/yrn-dev/Operator/issues/36895"
+        }
+      ],
+      "tags": [
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "yrn-dev/Operator",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5839583985",
+      "title": "[good first issue, hacktoberfest] 🎍 Hacktoberfest Task - Add new Video Game Quote 246 (good-first-issue)",
+      "summary": "🟢 Good First Issue: Add Video Game Quote 24 — Beginner-Friendly Open Source Contribution 🟢 No prerequisites needed! You don't need to clone the repo, install anything, or write code. This entire contribution can be done from your browser in under 60 seconds. Labels: good first issue, help wanted, hacktoberfest Language: JSON (no coding required) Time: < 1 minute Skill Level: Absolute beginner --- Add Famous Japanese…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-14T00:01:06Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/lingdojo/kana-dojo/issues/32370",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/lingdojo/kana-dojo/issues/32370"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "good first issue",
+        "hacktoberfest",
+        "community",
+        "low hanging fruit",
+        "up-for-grabs",
+        "first-timers-only",
+        "good-first-issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "lingdojo/kana-dojo",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5839552102",
+      "title": "[good first issue, hacktoberfest] 🐡 Hacktoberfest Task - Add new Anime Quote 887 (good-first-issue)",
+      "summary": "🟢 Good First Issue: Add Anime Quote 88 — Beginner-Friendly Open Source Contribution 🟢 No prerequisites needed! You don't need to clone the repo, install anything, or write code. This entire contribution can be done from your browser in under 60 seconds. Labels: good first issue, help wanted, hacktoberfest Language: JSON (no coding required) Time: < 1 minute Skill Level: Absolute beginner --- 🎬 Add Famous Anime Quote…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-13T23:57:28Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/lingdojo/kana-dojo/issues/32369",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/lingdojo/kana-dojo/issues/32369"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "good first issue",
+        "hacktoberfest",
+        "community",
+        "low hanging fruit",
+        "up-for-grabs",
+        "first-timers-only",
+        "good-first-issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "lingdojo/kana-dojo",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5839548473",
+      "title": "[Bounty] 📋 2 open bounties right now",
+      "summary": "赏金平台 / Platform GitHub 原始链接 / Source URL 漏洞描述 / Description 📋 2 open bounties right now Bounties that were already open when the watcher started. From now on, each new one gets its own issue. - 🔴 $150 · 📱 Epic: BAWES Universe Mobile App (Android + iOS) - 🔴 $50 · BOUNTY: integrate AWS Comprehend as a utility to redact data cc 积分币奖励 / Coin Reward 187 coins 真实赏金（USD）/ Real Reward $150 难度 / Difficulty Medium 认领方式 评论…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-13T23:57:04Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/zhangjiayang6835-cyber/bounty-plaza/issues/1891",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/zhangjiayang6835-cyber/bounty-plaza/issues/1891"
+        }
+      ],
+      "tags": [
+        "bounty",
+        "real"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "zhangjiayang6835-cyber/bounty-plaza",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5839545585",
+      "title": "ci-flake: github.com/hivecommons/hive/cmd/hive.TestEvalIntervalForConfigWithoutWebhooksMatchesBudget",
+      "summary": "CI flake detected - Test: TestEvalIntervalForConfigWithoutWebhooksMatchesBudget - Package: github.com/hivecommons/hive/cmd/hive - Run: - Branch: v5 Rerun report - github.com/hivecommons/hive/cmd/hive.TestEvalIntervalForConfigWithoutWebhooksMatchesBudget: 2 runs, 1 failures Tally recent failures A gotestsum rerun is not a pass. Please fix the flaky test.",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-13T23:56:44Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/hivecommons/hive/issues/11754",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/hivecommons/hive/issues/11754"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "blocked",
+        "ci-flake",
+        "claimed"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "hivecommons/hive",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5839545523",
+      "title": "ci-flake: github.com/hivecommons/hive/pkg/hub.TestFetchBranchSHASpokeTargetWalkbackStopsAtCurrentTarget",
+      "summary": "CI flake detected - Test: TestFetchBranchSHASpokeTargetWalkbackStopsAtCurrentTarget - Package: github.com/hivecommons/hive/pkg/hub - Run: - Branch: v5 Rerun report - github.com/hivecommons/hive/pkg/hub.TestFetchBranchSHASpokeTargetWalkbackStopsAtCurrentTarget: 2 runs, 1 failures Tally recent failures A gotestsum rerun is not a pass. Please fix the flaky test.",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-13T23:56:43Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/hivecommons/hive/issues/11753",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/hivecommons/hive/issues/11753"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "hive/covered-by-pr",
+        "ci-flake"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "hivecommons/hive",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5839518371",
+      "title": "10 and 11 slow down the site immensely",
+      "summary": "Something in your PRs 10 and 11 slow down the production site immensely. The Discover page takes 15 seconds to load, and the Archive page takes about 5. I've reverted them in production for now, but it'd be nice to figure out the issue. I suspect that the caching of that doesntHave() query may have been necessary, among other things!",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-13T23:53:56Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Neetpone/ponepaste/issues/12",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Neetpone/ponepaste/issues/12"
+        }
+      ],
+      "tags": [
+        "bug",
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Neetpone/ponepaste",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5839488373",
+      "title": "fix: model prefix heuristics are shadowed by default engine in resolve engine",
+      "summary": "Motivation Users configure multi-agent flows or individual agents specifying well-known model names like Agent(name=\"Coder\", model=\"claude-3-5-sonnet\") or Agent(name=\"Planner\", model=\"gpt-4o\") expecting the framework's prefix heuristics to auto-resolve to AnthropicEngine or OpenAIEngine . Because Runner always initializes self.engine = GeminiEngine(...) and forwards it as default engine , Step 4 ( if default engine…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-13T23:50:47Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/GustavoBaranda/chatflow-agent/issues/38",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/GustavoBaranda/chatflow-agent/issues/38"
+        }
+      ],
+      "tags": [
+        "bug",
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "GustavoBaranda/chatflow-agent",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5839471831",
+      "title": "fix: persist Handoff.context updates into session metadata during agent transfers",
+      "summary": "Motivation In multi-agent architectures (e.g. triage routing to specialized agents), handoffs are designed not just to route the next turn to a new agent, but also to forward contextual state (e.g., extracted customer ID, sentiment score, or transaction parameters) accumulated during the conversation. Because context updates is currently dropped during transfer: 1. Recipient agents and subsequent tools cannot read…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-13T23:49:02Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/GustavoBaranda/chatflow-agent/issues/37",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/GustavoBaranda/chatflow-agent/issues/37"
+        }
+      ],
+      "tags": [
+        "bug",
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "GustavoBaranda/chatflow-agent",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5839457940",
+      "title": "Melhorar a mensagem de confirmação do voto",
+      "summary": "Baixa complexidade Tipo: correção de interface · Estimativa: 1–2 horas Problema A tela de confirmação da urna simulada pode apresentar uma mensagem pouco clara ou precisar de um texto padronizado. Solução solicitada Ajustar a mensagem exibida após a confirmação do voto para: “VOTO CONFIRMADO COM SUCESSO!” Ou \"FIM!\" O aluno deverá preservar o funcionamento dos botões e o restante da interface. Essa é uma proposta…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "teaching",
+        "projects",
+        "needs"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-13T23:47:26Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/rodrigogeorgino/auditoria_Sistema_Urna_Eletronica/issues/4",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/rodrigogeorgino/auditoria_Sistema_Urna_Eletronica/issues/4"
+        }
+      ],
+      "tags": [
+        "accessibility",
+        "enhancement",
+        "good first issue",
+        "Atividade Fácil",
+        "Baixa complexidade",
+        "Fluxo GIT"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "rodrigogeorgino/auditoria_Sistema_Urna_Eletronica",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5839450966",
+      "title": "fix: support tuple, set, Sequence, and Mapping types in tool parameter schema introspection",
+      "summary": "Bug Description In src/chatflow agent/core/tools.py , the type mapping function python type to gemini type() translates Python type annotations into schema types such as STRING , INTEGER , NUMBER , BOOLEAN , ARRAY , and OBJECT . Currently, only list and dict are recognized as container origins: python if origin in (list, list): return \"ARRAY\" if origin in (dict, dict): return \"OBJECT\"",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-13T23:46:38Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/GustavoBaranda/chatflow-agent/issues/36",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/GustavoBaranda/chatflow-agent/issues/36"
+        }
+      ],
+      "tags": [
+        "bug",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "GustavoBaranda/chatflow-agent",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5839444211",
+      "title": "no root and no adb connection",
+      "summary": "Please check before submitting an issue - [x] I have searched the issues and haven't found anything relevant - [x] I have read the docs - [x] I know that generating a report, in whole part or in part, using AI/LLM is prohibited Describe the existing feature/documentation Debloater / Mode of Opporation Describe your problem(s) Used Debloater to find apps that were unneeded and marked safe to uninstall. Tried to…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects",
+        "needs"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-13T23:45:51Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/MuntashirAkon/AppManager/issues/2065",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/MuntashirAkon/AppManager/issues/2065"
+        }
+      ],
+      "tags": [
+        "Help Wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "MuntashirAkon/AppManager",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5839427370",
+      "title": "Cant Update Xenia Canary",
+      "summary": "Whenever i try to update xenia canary i get this error.",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-13T23:43:58Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/xenia-manager/xenia-manager/issues/607",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/xenia-manager/xenia-manager/issues/607"
+        }
+      ],
+      "tags": [
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "xenia-manager/xenia-manager",
+      "hasDetails": false
+    },
+    {
+      "id": "stackexchange:stackoverflow-80009590",
+      "title": "Apply CSS style to cshtml input control that uses asp-for",
+      "summary": "Apply CSS style to cshtml input control that uses asp-for",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "needs"
+      ],
+      "type": "community post · unverified",
+      "salary": "",
+      "publishedAt": "2026-10-13T23:40:10Z",
+      "sourceName": "Stack Exchange · pedidos de ajuda",
+      "sourceUrl": "https://stackoverflow.com/questions/80009590/apply-css-style-to-cshtml-input-control-that-uses-asp-for",
+      "sourceLinks": [
+        {
+          "name": "Stack Exchange · pedidos de ajuda",
+          "url": "https://stackoverflow.com/questions/80009590/apply-css-style-to-cshtml-input-control-that-uses-asp-for"
+        }
+      ],
+      "tags": [
+        "stackoverflow",
+        "css",
+        "asp.net-mvc"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "social_unverified",
+      "language": "unknown",
+      "project": "stackoverflow",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5839331256",
+      "title": "Accept and log an optional tool name in POST /guard",
+      "summary": "Problem verdicts.jsonl records the policy and reason for each verdict but not which tool was called, so you can't tell whether blocks come from Bash , file edits, MCP tools, etc. This came up as feedback: \"log every block with the tool name and a short reason, or you won't know whether the judge is helping or just slowing you down.\" Part of 31. Scope (server side only) Accept an optional tool name on the API and log…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects",
+        "needs"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-13T23:33:17Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/scs0209/laya-guard/issues/52",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/scs0209/laya-guard/issues/52"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue",
+        "area: server"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "scs0209/laya-guard",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5839331372",
+      "title": "Which agents let a hook detect an unattended (headless) run?",
+      "summary": "Question Should a guard fail closed when nobody is watching? Feedback on the fail-open default ( 42) keeps landing on the same point: in an unattended run, an unjudged call should not just pass. To act on that, the hook has to know the run is unattended, and today we don't know which agents expose that. What we know | Agent | Approval step for review | Unattended behavior we know of | Signal the hook can read? |…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-13T23:33:17Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/scs0209/laya-guard/issues/53",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/scs0209/laya-guard/issues/53"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "question",
+        "area: adapter"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "scs0209/laya-guard",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5839331145",
+      "title": "Log offline verdicts (check --offline) to verdicts.jsonl",
+      "summary": "Problem When the server is down, every adapter falls back to laya-guard check --offline . Those verdicts are never written to verdicts.jsonl : only the server ( server.py → judge and log ) calls log verdict . So laya-guard stats can't tell you how often the guard ran without the model, or how many calls were allowed unjudged during an outage. This is one small, concrete piece of 31 (audit trail) and 42 (an outage is…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects",
+        "needs"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-13T23:33:16Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/scs0209/laya-guard/issues/51",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/scs0209/laya-guard/issues/51"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue",
+        "area: server"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "scs0209/laya-guard",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5839331016",
+      "title": "False negative: root/home deletes via python -c, node -e and find -delete pass the regex floor",
+      "summary": "Problem destructive-fs blocks rm -rf / and rm -rf without the model, but the same delete slips past the regex when it's wrapped in an interpreter one-liner or done with find -delete . With the server up the model catches them as review / block , but with the server down ( laya-guard check --offline ) all of these are allowed : | Command | Offline (regex only) | Server (model) | |---|---|---| | python -c \"import…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects",
+        "needs"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-13T23:33:15Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/scs0209/laya-guard/issues/50",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/scs0209/laya-guard/issues/50"
+        }
+      ],
+      "tags": [
+        "good first issue",
+        "false-negative",
+        "area: policy"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "scs0209/laya-guard",
+      "hasDetails": true
+    },
     {
       "id": "weworkremotely:https-weworkremotely.com-remote-jobs-imerit-technology-ai-trainer",
       "title": "iMerit Technology: AI Trainer",
@@ -4906,6 +8462,39 @@
       "hasDetails": true
     },
     {
+      "id": "github:5838322360",
+      "title": "feat(analyzer): hostPath volumes (data is bound to the node)",
+      "summary": "A pod that mounts a hostPath volume depends on files that exist only on that node. After eviction it starts on another node with different (or no) data. Complements the emptyDir rule. Requirements - Rule ID HOSTPATH VOLUME , severity RISK . - Typed evidence: pod, node, volume name, host path, whether it is read-only. - Skip DaemonSet and mirror pods: hostPath is normal for them and they are not rescheduled. - Skip…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-13T21:54:53Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Veinar/draincheck/issues/45",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Veinar/draincheck/issues/45"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Veinar/draincheck",
+      "hasDetails": true
+    },
+    {
       "id": "github:5838268441",
       "title": "scripts/jest.config.js does not collect coverage or resolve tsconfig paths, so script specs are excluded from the main test run",
       "summary": "Context package.json runs jest for pnpm test and jest --coverage for pnpm test:cov , and the repo has a separate scripts/jest.config.js with rootDir '.', testRegex '. \\.spec\\.ts$' and a ts-jest transform. The scripts directory contains real specs that must run in CI: scripts/check-migration-naming.spec.ts and scripts/verify-key-management-consolidation.spec.ts. The root Jest configuration is not present in the file…",
@@ -5260,40 +8849,6 @@
       "language": "unknown",
       "project": "riccardoalv/omini",
       "hasDetails": true
-    },
-    {
-      "id": "stackexchange:stackoverflow-80009744",
-      "title": "How do I force multiple pygame windows to be unable to minimize?",
-      "summary": "How do I force multiple pygame windows to be unable to minimize?",
-      "company": "",
-      "country": "Não informado",
-      "countries": [],
-      "remote": false,
-      "categories": [
-        "programming",
-        "needs"
-      ],
-      "type": "community post · unverified",
-      "salary": "",
-      "publishedAt": "2026-10-13T21:36:17Z",
-      "sourceName": "Stack Exchange · pedidos de ajuda",
-      "sourceUrl": "https://stackoverflow.com/questions/80009744/how-do-i-force-multiple-pygame-windows-to-be-unable-to-minimize",
-      "sourceLinks": [
-        {
-          "name": "Stack Exchange · pedidos de ajuda",
-          "url": "https://stackoverflow.com/questions/80009744/how-do-i-force-multiple-pygame-windows-to-be-unable-to-minimize"
-        }
-      ],
-      "tags": [
-        "stackoverflow",
-        "python",
-        "pygame"
-      ],
-      "status": "UNKNOWN",
-      "trustLevel": "social_unverified",
-      "language": "unknown",
-      "project": "stackoverflow",
-      "hasDetails": false
     },
     {
       "id": "github:5838027126",
@@ -6358,6 +9913,348 @@
       "hasDetails": true
     },
     {
+      "id": "jobicy:155246",
+      "title": "Manager, Account Management",
+      "summary": "Who are we? At UpGuard , we are replacing manual security bottlenecks with AI-driven precision. Fresh off a US$75M Series C, we are scaling our infrastructure to process 100 billion risk signals daily. This isn’t just growth; it’s a total reimagining of how the world manages cyber risk. We build the Cyber Risk Posture Management (CRPM) platform that security teams actually love. By integrating security ratings…",
+      "company": "UpGuard",
+      "country": "Estados Unidos",
+      "countries": [
+        "Estados Unidos"
+      ],
+      "remote": true,
+      "categories": [
+        "teaching",
+        "employment",
+        "remote"
+      ],
+      "type": "employment",
+      "salary": "150000–170000 USD",
+      "publishedAt": "2026-10-13T20:24:04Z",
+      "sourceName": "Jobicy",
+      "sourceUrl": "https://jobicy.com/jobs/155246-manager-account-management",
+      "sourceLinks": [
+        {
+          "name": "Jobicy",
+          "url": "https://jobicy.com/jobs/155246-manager-account-management"
+        }
+      ],
+      "tags": [
+        "Customer Support & Success"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "source_listing",
+      "language": "unknown",
+      "hasDetails": true
+    },
+    {
+      "id": "jobicy:155245",
+      "title": "Expert Comics - Tintin & Dutch Traditional Comics",
+      "summary": "At Catawiki , every day brings the extraordinary! Whether it’s Daniel Ricciardo’s Formula 1 Car , a Woolly Mammoth’s Skeleton , Lady Gaga's Jumpsuit or Usain Bolt’s running shoe , we encounter exceptional objects every day. We’re a one-of-a-kind marketplace for buying and selling special objects. Each week, more than 100,000 unique items are auctioned, all carefully curated by our passionate in-house experts. Having…",
+      "company": "Catawiki",
+      "country": "França, Países Baixos",
+      "countries": [
+        "França",
+        "Países Baixos"
+      ],
+      "remote": true,
+      "categories": [
+        "employment",
+        "remote"
+      ],
+      "type": "employment",
+      "salary": "",
+      "publishedAt": "2026-10-13T20:24:04Z",
+      "sourceName": "Jobicy",
+      "sourceUrl": "https://jobicy.com/jobs/155245-expert-comics-tintin-dutch-traditional-comics",
+      "sourceLinks": [
+        {
+          "name": "Jobicy",
+          "url": "https://jobicy.com/jobs/155245-expert-comics-tintin-dutch-traditional-comics"
+        }
+      ],
+      "tags": [
+        "Product & Operations"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "source_listing",
+      "language": "unknown",
+      "hasDetails": true
+    },
+    {
+      "id": "jobicy:155242",
+      "title": "Commercial Operations Project Manager (Trust Operations Excellence)",
+      "summary": "At Catawiki , every day brings the extraordinary! Whether it’s Daniel Ricciardo’s Formula 1 Car , a Woolly Mammoth’s Skeleton , Lady Gaga's Jumpsuit or Usain Bolt’s running shoe , we encounter exceptional objects every day. We’re a one-of-a-kind marketplace for buying and selling special objects. Each week, more than 100,000 unique items are auctioned, all carefully curated by our passionate in-house experts. Having…",
+      "company": "Catawiki",
+      "country": "Países Baixos",
+      "countries": [
+        "Países Baixos"
+      ],
+      "remote": true,
+      "categories": [
+        "projects",
+        "employment",
+        "needs",
+        "remote"
+      ],
+      "type": "employment",
+      "salary": "",
+      "publishedAt": "2026-10-13T20:24:04Z",
+      "sourceName": "Jobicy",
+      "sourceUrl": "https://jobicy.com/jobs/155242-commercial-operations-project-manager-trust-operations-excellence",
+      "sourceLinks": [
+        {
+          "name": "Jobicy",
+          "url": "https://jobicy.com/jobs/155242-commercial-operations-project-manager-trust-operations-excellence"
+        }
+      ],
+      "tags": [
+        "Project & Program Management"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "source_listing",
+      "language": "unknown",
+      "hasDetails": true
+    },
+    {
+      "id": "jobicy:155239",
+      "title": "Lead Product Manager",
+      "summary": "Who are we? At UpGuard , we are replacing manual security bottlenecks with AI-driven precision. Fresh off a US$75M Series C, we are scaling our infrastructure to process 100 billion risk signals daily. This isn’t just growth; it’s a total reimagining of how the world manages cyber risk. We build the Cyber Risk Posture Management (CRPM) platform that security teams actually love. By integrating security ratings…",
+      "company": "UpGuard",
+      "country": "Austrália",
+      "countries": [
+        "Austrália"
+      ],
+      "remote": true,
+      "categories": [
+        "design",
+        "employment",
+        "remote"
+      ],
+      "type": "employment",
+      "salary": "",
+      "publishedAt": "2026-10-13T20:24:04Z",
+      "sourceName": "Jobicy",
+      "sourceUrl": "https://jobicy.com/jobs/155239-lead-product-manager-3",
+      "sourceLinks": [
+        {
+          "name": "Jobicy",
+          "url": "https://jobicy.com/jobs/155239-lead-product-manager-3"
+        }
+      ],
+      "tags": [
+        "Product & Operations"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "source_listing",
+      "language": "unknown",
+      "hasDetails": true
+    },
+    {
+      "id": "jobicy:155244",
+      "title": "Sales & Operations Specialist, RC Capital",
+      "summary": "RevenueCat gives app businesses the infrastructure and tools to build, run, and improve their monetization. Since graduating from YC's S18 batch, we've grown into the default monetization platform for mobile. We're in 50%+ of newly shipped subscription apps, we process $16B+ in annual purchase volume, and we help everyone from a solo developer to the OpenAI mobile team understand and grow their revenue. We're a…",
+      "company": "RevenueCat",
+      "country": "Canadá, Estados Unidos",
+      "countries": [
+        "Canadá",
+        "Estados Unidos"
+      ],
+      "remote": true,
+      "categories": [
+        "programming",
+        "employment",
+        "remote"
+      ],
+      "type": "employment",
+      "salary": "167000–167000 USD",
+      "publishedAt": "2026-10-13T20:24:03Z",
+      "sourceName": "Jobicy",
+      "sourceUrl": "https://jobicy.com/jobs/155244-sales-operations-specialist-rc-capital",
+      "sourceLinks": [
+        {
+          "name": "Jobicy",
+          "url": "https://jobicy.com/jobs/155244-sales-operations-specialist-rc-capital"
+        }
+      ],
+      "tags": [
+        "Product & Operations"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "source_listing",
+      "language": "unknown",
+      "hasDetails": true
+    },
+    {
+      "id": "jobicy:155243",
+      "title": "Customer Success Manager",
+      "summary": "Who are we? At UpGuard , we are replacing manual security bottlenecks with AI-driven precision. Fresh off a US$75M Series C, we are scaling our infrastructure to process 100 billion risk signals daily. This isn’t just growth; it’s a total reimagining of how the world manages cyber risk. We build the Cyber Risk Posture Management (CRPM) platform that security teams actually love. By integrating security ratings…",
+      "company": "UpGuard",
+      "country": "Austrália",
+      "countries": [
+        "Austrália"
+      ],
+      "remote": true,
+      "categories": [
+        "employment",
+        "remote"
+      ],
+      "type": "employment",
+      "salary": "",
+      "publishedAt": "2026-10-13T20:24:03Z",
+      "sourceName": "Jobicy",
+      "sourceUrl": "https://jobicy.com/jobs/155243-customer-success-manager-50",
+      "sourceLinks": [
+        {
+          "name": "Jobicy",
+          "url": "https://jobicy.com/jobs/155243-customer-success-manager-50"
+        }
+      ],
+      "tags": [
+        "Customer Support & Success"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "source_listing",
+      "language": "unknown",
+      "hasDetails": true
+    },
+    {
+      "id": "jobicy:155238",
+      "title": "Backend Engineer",
+      "summary": "At Catawiki , every day brings the extraordinary! Whether it’s Daniel Ricciardo’s Formula 1 Car , a Woolly Mammoth’s Skeleton , Lady Gaga's Jumpsuit or Usain Bolt’s running shoe , we encounter exceptional objects every day. We’re a one-of-a-kind marketplace for buying and selling special objects. Each week, more than 100,000 unique items are auctioned, all carefully curated by our passionate in-house experts. Having…",
+      "company": "Catawiki",
+      "country": "Portugal",
+      "countries": [
+        "Portugal"
+      ],
+      "remote": true,
+      "categories": [
+        "programming",
+        "employment",
+        "remote"
+      ],
+      "type": "employment",
+      "salary": "",
+      "publishedAt": "2026-10-13T20:24:03Z",
+      "sourceName": "Jobicy",
+      "sourceUrl": "https://jobicy.com/jobs/155238-backend-engineer-4",
+      "sourceLinks": [
+        {
+          "name": "Jobicy",
+          "url": "https://jobicy.com/jobs/155238-backend-engineer-4"
+        }
+      ],
+      "tags": [
+        "Software Engineering"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "source_listing",
+      "language": "unknown",
+      "hasDetails": true
+    },
+    {
+      "id": "jobicy:155240",
+      "title": "Enterprise Account Executive - Financial Services, New York/Northeast",
+      "summary": "Level: ES2-ES5 Hiring Manager: Recruiter: Celine Clark At Qualtrics , we create software the world’s best brands use to deliver exceptional frontline experiences, build high-performing teams, and design products people love. But we are more than a platform—we are the creators and stewards of the Experience Management category serving over 18K clients globally. Building a category takes grit, determination, and a…",
+      "company": "Qualtrics",
+      "country": "Estados Unidos",
+      "countries": [
+        "Estados Unidos"
+      ],
+      "remote": true,
+      "categories": [
+        "employment",
+        "needs",
+        "remote"
+      ],
+      "type": "employment",
+      "salary": "98500–187000 USD",
+      "publishedAt": "2026-10-13T20:24:02Z",
+      "sourceName": "Jobicy",
+      "sourceUrl": "https://jobicy.com/jobs/155240-enterprise-account-executive-financial-services-new-york-northeast",
+      "sourceLinks": [
+        {
+          "name": "Jobicy",
+          "url": "https://jobicy.com/jobs/155240-enterprise-account-executive-financial-services-new-york-northeast"
+        }
+      ],
+      "tags": [
+        "Sales"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "source_listing",
+      "language": "unknown",
+      "hasDetails": true
+    },
+    {
+      "id": "jobicy:155241",
+      "title": "Data Analyst",
+      "summary": "RevenueCat gives app businesses the infrastructure and tools to build, run, and improve their monetization. Since graduating from YC's S18 batch, we've grown into the default monetization platform for mobile. We're in 50%+ of newly shipped subscription apps, we process $16B+ in annual purchase volume, and we help everyone from a solo developer to the OpenAI mobile team understand and grow their revenue. We're a…",
+      "company": "RevenueCat",
+      "country": "Canadá, Estados Unidos",
+      "countries": [
+        "Canadá",
+        "Estados Unidos"
+      ],
+      "remote": true,
+      "categories": [
+        "programming",
+        "employment",
+        "remote"
+      ],
+      "type": "employment",
+      "salary": "167000–167000 USD",
+      "publishedAt": "2026-10-13T20:24:01Z",
+      "sourceName": "Jobicy",
+      "sourceUrl": "https://jobicy.com/jobs/155241-data-analyst-4",
+      "sourceLinks": [
+        {
+          "name": "Jobicy",
+          "url": "https://jobicy.com/jobs/155241-data-analyst-4"
+        }
+      ],
+      "tags": [
+        "Data Science & Analytics"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "source_listing",
+      "language": "unknown",
+      "hasDetails": true
+    },
+    {
+      "id": "jobicy:155237",
+      "title": "Enterprise Account Executive - Business Services",
+      "summary": "At Qualtrics , we create software the world’s best brands use to deliver exceptional frontline experiences, build high-performing teams, and design products people love. But we are more than a platform—we are the creators and stewards of the Experience Management category serving over 18K clients globally. Building a category takes grit, determination, and a disdain for convention—but most of all it requires…",
+      "company": "Qualtrics",
+      "country": "Estados Unidos",
+      "countries": [
+        "Estados Unidos"
+      ],
+      "remote": true,
+      "categories": [
+        "employment",
+        "needs",
+        "remote"
+      ],
+      "type": "employment",
+      "salary": "109500–144000 USD",
+      "publishedAt": "2026-10-13T20:24:01Z",
+      "sourceName": "Jobicy",
+      "sourceUrl": "https://jobicy.com/jobs/155237-enterprise-account-executive-business-services",
+      "sourceLinks": [
+        {
+          "name": "Jobicy",
+          "url": "https://jobicy.com/jobs/155237-enterprise-account-executive-business-services"
+        }
+      ],
+      "tags": [
+        "Sales"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "source_listing",
+      "language": "unknown",
+      "hasDetails": true
+    },
+    {
       "id": "github:5837166077",
       "title": "Design Analytic Data",
       "summary": "What data do we want to guide development + fits in a database",
@@ -6712,6 +10609,315 @@
       "language": "unknown",
       "project": "Chandraprakash-Darji/brick",
       "hasDetails": false
+    },
+    {
+      "id": "jobicy:155236",
+      "title": "Senior Systems Engineer",
+      "summary": "Location: Remote — South Asia (Open to applicants located anywhere in South Asia, with a preference for those based in IST or PKT time zones) Fueled is a leading digital strategy, design, and engineering agency. We are a 300+ person team that has designed and built hundreds of digital products and experiences for brands like Google, Apple, The New York Times, ESPN, Victoria’s Secret, MGM Resorts, Albertsons, and…",
+      "company": "Fueled",
+      "country": "Não informado",
+      "countries": [],
+      "remote": true,
+      "categories": [
+        "programming",
+        "employment",
+        "remote"
+      ],
+      "type": "employment",
+      "salary": "",
+      "publishedAt": "2026-10-13T20:08:25Z",
+      "sourceName": "Jobicy",
+      "sourceUrl": "https://jobicy.com/jobs/155236-senior-systems-engineer-2",
+      "sourceLinks": [
+        {
+          "name": "Jobicy",
+          "url": "https://jobicy.com/jobs/155236-senior-systems-engineer-2"
+        }
+      ],
+      "tags": [
+        "DevOps & Infrastructure"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "source_listing",
+      "language": "unknown",
+      "hasDetails": true
+    },
+    {
+      "id": "jobicy:155235",
+      "title": "Sr. Analyst, Revenue Operations and Analytics",
+      "summary": "About Zuora At Zuora, we help businesses grow smarter and adapt faster. Our platform powers modern business models — from subscriptions and usage-based pricing to AI-driven and outcome-based offerings — helping companies launch new products, automate complex billing, and unlock predictable, recurring revenue. We’ve led the Subscription Economy for more than a decade. Now we’re evolving again by building the…",
+      "company": "Zuora",
+      "country": "Estados Unidos",
+      "countries": [
+        "Estados Unidos"
+      ],
+      "remote": true,
+      "categories": [
+        "employment",
+        "remote"
+      ],
+      "type": "employment",
+      "salary": "99500–132000 USD",
+      "publishedAt": "2026-10-13T20:08:25Z",
+      "sourceName": "Jobicy",
+      "sourceUrl": "https://jobicy.com/jobs/155235-sr-analyst-revenue-operations-and-analytics",
+      "sourceLinks": [
+        {
+          "name": "Jobicy",
+          "url": "https://jobicy.com/jobs/155235-sr-analyst-revenue-operations-and-analytics"
+        }
+      ],
+      "tags": [
+        "Data Science & Analytics"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "source_listing",
+      "language": "unknown",
+      "hasDetails": true
+    },
+    {
+      "id": "jobicy:155230",
+      "title": "Senior iOS Engineer (Swift & AWS)",
+      "summary": "Join Our Team Oowlish, one of Latin America's rapidly expanding software development companies, is seeking experienced technology professionals to enhance our diverse and vibrant team. As a valued member of Oowlish, you will collaborate with premier clients from the United States and Europe, contributing to pioneering digital solutions. Our commitment to creating a nurturing work environment is recognized by our…",
+      "company": "Oowlish Technology",
+      "country": "Argentina, Brasil, México",
+      "countries": [
+        "Argentina",
+        "Brasil",
+        "México"
+      ],
+      "remote": true,
+      "categories": [
+        "programming",
+        "applications",
+        "projects",
+        "employment",
+        "remote"
+      ],
+      "type": "internship",
+      "salary": "",
+      "publishedAt": "2026-10-13T20:08:25Z",
+      "sourceName": "Jobicy",
+      "sourceUrl": "https://jobicy.com/jobs/155230-senior-ios-engineer-swift-aws",
+      "sourceLinks": [
+        {
+          "name": "Jobicy",
+          "url": "https://jobicy.com/jobs/155230-senior-ios-engineer-swift-aws"
+        }
+      ],
+      "tags": [
+        "Software Engineering"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "source_listing",
+      "language": "unknown",
+      "hasDetails": true
+    },
+    {
+      "id": "jobicy:155229",
+      "title": "Account Director",
+      "summary": "About the Team At AudioEye , we believe access to digital content is a fundamental right, not a privilege. Our mission is clear: eliminate every barrier to digital accessibility so that everyone, regardless of ability, can experience the web without limitations. We are a team of passionate problem-solvers who are driven by purpose and impact. Every challenge we tackle moves us closer to a future where creating…",
+      "company": "AudioEye",
+      "country": "Estados Unidos",
+      "countries": [
+        "Estados Unidos"
+      ],
+      "remote": true,
+      "categories": [
+        "projects",
+        "employment",
+        "needs",
+        "remote"
+      ],
+      "type": "internship",
+      "salary": "",
+      "publishedAt": "2026-10-13T20:08:24Z",
+      "sourceName": "Jobicy",
+      "sourceUrl": "https://jobicy.com/jobs/155229-account-director-4",
+      "sourceLinks": [
+        {
+          "name": "Jobicy",
+          "url": "https://jobicy.com/jobs/155229-account-director-4"
+        }
+      ],
+      "tags": [
+        "Sales"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "source_listing",
+      "language": "unknown",
+      "hasDetails": true
+    },
+    {
+      "id": "jobicy:155227",
+      "title": "Content Designer | LATAM",
+      "summary": "Location : Remote – Central or South America (Open to applicants anywhere in Central or South America) Fueled is a leading digital strategy, design, and engineering agency. We are a 300+ person team that has designed and built hundreds of digital products and experiences for brands like Google, Apple, The New York Times, ESPN, Victoria’s Secret, MGM Resorts, Albertsons, and CLEAR. As a Senior Content Designer at…",
+      "company": "Fueled",
+      "country": "Não informado",
+      "countries": [],
+      "remote": true,
+      "categories": [
+        "design",
+        "employment",
+        "remote"
+      ],
+      "type": "training",
+      "salary": "",
+      "publishedAt": "2026-10-13T20:08:24Z",
+      "sourceName": "Jobicy",
+      "sourceUrl": "https://jobicy.com/jobs/155227-content-designer-latam",
+      "sourceLinks": [
+        {
+          "name": "Jobicy",
+          "url": "https://jobicy.com/jobs/155227-content-designer-latam"
+        }
+      ],
+      "tags": [
+        "Web, UI & UX Design"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "source_listing",
+      "language": "unknown",
+      "hasDetails": true
+    },
+    {
+      "id": "jobicy:155234",
+      "title": "Senior Digital Project Manager - LATAM",
+      "summary": "Location: Remote - LATAM (Open to candidates across the Americas aligned time zones, with a preference for Latin America-based applicants) Fueled is a leading digital strategy, design, and engineering agency. We are a 300+ person team that has designed and built hundreds of digital products and experiences for brands like Google, Apple, The New York Times, ESPN, Victoria’s Secret, MGM Resorts, Albertsons, and CLEAR…",
+      "company": "Fueled",
+      "country": "Não informado",
+      "countries": [],
+      "remote": true,
+      "categories": [
+        "applications",
+        "projects",
+        "employment",
+        "remote"
+      ],
+      "type": "employment",
+      "salary": "",
+      "publishedAt": "2026-10-13T20:08:23Z",
+      "sourceName": "Jobicy",
+      "sourceUrl": "https://jobicy.com/jobs/155234-senior-digital-project-manager-latam",
+      "sourceLinks": [
+        {
+          "name": "Jobicy",
+          "url": "https://jobicy.com/jobs/155234-senior-digital-project-manager-latam"
+        }
+      ],
+      "tags": [
+        "Project & Program Management"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "source_listing",
+      "language": "unknown",
+      "hasDetails": true
+    },
+    {
+      "id": "jobicy:155233",
+      "title": "Senior Software Engineer (Full Stack | Node.js & React | AI Focus)",
+      "summary": "Join Our Team Oowlish, one of Latin America's rapidly expanding software development companies, is seeking experienced technology professionals to enhance our diverse and vibrant team. As a valued member of Oowlish, you will collaborate with premier clients from the United States and Europe, contributing to pioneering digital solutions. Our commitment to creating a nurturing work environment is recognized by our…",
+      "company": "Oowlish Technology",
+      "country": "Brasil",
+      "countries": [
+        "Brasil"
+      ],
+      "remote": true,
+      "categories": [
+        "programming",
+        "ai",
+        "projects",
+        "employment",
+        "remote"
+      ],
+      "type": "internship",
+      "salary": "",
+      "publishedAt": "2026-10-13T20:08:23Z",
+      "sourceName": "Jobicy",
+      "sourceUrl": "https://jobicy.com/jobs/155233-senior-software-engineer-full-stack-node-js-react-ai-focus",
+      "sourceLinks": [
+        {
+          "name": "Jobicy",
+          "url": "https://jobicy.com/jobs/155233-senior-software-engineer-full-stack-node-js-react-ai-focus"
+        }
+      ],
+      "tags": [
+        "Software Engineering"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "source_listing",
+      "language": "unknown",
+      "hasDetails": true
+    },
+    {
+      "id": "jobicy:155231",
+      "title": "Full Stack Web Engineer",
+      "summary": "Location: Remote – Latin America (Open to applicants located anywhere in the LATAM region) Fueled is a leading digital strategy, design, and engineering agency. We are a 300+ person team that has designed and built hundreds of digital products and experiences for brands like Google, Apple, The New York Times, ESPN, Victoria's Secret, MGM Resorts, Albertsons, and CLEAR. As a Full Stack Web Engineer at Fueled, your…",
+      "company": "Fueled",
+      "country": "Não informado",
+      "countries": [],
+      "remote": true,
+      "categories": [
+        "programming",
+        "websites",
+        "ai",
+        "employment",
+        "remote"
+      ],
+      "type": "employment",
+      "salary": "",
+      "publishedAt": "2026-10-13T20:08:23Z",
+      "sourceName": "Jobicy",
+      "sourceUrl": "https://jobicy.com/jobs/155231-full-stack-web-engineer",
+      "sourceLinks": [
+        {
+          "name": "Jobicy",
+          "url": "https://jobicy.com/jobs/155231-full-stack-web-engineer"
+        }
+      ],
+      "tags": [
+        "Software Engineering"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "source_listing",
+      "language": "unknown",
+      "hasDetails": true
+    },
+    {
+      "id": "jobicy:155228",
+      "title": "Junior Software Engineer – Early Career (Strong Problem solving & Coding Focus) - 100% Remote within Spain",
+      "summary": "Welcome to the good side of tech You might know us as ZnanyLekarz in Poland or Doctoralia in Spain. Globally, we are Docplanner . We build technology that helps people live longer, healthier lives. Our products connect patients with doctors, power clinical workflows, and support healthcare systems used by millions of people every month. Engineering at Docplanner is about building reliable, scalable systems with real…",
+      "company": "Docplanner",
+      "country": "Espanha",
+      "countries": [
+        "Espanha"
+      ],
+      "remote": true,
+      "categories": [
+        "programming",
+        "internship",
+        "employment",
+        "needs",
+        "remote"
+      ],
+      "type": "employment",
+      "salary": "",
+      "publishedAt": "2026-10-13T20:08:23Z",
+      "sourceName": "Jobicy",
+      "sourceUrl": "https://jobicy.com/jobs/155228-junior-software-engineer-early-career-strong-problem-solving-coding-focus-100-remote-within-spain-2",
+      "sourceLinks": [
+        {
+          "name": "Jobicy",
+          "url": "https://jobicy.com/jobs/155228-junior-software-engineer-early-career-strong-problem-solving-coding-focus-100-remote-within-spain-2"
+        }
+      ],
+      "tags": [
+        "Software Engineering"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "source_listing",
+      "language": "unknown",
+      "hasDetails": true
     },
     {
       "id": "stackexchange:stackoverflow-80009138",
@@ -22954,39 +27160,6 @@
       "hasDetails": false
     },
     {
-      "id": "stackexchange:stackoverflow-80009590",
-      "title": "Apply CSS style to cshtml input control that uses asp-for",
-      "summary": "Apply CSS style to cshtml input control that uses asp-for",
-      "company": "",
-      "country": "Não informado",
-      "countries": [],
-      "remote": false,
-      "categories": [
-        "needs"
-      ],
-      "type": "community post · unverified",
-      "salary": "",
-      "publishedAt": "2026-10-13T04:17:25Z",
-      "sourceName": "Stack Exchange · pedidos de ajuda",
-      "sourceUrl": "https://stackoverflow.com/questions/80009590/apply-css-style-to-cshtml-input-control-that-uses-asp-for",
-      "sourceLinks": [
-        {
-          "name": "Stack Exchange · pedidos de ajuda",
-          "url": "https://stackoverflow.com/questions/80009590/apply-css-style-to-cshtml-input-control-that-uses-asp-for"
-        }
-      ],
-      "tags": [
-        "stackoverflow",
-        "css",
-        "asp.net-mvc"
-      ],
-      "status": "UNKNOWN",
-      "trustLevel": "social_unverified",
-      "language": "unknown",
-      "project": "stackoverflow",
-      "hasDetails": false
-    },
-    {
       "id": "github:5824076448",
       "title": "Add Shakespeare lamps to the lamp list",
       "summary": "Add Shakespeare lamps to the list - set default lamps for Shakespeare instruments and allow other ones",
@@ -30882,6 +35055,96 @@
       "language": "unknown",
       "project": "webapps",
       "hasDetails": false
+    },
+    {
+      "id": "remoteok:1137508",
+      "title": "Principal Software Engineer",
+      "summary": "Your Opportunity As a Principal Engineer , you will help design, build, and operate the clinical decision support and API-driven data delivery platform that enables Vytalize Health to embed timely, actionable clinical insights directly into provider workflows. Working cross-functionally with Data Engineering, Product, Clinical Operations, and EMR partners, your solutions will transform how clinicians access…",
+      "company": "Vytalize Health",
+      "country": "Não informado",
+      "countries": [],
+      "remote": true,
+      "categories": [
+        "programming",
+        "cybersecurity",
+        "employment",
+        "remote"
+      ],
+      "type": "employment",
+      "salary": "",
+      "publishedAt": "2026-10-13T00:00:18Z",
+      "sourceName": "Remote OK",
+      "sourceUrl": "https://remoteOK.com/remote-jobs/remote-principal-software-engineer-vytalize-health-1137508",
+      "sourceLinks": [
+        {
+          "name": "Remote OK",
+          "url": "https://remoteOK.com/remote-jobs/remote-principal-software-engineer-vytalize-health-1137508"
+        }
+      ],
+      "tags": [
+        "dev",
+        "design",
+        "infosec",
+        "python",
+        "docker",
+        "technical",
+        "recruiter",
+        "customer support",
+        "testing",
+        "marketing",
+        "quality assurance",
+        "finance"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "source_listing",
+      "language": "unknown",
+      "hasDetails": true
+    },
+    {
+      "id": "remoteok:1137507",
+      "title": "Graphic Designer & Video Editor",
+      "summary": "Description BlueTuskr is a full-service e-commerce growth agency built exclusively for e-commerce brands. We combine paid media, owned media, creative, and analytics to help our clients scale profitably. Our team is made up of specialists who are deeply invested in their craft â and in the success of the brands they serve. This isn't a \"jack of all trades\" environment. We hire people who are exceptional at what…",
+      "company": "BlueTuskr",
+      "country": "Remoto/Global",
+      "countries": [],
+      "remote": true,
+      "categories": [
+        "websites",
+        "design",
+        "video",
+        "freelance",
+        "employment",
+        "remote"
+      ],
+      "type": "freelance/contract",
+      "salary": "",
+      "publishedAt": "2026-10-13T00:00:06Z",
+      "sourceName": "Remote OK",
+      "sourceUrl": "https://remoteOK.com/remote-jobs/remote-graphic-designer-video-editor-bluetuskr-1137507",
+      "sourceLinks": [
+        {
+          "name": "Remote OK",
+          "url": "https://remoteOK.com/remote-jobs/remote-graphic-designer-video-editor-bluetuskr-1137507"
+        }
+      ],
+      "tags": [
+        "design",
+        "designer",
+        "customer support",
+        "testing",
+        "marketing",
+        "web dev",
+        "video",
+        "mobile",
+        "photoshop",
+        "stats",
+        "sales",
+        "illustrator"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "source_listing",
+      "language": "unknown",
+      "hasDetails": true
     },
     {
       "id": "github:5821651122",
@@ -68196,42 +72459,6 @@
       "language": "unknown",
       "project": "codercops/discord-bot",
       "hasDetails": true
-    },
-    {
-      "id": "github:5751761253",
-      "title": "Consider deprecating old config API",
-      "summary": "Feature request It would be great to have pagination for validation. Use case Many users need this functionality for production deployments. Implementation idea Add a new config option enable pagination with default false .",
-      "company": "",
-      "country": "Não informado",
-      "countries": [],
-      "remote": false,
-      "categories": [
-        "projects"
-      ],
-      "type": "open-source contribution",
-      "salary": "",
-      "publishedAt": "2026-10-11T19:23:40Z",
-      "sourceName": "GitHub Issues",
-      "sourceUrl": "https://github.com/yrn-dev/Operator/issues/33416",
-      "sourceLinks": [
-        {
-          "name": "GitHub Issues",
-          "url": "https://github.com/yrn-dev/Operator/issues/33416"
-        },
-        {
-          "name": "GitHub Issues",
-          "url": "https://github.com/yrn-dev/Operator/issues/35669"
-        }
-      ],
-      "tags": [
-        "documentation",
-        "good first issue"
-      ],
-      "status": "UNKNOWN",
-      "trustLevel": "community_project",
-      "language": "unknown",
-      "project": "yrn-dev/Operator",
-      "hasDetails": false
     },
     {
       "id": "github:5804361318",
@@ -125536,54 +129763,6 @@
       "language": "unknown",
       "project": "IbraheemAlz/next-gen-editor",
       "hasDetails": true
-    },
-    {
-      "id": "github:5684981910",
-      "title": "Fix JavaScript lint errors",
-      "summary": "JavaScript Linting Failures Linting failures were detected in the automated JavaScript lint workflow run. Workflow Details - Run: - Type: JavaScript Linting - Date: :11:11 UTC Error Details Pull Request Instructions - Please use the following PR title format: \"chore: fix JavaScript lint errors (issue )\". - Reference this issue in the \"Related Issues\" section of the PR body as \"resolves \".",
-      "company": "",
-      "country": "Não informado",
-      "countries": [],
-      "remote": false,
-      "categories": [
-        "programming",
-        "projects"
-      ],
-      "type": "open-source contribution",
-      "salary": "",
-      "publishedAt": "2026-10-10T00:20:24Z",
-      "sourceName": "GitHub Issues",
-      "sourceUrl": "https://github.com/stdlib-js/stdlib/issues/15831",
-      "sourceLinks": [
-        {
-          "name": "GitHub Issues",
-          "url": "https://github.com/stdlib-js/stdlib/issues/15831"
-        },
-        {
-          "name": "GitHub Issues",
-          "url": "https://github.com/stdlib-js/stdlib/issues/15944"
-        },
-        {
-          "name": "GitHub Issues",
-          "url": "https://github.com/stdlib-js/stdlib/issues/15970"
-        },
-        {
-          "name": "GitHub Issues",
-          "url": "https://github.com/stdlib-js/stdlib/issues/15995"
-        },
-        {
-          "name": "GitHub Issues",
-          "url": "https://github.com/stdlib-js/stdlib/issues/16021"
-        }
-      ],
-      "tags": [
-        "Good First Issue"
-      ],
-      "status": "UNKNOWN",
-      "trustLevel": "community_project",
-      "language": "unknown",
-      "project": "stdlib-js/stdlib",
-      "hasDetails": false
     },
     {
       "id": "github:5786322721",
@@ -278443,37 +282622,6 @@
       "hasDetails": true
     },
     {
-      "id": "github:5703308242",
-      "title": "Add configuration options for sorting",
-      "summary": "Problem When working with middleware, the error messages could be more descriptive. Suggestion Improve error handling and add detailed error messages. Context This would help with debugging and maintenance.",
-      "company": "",
-      "country": "Não informado",
-      "countries": [],
-      "remote": false,
-      "categories": [
-        "projects"
-      ],
-      "type": "open-source contribution",
-      "salary": "",
-      "publishedAt": "2026-10-04T21:05:47Z",
-      "sourceName": "GitHub Issues",
-      "sourceUrl": "https://github.com/yrn-dev/Operator/issues/31696",
-      "sourceLinks": [
-        {
-          "name": "GitHub Issues",
-          "url": "https://github.com/yrn-dev/Operator/issues/31696"
-        }
-      ],
-      "tags": [
-        "good first issue"
-      ],
-      "status": "UNKNOWN",
-      "trustLevel": "community_project",
-      "language": "unknown",
-      "project": "yrn-dev/Operator",
-      "hasDetails": false
-    },
-    {
       "id": "github:5703273128",
       "title": "[good first issue, hacktoberfest] 🌊 Add new Example Sentence 1168 (good-first-issue)",
       "summary": "🟢 Good First Issue: Add Example Sentence 116 — Beginner-Friendly Open Source Contribution 🟢 No prerequisites needed! You don't need to clone the repo, install anything, or write code. This entire contribution can be done from your browser in under 60 seconds. Labels: good first issue, help wanted, hacktoberfest Language: JSON (no coding required) Time: < 1 minute Skill Level: Absolute beginner --- Add Japanese…",
@@ -387726,7 +391874,7 @@
       "frequencyMinutes": 60,
       "limit": 100,
       "status": "ok",
-      "lastSyncAt": "2026-10-13T23:19:52Z",
+      "lastSyncAt": "2026-10-14T01:59:30Z",
       "itemsFound": 100,
       "note": "Fonte remota; consultar no máximo uma vez por hora."
     },
@@ -387746,7 +391894,7 @@
       "frequencyMinutes": 60,
       "limit": 250,
       "status": "ok",
-      "lastSyncAt": "2026-10-13T23:19:52Z",
+      "lastSyncAt": "2026-10-14T01:59:30Z",
       "itemsFound": 99,
       "note": "Atribuição e link dofollow para cada anúncio original."
     },
@@ -387765,7 +391913,7 @@
       "frequencyMinutes": 60,
       "limit": 100,
       "status": "ok",
-      "lastSyncAt": "2026-10-13T23:19:52Z",
+      "lastSyncAt": "2026-10-14T01:59:30Z",
       "itemsFound": 89,
       "note": "Preservar a atribuição e o link do feed original."
     },
@@ -387784,7 +391932,7 @@
       "frequencyMinutes": 60,
       "limit": 50,
       "status": "ok",
-      "lastSyncAt": "2026-10-13T23:19:52Z",
+      "lastSyncAt": "2026-10-14T01:59:30Z",
       "itemsFound": 4,
       "note": "Feed RSS oficial do portal de carreiras AGL, filtrada para Angola; manter o link original."
     },
@@ -387804,8 +391952,8 @@
       "frequencyMinutes": 60,
       "limit": 180,
       "status": "ok",
-      "lastSyncAt": "2026-10-13T23:19:52Z",
-      "itemsFound": 292,
+      "lastSyncAt": "2026-10-14T01:59:30Z",
+      "itemsFound": 280,
       "note": "Issues abertas com labels de contribuição; remuneração não presumida."
     },
     {
@@ -387921,8 +392069,8 @@
       "frequencyMinutes": 60,
       "limit": 180,
       "status": "ok",
-      "lastSyncAt": "2026-10-13T23:19:52Z",
-      "itemsFound": 66,
+      "lastSyncAt": "2026-10-14T01:59:30Z",
+      "itemsFound": 67,
       "note": "Perguntas públicas recentes; responde na fonte original. Não são ofertas pagas."
     },
     {
@@ -387942,7 +392090,7 @@
       "frequencyMinutes": 60,
       "limit": 180,
       "status": "ok",
-      "lastSyncAt": "2026-10-13T23:19:52Z",
+      "lastSyncAt": "2026-10-14T01:59:30Z",
       "itemsFound": 0,
       "note": "Vídeos e comentários públicos recentes; requer YOUTUBE_API_KEY e não publica respostas automaticamente."
     }
