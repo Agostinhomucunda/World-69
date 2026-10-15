@@ -1,5 +1,5 @@
 {
-  "next_source": 3,
+  "next_source": 16,
   "sources": {
     "developer-tools": {
       "page": 3,
@@ -19,7 +19,7 @@
     },
     "image-editing": {
       "page": 3,
-      "offset": 31
+      "offset": 40
     },
     "video-editor": {
       "page": 11,
@@ -27,43 +27,43 @@
     },
     "audio": {
       "page": 2,
-      "offset": 91
+      "offset": 95
     },
     "productivity": {
       "page": 2,
-      "offset": 63
+      "offset": 68
     },
     "cybersecurity": {
-      "page": 2,
-      "offset": 94
-    },
-    "self-hosted": {
-      "page": 3,
-      "offset": 3
-    },
-    "education": {
-      "page": 3,
-      "offset": 12
-    },
-    "artificial-intelligence": {
-      "page": 2,
-      "offset": 94
-    },
-    "machine-learning": {
-      "page": 3,
-      "offset": 33
-    },
-    "social-media": {
-      "page": 2,
-      "offset": 88
-    },
-    "ecommerce": {
       "page": 3,
       "offset": 0
     },
+    "self-hosted": {
+      "page": 3,
+      "offset": 8
+    },
+    "education": {
+      "page": 3,
+      "offset": 21
+    },
+    "artificial-intelligence": {
+      "page": 3,
+      "offset": 0
+    },
+    "machine-learning": {
+      "page": 3,
+      "offset": 45
+    },
+    "social-media": {
+      "page": 2,
+      "offset": 97
+    },
+    "ecommerce": {
+      "page": 3,
+      "offset": 4
+    },
     "finance": {
       "page": 2,
-      "offset": 66
+      "offset": 67
     },
     "open-source": {
       "page": 3,
@@ -74,6 +74,6 @@
       "offset": 15
     }
   },
-  "runs": 58,
-  "updated_at": "2026-10-15T11:07:49Z"
+  "runs": 59,
+  "updated_at": "2026-10-15T16:39:16Z"
 }
