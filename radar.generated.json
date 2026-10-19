@@ -1,8 +1,2819 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-18T23:22:45Z",
+  "generatedAt": "2026-10-19T01:25:46Z",
   "refreshIntervalMinutes": 60,
   "items": [
+    {
+      "id": "github:5916222403",
+      "title": "[scanner] Console Live Promote failing 15+ consecutive scheduled runs: live /deployments renders unavailable state (live-core-pages semantic invariant)",
+      "summary": "What The scheduled Console Live Promote workflow ( .github/workflows/console-live-promote.yml , 2x daily) has failed 15+ consecutive runs since at least . Latest: run -19T01:01 UTC). Failure Single consistent failure in the live semantic suite: 5 other live routes pass; 4 did not run after the failure. Only /deployments renders an unavailable/not-loaded state on the live site, consistently, for a week. Diagnosis…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-19T01:24:43Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/kubestellar/console/issues/24438",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/kubestellar/console/issues/24438"
+        }
+      ],
+      "tags": [
+        "bug",
+        "help wanted",
+        "agent/scanner"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "kubestellar/console",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5916217422",
+      "title": "Expose version metadata from MinIO List output",
+      "summary": "[!IMPORTANT] This issue is not ready for contributions yet. The Kestra team still has to review it. Please wait until this message is removed and the issue has been move to Backlog stage before you start working on it. Pull requests opened before that will not be reviewed. In the meantime, feel free to get started on a different issue by checking out our good first issues list. Describe the issue When…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-19T01:24:07Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/kestra-io/plugin-minio/issues/171",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/kestra-io/plugin-minio/issues/171"
+        }
+      ],
+      "tags": [
+        "area/plugin",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "kestra-io/plugin-minio",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5916215542",
+      "title": "Learn: make the Starter Auto your own",
+      "summary": "Learn how autonomous works by making Starter Auto your own. Read the file top to bottom first, it's short! Pick one or more of the \"Things to try\" at the bottom of the file: - [ ] Tune DRIVE TIME so the robot stops where you want it - [ ] Tune LAUNCH TIME so all 4 POLLEN leave the robot, without wasting time - [ ] Strafe or turn instead of only driving forward - [ ] Make a copy for the other side of the field - [ ]…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-19T01:23:52Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Wyandotte-Robotics/ftc-14158-biobuzz/issues/4",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Wyandotte-Robotics/ftc-14158-biobuzz/issues/4"
+        }
+      ],
+      "tags": [
+        "good first issue",
+        "autonomous"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Wyandotte-Robotics/ftc-14158-biobuzz",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5916115673",
+      "title": "Hindi top-up: claim a batch of rakazo's 397 untranslated strings",
+      "summary": "The task rakazo is an open-source, self-hostable app for running AI bots with your team. Hindi is a supported UI language. It was merged in August, and the project keeps merging translation work. But rakazo ships new features almost daily, and every new screen adds English strings, so Hindi has fallen behind. Measured against main on , in apps/web/src/locales/hi/messages.po : | | | |---|---| | Strings in the…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "ai",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-19T01:12:27Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/ecogetaway/oss-language-inclusion/issues/24",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/ecogetaway/oss-language-inclusion/issues/24"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "tier-a"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "ecogetaway/oss-language-inclusion",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5916065031",
+      "title": "[radar] SN open bounty 2026-10-19T01:06",
+      "summary": "New SN OPEN BOUNTY detected:",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-19T01:06:42Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/relayhop/sn-monetization-runtime/issues/1309",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/relayhop/sn-monetization-runtime/issues/1309"
+        }
+      ],
+      "tags": [
+        "radar",
+        "sn",
+        "bounty"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "relayhop/sn-monetization-runtime",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5916025625",
+      "title": "fix(remote): accept the pre-rewrite reference when registries.conf rewrites a location",
+      "summary": "Problem When registries.conf rewrites a prefix to a different location , a Repository built with remote.NewRepositoryWithProperties rejects the reference the user actually typed. config.NewRegistryProperties rewrites charts.example.test/foo/app to localhost:5000/foo/app and keeps only the rewritten value in props.Reference . Repository.ParseReference ( registry/remote/repository.go ) then rejects any fully qualified…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects",
+        "needs"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-19T01:01:54Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/oras-project/oras-go/issues/1625",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/oras-project/oras-go/issues/1625"
+        }
+      ],
+      "tags": [
+        "bug",
+        "help wanted",
+        "v3"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "oras-project/oras-go",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5916018435",
+      "title": "[good first issue, hacktoberfest] 🎏 Hacktoberfest Task - Add new Video Game Quote 585 (good-first-issue)",
+      "summary": "🟢 Good First Issue: Add Video Game Quote 58 — Beginner-Friendly Open Source Contribution 🟢 No prerequisites needed! You don't need to clone the repo, install anything, or write code. This entire contribution can be done from your browser in under 60 seconds. Labels: good first issue, help wanted, hacktoberfest Language: JSON (no coding required) Time: < 1 minute Skill Level: Absolute beginner --- Add Famous Japanese…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-19T01:00:58Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/lingdojo/kana-dojo/issues/32737",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/lingdojo/kana-dojo/issues/32737"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "good first issue",
+        "hacktoberfest",
+        "community",
+        "low hanging fruit",
+        "up-for-grabs",
+        "first-timers-only",
+        "good-first-issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "lingdojo/kana-dojo",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915996464",
+      "title": "Melhoria de performance",
+      "summary": "Contexto Realizar a analise de possibilidade de melhorias de performance dos MFEs",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-19T00:58:08Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/elevhub/.github/issues/13",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/elevhub/.github/issues/13"
+        }
+      ],
+      "tags": [
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "elevhub/.github",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5915991468",
+      "title": "[good first issue, hacktoberfest] 🐙 Hacktoberfest Task - Add new Grammar Point 717 (good-first-issue)",
+      "summary": "🟢 Good First Issue: Add Grammar Point 71 — Beginner-Friendly Open Source Contribution 🟢 No prerequisites needed! You don't need to clone the repo, install anything, or write code. This entire contribution can be done from your browser in under 60 seconds. Labels: good first issue, help wanted, hacktoberfest Language: JSON (no coding required) Time: < 1 minute Skill Level: Absolute beginner --- 📖 Add New Grammar…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-19T00:57:30Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/lingdojo/kana-dojo/issues/32736",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/lingdojo/kana-dojo/issues/32736"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "good first issue",
+        "hacktoberfest",
+        "community",
+        "low hanging fruit",
+        "up-for-grabs",
+        "first-timers-only",
+        "good-first-issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "lingdojo/kana-dojo",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915969304",
+      "title": "docs: update 1.3 docs for ORAS CLI v1.3.5",
+      "summary": "What is the problem? ORAS CLI v1.3.5 was released on (GitHub release, ghcr.io/oras-project/oras:v1.3.5 , and the Snap stable channel for amd64/arm64/s390x are all live). The 1.3 docs still point at v1.3.4. What needs to be updated 1. Installation page: versioned docs/version-1.3/installation.mdx Replace 1.3.4 / v1.3.4 with 1.3.5 / v1.3.5 (11 occurrences): | Line | Content | | --- | --- | | 33 | VERSION=\"1.3.4\"…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects",
+        "needs"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-19T00:54:47Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/oras-project/oras-www/issues/635",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/oras-project/oras-www/issues/635"
+        }
+      ],
+      "tags": [
+        "documentation",
+        "good first issue",
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "oras-project/oras-www",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915968099",
+      "title": "Templated SurrealDB ports fail flow validation",
+      "summary": "[!IMPORTANT] This issue is not ready for contributions yet. The Kestra team still has to review it. Please wait until this message is removed and the issue has been move to Backlog stage before you start working on it. Pull requests opened before that will not be reviewed. In the meantime, feel free to get started on a different issue by checking out our good first issues list. Describe the issue I need to set the…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-19T00:54:39Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/kestra-io/plugin-surrealdb/issues/132",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/kestra-io/plugin-surrealdb/issues/132"
+        }
+      ],
+      "tags": [
+        "area/plugin",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "kestra-io/plugin-surrealdb",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915926295",
+      "title": "语义状态色在浅色档当文字色时低于 WCAG AA（警告黄只有 1.71:1）",
+      "summary": "现象 语义状态色（ --state-warning / --state-error / --state-success ）在 浅色档当文字色 用时，对比度低于 WCAG AA 对小字的要求（4.5:1）。最严重的是警告黄： fbbc05 写在白底上只有 1.71:1 ，正文级别基本读不出。 应用有浅/暗两档（设置 → 外观可切， document.documentElement.classList.toggle('dark') ）。暗档这几档都是提亮版，对比度是够的；问题只在浅档。 实测（WCAG 2.1 相对亮度公式， npm 无需新依赖） | 用在哪 | 色值（浅档） | 写在 ffffff 上 | 写在 0f0f10 （暗档页面）上 | AA 小字 4.5 | |---|---|---|---|---| | --state-warning | fbbc05 | 1.71 | 11.22 | 浅档不过 | |…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-19T00:49:21Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/harryopo/zhixing-reader/issues/15",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/harryopo/zhixing-reader/issues/15"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "harryopo/zhixing-reader",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915850302",
+      "title": "make sure to update the readme once the reaper/renoise integrations are rolled out",
+      "summary": "yeah",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-19T00:39:55Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/user1303836/kumi/issues/368",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/user1303836/kumi/issues/368"
+        }
+      ],
+      "tags": [
+        "bug",
+        "documentation",
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "critical",
+        "chore",
+        "area: install",
+        "platform: windows",
+        "platform: macos",
+        "platform: linux"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "user1303836/kumi",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5915779995",
+      "title": "validate-setup.bat says nothing when bitcoin-datadir is missing",
+      "summary": "win/scripts/utilities/validate-setup.bat tests its two data directories with one line: cmd.exe binds the else to the nearer if , so a folder without bitcoin-datadir prints neither line: the warning appears only where bitcoin-datadir exists and electrum-datadir does not. Inferred from cmd.exe's parsing rule, not run. This command decides it on Windows, in an empty directory: It prints nothing where the rule holds…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-19T00:31:31Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/btclib-org/portanode/issues/691",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/btclib-org/portanode/issues/691"
+        }
+      ],
+      "tags": [
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "btclib-org/portanode",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915725540",
+      "title": "Decode a single base64 layer and scan the decoded text (opt-in --decode-base64 )",
+      "summary": "Parent: 12 Context - entropy.looks like encoded text() already base64-decodes candidates, but only to reject them ( evaluate() returns base64-decodes-to-text ). The decoded text is thrown away, even when it is aws secret access key=... or a JSON blob with an access key. - scanner.Scanner. scan structured() already re-runs rules on a different buffer through apply rule(..., haystack=value, value offset=line start)…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-19T00:24:59Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Jeffy123-zhu/logspecter/issues/41",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Jeffy123-zhu/logspecter/issues/41"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Jeffy123-zhu/logspecter",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915725383",
+      "title": "Accuracy benchmark: bench/accuracy.py reporting precision / recall / F1 per rule",
+      "summary": "Parent: 24 Depends on 39 (corpus and .truth.jsonl format). Context - engine.scan(paths, config) returns ScanResult.groups ; each FindingGroup has the plaintext secret , rule id , and occurrence samples with source and line (capped by engine.MAX SAMPLES PER GROUP , which is fine because corpus secrets are unique). - report/exporters.py::to json(..., include secret=True) is the CLI equivalent if you prefer running…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-19T00:24:58Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Jeffy123-zhu/logspecter/issues/40",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Jeffy123-zhu/logspecter/issues/40"
+        }
+      ],
+      "tags": [
+        "good first issue",
+        "tests"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Jeffy123-zhu/logspecter",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915725181",
+      "title": "Accuracy benchmark: labelled corpus format and seeded corpus generator",
+      "summary": "Parent: 24 Context - cli.py::selftest checks single lines from samples.POSITIVE SAMPLES / NEGATIVE SAMPLES for pass/fail only. cli.py::benchmark + samples.write synthetic log measure throughput, and nothing checks whether planted secrets were found. - samples.make secret(alphabet, length, rng) generates realistic fake tokens from a seed. Task - bench/generate corpus.py --seed N --out DIR writes a reproducible corpus…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects",
+        "employment"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-19T00:24:57Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Jeffy123-zhu/logspecter/issues/39",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Jeffy123-zhu/logspecter/issues/39"
+        }
+      ],
+      "tags": [
+        "good first issue",
+        "tests"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Jeffy123-zhu/logspecter",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915725037",
+      "title": "Docs site: generate the rule catalog from the built-in rule packs",
+      "summary": "Parent: 29 Can start in parallel with 37; hooking the output into the site nav needs 37. Context Rule metadata ( id , name , description , severity , confidence , tags , enabled , references , keywords , entropy , pack ) is defined on rules.Rule and loaded by rules.load ruleset() , but it is only visible via logspecter rules list/show or by reading the YAML in src/logspecter/rules/ . Task scripts/gen rule docs.py…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-19T00:24:56Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Jeffy123-zhu/logspecter/issues/38",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Jeffy123-zhu/logspecter/issues/38"
+        }
+      ],
+      "tags": [
+        "documentation",
+        "enhancement",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Jeffy123-zhu/logspecter",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915724889",
+      "title": "Docs site: MkDocs Material skeleton and GitHub Pages workflow",
+      "summary": "Parent: 29 Context Docs are spread across README.md , README.zh-CN.md and docs/rules.md (Chinese; the English translation is 8). There is no mkdocs.yml and .github/workflows/ only has ci.yml and release.yml . Task - mkdocs.yml using the Material theme with search enabled and this nav: Getting started, CLI reference, Integrations (GitHub Action, pre-commit, SARIF), Writing rules (use docs/rules.md ), FAQ (false…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-19T00:24:55Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Jeffy123-zhu/logspecter/issues/37",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Jeffy123-zhu/logspecter/issues/37"
+        }
+      ],
+      "tags": [
+        "documentation",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Jeffy123-zhu/logspecter",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915724755",
+      "title": "Add basic logspecter redact : write masked copies of plain log files",
+      "summary": "Parent: 22 Context - src/logspecter/redact.py has mask(secret) / mask line(line, secret) , used only to mask report output. Nothing writes a cleaned copy of the input. - engine.scan() returns ScanResult.groups ; each FindingGroup keeps only a capped number of occurrence samples ( engine.MAX SAMPLES PER GROUP ), but every group knows its secret and source . - ingest.classify() distinguishes SourceKind.SEEKABLE /…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-19T00:24:54Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Jeffy123-zhu/logspecter/issues/36",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Jeffy123-zhu/logspecter/issues/36"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Jeffy123-zhu/logspecter",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915724766",
+      "title": "Add backup and restore guide for credential data and export bundles",
+      "summary": "--- Issue 32: Add backup and restore guide for credential data and export bundles - Category : Docs - Summary : Credential exports and backup data contain sensitive information and should be documented with a clear restore process. A dedicated backup guide would reduce operational risk and help recovery when data corruption or accidental deletion occurs. - Suggested Files : - docs/BACKUP RESTORE.md - README.md…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-19T00:24:54Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/ToluLabs/StellarCred/issues/857",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/ToluLabs/StellarCred/issues/857"
+        }
+      ],
+      "tags": [
+        "documentation",
+        "good first issue",
+        "Stellar Wave"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "ToluLabs/StellarCred",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915724627",
+      "title": "Config file: [allowlist] for paths and secret regexes (global and per rule)",
+      "summary": "Parent: 21 Depends on 34 ( config.py and --config loading). Context - False positives can only be silenced by forking a rule's exclude pattern ( rules.py::Rule.exclude pattern ) or by a fingerprint baseline ( baseline.py ), which matches exact secrets only and cannot express \"anything under tests/fixtures/ \" or \"values containing EXAMPLE \". - ingest.py::resolve inputs(paths, , recursive, suffixes, follow all) has no…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-19T00:24:53Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Jeffy123-zhu/logspecter/issues/35",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Jeffy123-zhu/logspecter/issues/35"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Jeffy123-zhu/logspecter",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915724458",
+      "title": "Config file: load .logspecter.toml / [tool.logspecter] for scan and rule-selection options",
+      "summary": "Parent: 21 Context - cli.py::scan has 25 typer.Option s and nothing reads a file. Rule selection goes through cli.py:: build ruleset → RuleSet.select(...) . - requires-python = \" =3.10\" , but tomllib is only in the stdlib from 3.11. Task 1. New module src/logspecter/config.py : - find config(start: Path) - Path | None : in each directory from start upward, use .logspecter.toml if present, else pyproject.toml if it…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-19T00:24:52Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Jeffy123-zhu/logspecter/issues/34",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Jeffy123-zhu/logspecter/issues/34"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Jeffy123-zhu/logspecter",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915724296",
+      "title": "Add logspecter rules test to run inline rule examples",
+      "summary": "Parent: 26 Depends on 32 (the examples field and samples.expand placeholders ). Context - cli.py::rules validate loads rule files and prints prefilter info, but never runs a rule against input. - cli.py::selftest shows how to build a Scanner and drive Scanner.scan line() with sample lines. Task New sub-command: - For every selected rule, expand each example with a fixed-seed random.Random , then scan it with a…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-19T00:24:51Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Jeffy123-zhu/logspecter/issues/33",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Jeffy123-zhu/logspecter/issues/33"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue",
+        "rules",
+        "tests"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Jeffy123-zhu/logspecter",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915724133",
+      "title": "Rule schema: accept inline examples.match / examples.no match with placeholder expansion",
+      "summary": "Parent: 26 Context - src/logspecter/rules.py : ALLOWED RULE KEYS has no examples key, so load file() rejects it as unknown. Rule is a frozen dataclass that is serialised with Rule.to dict() / Rule.from dict() to reach worker processes. - src/logspecter/samples.py already has seeded generators: make secret(alphabet, length, rng) and the alphabets LOWER HEX , ALNUM , UPPER NUM , B64 , B64URL . Task 1. Accept an…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-19T00:24:50Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Jeffy123-zhu/logspecter/issues/32",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Jeffy123-zhu/logspecter/issues/32"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue",
+        "rules",
+        "tests"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Jeffy123-zhu/logspecter",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915723948",
+      "title": "Container logs: CRI (containerd/CRI-O) decoder and Kubernetes log-path metadata",
+      "summary": "Parent: 27 Depends on 30 (reuses ContainerLine from src/logspecter/containers.py ). Context - Kubernetes nodes write CRI logs to /var/log/containers/ .log and /var/log/pods/... , one record per line: . P means partial, F means the line is complete. - Today LogSpecter reads these as plain text: partial lines are not joined, and the report has no pod/namespace/container ( ingest.resolve inputs keeps only the path)…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-19T00:24:48Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Jeffy123-zhu/logspecter/issues/31",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Jeffy123-zhu/logspecter/issues/31"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue",
+        "integration"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Jeffy123-zhu/logspecter",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915723771",
+      "title": "Container logs: Docker json-file decoder with partial-line reassembly",
+      "summary": "Parent: 27 Context - src/logspecter/cloud.py ( SCHEMA DETECTORS , detect schema ) has no detector for container runtime logs, so a Docker json-file record is treated as generic JSON and findings point at $.log . - Docker splits application lines longer than 16 KiB into several records; only the last one ends with \\n . A token that crosses the split is missed today. - structured.try parse() already parses one JSON…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-19T00:24:47Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Jeffy123-zhu/logspecter/issues/30",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Jeffy123-zhu/logspecter/issues/30"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue",
+        "integration"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Jeffy123-zhu/logspecter",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915716683",
+      "title": "Practice: make your first pull request",
+      "summary": "Every new programmer: do this once. It walks you through the way we make every change. 1. Make a branch named practice/ 2. Make a small change (for example, add a useful link to the README) 3. Commit it with a clear message and push the branch 4. Open a pull request, fill in the template, and ask a programming lead or mentor to review 5. Reply to the review comments This is practice, so the reviewer will close your…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "teaching",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-19T00:23:57Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Wyandotte-Robotics/frc-8124-2027/issues/3",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Wyandotte-Robotics/frc-8124-2027/issues/3"
+        }
+      ],
+      "tags": [
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Wyandotte-Robotics/frc-8124-2027",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915716330",
+      "title": "Set up WPILib and GitHub on team laptops",
+      "summary": "Get every programmer's laptop ready before kickoff. - [ ] Install the current WPILib tools (2026) for practice - [ ] Install GitHub Desktop and sign in - [ ] Clone this repo - [ ] Work through Zero to Robot and the command-based guide Done when every programmer can build and deploy a practice project to a robot.",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-19T00:23:54Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Wyandotte-Robotics/frc-8124-2027/issues/1",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Wyandotte-Robotics/frc-8124-2027/issues/1"
+        }
+      ],
+      "tags": [
+        "good first issue",
+        "tools"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Wyandotte-Robotics/frc-8124-2027",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5915716146",
+      "title": "Practice: make your first pull request",
+      "summary": "Every new programmer: do this once. It walks you through the way we make every change. 1. Make a branch named practice/ 2. Make a small change (for example, change SLOW MODE in MainTeleOp.java , or fix a typo in the README) 3. Commit it with a clear message and push the branch 4. Open a pull request, fill in the template, and ask a programming lead or mentor to review 5. Reply to the review comments This is…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "teaching",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-19T00:23:53Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Wyandotte-Robotics/ftc-14158-biobuzz/issues/3",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Wyandotte-Robotics/ftc-14158-biobuzz/issues/3"
+        }
+      ],
+      "tags": [
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Wyandotte-Robotics/ftc-14158-biobuzz",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915715551",
+      "title": "Set up the robot configuration and drive the StarterBot",
+      "summary": "Get the StarterBot driving, intaking and launching with our code. - [ ] Install this code on the robot ( Run ▶ in Android Studio) - [ ] On the Driver Hub, make a robot configuration using the names in the README's robot configuration table (they match goBILDA's guide) - [ ] Plug the Pinpoint into an I2C bus other than bus 0, and add it as pinpoint - [ ] Run Main TeleOp : drive, strafe, turn, intake in and out, and…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-19T00:23:49Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Wyandotte-Robotics/ftc-14158-biobuzz/issues/1",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Wyandotte-Robotics/ftc-14158-biobuzz/issues/1"
+        }
+      ],
+      "tags": [
+        "good first issue",
+        "drivetrain"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Wyandotte-Robotics/ftc-14158-biobuzz",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915698752",
+      "title": "fix(content/oci): Store.GC can delete blobs from a write in progress",
+      "summary": "Store.GC deletes every blob in blobs/ that isn't reachable from the store's in-memory tags. Blobs get no age check: leftoverExpiry only applies to ingest/ files and temporary index.json / oci-layout files ( gcLeftovers ). Once Storage.Push renames a blob from ingest/ into blobs/ , GC no longer protects it as a write in progress. That loses data in two cases. Within one Store , during a multi-step copy Store.Push…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-19T00:21:49Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/oras-project/oras-go/issues/1623",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/oras-project/oras-go/issues/1623"
+        }
+      ],
+      "tags": [
+        "bug",
+        "help wanted",
+        "v3"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "oras-project/oras-go",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915692911",
+      "title": "Anchor .gitignore rules, and add CONTRIBUTING and Dependabot",
+      "summary": ".gitignore rules catch unrelated paths Several rules aren't anchored to the repository root, so they would silently ignore new files elsewhere. git check-ignore --no-index shows these would all be ignored: - web/vendor/three.js , by vendor/ ( .gitignore:50 ) - web/lib/three.module.js , by lib/ - docs/build/x.html , by build/ - domez/parts/x.py , by parts/ - any .obj anywhere ( .gitignore:6 ), including test fixtures…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-19T00:21:08Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/zacharyelston/DomeZ/issues/36",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/zacharyelston/DomeZ/issues/36"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "zacharyelston/DomeZ",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915692726",
+      "title": "Docs: wrong counts, stale sections, old project name and one undocumented Acidome quirk",
+      "summary": "Small documentation fixes found in a review. Wrong numbers - Verified configurations. README.md:63 and docs/acidome.md:38 say \"13 checked configurations\" / \"These 13 configurations\", but the list below has 15: 5 full spheres, 5 cuts, 2 octahedra and 3 flattened. - Fixture size. docs/viewer.md:147 says the Acidome label fixture holds \"28 board types across six designs\". tests/js/fixtures/acidome-drawings.json has 31…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-19T00:21:06Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/zacharyelston/DomeZ/issues/35",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/zacharyelston/DomeZ/issues/35"
+        }
+      ],
+      "tags": [
+        "documentation",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "zacharyelston/DomeZ",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915680394",
+      "title": "Add SDK helper to parse and validate credential JSON",
+      "summary": "--- Issue 27: Add SDK helper to parse and validate credential JSON - Category : Feature - Summary : An SDK helper to validate credential JSON shapes and required metadata would speed integrations and reduce invalid submissions to verifier flows. - Suggested Files : - frontend/packages/sdk/src/validateCredential.ts - frontend/packages/sdk/README.md - tests/sdk/validateCredential.test.ts - Tasks : - [ ] Implement a…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-19T00:19:38Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/ToluLabs/StellarCred/issues/852",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/ToluLabs/StellarCred/issues/852"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue",
+        "Stellar Wave"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "ToluLabs/StellarCred",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915679711",
+      "title": "Shared extraction is keyed by pack checksum, so unchanged layers are re-extracted on every pack version",
+      "summary": "Ask Key the shared extraction store per layer digest instead of per pack checksum, so a new pack that shares layers with one already extracted does not re-extract them. Today shared pack dir(shared root, footer.checksum) names the entry after the pack footer's checksum , and extract sidecar shared with options returns early only when is extracted(&shared dir) . Change one byte anywhere in the pack — one tool version…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-19T00:19:33Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/smol-machines/smolvm/issues/1868",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/smol-machines/smolvm/issues/1868"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "smol-machines/smolvm",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915658039",
+      "title": "Android support",
+      "summary": "Ship an Android app alongside the iOS app from spuder/OpenThings 4. The iOS app wraps the web app with Capacitor 8. Android can use the same approach: - npx cap add android - src/lib/native is already platform-neutral, apart from the App Group plugin. - Widgets and the share inbox need Android equivalents: SharedPreferences and a Glance widget instead of the App Group (see \"Next\" in docs/ios.md ). We need testers…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-19T00:16:58Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/spuder/OpenThings/issues/6",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/spuder/OpenThings/issues/6"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "spuder/OpenThings",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915625497",
+      "title": "Add offline credential export/import CLI helper",
+      "summary": "--- Issue 4: Add offline credential export/import CLI helper - Category : Feature - Summary : Users depend on the browser UI to export and import credential JSON backups, but there is no simple offline or script-based path for recovery, bulk migration, or CI demos. A CLI helper would make emergency recovery and testing easier while keeping the workflow explicit and auditable. - Suggested Files…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-19T00:13:03Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/ToluLabs/StellarCred/issues/843",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/ToluLabs/StellarCred/issues/843"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue",
+        "Stellar Wave"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "ToluLabs/StellarCred",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915622463",
+      "title": "Add SDK helper: buildVerifyUrl type-safe options and examples",
+      "summary": "--- Issue 1: Add SDK helper: buildVerifyUrl type-safe options and examples - Category : Feature - Summary : The SDK's buildVerifyUrl helper is referenced across docs but contributors may misuse optional parameters (returnUrl, claim params). Add a clearer, typed API surface and in-repo examples to reduce integration bugs and increase adoption. - Suggested Files : - frontend/packages/sdk/…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-19T00:12:41Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/ToluLabs/StellarCred/issues/842",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/ToluLabs/StellarCred/issues/842"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue",
+        "Stellar Wave"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "ToluLabs/StellarCred",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915616668",
+      "title": "Add a worked example for scan, export, and verify-manifest to the README",
+      "summary": "Context README describes the commands, but a new user benefits from one copy-pasteable end-to-end walkthrough against the CC0 fixtures. Acceptance criteria - A short \"Try it on the fixtures\" section: albumen scan fixtures --manifest /tmp/albumen-scan.jsonl , albumen verify-manifest --manifest /tmp/albumen-scan.jsonl --against fixtures , then albumen export --from fixtures --to /tmp/albumen-export and albumen…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-19T00:12:00Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/jay-the-maker/albumen/issues/47",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/jay-the-maker/albumen/issues/47"
+        }
+      ],
+      "tags": [
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "jay-the-maker/albumen",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915616558",
+      "title": "Add Live Photo pairing tests for mismatched and missing ContentIdentifier",
+      "summary": "Context ingest/src/discover.rs has discovers xmp raw pair and live photo and discovers live photo from the still . Edge cases are not covered: the .mov alone, a different-case extension ( .MOV ), and a still whose video is missing. Acceptance criteria - Unit tests in ingest/src/discover.rs for: discovering from the .mov side, IMG.HEIC + IMG.MOV uppercase, and a still with no video (asset is the still alone, no…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-19T00:12:00Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/jay-the-maker/albumen/issues/45",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/jay-the-maker/albumen/issues/45"
+        }
+      ],
+      "tags": [
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "jay-the-maker/albumen",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915616556",
+      "title": "Add a test that albumen scan and albumen-mcp make no network connections",
+      "summary": "Context Respect and control: a local scan or a local MCP session should not talk to the network. There is no test that pins this today. Acceptance criteria - On Linux CI, a test runs albumen scan over the fixture corpus and an albumen-mcp search session inside a network namespace with no route (for example unshare -rn ), and asserts both succeed. - Where the namespace is unavailable, the test skips with a clear…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-19T00:12:00Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/jay-the-maker/albumen/issues/44",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/jay-the-maker/albumen/issues/44"
+        }
+      ],
+      "tags": [
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "jay-the-maker/albumen",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915616660",
+      "title": "Add unit tests for the albumen-receive WebDAV, SFTP, and FTP front ends",
+      "summary": "Context receive/src/store.rs has 5 unit tests, but webdav.rs , sftp.rs , ftp.rs , and roundtrip.rs have none, and receive/ has no tests/ directory. Acceptance criteria - At least one test per protocol front end that uploads a fixture through it and asserts SHA-256, filename, and mtime of the stored copy. - A test per protocol that a second upload with different bytes under the same name is stored beside the first…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-19T00:12:00Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/jay-the-maker/albumen/issues/46",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/jay-the-maker/albumen/issues/46"
+        }
+      ],
+      "tags": [
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "jay-the-maker/albumen",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915616436",
+      "title": "Generate shell completions for the albumen CLI",
+      "summary": "Context The CLI uses clap ( cli/src/main.rs ). Shell completions reduce friction for export , scan , and verify-manifest . Acceptance criteria - albumen completions prints a completion script to stdout using clap complete . - The new dependency is added with --locked -compatible Cargo.lock changes and an Apache-2.0-compatible license. - README shows how to install the completion for bash, zsh, fish, and PowerShell…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-19T00:11:59Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/jay-the-maker/albumen/issues/43",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/jay-the-maker/albumen/issues/43"
+        }
+      ],
+      "tags": [
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "jay-the-maker/albumen",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915616303",
+      "title": "Add synthetic sidecar-pair fixtures for edge-case names",
+      "summary": "Context fixtures/ has one XMP pair ( xmp/IMG 0004.jpg + .xmp ) and one AAE pair. ingest/src/discover.rs::sidecar candidates also handles other naming forms. More CC0 synthetic fixtures make the round-trip gate cover them. Acceptance criteria - New CC0 synthetic fixtures generated by fixtures/generate.sh / fixtures/assemble.py for: IMG X.JPG.xmp (full-name sidecar), uppercase .XMP , and a sidecar beside a RAW+JPEG…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-19T00:11:58Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/jay-the-maker/albumen/issues/42",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/jay-the-maker/albumen/issues/42"
+        }
+      ],
+      "tags": [
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "jay-the-maker/albumen",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915616288",
+      "title": "Add a lint test that source-reading modules never call filesystem write APIs",
+      "summary": "Context The repo already has a source scan asserting the CLI and default MCP server never name copy verify quarantine ( cli/tests/quarantine unreachable.rs ). A similar guard should keep write calls out of code that only reads sources. Acceptance criteria - A test scans ingest/src/scan.rs and ingest/src/discover.rs (and any SourceRoot module once it exists) for fs::write , File::create , OpenOptions with…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-19T00:11:58Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/jay-the-maker/albumen/issues/41",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/jay-the-maker/albumen/issues/41"
+        }
+      ],
+      "tags": [
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "jay-the-maker/albumen",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915616008",
+      "title": "Add --dry-run to albumen export",
+      "summary": "Context albumen export --from --to ( cli/src/main.rs ) copies straight away. A dry run lets a user see exactly what would be written before anything touches the destination, which is minimal friction with no surprises. Acceptance criteria - albumen export --dry-run lists each relative path that would be placed, the ones already present with identical SHA-256, and any that would fail as AlreadyExists , then exits…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-19T00:11:56Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/jay-the-maker/albumen/issues/40",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/jay-the-maker/albumen/issues/40"
+        }
+      ],
+      "tags": [
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "jay-the-maker/albumen",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915615998",
+      "title": "Introduce a read-only SourceRoot type for library and scan roots",
+      "summary": "Context Sources are read-only forever. Today a source root is a plain PathBuf (for example Export { from } and Scan { dir } in cli/src/main.rs , ingest/src/scan.rs ). A dedicated type makes the read-only contract visible in the type system. Acceptance criteria - A SourceRoot newtype in albumen-ingest exposes only read operations (open for read, metadata, read dir, walk). It has no method that creates, writes…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-19T00:11:56Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/jay-the-maker/albumen/issues/39",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/jay-the-maker/albumen/issues/39"
+        }
+      ],
+      "tags": [
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "jay-the-maker/albumen",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915615930",
+      "title": "Add a Windows leg to the ingest CI matrix",
+      "summary": "Context Windows is a first-class platform, but the ingest job in .github/workflows/ci.yml runs only on ubuntu-24.04 , ubuntu-26.04 , and macos-14 (see docs/ci.md ). Filename, mtime, and path handling differ on NTFS, so the round-trip gate should run there too. Acceptance criteria - A windows-2025 (or current pinned Windows image, not windows-latest ) entry in the ingest matrix runs cargo fmt , cargo clippy , and…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects",
+        "employment"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-19T00:11:55Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/jay-the-maker/albumen/issues/38",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/jay-the-maker/albumen/issues/38"
+        }
+      ],
+      "tags": [
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "jay-the-maker/albumen",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915593514",
+      "title": "rtk ruff reads the subcommand from fixed positions, so ruff global options make rtk ruff --isolated analyze graph truncate the JSON",
+      "summary": "rtk ruff decides the route from fixed argument positions: is check invocation reads args[0] , is format matches format anywhere, and (with 3942) is analyze graph invocation reads args[0] and args[1] . ruff's global options are accepted before the subcommand and between analyze and graph , so any of them moves the subcommand out of the position rtk looks at. First reported by in for the global options before analyze…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects",
+        "employment"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-19T00:09:12Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/rtk-ai/rtk/issues/4654",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/rtk-ai/rtk/issues/4654"
+        }
+      ],
+      "tags": [
+        "bug",
+        "help wanted",
+        "area:cli",
+        "priority:medium"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "rtk-ai/rtk",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915568629",
+      "title": "Publish the first extensions to Browse Extensions",
+      "summary": "Goal Browse Extensions shows real extensions to install, instead of \"No extensions are listed yet\". Why Browse Extensions (0.4.0) lists npm packages with the waypoint-extension keyword, and none exist yet. New users opening it find nothing, and authors have no example to copy. In scope - Publish examples/extensions/developer-utilities to npm with the waypoint-extension keyword - Write and publish two or three small…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-19T00:06:08Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/alexsilver8/waypoint/issues/66",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/alexsilver8/waypoint/issues/66"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue",
+        "roadmap"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "alexsilver8/waypoint",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915567655",
+      "title": "Share a custom colour theme as a code",
+      "summary": "Goal Copy your custom colour theme as a short code, and paste someone else's to use it. Why Colour themes landed in 0.4.0 with a Custom option for your own accent and tint. Right now the only way to pass one on is to read out the two hex colours. In scope - Copy Theme Code next to the Custom colours in Settings → General → Appearance, giving something like waypoint-theme:ff6b35/ff6b35 (accent, then optional tint)…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-19T00:06:01Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/alexsilver8/waypoint/issues/65",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/alexsilver8/waypoint/issues/65"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue",
+        "roadmap"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "alexsilver8/waypoint",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915548126",
+      "title": "Toasts share the export toast's popover surface in every theme",
+      "summary": "Problem Toasts don't share one surface. The export toast renders a custom card on bg-popover / text-popover-foreground with border-border and shadow-elevation-5 , so it follows our design tokens in light and dark. Every other toast uses Sonner's built-in styling, picked by theme=\"light\" | \"dark\" on the . Sonner's dark palette doesn't match our --popover ( 251e21 in .dark ), so the \"Deleted {name}\" undo toast comes…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects",
+        "needs"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-19T00:03:31Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/openslop/openslop/issues/992",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/openslop/openslop/issues/992"
+        }
+      ],
+      "tags": [
+        "good first issue",
+        "priority: low",
+        "size: S",
+        "bug"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "openslop/openslop",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915529876",
+      "title": "[good first issue, hacktoberfest] 🎍 Hacktoberfest Task - Add new Trivia Question 466 (good-first-issue)",
+      "summary": "🟢 Good First Issue: Add Trivia Question 46 — Beginner-Friendly Open Source Contribution 🟢 No prerequisites needed! You don't need to clone the repo, install anything, or write code. This entire contribution can be done from your browser in under 60 seconds. Labels: good first issue, help wanted, hacktoberfest Language: JSON (no coding required) Time: < 1 minute Skill Level: Absolute beginner --- 🧠 Add New Trivia…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-19T00:01:00Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/lingdojo/kana-dojo/issues/32735",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/lingdojo/kana-dojo/issues/32735"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "good first issue",
+        "hacktoberfest",
+        "community",
+        "low hanging fruit",
+        "up-for-grabs",
+        "first-timers-only",
+        "good-first-issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "lingdojo/kana-dojo",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915523547",
+      "title": "payment::unpause is missing the TTL extension that payment::pause (and every other contract's unpause) has",
+      "summary": "Summary payment::unpause ( contracts/payment/src/lib.rs:256-261 ) never extends the contract instance's TTL — unlike payment::pause right above it (which does, line 249), and unlike pause / unpause in the other three contracts (channel, compliance, treasury), which both correctly extend TTL. This is an isolated inconsistency within a single function, not a contract-wide pattern — the fix is one line. Evidence…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-19T00:00:08Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Konfirm-xyz/konfirm-contracts/issues/167",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Konfirm-xyz/konfirm-contracts/issues/167"
+        }
+      ],
+      "tags": [
+        "bug",
+        "good first issue",
+        "priority:high"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Konfirm-xyz/konfirm-contracts",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915523216",
+      "title": "set admin never extends the contract instance TTL in channel, compliance, or payment",
+      "summary": "Summary set admin in all three contracts that have it ( channel , compliance , payment — treasury has no set admin , per already-tracked issue 69) never extends the contract instance's TTL, despite writing to DataKey::Admin . Every other mutating entry point in these same files calls env.storage().instance().extend ttl(TTL THRESHOLD, TTL EXTEND TO) as (or near) its first line. Admin rotation is exactly the kind of…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-19T00:00:05Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Konfirm-xyz/konfirm-contracts/issues/166",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Konfirm-xyz/konfirm-contracts/issues/166"
+        }
+      ],
+      "tags": [
+        "bug",
+        "good first issue",
+        "priority:high"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Konfirm-xyz/konfirm-contracts",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915521376",
+      "title": "cmd/deja tests outside the TUI still wait a fixed 5 s for async work and can flake on a loaded windows runner",
+      "summary": "5160 (PR 5353) moved the TUI tests from a fixed 5 s wait to waiting on the work itself. The same fixed wait is still in a few other tests in cmd/deja: hook prompt , last show lock , mcp dispatch and hook antigravity stdin tests (grep 5 \\ time.Second / time.After(5 ). On a slow windows-latest runner a background step can take longer than 5 s, and the test fails with a timeout though nothing is wrong. Expected: wait…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-18T23:59:48Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/vshulcz/deja-vu/issues/5356",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/vshulcz/deja-vu/issues/5356"
+        }
+      ],
+      "tags": [
+        "bug",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "vshulcz/deja-vu",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915518585",
+      "title": "perf: raise the default copy concurrency from 3 to 8",
+      "summary": "Supersedes 1532, re-evaluated against main at 614677d ( ). Problem CopyGraphOptions.Concurrency defaults to 3: dockerd and containerd tune this for pulling a few large layers, where bandwidth is the limit and three streams already fill the link. This library is mostly used on graphs of many small nodes: artifact manifests, referrers, signatures, config blobs. There each node costs a round trip, not bytes. The…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects",
+        "needs"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-18T23:59:22Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/oras-project/oras-go/issues/1622",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/oras-project/oras-go/issues/1622"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "v3",
+        "perf"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "oras-project/oras-go",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915516437",
+      "title": "void payment is the only mutator in the file with zero TTL extension — neither instance nor the Voided key",
+      "summary": "Summary void payment is the only mutating entry point in contracts/payment/src/lib.rs that extends no TTL at all — it skips both the instance-level extend ttl every other mutator calls as its first line, and the key-level extend ttl on the DataKey::Voided(payment id) entry it writes. Its sibling mark refunded (same file, same shape: admin-gated, flips a flag on an existing payment) does both correctly. This is the…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-18T23:59:02Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Konfirm-xyz/konfirm-contracts/issues/165",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Konfirm-xyz/konfirm-contracts/issues/165"
+        }
+      ],
+      "tags": [
+        "bug",
+        "good first issue",
+        "priority:high"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Konfirm-xyz/konfirm-contracts",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915510023",
+      "title": "HeldFrom(channel id) is the only persistent key never TTL-extended — a held channel can get permanently stuck",
+      "summary": "Summary DataKey::HeldFrom(channel id) (which stores a channel's pre-hold status so release hold can restore it) is written via a plain .set() in hold channel and never TTL-extended — unlike every other persistent key in this file ( Channel(channel id) gets extend ttl on every save channel call, visible a few lines away in the same functions). Since a held channel has no built-in time limit (already noted as…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-18T23:58:06Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Konfirm-xyz/konfirm-contracts/issues/164",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Konfirm-xyz/konfirm-contracts/issues/164"
+        }
+      ],
+      "tags": [
+        "bug",
+        "good first issue",
+        "priority:high"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Konfirm-xyz/konfirm-contracts",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915505799",
+      "title": "[good first issue, hacktoberfest] 🐙 Hacktoberfest Task - Add new Japanese Proverb 456 (good-first-issue)",
+      "summary": "🟢 Good First Issue: Add Japanese Proverb 45 — Beginner-Friendly Open Source Contribution 🟢 No prerequisites needed! You don't need to clone the repo, install anything, or write code. This entire contribution can be done from your browser in under 60 seconds. Labels: good first issue, help wanted, hacktoberfest Language: JSON (no coding required) Time: < 1 minute Skill Level: Absolute beginner --- 🎌 Add Japanese…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-18T23:57:28Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/lingdojo/kana-dojo/issues/32734",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/lingdojo/kana-dojo/issues/32734"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "good first issue",
+        "hacktoberfest",
+        "community",
+        "low hanging fruit",
+        "up-for-grabs",
+        "first-timers-only",
+        "good-first-issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "lingdojo/kana-dojo",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915460393",
+      "title": "feat(integration): show live Etherfuse Stablebond yields in inflation module",
+      "summary": "Categoría / Tipo Integration · Feature (temática LATAM / grant-friendly) Problema Ya existe contenido sobre inflación / valor del dinero, pero sin datos live de productos tokenizados reales en Stellar. Etherfuse Stablebonds encaja temáticamente con la audiencia LATAM. Solución propuesta Mostrar yields live de Etherfuse Stablebonds dentro del módulo de inflación, con fallback si la API falla. Si el testnet lo…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects",
+        "needs"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-18T23:51:07Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/BuenDia-Builders/defiwise-stellar/issues/40",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/BuenDia-Builders/defiwise-stellar/issues/40"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "integration"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "BuenDia-Builders/defiwise-stellar",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915459796",
+      "title": "feat(curriculum): interactive testnet swap practice inside a DEX lesson",
+      "summary": "Categoría / Tipo Integration · Feature (alto valor para grants / Drips) Problema Las lecciones son contenido estático. No hay práctica on-chain real de un swap DeFi dentro del curriculum. Solución propuesta Integrar un componente “Práctica” en un módulo de DEX que ejecute un swap real en Stellar Testnet (Aquarius routing API o Soroswap). El swap lo firma la wallet del usuario (no el admin). Opcionalmente, el…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects",
+        "needs"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-18T23:51:02Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/BuenDia-Builders/defiwise-stellar/issues/39",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/BuenDia-Builders/defiwise-stellar/issues/39"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "integration"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "BuenDia-Builders/defiwise-stellar",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915458781",
+      "title": "feat(wallet): migrate Freighter-only connect to Stellar Wallets Kit",
+      "summary": "Categoría / Tipo Integration · Good First Issue (intermedio) Problema useStellarWallet.ts usa solo /freighter-api . Estudiantes con Lobstr, xBull, Albedo, Hana u otras wallets quedan fuera. En una plataforma educativa esto limita el onboarding. Solución propuesta Migrar a Stellar Wallets Kit (SEP-43), manteniendo la misma interfaz pública del hook ( address , connected , connect , disconnect , signTransaction )…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects",
+        "needs"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-18T23:50:55Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/BuenDia-Builders/defiwise-stellar/issues/37",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/BuenDia-Builders/defiwise-stellar/issues/37"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue",
+        "integration"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "BuenDia-Builders/defiwise-stellar",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915452657",
+      "title": "FUNDING.yml hygiene: root file duplicates .github/FUNDING.yml and links to nonexistent TREASURY.md",
+      "summary": "Problema O repositório tem dois arquivos FUNDING.yml : 1. .github/FUNDING.yml (commitado no branch main , commit b8d3ae0b ) — contém solana: Eeztv1nCYUt1fwGWpzKC948gaWfjejYCAuLtUMgzDWbW 2. FUNDING.yml na raiz (untracked, working tree) — duplica o conteúdo e adiciona link para TREASURY.md que não existe no repo Problemas 1. Duplicação : dois arquivos FUNDING.yml com a mesma finalidade 2. Link quebrado : o FUNDING.yml…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects",
+        "needs"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-18T23:50:07Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/yunaremaia/space-radar/issues/1",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/yunaremaia/space-radar/issues/1"
+        }
+      ],
+      "tags": [
+        "documentation",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "yunaremaia/space-radar",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915442133",
+      "title": "main branch has unresolved merge conflict markers in cli.py and hooks.py — SyntaxError on import",
+      "summary": "Problema O branch main do repositório contém marcadores de merge conflict não resolvidos em dois arquivos: - agent undo/cli.py (linhas 98, 108, 114, 119, 163, 169 no HEAD) - agent undo/hooks.py (linhas 23-27 no HEAD) Isso causa IndentationError ao importar o módulo — o código committed está quebrado. Como reproduzir Resultado esperado: import bem-sucedido. Resultado atual: IndentationError: expected an indented…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects",
+        "needs"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-18T23:48:43Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/yunaremaia/agent-undo/issues/72",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/yunaremaia/agent-undo/issues/72"
+        }
+      ],
+      "tags": [
+        "bug",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "yunaremaia/agent-undo",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915420798",
+      "title": "Before turning on features",
+      "summary": "Before turning these features on: - Database migration: 215 adds migration 0006 garmin activities, so run pnpm run db:migrate on staging and later production. - BETTER AUTH SECRET: every environment except local dev needs it set to a real value, or the app now refuses to start. - Admins: grant admin with pnpm run grant-admin, because onboarding no longer does it. - Feature flags: Garmin stays off until GARMIN…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-18T23:45:59Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Luen/runaround/issues/246",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Luen/runaround/issues/246"
+        }
+      ],
+      "tags": [
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Luen/runaround",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915400129",
+      "title": "[Good First Issue] Add least privilege guidance for Finding titles [MC-102]",
+      "summary": "Add least privilege guidance for Finding titles Browser-only · 2–5 minutes · beginner-friendly · no local setup required Your task Write one concise original tip about clear, specific titles for security findings; specifically, minimize permissions, access, scope, or authority. Replace REPLACE ME with your own 1–3 sentence tip. Keep it original, practical, and safe. Create…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-18T23:43:20Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Berserk-hub150/skillhawk/issues/227",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Berserk-hub150/skillhawk/issues/227"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "community",
+        "low hanging fruit",
+        "up-for-grabs",
+        "first-timers-only",
+        "micro-contribution",
+        "type: task",
+        "beginner-friendly",
+        "hacktoberfest",
+        "category:finding-titles"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Berserk-hub150/skillhawk",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915399899",
+      "title": "[Good First Issue] Add safe defaults guidance for Finding titles [MC-101]",
+      "summary": "Add safe defaults guidance for Finding titles Browser-only · 2–5 minutes · beginner-friendly · no local setup required Your task Write one concise original tip about clear, specific titles for security findings; specifically, prefer a safer default behavior without blocking legitimate use. Replace REPLACE ME with your own 1–3 sentence tip. Keep it original, practical, and safe. Create…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-18T23:43:18Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Berserk-hub150/skillhawk/issues/226",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Berserk-hub150/skillhawk/issues/226"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "community",
+        "low hanging fruit",
+        "up-for-grabs",
+        "first-timers-only",
+        "micro-contribution",
+        "type: task",
+        "beginner-friendly",
+        "hacktoberfest",
+        "category:finding-titles"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Berserk-hub150/skillhawk",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915399602",
+      "title": "[Good First Issue] Add clarity guidance for Finding titles [MC-100]",
+      "summary": "Add clarity guidance for Finding titles Browser-only · 2–5 minutes · beginner-friendly · no local setup required Your task Write one concise original tip about clear, specific titles for security findings; specifically, make the advice immediately understandable to a first-time contributor. Replace REPLACE ME with your own 1–3 sentence tip. Keep it original, practical, and safe. Create…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-18T23:43:16Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Berserk-hub150/skillhawk/issues/225",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Berserk-hub150/skillhawk/issues/225"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "community",
+        "low hanging fruit",
+        "up-for-grabs",
+        "first-timers-only",
+        "micro-contribution",
+        "type: task",
+        "beginner-friendly",
+        "hacktoberfest",
+        "category:finding-titles"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Berserk-hub150/skillhawk",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915339686",
+      "title": "[Bug] Russian sentence segmentation fails after list-ending abbreviations",
+      "summary": "🔍 Description Russian sentence segmentation can miss a sentence boundary after list-ending abbreviations such as и т. д. , и т. п. , и др. , and и пр. . For example, Купил хлеб, молоко и т. д. Потом пошёл домой. should be split into two sentences. In Russian, the period ending an abbreviation can also serve as the sentence-ending period, without being doubled. 🧪 Code Snippet to Reproduce 📉 Expected vs. Actual Output…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-18T23:35:39Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/speedyk-005/yasbd-lib/issues/402",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/speedyk-005/yasbd-lib/issues/402"
+        }
+      ],
+      "tags": [
+        "bug",
+        "good first issue",
+        "edge-cases"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "speedyk-005/yasbd-lib",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5701237192",
+      "title": "Improve error messages in api",
+      "summary": "Feature request It would be great to have encryption for middleware. Use case Many users need this functionality for production deployments. Implementation idea Add a new config option enable encryption with default false .",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-18T23:33:53Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/yrn-dev/Operator/issues/31580",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/yrn-dev/Operator/issues/31580"
+        },
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/yrn-dev/Operator/issues/39580"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "yrn-dev/Operator",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5915302478",
+      "title": "Write the triage and support policy (labels, expectations, supported versions)",
+      "summary": "Summary CONTRIBUTING.md explains how to build and test. It does not say how issues are handled. SECURITY.md says \"latest release: yes\" for security fixes. Proposed content 1. Labels: what bug , enhancement , compatibility , decision needed , needs real-world testing , help wanted , good first issue , security and the size: labels mean, and the milestone naming ( v0.2.x , v0.3 and so on). 2. Expectations: one…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-18T23:30:56Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/ncecere/open-mcp-portal/issues/21",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/ncecere/open-mcp-portal/issues/21"
+        }
+      ],
+      "tags": [
+        "documentation",
+        "good first issue",
+        "roadmap",
+        "size: S"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "ncecere/open-mcp-portal",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915301460",
+      "title": "Verify notifications with a real Slack webhook and a real SMTP provider over TLS",
+      "summary": "Summary Why Slack's formatting and URL rules, and real mail providers' TLS, authentication and spam handling, are where fakes stop being faithful. The notification emails are text plus a simple HTML part; how they render in real clients is unchecked. How 1. Slack: create an incoming webhook, add it as a team destination (format Slack), press Send test , then trigger a real event (a server going unhealthy; a publish…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-18T23:30:49Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/ncecere/open-mcp-portal/issues/19",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/ncecere/open-mcp-portal/issues/19"
+        }
+      ],
+      "tags": [
+        "documentation",
+        "help wanted",
+        "roadmap",
+        "needs real-world testing",
+        "size: S"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "ncecere/open-mcp-portal",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915300983",
+      "title": "Verify delegated credentials with real Google and Microsoft Entra ID providers",
+      "summary": "Summary The provider presets (Google, Microsoft Entra ID, Atlassian, Slack, GitLab, GitHub) are exercised with cmd/fakeoauth and the Gmail example server ( examples/mail-mcp -fake-gmail ). Real Google and Microsoft have not been run. Why Real providers differ from fakes in token formats, scope handling (Microsoft's offline access , Google's access type=offline and refresh behaviour), consent screens, and error…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-18T23:30:45Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/ncecere/open-mcp-portal/issues/18",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/ncecere/open-mcp-portal/issues/18"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "roadmap",
+        "needs real-world testing",
+        "size: M"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "ncecere/open-mcp-portal",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915300499",
+      "title": "Verify that real clients refresh their access token after an hour",
+      "summary": "Summary ompat access tokens expire after one hour; omprt refresh tokens rotate on each use ( internal/oauth ). Claude Code was verified signing in and calling tools on a real deployment ( ) but not across an access-token expiry. How 1. Sign in with Claude Code (and pi) to a gateway; note the time. 2. After more than an hour, call a tool without signing in again. 3. Check the portal: the request log shows POST…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-18T23:30:42Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/ncecere/open-mcp-portal/issues/17",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/ncecere/open-mcp-portal/issues/17"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "compatibility",
+        "roadmap",
+        "needs real-world testing",
+        "size: S"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "ncecere/open-mcp-portal",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915300026",
+      "title": "Find and test a real client that declares URL elicitation",
+      "summary": "Summary On the revision the portal answers \"connect your account\" with an input required result carrying a URL elicitation and a sealed requestState only for clients that declare elicitation.url . Others get a tool error with the link (decision 59). The first path is tested with the Go SDK client in internal/httpapi/mcp consent mrtr integration test.go , never with a product. Why It is the intended best experience…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-18T23:30:38Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/ncecere/open-mcp-portal/issues/16",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/ncecere/open-mcp-portal/issues/16"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "compatibility",
+        "roadmap",
+        "needs real-world testing",
+        "size: S"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "ncecere/open-mcp-portal",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915299504",
+      "title": "Test Cursor against a gateway and report the result",
+      "summary": "Summary The gateway page generates a Cursor connection snippet. No one has run Cursor against a gateway. How and report Exactly as for VS Code ( 14 in the roadmap): the compatibility checklist, then a client compatibility report naming the Cursor version. Acceptance criteria - [ ] A report exists for a named Cursor version (OAuth sign-in and an API key if both are supported). - [ ] Docs and status updated; defects…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-18T23:30:34Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/ncecere/open-mcp-portal/issues/15",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/ncecere/open-mcp-portal/issues/15"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "compatibility",
+        "roadmap",
+        "needs real-world testing",
+        "size: S"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "ncecere/open-mcp-portal",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915299022",
+      "title": "Test VS Code against a gateway and report the result",
+      "summary": "Summary The gateway page generates a .vscode/mcp.json snippet. It has not been tried with a real VS Code. This issue tracks one real run and the result. How Follow the client compatibility checklist: connect (OAuth), list tools, call a tool, hit a tool that needs a connected account and use its link, and leave it for over an hour to exercise the refresh token. Use a team gateway with at least one real server (a…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-18T23:30:30Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/ncecere/open-mcp-portal/issues/14",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/ncecere/open-mcp-portal/issues/14"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "compatibility",
+        "roadmap",
+        "needs real-world testing",
+        "size: S"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "ncecere/open-mcp-portal",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915298569",
+      "title": "Commission an independent security review of the portal",
+      "summary": "Summary docs/threat-model.md lists assets, actors, trust boundaries, STRIDE-style threats with the code and tests that address them, and code-review findings F-1 to F-4 (all fixed). It was written to be handed to an independent reviewer; none has seen it yet. Why The maintainers found F-1 to F-4 themselves, which shows the model works but also that the same eyes produced the code and the review. The portal holds…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-18T23:30:27Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/ncecere/open-mcp-portal/issues/13",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/ncecere/open-mcp-portal/issues/13"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "roadmap",
+        "security",
+        "needs real-world testing",
+        "size: M"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "ncecere/open-mcp-portal",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915297581",
+      "title": "Pin the Dockerfile base images by digest (H-9)",
+      "summary": "Summary Threat-model idea H-9, remainder. Dockerfile has five FROM lines without digests. The image workflow already runs Trivy with severity: CRITICAL,HIGH , ignore-unfixed: true and exit-code: \"1\" , so that half of H-9 is done. Why A moving tag means two builds of the same commit can differ, and a compromised or broken upstream tag reaches our release unreviewed. The website and docs images already pin nginx and…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "websites",
+        "projects",
+        "employment"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-18T23:30:20Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/ncecere/open-mcp-portal/issues/11",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/ncecere/open-mcp-portal/issues/11"
+        }
+      ],
+      "tags": [
+        "good first issue",
+        "roadmap",
+        "security",
+        "size: S",
+        "area: ops"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "ncecere/open-mcp-portal",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5915239957",
+      "title": "Unit tests for the web app's sign-in and database layer",
+      "summary": "Done when: - [ ] apps/web has vitest and a test script, picked up by the root npm test and CI - [ ] sendSignInLink is tested for invalid emails, missing Supabase settings, a provider error and success, with the Supabase client mocked - [ ] finishSignIn and the membership query mapping are tested the same way - [ ] server-only imports don't break the test run",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-18T23:23:06Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/heynewton/newton/issues/47",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/heynewton/newton/issues/47"
+        }
+      ],
+      "tags": [
+        "good first issue",
+        "web"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "heynewton/newton",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5915239663",
+      "title": "Show test coverage on every PR",
+      "summary": "CI runs the tests ( npm test , plus the pgTAP RLS tests), but nothing measures coverage, so a PR can add a calc function with weak tests and nobody sees it. No coverage provider is installed ( /coverage-v8 is missing). Principle 2 says every number comes from tested code, so packages/calc should hold a high bar; other workspaces get reported but not gated yet. Done when: - [ ] /coverage-v8 is added and npm test…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects",
+        "employment"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-18T23:23:04Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/heynewton/newton/issues/46",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/heynewton/newton/issues/46"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "repo"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "heynewton/newton",
+      "hasDetails": true
+    },
     {
       "id": "github:5915229079",
       "title": "Add Another Job Provider Using Existing Interface",
@@ -936,6 +3747,39 @@
       "language": "unknown",
       "project": "chatvector-ai/chatvector-ai",
       "hasDetails": true
+    },
+    {
+      "id": "github:5915156348",
+      "title": "run-lint fails on two bugs in gatemate-pipe",
+      "summary": "Upstream: colognechip/gatemate-pipe 4 1. Latch , ccfpga scrambler byte.v:18 : data c not assigned on every path; 128 CC DLT after synthesis. Fix: default assignment, or always latch if intended. 2. Undriven END lost , virtual channel.v:121 . - [ ] fixed upstream - [ ] submodule bumped - [ ] run-lint.sh passes Also: the gatemate-pipe style waivers in run-lint-waivers.txt go before the first release.",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-18T23:12:01Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/chili-chips-ba/openCologne-PCIE/issues/20",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/chili-chips-ba/openCologne-PCIE/issues/20"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "RTL"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "chili-chips-ba/openCologne-PCIE",
+      "hasDetails": false
     },
     {
       "id": "github:5915155479",
@@ -496676,38 +499520,6 @@
       "hasDetails": true
     },
     {
-      "id": "github:5701237192",
-      "title": "Improve error messages in api",
-      "summary": "Feature request It would be great to have encryption for middleware. Use case Many users need this functionality for production deployments. Implementation idea Add a new config option enable encryption with default false .",
-      "company": "",
-      "country": "Não informado",
-      "countries": [],
-      "remote": false,
-      "categories": [
-        "projects"
-      ],
-      "type": "open-source contribution",
-      "salary": "",
-      "publishedAt": "2026-10-04T16:38:25Z",
-      "sourceName": "GitHub Issues",
-      "sourceUrl": "https://github.com/yrn-dev/Operator/issues/31580",
-      "sourceLinks": [
-        {
-          "name": "GitHub Issues",
-          "url": "https://github.com/yrn-dev/Operator/issues/31580"
-        }
-      ],
-      "tags": [
-        "enhancement",
-        "good first issue"
-      ],
-      "status": "UNKNOWN",
-      "trustLevel": "community_project",
-      "language": "unknown",
-      "project": "yrn-dev/Operator",
-      "hasDetails": false
-    },
-    {
       "id": "github:5701223477",
       "title": "grad accum auto tune measures VRAM pressure against a fixed 24 GB on every GPU: it can never fire on an 8 GB card and fires at 28% use on an 80 GB one",
       "summary": "Summary With training.grad accum auto tune: true , the training callback prints a one-time \"Grad-accum advisory\" when VRAM pressure (peak allocated memory divided by the card's memory) crosses training.grad accum pressure threshold (default 0.92). The card's memory is never read. On main at 45b8470c : - SoupTrainerCallback. init takes grad accum total vram gb: float = 24.0 ( src/soup cli/monitoring/callback.py:121 )…",
@@ -598258,7 +601070,7 @@
       "frequencyMinutes": 60,
       "limit": 100,
       "status": "ok",
-      "lastSyncAt": "2026-10-18T23:22:45Z",
+      "lastSyncAt": "2026-10-19T01:25:46Z",
       "itemsFound": 99,
       "note": "Fonte remota; consultar no máximo uma vez por hora."
     },
@@ -598278,7 +601090,7 @@
       "frequencyMinutes": 60,
       "limit": 250,
       "status": "ok",
-      "lastSyncAt": "2026-10-18T23:22:45Z",
+      "lastSyncAt": "2026-10-19T01:25:46Z",
       "itemsFound": 99,
       "note": "Atribuição e link dofollow para cada anúncio original."
     },
@@ -598297,7 +601109,7 @@
       "frequencyMinutes": 60,
       "limit": 100,
       "status": "ok",
-      "lastSyncAt": "2026-10-18T23:22:45Z",
+      "lastSyncAt": "2026-10-19T01:25:46Z",
       "itemsFound": 87,
       "note": "Preservar a atribuição e o link do feed original."
     },
@@ -598316,7 +601128,7 @@
       "frequencyMinutes": 60,
       "limit": 50,
       "status": "ok",
-      "lastSyncAt": "2026-10-18T23:22:45Z",
+      "lastSyncAt": "2026-10-19T01:25:46Z",
       "itemsFound": 4,
       "note": "Feed RSS oficial do portal de carreiras AGL, filtrada para Angola; manter o link original."
     },
@@ -598336,8 +601148,8 @@
       "frequencyMinutes": 60,
       "limit": 180,
       "status": "ok",
-      "lastSyncAt": "2026-10-18T23:22:45Z",
-      "itemsFound": 279,
+      "lastSyncAt": "2026-10-19T01:25:46Z",
+      "itemsFound": 277,
       "note": "Issues abertas com labels de contribuição; remuneração não presumida."
     },
     {
@@ -598453,7 +601265,7 @@
       "frequencyMinutes": 60,
       "limit": 180,
       "status": "ok",
-      "lastSyncAt": "2026-10-18T23:22:45Z",
+      "lastSyncAt": "2026-10-19T01:25:46Z",
       "itemsFound": 69,
       "note": "Perguntas públicas recentes; responde na fonte original. Não são ofertas pagas."
     },
@@ -598474,7 +601286,7 @@
       "frequencyMinutes": 60,
       "limit": 180,
       "status": "ok",
-      "lastSyncAt": "2026-10-18T23:22:45Z",
+      "lastSyncAt": "2026-10-19T01:25:46Z",
       "itemsFound": 0,
       "note": "Vídeos e comentários públicos recentes; requer YOUTUBE_API_KEY e não publica respostas automaticamente."
     }
