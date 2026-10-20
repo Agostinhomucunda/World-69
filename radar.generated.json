@@ -1,8 +1,4353 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-20T00:27:01Z",
+  "generatedAt": "2026-10-20T06:07:58Z",
   "refreshIntervalMinutes": 60,
   "items": [
+    {
+      "id": "github:5936772785",
+      "title": "Executions dashboard data docs example is invalid YAML (missing colon after data )",
+      "summary": "[!IMPORTANT] This issue is not ready for contributions yet. The Kestra team still has to review it. Please wait until this message is removed and the issue has been move to Backlog stage before you start working on it. Pull requests opened before that will not be reviewed. In the meantime, feel free to get started on a different issue by checking out our good first issues list. Describe the issue Describe the issue…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T06:01:57Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/kestra-io/kestra/issues/21438",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/kestra-io/kestra/issues/21438"
+        }
+      ],
+      "tags": [
+        "area/plugin",
+        "kind/quick-win",
+        "good first issue",
+        "area/docs"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "kestra-io/kestra",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936749789",
+      "title": "Docs: deploy to Netlify, Cloudflare Pages and Dokploy",
+      "summary": "GitHub Pages works out of the box ( .github/workflows/pages.yml ). Document the other popular hosts so people can pick theirs. Scope — a new docs/deploy.md , linked from the README: - Netlify : build command npm run build , publish dir dist , Node version, optional netlify.toml - Cloudflare Pages : same, plus the Node version env var - Dokploy / any Docker host : a minimal static Dockerfile (build with Node, serve…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:59:34Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/pipozzz/showtime/issues/12",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/pipozzz/showtime/issues/12"
+        }
+      ],
+      "tags": [
+        "documentation",
+        "good first issue",
+        "hacktoberfest"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "pipozzz/showtime",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936749545",
+      "title": "Translate the story labels (i18n groundwork)",
+      "summary": "Every profile is in English today (\"Act I — By the numbers\", \"Who trusted me with production\", \"That's a wrap\"…). Many people want their page in their own language. Scope - Add optional profile.lang (BCP 47, default en ) to the model and the editor ( Headliner section) - Move every user-visible string in src/story/ProfileStory.tsx into a dictionary, e.g. src/story/i18n/{en,sk,de,es}.ts , with a typed key set so…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:59:33Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/pipozzz/showtime/issues/11",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/pipozzz/showtime/issues/11"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "hacktoberfest",
+        "i18n"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "pipozzz/showtime",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936749302",
+      "title": "Import from JSON Resume",
+      "summary": "JSON Resume is the most common open CV format. Letting people bring their resume.json fills the parts GitHub can't: work history and education. Mapping | JSON Resume | Showtime | | --- | --- | | work[] ( name , position , startDate , endDate , summary , highlights ) | experience[] ( company , role , from , to — years only, null if current) | | education[] | education[] | | skills[] ( name , keywords ) | skills…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects",
+        "employment"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:59:31Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/pipozzz/showtime/issues/10",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/pipozzz/showtime/issues/10"
+        }
+      ],
+      "tags": [
+        "good first issue",
+        "hacktoberfest",
+        "importer"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "pipozzz/showtime",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936748979",
+      "title": "Gitea / Forgejo importer",
+      "summary": "Gitea and Forgejo (e.g. Codeberg) have an API very close to GitHub's, so this is a small, well-bounded first TypeScript PR. Scope - src/lib/importers/gitea.ts : importGitea({ instance, username, token?, base? }) - GET /api/v1/users/{username} → profile; GET /api/v1/users/{username}/repos → featured projects (stars/forks → impact, language + topics → stack) - Platform entry { name: 'Codeberg' | 'Gitea', kind…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:59:29Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/pipozzz/showtime/issues/9",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/pipozzz/showtime/issues/9"
+        }
+      ],
+      "tags": [
+        "good first issue",
+        "hacktoberfest",
+        "importer"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "pipozzz/showtime",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936748680",
+      "title": "GitLab importer (gitlab.com + self-hosted)",
+      "summary": "Many agency and enterprise developers live on GitLab, often self-hosted. This is the most-requested source after GitHub. Scope - src/lib/importers/gitlab.ts : importGitlab({ instance = ' username, token? , base? }) - Profile: GET /api/v4/users?username=… → name, bio, location, website, avatar not needed - Projects: GET /api/v4/users/:id/projects (public; with a token also private ones the user owns) → featured…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "websites",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:59:28Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/pipozzz/showtime/issues/8",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/pipozzz/showtime/issues/8"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "hacktoberfest",
+        "importer"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "pipozzz/showtime",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936748369",
+      "title": "New theme: Terminal",
+      "summary": "Green phosphor CRT. The whole story reads like a terminal session. Ideas - Fonts: monospace everywhere ( IBM Plex Mono , VT323 , Fira Code ) - A blinking block cursor after the name ( .hero-name .line.accent::after ) - Act labels styled like prompts: $ cat clients.txt - Optional soft glow ( text-shadow ) and scanlines Done when - [ ] src/themes/terminal/theme.ts (+ style.css if needed), created with npm run…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:59:26Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/pipozzz/showtime/issues/7",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/pipozzz/showtime/issues/7"
+        }
+      ],
+      "tags": [
+        "good first issue",
+        "hacktoberfest",
+        "theme"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "pipozzz/showtime",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936748094",
+      "title": "New theme: Synthwave",
+      "summary": "Outrun / synthwave: sunset gradient, perspective grid on the horizon, neon pink and purple. Ideas - Hero: a CSS sunset gradient with a perspective grid ( linear-gradient + transform: perspective() ) - Display: something wide and chrome-y (e.g. Monoton , Audiowide , Orbitron ) - Accent ff2bd6 -ish pink, secondary cyan via style.css Done when - [ ] src/themes/synthwave/theme.ts (+ style.css if needed), created with…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:59:24Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/pipozzz/showtime/issues/6",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/pipozzz/showtime/issues/6"
+        }
+      ],
+      "tags": [
+        "good first issue",
+        "hacktoberfest",
+        "theme"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "pipozzz/showtime",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936747779",
+      "title": "New theme: Film Noir",
+      "summary": "Black-and-white cinema. Think 1940s detective film: deep blacks, silver whites, film grain, a serif with attitude. Ideas - Display: a high-contrast serif such as Playfair Display or DM Serif Display - Accent: silver/white, or a single blood-red if you want one colour - style.css : subtle animated film grain (SVG noise or CSS gradient) over .story , maybe a vignette on .hero Done when - [ ] src/themes/noir/theme.ts…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:59:22Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/pipozzz/showtime/issues/5",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/pipozzz/showtime/issues/5"
+        }
+      ],
+      "tags": [
+        "good first issue",
+        "hacktoberfest",
+        "theme"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "pipozzz/showtime",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936733949",
+      "title": "[People & HR] Policy Engagement — Run and act on employee engagement surveys",
+      "summary": "🎯 Issue Summary Track: People & HR → Policy Engagement Type: New Skill Content Difficulty: Advanced Estimated: 40 min Labels: enhancement , help wanted , good first issue , people-hr , skill-advanced --- 📋 Context Question design, participation, analysis, action planning. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the People & HR track and bring the library closer…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:52Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/371",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/371"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-advanced",
+        "people-hr"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936734014",
+      "title": "[People & HR] Recruiting — Build an authentic employer brand",
+      "summary": "🎯 Issue Summary Track: People & HR → Recruiting Type: New Skill Content Difficulty: Intermediate Estimated: 35 min Labels: enhancement , help wanted , good first issue , people-hr , skill-intermediate --- 📋 Context Candidate journey, story assets, review management, advocacy. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the People & HR track and bring the library…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:52Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/374",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/374"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-intermediate",
+        "people-hr"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936733950",
+      "title": "[People & HR] Policy Engagement — Write clear, enforceable HR policies",
+      "summary": "🎯 Issue Summary Track: People & HR → Policy Engagement Type: New Skill Content Difficulty: Intermediate Estimated: 35 min Labels: enhancement , help wanted , good first issue , people-hr , skill-intermediate --- 📋 Context Plain language, scenarios, ownership, review cycles. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the People & HR track and bring the library closer…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:52Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/370",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/370"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-intermediate",
+        "people-hr"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936733925",
+      "title": "[People & HR] Policy Engagement — Advise employees on benefits and time off",
+      "summary": "🎯 Issue Summary Track: People & HR → Policy Engagement Type: New Skill Content Difficulty: Intermediate Estimated: 35 min Labels: enhancement , help wanted , good first issue , people-hr , skill-intermediate --- 📋 Context Benefits navigation, leave policies, wellness resources. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the People & HR track and bring the library…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:52Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/369",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/369"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-intermediate",
+        "people-hr"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936733956",
+      "title": "[People & HR] Recruiting — Blind resume screening processes",
+      "summary": "🎯 Issue Summary Track: People & HR → Recruiting Type: New Skill Content Difficulty: Advanced Estimated: 40 min Labels: enhancement , help wanted , good first issue , people-hr , skill-advanced --- 📋 Context Anonymization, standardized scorecards, structured shortlisting. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the People & HR track and bring the library closer to…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:52Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/372",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/372"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-advanced",
+        "people-hr"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936734015",
+      "title": "[People & HR] Recruiting — Write inclusive job descriptions",
+      "summary": "🎯 Issue Summary Track: People & HR → Recruiting Type: New Skill Content Difficulty: Intermediate Estimated: 35 min Labels: enhancement , help wanted , good first issue , people-hr , skill-intermediate --- 📋 Context Bias-free language, essential-vs-preferred requirements, compensation transparency. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the People & HR track and…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects",
+        "employment"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:52Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/373",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/373"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-intermediate",
+        "people-hr"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936734028",
+      "title": "[People & HR] Recruiting — Negotiate offers that stick",
+      "summary": "🎯 Issue Summary Track: People & HR → Recruiting Type: New Skill Content Difficulty: Advanced Estimated: 40 min Labels: enhancement , help wanted , good first issue , people-hr , skill-advanced --- 📋 Context Range discipline, total-comp framing, counters, acceptance signals. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the People & HR track and bring the library closer…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:52Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/375",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/375"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-advanced",
+        "people-hr"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936733775",
+      "title": "[Nonprofit & Impact] Strategy Measurement — Build a theory of change",
+      "summary": "🎯 Issue Summary Track: Nonprofit & Impact → Strategy Measurement Type: New Skill Content Difficulty: Advanced Estimated: 40 min Labels: enhancement , help wanted , good first issue , nonprofit-impact , skill-advanced --- 📋 Context Inputs, activities, outputs, outcomes, impact logic. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the Nonprofit & Impact track and bring…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:51Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/361",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/361"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-advanced",
+        "nonprofit-impact"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936733827",
+      "title": "[People & HR] Onboarding Offboarding — Design structured 30-60-90 onboarding plans",
+      "summary": "🎯 Issue Summary Track: People & HR → Onboarding Offboarding Type: New Skill Content Difficulty: Intermediate Estimated: 35 min Labels: enhancement , help wanted , good first issue , people-hr , skill-intermediate --- 📋 Context Goal setting, mentor pairing, milestone checks, feedback cadences. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the People & HR track and bring…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "teaching",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:51Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/364",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/364"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-intermediate",
+        "people-hr"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936733817",
+      "title": "[Nonprofit & Impact] Strategy Measurement — Measure program impact",
+      "summary": "🎯 Issue Summary Track: Nonprofit & Impact → Strategy Measurement Type: New Skill Content Difficulty: Advanced Estimated: 40 min Labels: enhancement , help wanted , good first issue , nonprofit-impact , skill-advanced --- 📋 Context Indicators, baselines, data collection, attribution. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the Nonprofit & Impact track and bring…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:51Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/363",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/363"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-advanced",
+        "nonprofit-impact"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936733891",
+      "title": "[People & HR] Onboarding Offboarding — Retain knowledge during offboarding",
+      "summary": "🎯 Issue Summary Track: People & HR → Onboarding Offboarding Type: New Skill Content Difficulty: Advanced Estimated: 40 min Labels: enhancement , help wanted , good first issue , people-hr , skill-advanced --- 📋 Context Exit interviews, documentation handoffs, access revocation, alumni networks. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the People & HR track and…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:51Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/368",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/368"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-advanced",
+        "people-hr"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936733888",
+      "title": "[People & HR] Onboarding Offboarding — Integrate new hires into team rhythms",
+      "summary": "🎯 Issue Summary Track: People & HR → Onboarding Offboarding Type: New Skill Content Difficulty: Intermediate Estimated: 35 min Labels: enhancement , help wanted , good first issue , people-hr , skill-intermediate --- 📋 Context Intro rituals, document access, first-week meetings, social onboarding. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the People & HR track and…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:51Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/367",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/367"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-intermediate",
+        "people-hr"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936733835",
+      "title": "[Nonprofit & Impact] Strategy Measurement — Write impactful annual reports",
+      "summary": "🎯 Issue Summary Track: Nonprofit & Impact → Strategy Measurement Type: New Skill Content Difficulty: Intermediate Estimated: 35 min Labels: enhancement , help wanted , good first issue , nonprofit-impact , skill-intermediate --- 📋 Context Storytelling, data viz, stakeholder messaging. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the Nonprofit & Impact track and bring…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:51Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/365",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/365"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-intermediate",
+        "nonprofit-impact"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936733791",
+      "title": "[Nonprofit & Impact] Strategy Measurement — Create logic models for funders",
+      "summary": "🎯 Issue Summary Track: Nonprofit & Impact → Strategy Measurement Type: New Skill Content Difficulty: Advanced Estimated: 40 min Labels: enhancement , help wanted , good first issue , nonprofit-impact , skill-advanced --- 📋 Context Model design, narrative, evaluation plan. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the Nonprofit & Impact track and bring the library…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:51Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/362",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/362"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-advanced",
+        "nonprofit-impact"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936733860",
+      "title": "[People & HR] Onboarding Offboarding — Execute secure offboarding checklists",
+      "summary": "🎯 Issue Summary Track: People & HR → Onboarding Offboarding Type: New Skill Content Difficulty: Advanced Estimated: 40 min Labels: enhancement , help wanted , good first issue , people-hr , skill-advanced --- 📋 Context Account deprovisioning, asset recovery, NDA reminders, data access reviews. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the People & HR track and…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:51Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/366",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/366"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-advanced",
+        "people-hr"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936733632",
+      "title": "[ML Research Engineering] Experimentation Rigor — Design statistically sound A/B tests for ML",
+      "summary": "🎯 Issue Summary Track: ML Research Engineering → Experimentation Rigor Type: New Skill Content Difficulty: Intermediate Estimated: 35 min Labels: enhancement , help wanted , good first issue , ml-research , skill-intermediate --- 📋 Context Sample size calc, power analysis, stratification, guardrail metrics. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the ML Research…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:50Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/354",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/354"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-intermediate",
+        "ml-research"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936733612",
+      "title": "[ML Research Engineering] Experimentation Rigor — Control false discoveries in multi-metric testing",
+      "summary": "🎯 Issue Summary Track: ML Research Engineering → Experimentation Rigor Type: New Skill Content Difficulty: Advanced Estimated: 40 min Labels: enhancement , help wanted , good first issue , ml-research , skill-advanced --- 📋 Context FDR correction, hierarchical testing, pre-registration. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the ML Research Engineering track and…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:50Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/352",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/352"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-advanced",
+        "ml-research"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936733727",
+      "title": "[Nonprofit & Impact] Fundraising Governance — Run an effective nonprofit board",
+      "summary": "🎯 Issue Summary Track: Nonprofit & Impact → Fundraising Governance Type: New Skill Content Difficulty: Advanced Estimated: 40 min Labels: enhancement , help wanted , good first issue , nonprofit-impact , skill-advanced --- 📋 Context Roles, recruitment, orientation, committee structure. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the Nonprofit & Impact track and bring…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:50Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/360",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/360"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-advanced",
+        "nonprofit-impact"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936733630",
+      "title": "[ML Research Engineering] Experimentation Rigor — Pre-register ML experiment protocols",
+      "summary": "🎯 Issue Summary Track: ML Research Engineering → Experimentation Rigor Type: New Skill Content Difficulty: Advanced Estimated: 40 min Labels: enhancement , help wanted , good first issue , ml-research , skill-advanced --- 📋 Context Hypotheses, primary endpoints, analysis plans, deviation logging. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the ML Research Engineering…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:50Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/353",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/353"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-advanced",
+        "ml-research"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936733676",
+      "title": "[ML Research Engineering] Model Card Docs — Write model cards that communicate responsibly",
+      "summary": "🎯 Issue Summary Track: ML Research Engineering → Model Card Docs Type: New Skill Content Difficulty: Intermediate Estimated: 35 min Labels: enhancement , help wanted , good first issue , ml-research , skill-intermediate --- 📋 Context Intended use, limitations, training data, performance across groups. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the ML Research…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "teaching",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:50Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/355",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/355"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-intermediate",
+        "ml-research"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936733719",
+      "title": "[Nonprofit & Impact] Fundraising Governance — Steward donors effectively",
+      "summary": "🎯 Issue Summary Track: Nonprofit & Impact → Fundraising Governance Type: New Skill Content Difficulty: Intermediate Estimated: 35 min Labels: enhancement , help wanted , good first issue , nonprofit-impact , skill-intermediate --- 📋 Context Acknowledgment, reporting, engagement, recognition. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the Nonprofit & Impact track and…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:50Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/358",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/358"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-intermediate",
+        "nonprofit-impact"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936733683",
+      "title": "[ML Research Engineering] Model Card Docs — Quantify and communicate prediction uncertainty",
+      "summary": "🎯 Issue Summary Track: ML Research Engineering → Model Card Docs Type: New Skill Content Difficulty: Expert Estimated: 45 min Labels: enhancement , help wanted , good first issue , ml-research , skill-expert --- 📋 Context Confidence calibration, ensemble variance, conformal prediction. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the ML Research Engineering track and…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:50Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/356",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/356"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-expert",
+        "ml-research"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936733726",
+      "title": "[Nonprofit & Impact] Fundraising Governance — Write winning grant proposals",
+      "summary": "🎯 Issue Summary Track: Nonprofit & Impact → Fundraising Governance Type: New Skill Content Difficulty: Advanced Estimated: 40 min Labels: enhancement , help wanted , good first issue , nonprofit-impact , skill-advanced --- 📋 Context Research, narratives, budgets, alignment, follow-up. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the Nonprofit & Impact track and bring…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:50Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/359",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/359"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-advanced",
+        "nonprofit-impact"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936733706",
+      "title": "[Nonprofit & Impact] Fundraising Governance — Design a fundraising mix",
+      "summary": "🎯 Issue Summary Track: Nonprofit & Impact → Fundraising Governance Type: New Skill Content Difficulty: Advanced Estimated: 40 min Labels: enhancement , help wanted , good first issue , nonprofit-impact , skill-advanced --- 📋 Context Donor segments, channels, asks, stewardship. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the Nonprofit & Impact track and bring the…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:50Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/357",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/357"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-advanced",
+        "nonprofit-impact"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936733579",
+      "title": "[ML Research Engineering] Evaluation Integrity — Run clean, reproducible benchmark evaluations",
+      "summary": "🎯 Issue Summary Track: ML Research Engineering → Evaluation Integrity Type: New Skill Content Difficulty: Advanced Estimated: 40 min Labels: enhancement , help wanted , good first issue , ml-research , skill-advanced --- 📋 Context Locked data splits, leak checks, deterministic pipelines, versioned results. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the ML Research…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:49Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/349",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/349"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-advanced",
+        "ml-research"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936733552",
+      "title": "[ML Research Engineering] Evaluation Integrity — Detect and mitigate model bias fairly",
+      "summary": "🎯 Issue Summary Track: ML Research Engineering → Evaluation Integrity Type: New Skill Content Difficulty: Expert Estimated: 45 min Labels: enhancement , help wanted , good first issue , ml-research , skill-expert --- 📋 Context Fairness metrics, subgroup analysis, bias mitigation trade-offs. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the ML Research Engineering track…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:49Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/348",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/348"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-expert",
+        "ml-research"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936733533",
+      "title": "[Media & Video Production] Preproduction — Write effective video scripts",
+      "summary": "🎯 Issue Summary Track: Media & Video Production → Preproduction Type: New Skill Content Difficulty: Intermediate Estimated: 35 min Labels: enhancement , help wanted , good first issue , media-production , skill-intermediate --- 📋 Context Structure, hooks, pacing, calls to action. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the Media & Video Production track and bring…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "video",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:49Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/347",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/347"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-intermediate",
+        "media-production"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936733588",
+      "title": "[ML Research Engineering] Experimentation Rigor — Apply causal inference beyond correlation",
+      "summary": "🎯 Issue Summary Track: ML Research Engineering → Experimentation Rigor Type: New Skill Content Difficulty: Expert Estimated: 45 min Labels: enhancement , help wanted , good first issue , ml-research , skill-expert --- 📋 Context Instrumental variables, difference-in-differences, synthetic controls. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the ML Research…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:49Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/350",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/350"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-expert",
+        "ml-research"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936733595",
+      "title": "[ML Research Engineering] Evaluation Integrity — Version and shard datasets properly",
+      "summary": "🎯 Issue Summary Track: ML Research Engineering → Evaluation Integrity Type: New Skill Content Difficulty: Intermediate Estimated: 35 min Labels: enhancement , help wanted , good first issue , ml-research , skill-intermediate --- 📋 Context Dataset cards, versioning, train/val/test splits, provenance. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the ML Research…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:49Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/351",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/351"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-intermediate",
+        "ml-research"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936733483",
+      "title": "[Media & Video Production] Preproduction — Budget and staff productions",
+      "summary": "🎯 Issue Summary Track: Media & Video Production → Preproduction Type: New Skill Content Difficulty: Advanced Estimated: 40 min Labels: enhancement , help wanted , good first issue , media-production , skill-advanced --- 📋 Context Cost breakdown, crew roles, equipment, timelines. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the Media & Video Production track and bring…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "video",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:49Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/344",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/344"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-advanced",
+        "media-production"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936733478",
+      "title": "[Media & Video Production] Post Publish — Run efficient editing workflows",
+      "summary": "🎯 Issue Summary Track: Media & Video Production → Post Publish Type: New Skill Content Difficulty: Advanced Estimated: 40 min Labels: enhancement , help wanted , good first issue , media-production , skill-advanced --- 📋 Context Rough cut, fine cut, color, sound, deliverables. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the Media & Video Production track and bring…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "video",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:49Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/342",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/342"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-advanced",
+        "media-production"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936733502",
+      "title": "[Media & Video Production] Preproduction — Develop video concepts from briefs",
+      "summary": "🎯 Issue Summary Track: Media & Video Production → Preproduction Type: New Skill Content Difficulty: Intermediate Estimated: 35 min Labels: enhancement , help wanted , good first issue , media-production , skill-intermediate --- 📋 Context Audience, objectives, formats, story angles. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the Media & Video Production track and…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "video",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:49Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/345",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/345"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-intermediate",
+        "media-production"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936733524",
+      "title": "[Media & Video Production] Preproduction — Plan shots and shot lists",
+      "summary": "🎯 Issue Summary Track: Media & Video Production → Preproduction Type: New Skill Content Difficulty: Advanced Estimated: 40 min Labels: enhancement , help wanted , good first issue , media-production , skill-advanced --- 📋 Context Coverage, angles, B-roll, continuity. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the Media & Video Production track and bring the library…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "video",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:49Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/346",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/346"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-advanced",
+        "media-production"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936733474",
+      "title": "[Media & Video Production] Post Publish — Publish videos for discoverability",
+      "summary": "🎯 Issue Summary Track: Media & Video Production → Post Publish Type: New Skill Content Difficulty: Intermediate Estimated: 35 min Labels: enhancement , help wanted , good first issue , media-production , skill-intermediate --- 📋 Context Titles, thumbnails, descriptions, tags. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the Media & Video Production track and bring the…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "video",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:49Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/343",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/343"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-intermediate",
+        "media-production"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936733425",
+      "title": "[Media & Video Production] Post Publish — Add motion graphics effectively",
+      "summary": "🎯 Issue Summary Track: Media & Video Production → Post Publish Type: New Skill Content Difficulty: Advanced Estimated: 40 min Labels: enhancement , help wanted , good first issue , media-production , skill-advanced --- 📋 Context Templates, timing, typography, brand fit. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the Media & Video Production track and bring the…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "video",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:48Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/340",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/340"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-advanced",
+        "media-production"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936733378",
+      "title": "[Marketing & Growth] Positioning Content — Plan content that moves customers",
+      "summary": "🎯 Issue Summary Track: Marketing & Growth → Positioning Content Type: New Skill Content Difficulty: Advanced Estimated: 40 min Labels: enhancement , help wanted , good first issue , marketing-growth , skill-advanced --- 📋 Context Audience maps, topic clusters, funnel alignment, measurement. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the Marketing & Growth track and…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects",
+        "employment"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:48Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/337",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/337"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-advanced",
+        "marketing-growth"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936733392",
+      "title": "[Marketing & Growth] Positioning Content — Operate a scalable content workflow",
+      "summary": "🎯 Issue Summary Track: Marketing & Growth → Positioning Content Type: New Skill Content Difficulty: Advanced Estimated: 40 min Labels: enhancement , help wanted , good first issue , marketing-growth , skill-advanced --- 📋 Context Calendars, owners, review stages, distribution. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the Marketing & Growth track and bring the…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects",
+        "employment"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:48Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/339",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/339"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-advanced",
+        "marketing-growth"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936733451",
+      "title": "[Media & Video Production] Post Publish — Measure video performance",
+      "summary": "🎯 Issue Summary Track: Media & Video Production → Post Publish Type: New Skill Content Difficulty: Advanced Estimated: 40 min Labels: enhancement , help wanted , good first issue , media-production , skill-advanced --- 📋 Context Retention, CTR, conversion, audience graphs. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the Media & Video Production track and bring the…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "video",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:48Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/341",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/341"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-advanced",
+        "media-production"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936733377",
+      "title": "[Marketing & Growth] Positioning Content — Build a cohesive messaging house",
+      "summary": "🎯 Issue Summary Track: Marketing & Growth → Positioning Content Type: New Skill Content Difficulty: Intermediate Estimated: 35 min Labels: enhancement , help wanted , good first issue , marketing-growth , skill-intermediate --- 📋 Context Positioning statement, value props, proof points, tone. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the Marketing & Growth track…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects",
+        "employment"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:48Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/336",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/336"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-intermediate",
+        "marketing-growth"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936733385",
+      "title": "[Marketing & Growth] Positioning Content — Apply SEO fundamentals to content",
+      "summary": "🎯 Issue Summary Track: Marketing & Growth → Positioning Content Type: New Skill Content Difficulty: Advanced Estimated: 40 min Labels: enhancement , help wanted , good first issue , marketing-growth , skill-advanced --- 📋 Context Keyword research, on-page SEO, authority building. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the Marketing & Growth track and bring the…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects",
+        "employment"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:48Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/338",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/338"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-advanced",
+        "marketing-growth"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936733354",
+      "title": "[Marketing & Growth] Lifecycle Campaigns — Run statistically sound experiments",
+      "summary": "🎯 Issue Summary Track: Marketing & Growth → Lifecycle Campaigns Type: New Skill Content Difficulty: Advanced Estimated: 40 min Labels: enhancement , help wanted , good first issue , marketing-growth , skill-advanced --- 📋 Context Hypothesis writing, sample size, segmentation, analysis. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the Marketing & Growth track and bring…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:48Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/335",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/335"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-advanced",
+        "marketing-growth"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936733235",
+      "title": "[Localization & i18n] String Engineering — Format dates and currencies locally",
+      "summary": "🎯 Issue Summary Track: Localization & i18n → String Engineering Type: New Skill Content Difficulty: Intermediate Estimated: 35 min Labels: enhancement , help wanted , good first issue , localization-i18n , skill-intermediate --- 📋 Context Intl API, locale data, time zones, calendars. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the Localization & i18n track and bring…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:47Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/329",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/329"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-intermediate",
+        "localization-i18n"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936733298",
+      "title": "[Marketing & Growth] Lifecycle Campaigns — Design marketing automation workflows",
+      "summary": "🎯 Issue Summary Track: Marketing & Growth → Lifecycle Campaigns Type: New Skill Content Difficulty: Advanced Estimated: 40 min Labels: enhancement , help wanted , good first issue , marketing-growth , skill-advanced --- 📋 Context Triggers, branching, scoring, attribution. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the Marketing & Growth track and bring the library…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:47Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/334",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/334"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-advanced",
+        "marketing-growth"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936733277",
+      "title": "[Localization & i18n] String Engineering — Support right-to-left languages",
+      "summary": "🎯 Issue Summary Track: Localization & i18n → String Engineering Type: New Skill Content Difficulty: Advanced Estimated: 40 min Labels: enhancement , help wanted , good first issue , localization-i18n , skill-advanced --- 📋 Context Layout mirroring, direction, typography, testing. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the Localization & i18n track and bring the…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:47Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/331",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/331"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-advanced",
+        "localization-i18n"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936733203",
+      "title": "[Localization & i18n] Linguistic Quality — Run linguistic quality assurance",
+      "summary": "🎯 Issue Summary Track: Localization & i18n → Linguistic Quality Type: New Skill Content Difficulty: Advanced Estimated: 40 min Labels: enhancement , help wanted , good first issue , localization-i18n , skill-advanced --- 📋 Context Checklists, reviewers, bug reporting, acceptance. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the Localization & i18n track and bring the…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:47Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/327",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/327"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-advanced",
+        "localization-i18n"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936733288",
+      "title": "[Marketing & Growth] Lifecycle Campaigns — Optimize landing pages for conversion",
+      "summary": "🎯 Issue Summary Track: Marketing & Growth → Lifecycle Campaigns Type: New Skill Content Difficulty: Advanced Estimated: 40 min Labels: enhancement , help wanted , good first issue , marketing-growth , skill-advanced --- 📋 Context Copy, layout, CTA design, testing frameworks. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the Marketing & Growth track and bring the…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "websites",
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:47Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/333",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/333"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-advanced",
+        "marketing-growth"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936733183",
+      "title": "[Localization & i18n] Linguistic Quality — Handle variable string lengths",
+      "summary": "🎯 Issue Summary Track: Localization & i18n → Linguistic Quality Type: New Skill Content Difficulty: Advanced Estimated: 40 min Labels: enhancement , help wanted , good first issue , localization-i18n , skill-advanced --- 📋 Context UI expansion, truncation, testing, wireframes. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the Localization & i18n track and bring the…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:47Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/325",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/325"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-advanced",
+        "localization-i18n"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936733200",
+      "title": "[Localization & i18n] Linguistic Quality — Use translation memories and glossaries",
+      "summary": "🎯 Issue Summary Track: Localization & i18n → Linguistic Quality Type: New Skill Content Difficulty: Advanced Estimated: 40 min Labels: enhancement , help wanted , good first issue , localization-i18n , skill-advanced --- 📋 Context Terminology, consistency, reuse, maintenance. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the Localization & i18n track and bring the…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:47Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/326",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/326"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-advanced",
+        "localization-i18n"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936733215",
+      "title": "[Localization & i18n] String Engineering — Externalize strings for localization",
+      "summary": "🎯 Issue Summary Track: Localization & i18n → String Engineering Type: New Skill Content Difficulty: Intermediate Estimated: 35 min Labels: enhancement , help wanted , good first issue , localization-i18n , skill-intermediate --- 📋 Context Resource files, placeholders, pluralization, context. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the Localization & i18n track…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:47Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/328",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/328"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-intermediate",
+        "localization-i18n"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936733275",
+      "title": "[Localization & i18n] String Engineering — Handle pluralization across languages",
+      "summary": "🎯 Issue Summary Track: Localization & i18n → String Engineering Type: New Skill Content Difficulty: Advanced Estimated: 40 min Labels: enhancement , help wanted , good first issue , localization-i18n , skill-advanced --- 📋 Context ICU messages, rules, edge cases, testing. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the Localization & i18n track and bring the library…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:47Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/330",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/330"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-advanced",
+        "localization-i18n"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936733087",
+      "title": "[Legal & Compliance] Open Source Law — Manage legal aspects of OSS contributions",
+      "summary": "🎯 Issue Summary Track: Legal & Compliance → Open Source Law Type: New Skill Content Difficulty: Intermediate Estimated: 35 min Labels: enhancement , help wanted , good first issue , legal-compliance , skill-intermediate --- 📋 Context CLA processes, copyright checks, license compatibility. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the Legal & Compliance track and…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:46Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/320",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/320"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-intermediate",
+        "legal-compliance"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936733042",
+      "title": "[Legal & Compliance] Contracts Ip — Manage contract lifecycle efficiently",
+      "summary": "🎯 Issue Summary Track: Legal & Compliance → Contracts Ip Type: New Skill Content Difficulty: Advanced Estimated: 40 min Labels: enhancement , help wanted , good first issue , legal-compliance , skill-advanced --- 📋 Context Templates, approval workflows, obligation tracking, renewal alerts. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the Legal & Compliance track and…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:46Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/318",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/318"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-advanced",
+        "legal-compliance"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936733023",
+      "title": "[Legal & Compliance] Contracts Ip — Assess IP ownership and licensing",
+      "summary": "🎯 Issue Summary Track: Legal & Compliance → Contracts Ip Type: New Skill Content Difficulty: Advanced Estimated: 40 min Labels: enhancement , help wanted , good first issue , legal-compliance , skill-advanced --- 📋 Context Work-for-hire, contractor agreements, third-party licenses, novelty checks. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the Legal & Compliance…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "freelance",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:46Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/317",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/317"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-advanced",
+        "legal-compliance"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936733125",
+      "title": "[Legal & Compliance] Privacy Data — Conduct data protection impact assessments",
+      "summary": "🎯 Issue Summary Track: Legal & Compliance → Privacy Data Type: New Skill Content Difficulty: Advanced Estimated: 40 min Labels: enhancement , help wanted , good first issue , legal-compliance , skill-advanced --- 📋 Context Processing mapping, risk scoring, mitigation, documentation. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the Legal & Compliance track and bring…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:46Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/322",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/322"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-advanced",
+        "legal-compliance"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936733144",
+      "title": "[Legal & Compliance] Privacy Data — Fulfill data subject rights requests",
+      "summary": "🎯 Issue Summary Track: Legal & Compliance → Privacy Data Type: New Skill Content Difficulty: Advanced Estimated: 40 min Labels: enhancement , help wanted , good first issue , legal-compliance , skill-advanced --- 📋 Context DSAR workflows, verification, timelines, cross-system fulfillment. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the Legal & Compliance track and…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:46Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/323",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/323"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-advanced",
+        "legal-compliance"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936733064",
+      "title": "[Legal & Compliance] Open Source Law — Maintain open source license compliance",
+      "summary": "🎯 Issue Summary Track: Legal & Compliance → Open Source Law Type: New Skill Content Difficulty: Advanced Estimated: 40 min Labels: enhancement , help wanted , good first issue , legal-compliance , skill-advanced --- 📋 Context Inventory, SBOM generation, obligation mapping, distribution checks. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the Legal & Compliance track…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:46Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/319",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/319"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-advanced",
+        "legal-compliance"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936733112",
+      "title": "[Legal & Compliance] Privacy Data — Build consent management properly",
+      "summary": "🎯 Issue Summary Track: Legal & Compliance → Privacy Data Type: New Skill Content Difficulty: Intermediate Estimated: 35 min Labels: enhancement , help wanted , good first issue , legal-compliance , skill-intermediate --- 📋 Context Granularity, withdrawal, auditing, lawful basis tracking. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the Legal & Compliance track and…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:46Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/321",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/321"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-intermediate",
+        "legal-compliance"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936733020",
+      "title": "[Legal & Compliance] Contracts Ip — Implement CCPA/CPRA compliance",
+      "summary": "🎯 Issue Summary Track: Legal & Compliance → Contracts Ip Type: New Skill Content Difficulty: Intermediate Estimated: 35 min Labels: enhancement , help wanted , good first issue , legal-compliance , skill-intermediate --- 📋 Context Consumer rights, opt-out signals, service provider contracts, audit. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the Legal & Compliance…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:46Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/316",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/316"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-intermediate",
+        "legal-compliance"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936733174",
+      "title": "[Legal & Compliance] Privacy Data — Govern data retention and deletion",
+      "summary": "🎯 Issue Summary Track: Legal & Compliance → Privacy Data Type: New Skill Content Difficulty: Advanced Estimated: 40 min Labels: enhancement , help wanted , good first issue , legal-compliance , skill-advanced --- 📋 Context Retention schedules, automated deletion, legal holds, audit trails. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the Legal & Compliance track and…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:46Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/324",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/324"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-advanced",
+        "legal-compliance"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936732941",
+      "title": "[Insurance Operations] Insurance Compliance — Maintain insurance regulatory compliance",
+      "summary": "🎯 Issue Summary Track: Insurance Operations → Insurance Compliance Type: New Skill Content Difficulty: Expert Estimated: 45 min Labels: enhancement , help wanted , good first issue , insurance , skill-expert --- 📋 Context Rate filing, licensing, reporting, audits. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the Insurance Operations track and bring the library closer…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:45Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/312",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/312"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-expert",
+        "insurance"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936732871",
+      "title": "[Insurance Operations] Claims Handling — Settle claims fairly",
+      "summary": "🎯 Issue Summary Track: Insurance Operations → Claims Handling Type: New Skill Content Difficulty: Advanced Estimated: 40 min Labels: enhancement , help wanted , good first issue , insurance , skill-advanced --- 📋 Context Valuation, negotiation, reserves, closure. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the Insurance Operations track and bring the library closer…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:45Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/309",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/309"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-advanced",
+        "insurance"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936732886",
+      "title": "[Insurance Operations] Claims Handling — Triage claims efficiently",
+      "summary": "🎯 Issue Summary Track: Insurance Operations → Claims Handling Type: New Skill Content Difficulty: Advanced Estimated: 40 min Labels: enhancement , help wanted , good first issue , insurance , skill-advanced --- 📋 Context Severity scoring, routing, reserve setting, notes. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the Insurance Operations track and bring the library…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:45Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/310",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/310"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-advanced",
+        "insurance"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936732864",
+      "title": "[Insurance Operations] Claims Handling — Investigate claims thoroughly",
+      "summary": "🎯 Issue Summary Track: Insurance Operations → Claims Handling Type: New Skill Content Difficulty: Expert Estimated: 45 min Labels: enhancement , help wanted , good first issue , insurance , skill-expert --- 📋 Context Evidence gathering, interviews, records, timelines. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the Insurance Operations track and bring the library…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:45Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/308",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/308"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-expert",
+        "insurance"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936732984",
+      "title": "[Insurance Operations] Underwriting Service — Make consistent underwriting decisions",
+      "summary": "🎯 Issue Summary Track: Insurance Operations → Underwriting Service Type: New Skill Content Difficulty: Expert Estimated: 45 min Labels: enhancement , help wanted , good first issue , insurance , skill-expert --- 📋 Context Risk factors, pricing, rules, documentation. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the Insurance Operations track and bring the library…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:45Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/314",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/314"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-expert",
+        "insurance"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936732884",
+      "title": "[Insurance Operations] Claims Handling — Streamline first notice of loss",
+      "summary": "🎯 Issue Summary Track: Insurance Operations → Claims Handling Type: New Skill Content Difficulty: Intermediate Estimated: 35 min Labels: enhancement , help wanted , good first issue , insurance , skill-intermediate --- 📋 Context Channels, data capture, routing, confirmation. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the Insurance Operations track and bring the…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:45Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/311",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/311"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-intermediate",
+        "insurance"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936732950",
+      "title": "[Insurance Operations] Underwriting Service — Administer policies accurately",
+      "summary": "🎯 Issue Summary Track: Insurance Operations → Underwriting Service Type: New Skill Content Difficulty: Advanced Estimated: 40 min Labels: enhancement , help wanted , good first issue , insurance , skill-advanced --- 📋 Context Endorsements, renewals, cancellations, billing. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the Insurance Operations track and bring the…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:45Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/313",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/313"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-advanced",
+        "insurance"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936732994",
+      "title": "[Insurance Operations] Underwriting Service — Pursue subrogation recoveries",
+      "summary": "🎯 Issue Summary Track: Insurance Operations → Underwriting Service Type: New Skill Content Difficulty: Expert Estimated: 45 min Labels: enhancement , help wanted , good first issue , insurance , skill-expert --- 📋 Context Liability analysis, demands, negotiations, legal. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the Insurance Operations track and bring the library…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:45Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/315",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/315"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-expert",
+        "insurance"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936732843",
+      "title": "[Hospitality & Travel] Revenue Operations — Set dynamic pricing responsibly",
+      "summary": "🎯 Issue Summary Track: Hospitality & Travel → Revenue Operations Type: New Skill Content Difficulty: Advanced Estimated: 40 min Labels: enhancement , help wanted , good first issue , hospitality-travel , skill-advanced --- 📋 Context Demand signals, competitor monitoring, elasticity, guardrails. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the Hospitality & Travel…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:44Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/307",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/307"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-advanced",
+        "hospitality-travel"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936732785",
+      "title": "[Hospitality & Travel] Revenue Operations — Optimize occupancy and ADR",
+      "summary": "🎯 Issue Summary Track: Hospitality & Travel → Revenue Operations Type: New Skill Content Difficulty: Advanced Estimated: 40 min Labels: enhancement , help wanted , good first issue , hospitality-travel , skill-advanced --- 📋 Context Channel mix, overbooking policy, length-of-stay strategies. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the Hospitality & Travel track…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:44Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/306",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/306"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-advanced",
+        "hospitality-travel"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936732779",
+      "title": "[Hospitality & Travel] Revenue Operations — Manage distribution channels",
+      "summary": "🎯 Issue Summary Track: Hospitality & Travel → Revenue Operations Type: New Skill Content Difficulty: Intermediate Estimated: 35 min Labels: enhancement , help wanted , good first issue , hospitality-travel , skill-intermediate --- 📋 Context OTA relationships, parity, commission, content quality. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the Hospitality & Travel…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:44Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/305",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/305"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-intermediate",
+        "hospitality-travel"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936732730",
+      "title": "[Hospitality & Travel] Guest Experience — Turn service failures into loyalty",
+      "summary": "🎯 Issue Summary Track: Hospitality & Travel → Guest Experience Type: New Skill Content Difficulty: Advanced Estimated: 40 min Labels: enhancement , help wanted , good first issue , hospitality-travel , skill-advanced --- 📋 Context HEART framework, empowerment, follow-up, pattern tracking. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the Hospitality & Travel track and…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:44Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/301",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/301"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-advanced",
+        "hospitality-travel"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936732749",
+      "title": "[Healthcare & Clinical] Clinical Workflow — Standardize delivery room protocols",
+      "summary": "🎯 Issue Summary Track: Healthcare & Clinical → Clinical Workflow Type: New Skill Content Difficulty: Advanced Estimated: 40 min Labels: enhancement , help wanted , good first issue , healthcare-clinical , skill-advanced --- 📋 Context Team roles, emergency checklists, neonatal stabilization. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the Healthcare & Clinical track…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:44Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/304",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/304"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-advanced",
+        "healthcare-clinical"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936732731",
+      "title": "[Hospitality & Travel] Guest Experience — Personalize guest experiences",
+      "summary": "🎯 Issue Summary Track: Hospitality & Travel → Guest Experience Type: New Skill Content Difficulty: Advanced Estimated: 40 min Labels: enhancement , help wanted , good first issue , hospitality-travel , skill-advanced --- 📋 Context Preferences, history, occasion marking, opt-in. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the Hospitality & Travel track and bring the…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:44Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/302",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/302"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-advanced",
+        "hospitality-travel"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936732750",
+      "title": "[Hospitality & Travel] Guest Experience — Collect and act on guest feedback",
+      "summary": "🎯 Issue Summary Track: Hospitality & Travel → Guest Experience Type: New Skill Content Difficulty: Intermediate Estimated: 35 min Labels: enhancement , help wanted , good first issue , hospitality-travel , skill-intermediate --- 📋 Context Survey timing, channels, response SLAs, action tracking. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the Hospitality & Travel…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:44Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/303",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/303"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-intermediate",
+        "hospitality-travel"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936732633",
+      "title": "[Healthcare & Clinical] Clinical Workflow — Standardize handoffs to prevent errors",
+      "summary": "🎯 Issue Summary Track: Healthcare & Clinical → Clinical Workflow Type: New Skill Content Difficulty: Intermediate Estimated: 35 min Labels: enhancement , help wanted , good first issue , healthcare-clinical , skill-intermediate --- 📋 Context ISBAR templates, sign-out checklists, ambiguity flags. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the Healthcare & Clinical…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:43Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/298",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/298"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-intermediate",
+        "healthcare-clinical"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936732649",
+      "title": "[Healthcare & Clinical] Quality Informatics — Track and report quality measures",
+      "summary": "",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:43Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/300",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/300"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-advanced",
+        "healthcare-clinical"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936732629",
+      "title": "[Healthcare & Clinical] Quality Informatics — Implement evidence-based practice changes",
+      "summary": "🎯 Issue Summary Track: Healthcare & Clinical → Quality Informatics Type: New Skill Content Difficulty: Expert Estimated: 45 min Labels: enhancement , help wanted , good first issue , healthcare-clinical , skill-expert --- 📋 Context Literature appraisal, guideline adaptation, change management. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the Healthcare & Clinical…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:43Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/297",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/297"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-expert",
+        "healthcare-clinical"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936732626",
+      "title": "[Healthcare & Clinical] Quality Informatics — Report adverse events justly",
+      "summary": "",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:43Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/296",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/296"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-intermediate",
+        "healthcare-clinical"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936732632",
+      "title": "[Healthcare & Clinical] Quality Informatics — Run PDSA quality improvement cycles",
+      "summary": "🎯 Issue Summary Track: Healthcare & Clinical → Quality Informatics Type: New Skill Content Difficulty: Advanced Estimated: 40 min Labels: enhancement , help wanted , good first issue , healthcare-clinical , skill-advanced --- 📋 Context Plan-do-study-act design, measure selection, run charts. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the Healthcare & Clinical track…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:57:43Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/299",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/299"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-advanced",
+        "healthcare-clinical"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936721438",
+      "title": "[Healthcare & Clinical] Clinical Workflow — Prevent medication errors end to end",
+      "summary": "🎯 Issue Summary Track: Healthcare & Clinical → Clinical Workflow Type: New Skill Content Difficulty: Advanced Estimated: 40 min Labels: enhancement , help wanted , good first issue , healthcare-clinical , skill-advanced --- 📋 Context Five rights, barcode scanning, high-alert meds, reconciliation. This skill is missing from the aniruddhaadak80/skills library. Adding it would close a gap in the Healthcare & Clinical…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:56:30Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/aniruddhaadak80/skills/issues/295",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/aniruddhaadak80/skills/issues/295"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "skill-advanced",
+        "healthcare-clinical"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "aniruddhaadak80/skills",
+      "hasDetails": true
+    },
+    {
+      "id": "stackexchange:stackoverflow-80011231",
+      "title": "Draw letters in python console given x y coordinates and characters",
+      "summary": "Draw letters in python console given x y coordinates and characters",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "needs"
+      ],
+      "type": "community post · unverified",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:55:26Z",
+      "sourceName": "Stack Exchange · pedidos de ajuda",
+      "sourceUrl": "https://stackoverflow.com/questions/80011231/draw-letters-in-python-console-given-x-y-coordinates-and-characters",
+      "sourceLinks": [
+        {
+          "name": "Stack Exchange · pedidos de ajuda",
+          "url": "https://stackoverflow.com/questions/80011231/draw-letters-in-python-console-given-x-y-coordinates-and-characters"
+        }
+      ],
+      "tags": [
+        "stackoverflow",
+        "python",
+        "console"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "social_unverified",
+      "language": "unknown",
+      "project": "stackoverflow",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5936709666",
+      "title": "[radar] SN open bounty 2026-10-20T05:55",
+      "summary": "New SN OPEN BOUNTY detected:",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:55:15Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/relayhop/sn-monetization-runtime/issues/1315",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/relayhop/sn-monetization-runtime/issues/1315"
+        }
+      ],
+      "tags": [
+        "radar",
+        "sn",
+        "bounty"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "relayhop/sn-monetization-runtime",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5936705717",
+      "title": "Use gallery for the recipe section",
+      "summary": "Something like but maybe native to myst?",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:54:50Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/21centuryweather/Weather-Change-Cookbook/issues/6",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/21centuryweather/Weather-Change-Cookbook/issues/6"
+        }
+      ],
+      "tags": [
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "21centuryweather/Weather-Change-Cookbook",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5936692703",
+      "title": "Completar las pruebas de integración de los endpoints (estudiantes)",
+      "summary": "Descripción Ejercicio del semillero: completar las pruebas de integración siguiendo los dos ejemplos de 25. Prueban el sistema de punta a punta: petición HTTP con token, controlador, servicio, dominio y SQL Server real (Testcontainers), con RabbitMQ simulado. Antes de empezar: lee los ejemplos de 25 y la guía del README para obtener el token de un administrador o de un estudiante. Flujos a cubrir Convocatorias…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:53:32Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/SemilleroSOLID/clean-architecture-api/issues/35",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/SemilleroSOLID/clean-architecture-api/issues/35"
+        }
+      ],
+      "tags": [
+        "good first issue",
+        "backend",
+        "pruebas"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "SemilleroSOLID/clean-architecture-api",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936692060",
+      "title": "Probar RequirementService, AuthService y los mappers (estudiantes)",
+      "summary": "Descripción Ejercicio del semillero, ideal para empezar: probar RequirementService , completar AuthServiceTest y probar los mappers, siguiendo el ejemplo de StudentServiceTest ( 24). Antes de empezar: lee esos ejemplos y la guía Cómo escribir una prueba de servicio del README. Casos sugeridos Son una guía, no una lista cerrada: si se te ocurre otro caso que valga la pena probar, agrégalo. RequirementService - [ ]…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:53:27Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/SemilleroSOLID/clean-architecture-api/issues/34",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/SemilleroSOLID/clean-architecture-api/issues/34"
+        }
+      ],
+      "tags": [
+        "good first issue",
+        "backend",
+        "pruebas"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "SemilleroSOLID/clean-architecture-api",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936691221",
+      "title": "Probar RequestService (estudiantes)",
+      "summary": "Descripción Ejercicio del semillero: crear RequestServiceTest y probar RequestService (CU-002) siguiendo el ejemplo de StudentServiceTest ( 24). Es el servicio con más reglas: verificación automática, estados de la solicitud (patrón State), dueño de la solicitud y eventos de RabbitMQ. Antes de empezar: lee StudentServiceTest ( 24), RequestAccessTest (ya prueba dos reglas de este servicio), la guía del README y la…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:53:22Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/SemilleroSOLID/clean-architecture-api/issues/33",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/SemilleroSOLID/clean-architecture-api/issues/33"
+        }
+      ],
+      "tags": [
+        "good first issue",
+        "backend",
+        "pruebas"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "SemilleroSOLID/clean-architecture-api",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936690428",
+      "title": "Probar ConvocationService (estudiantes)",
+      "summary": "Descripción Ejercicio del semillero: crear ConvocationServiceTest y probar ConvocationService (CU-001) siguiendo el ejemplo de StudentServiceTest ( 24). Los repositorios se simulan con Mockito y la fecha de hoy con un Clock fijo, así que no se necesita base de datos. Antes de empezar: lee StudentServiceTest ( 24), JwtTokenProviderTest (cómo fijar la fecha con un Clock ), la guía del README y el diagrama de estados…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:53:17Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/SemilleroSOLID/clean-architecture-api/issues/32",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/SemilleroSOLID/clean-architecture-api/issues/32"
+        }
+      ],
+      "tags": [
+        "good first issue",
+        "backend",
+        "pruebas"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "SemilleroSOLID/clean-architecture-api",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936676585",
+      "title": "[🐛 Bug]: /snapshot emits package-less Android id= selectors that resolve to nothing",
+      "summary": "WebdriverIO Version 10.0.2 ( /snapshot 10.0.2; 10.1.0 has the same build) Node.js Version v24.13.0 Mode Standalone Mode Which capabilities are you using? What happened? On Android, attachSelectors emits id= exactly as the page source reports it. When an app reports a resource-id without its package prefix (React Native testID s are the common case), UiAutomator2 qualifies a bare id= with the app package, so the…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:51:43Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/webdriverio/webdriverio/issues/16149",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/webdriverio/webdriverio/issues/16149"
+        }
+      ],
+      "tags": [
+        "Bug 🐛",
+        "mobile",
+        "help wanted",
+        "good first pick",
+        "Appium"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "webdriverio/webdriverio",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936630925",
+      "title": "El color de la J no está bien. Debería ser un azul pálido!!",
+      "summary": "El color de la J o la L invertida debería ser un azul pálido.",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:46:54Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Miqueld76/claude-tetris/issues/4",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Miqueld76/claude-tetris/issues/4"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Miqueld76/claude-tetris",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5936624210",
+      "title": "Try scripts/test.ps1 on Windows and fix what breaks",
+      "summary": "Time: about 20 minutes · Hardware: none, but you need a Windows computer with CMake and MinGW (or the toolchain in CONTRIBUTING.md) · New here? Start with CONTRIBUTING.md Files you'll touch: scripts/test.ps1 . scripts/test.ps1 was written without being run on Windows, and CI only runs Linux. Task 1. On Windows, open PowerShell and run .\\scripts\\test.ps1 from the repo root, then again from inside test\\ . 2. If it…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects",
+        "needs"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:46:10Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/GageLawton/noise-cancellation/issues/275",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/GageLawton/noise-cancellation/issues/275"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "no hardware needed",
+        "tests"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "GageLawton/noise-cancellation",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936624092",
+      "title": "Add bench summary.py to summarize a long telemetry log",
+      "summary": "Time: about 25 minutes · Hardware: none, this runs on your laptop · New here? Start with CONTRIBUTING.md Files you'll touch: tools/bench summary.py (new), tools/test bench summary.py (new). Bench checks like 92 run for 10 minutes and produce 600 telemetry lines. A summary answers the questions directly: did anything drop, how loud was the mic, how often was the tracker locked? Task 1. Create tools/bench summary.py…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:46:09Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/GageLawton/noise-cancellation/issues/274",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/GageLawton/noise-cancellation/issues/274"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "no hardware needed",
+        "python",
+        "bench bring-up"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "GageLawton/noise-cancellation",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936623981",
+      "title": "Write a first-run guide: what the serial log should look like",
+      "summary": "Time: about 25 minutes · Hardware: none, this runs on your laptop · New here? Start with CONTRIBUTING.md Files you'll touch: docs/first-run.md (new). Someone flashing the board for the first time has no idea what a healthy log looks like. This page tells them, from reading the code (no board needed). Task Create docs/first-run.md with: 1. Before you flash: link docs/hardware.md for wiring and the README's Device…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:46:09Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/GageLawton/noise-cancellation/issues/273",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/GageLawton/noise-cancellation/issues/273"
+        }
+      ],
+      "tags": [
+        "documentation",
+        "help wanted",
+        "no hardware needed",
+        "bench bring-up"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "GageLawton/noise-cancellation",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936623860",
+      "title": "Update the README status now that the runtime runs every milestone",
+      "summary": "Time: about 10 minutes · Hardware: none, this runs on your laptop · New here? Start with CONTRIBUTING.md Files you'll touch: README.md only. The README's Status section says wiring the M2 to M6 building blocks into the firmware is \"in progress\". It's done now: the runtime calibrates, cancels and tracks. What's left is running it on the board. Task 1. Rewrite the paragraph under Status : M2 to M6 are implemented in…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:46:08Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/GageLawton/noise-cancellation/issues/272",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/GageLawton/noise-cancellation/issues/272"
+        }
+      ],
+      "tags": [
+        "documentation",
+        "good first issue",
+        "no hardware needed"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "GageLawton/noise-cancellation",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936623742",
+      "title": "Add bench-results sections for the new bench checks",
+      "summary": "Time: about 15 minutes · Hardware: none, this runs on your laptop · New here? Start with CONTRIBUTING.md Files you'll touch: docs/bench-results.md . docs/bench-results.md has a table per bench check. Four new checks need a place for their numbers: 253, 264, 265 and 267. Task Add a section for each, in the same style as the existing ones (a heading, a one-line link to the issue, a table with one empty row): - First…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:46:07Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/GageLawton/noise-cancellation/issues/271",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/GageLawton/noise-cancellation/issues/271"
+        }
+      ],
+      "tags": [
+        "documentation",
+        "good first issue",
+        "no hardware needed",
+        "bench bring-up"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "GageLawton/noise-cancellation",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936623653",
+      "title": "Add sync frame, goertzel and peak to the code map",
+      "summary": "Time: about 10 minutes · Hardware: none, this runs on your laptop · New here? Start with CONTRIBUTING.md Files you'll touch: docs/architecture.md . Three headers landed after the code map was last updated. Task Add a row, in the same style as its neighbours, for: - sync frame.hpp under transport - goertzel.hpp and peak.hpp under dsp core , in alphabetical order Also check the page's \"planned\" notes against main…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:46:06Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/GageLawton/noise-cancellation/issues/270",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/GageLawton/noise-cancellation/issues/270"
+        }
+      ],
+      "tags": [
+        "documentation",
+        "good first issue",
+        "no hardware needed"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "GageLawton/noise-cancellation",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936623534",
+      "title": "Add a loopback link fake and test frames end to end",
+      "summary": "Time: about 20 minutes · Hardware: none, this runs on your laptop · New here? Start with CONTRIBUTING.md Files you'll touch: test/fakes/loopback link.hpp (new), test/test loopback link.cpp (new). M7 is done when one node plays both roles, sender and receiver. A fake \"link\" that hands bytes from one side to the other lets us test that on a laptop, using sync frame.hpp . Task 1. Create test/fakes/loopback link.hpp…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:46:06Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/GageLawton/noise-cancellation/issues/269",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/GageLawton/noise-cancellation/issues/269"
+        }
+      ],
+      "tags": [
+        "good first issue",
+        "no hardware needed",
+        "tests",
+        "c++",
+        "M7: multi-node"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "GageLawton/noise-cancellation",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936623413",
+      "title": "Add a SyncReceiver that spots missed and stale sync messages",
+      "summary": "Time: about 25 minutes · Hardware: none, this runs on your laptop · New here? Start with CONTRIBUTING.md Files you'll touch: components/transport/include/anc/sync receiver.hpp (new), test/test sync receiver.cpp (new). When nodes exchange SyncMessage s, the receiver needs to notice lost messages (a gap in sequenceNumber ) and old ones arriving late. Task 1. Create sync receiver.hpp (header-only, namespace anc ) with…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:46:05Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/GageLawton/noise-cancellation/issues/268",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/GageLawton/noise-cancellation/issues/268"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "no hardware needed",
+        "tests",
+        "c++",
+        "M7: multi-node"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "GageLawton/noise-cancellation",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936623155",
+      "title": "Add a GpioSyncTick that drives the sync wire",
+      "summary": "Time: about 30 minutes · Hardware: none, this runs on your laptop · New here? Start with CONTRIBUTING.md Files you'll touch: components/transport/gpio sync tick.cpp (new), components/transport/include/anc/gpio sync tick.hpp (new), components/transport/CMakeLists.txt . ISyncTick is the interface for the wired sync line between boards (design doc section 4). Only a fake exists. This issue adds the real one on the pins…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "applications",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:46:03Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/GageLawton/noise-cancellation/issues/266",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/GageLawton/noise-cancellation/issues/266"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "no hardware needed",
+        "c++",
+        "M7: multi-node"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "GageLawton/noise-cancellation",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936622703",
+      "title": "Say in the docs that dma block samples isn't used yet",
+      "summary": "Time: about 10 minutes · Hardware: none, this runs on your laptop · New here? Start with CONTRIBUTING.md Depends on: 261. Wait until that's merged before starting, so your pull request doesn't conflict. Files you'll touch: docs/config.md . dsp.dma block samples is read, validated and saved, but the firmware ignores it: audio blocks are fixed at 32 samples ( kBlockSamples in node runtime.hpp ). Someone tuning it…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:46:00Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/GageLawton/noise-cancellation/issues/263",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/GageLawton/noise-cancellation/issues/263"
+        }
+      ],
+      "tags": [
+        "documentation",
+        "good first issue",
+        "no hardware needed"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "GageLawton/noise-cancellation",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936622613",
+      "title": "Use min lock amplitude in the AlignmentEngine",
+      "summary": "Time: about 20 minutes · Hardware: none, this runs on your laptop · New here? Start with CONTRIBUTING.md Depends on: 260. Wait until that's merged before starting, so your pull request doesn't conflict. Files you'll touch: components/alignment/include/anc/alignment engine.hpp , test/test alignment engine.cpp . With the field from 260, the tracker can take its lock threshold from the config. Task 1. In…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:46:00Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/GageLawton/noise-cancellation/issues/262",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/GageLawton/noise-cancellation/issues/262"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "no hardware needed",
+        "tests",
+        "c++",
+        "M6: alignment"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "GageLawton/noise-cancellation",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936622479",
+      "title": "Read, write and set tracking.min lock amplitude",
+      "summary": "Time: about 25 minutes · Hardware: none, this runs on your laptop · New here? Start with CONTRIBUTING.md Depends on: 260. Wait until that's merged before starting, so your pull request doesn't conflict. Files you'll touch: components/config/config store.cpp , components/config/include/anc/config keys.hpp , test/test config keys.cpp , docs/config.md . With the field from 260 in NodeConfig , this issue makes it a real…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:45:59Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/GageLawton/noise-cancellation/issues/261",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/GageLawton/noise-cancellation/issues/261"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "no hardware needed",
+        "c++",
+        "M6: alignment"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "GageLawton/noise-cancellation",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936622263",
+      "title": "Report node status to a LocalCoordinator",
+      "summary": "Time: about 20 minutes · Hardware: none, this runs on your laptop · New here? Start with CONTRIBUTING.md Depends on: 258. Wait until that's merged before starting, so your pull request doesn't conflict. Files you'll touch: components/node runtime/node runtime.cpp , components/node runtime/include/anc/node runtime.hpp , components/node runtime/CMakeLists.txt . M7's goal is to run the coordinator interface with node 1…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:45:58Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/GageLawton/noise-cancellation/issues/259",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/GageLawton/noise-cancellation/issues/259"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "no hardware needed",
+        "c++",
+        "M7: multi-node"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "GageLawton/noise-cancellation",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936622354",
+      "title": "Add a min lock amplitude field to NodeConfig",
+      "summary": "Time: about 20 minutes · Hardware: none, this runs on your laptop · New here? Start with CONTRIBUTING.md Files you'll touch: components/config/include/anc/node config.hpp , components/config/node config.cpp , test/test node config.cpp . The frequency tracker only reports a lock when the hum is louder than a fixed amplitude of 0.1 (about -20 dBFS). That is hard-coded in pll.hpp ( minAmplitude = 0.05f , which is half…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:45:58Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/GageLawton/noise-cancellation/issues/260",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/GageLawton/noise-cancellation/issues/260"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "no hardware needed",
+        "tests",
+        "c++",
+        "M6: alignment"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "GageLawton/noise-cancellation",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936622141",
+      "title": "Report the hum level at the tracked frequency in telemetry",
+      "summary": "Time: about 30 minutes · Hardware: none, this runs on your laptop · New here? Start with CONTRIBUTING.md Depends on: 257. Wait until that's merged before starting, so your pull request doesn't conflict. Files you'll touch: components/node runtime/node runtime.cpp , components/node runtime/include/anc/node runtime.hpp . mic= in telemetry is the level of everything the mic hears. To judge the frequency tracker and the…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:45:57Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/GageLawton/noise-cancellation/issues/258",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/GageLawton/noise-cancellation/issues/258"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "no hardware needed",
+        "c++",
+        "dsp",
+        "M6: alignment"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "GageLawton/noise-cancellation",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936621920",
+      "title": "Log how much stack each task has left",
+      "summary": "Time: about 25 minutes · Hardware: none, this runs on your laptop · New here? Start with CONTRIBUTING.md Depends on: 255. Wait until that's merged before starting, so your pull request doesn't conflict. Files you'll touch: components/node runtime/node runtime.cpp , components/node runtime/include/anc/node runtime.hpp . Every task in spawnTasks() gets a fixed stack (4096 or 6144 bytes). FreeRTOS can report the…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:45:56Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/GageLawton/noise-cancellation/issues/256",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/GageLawton/noise-cancellation/issues/256"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "no hardware needed",
+        "c++",
+        "bench bring-up"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "GageLawton/noise-cancellation",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936622019",
+      "title": "Add a status serial command",
+      "summary": "Time: about 25 minutes · Hardware: none, this runs on your laptop · New here? Start with CONTRIBUTING.md Depends on: 256. Wait until that's merged before starting, so your pull request doesn't conflict. Files you'll touch: components/node runtime/node runtime.cpp , components/config/include/anc/command parser.hpp , test/test command parser.cpp . Telemetry prints once a second, which scrolls past quickly. A status…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:45:56Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/GageLawton/noise-cancellation/issues/257",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/GageLawton/noise-cancellation/issues/257"
+        }
+      ],
+      "tags": [
+        "help wanted",
+        "no hardware needed",
+        "c++",
+        "bench bring-up"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "GageLawton/noise-cancellation",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936621749",
+      "title": "Print the firmware version at boot",
+      "summary": "Time: about 15 minutes · Hardware: none, this runs on your laptop · New here? Start with CONTRIBUTING.md Files you'll touch: components/node runtime/node runtime.cpp , components/node runtime/CMakeLists.txt . When someone pastes a bench log, we need to know which code it came from. ESP-IDF already stamps every build with a version from git describe . Task 1. In node runtime.cpp , add include \"esp app desc.h\" . 2. At…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:45:55Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/GageLawton/noise-cancellation/issues/255",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/GageLawton/noise-cancellation/issues/255"
+        }
+      ],
+      "tags": [
+        "good first issue",
+        "no hardware needed",
+        "c++",
+        "bench bring-up"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "GageLawton/noise-cancellation",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936611743",
+      "title": "DuckDB Query fails for JSON arrays and scalar values",
+      "summary": "[!IMPORTANT] This issue is not ready for contributions yet. The Kestra team still has to review it. Please wait until this message is removed and the issue has been move to Backlog stage before you start working on it. Pull requests opened before that will not be reviewed. In the meantime, feel free to get started on a different issue by checking out our good first issues list. Describe the issue A DuckDB Query task…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:44:53Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/kestra-io/plugin-jdbc/issues/1078",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/kestra-io/plugin-jdbc/issues/1078"
+        }
+      ],
+      "tags": [
+        "area/plugin",
+        "area/backend",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "kestra-io/plugin-jdbc",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936599771",
+      "title": "CLI: doctor command — check credentials and suggest custom field IDs",
+      "summary": "Many Jira sites keep acceptance criteria, story points or epic links in custom fields. Until JIRA ACCEPTANCE CRITERIA FIELD ID and the other field ids are set, jira prepare work brief reports acceptanceCriteriaField: \"not configured\" and can only find criteria in the description. Finding the right customfield NNNNN by hand is a common setup hurdle. Proposal: npx jira-delivery-mcp doctor , which: - checks that JIRA…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:43:37Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/teransarathchandra/jira-mcp-server/issues/17",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/teransarathchandra/jira-mcp-server/issues/17"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "teransarathchandra/jira-mcp-server",
+      "hasDetails": false
+    },
+    {
+      "id": "github:5936473553",
+      "title": "Research Mode: make the checkpoint (gate) reviews easier to act on",
+      "summary": "Research Mode pauses at 3 human review gates: protocol, evidence corpus, and hypotheses. The review panel ( rm-hitl-panel in frontend/app.html , rendered by renderRMHitlPanel in frontend/app.js ) shows what was produced, but it's hard to review properly and the only way to change anything is a free-text box. Problems today - Gate 2 hides most of the corpus. It shows only the first 8 papers and 6 evidence records…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "projects",
+        "needs"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:29:45Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Aryan-Pardeshi/DeepResearch_AI/issues/64",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Aryan-Pardeshi/DeepResearch_AI/issues/64"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Aryan-Pardeshi/DeepResearch_AI",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5936471675",
+      "title": "Research Mode: make the pipeline progress tracker easier to follow",
+      "summary": "While a Research Mode run is going, the tracker at the top of the workspace ( rm-tracker-card in frontend/app.html , rendered by updateRMPipelineTracker in frontend/app.js ) is hard to follow. It is the main thing users watch during a run, which can take several minutes. Problems today - Too much at once. It shows 33 chips together: 30 numbered stages plus 3 checkpoints across 5 phases. Phase 5 alone has 12. It's…",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "programming",
+        "websites",
+        "projects",
+        "needs"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T05:29:32Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/Aryan-Pardeshi/DeepResearch_AI/issues/63",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/Aryan-Pardeshi/DeepResearch_AI/issues/63"
+        }
+      ],
+      "tags": [
+        "enhancement",
+        "help wanted",
+        "good first issue"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "Aryan-Pardeshi/DeepResearch_AI",
+      "hasDetails": true
+    },
+    {
+      "id": "github:5935826115",
+      "title": "Frantic bounty 143: Write and validate your own MAP description with the mailschema package",
+      "summary": "Frantic bounty 143 Write and validate your own MAP description with the mailschema package Worker price: $2 Slots: 40 (32 available) Status: Available Claim: Funding receipt: Frantic is the source of truth. This GitHub issue is a mirrored board thread.",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "projects"
+      ],
+      "type": "open-source contribution",
+      "salary": "",
+      "publishedAt": "2026-10-20T04:15:53Z",
+      "sourceName": "GitHub Issues",
+      "sourceUrl": "https://github.com/auscaster/frantic-board/issues/541",
+      "sourceLinks": [
+        {
+          "name": "GitHub Issues",
+          "url": "https://github.com/auscaster/frantic-board/issues/541"
+        }
+      ],
+      "tags": [
+        "bounty",
+        "funded",
+        "available",
+        "claimed",
+        "delivered",
+        "needs-work"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "community_project",
+      "language": "unknown",
+      "project": "auscaster/frantic-board",
+      "hasDetails": false
+    },
+    {
+      "id": "stackexchange:superuser-1940959",
+      "title": "Windows 11 back up to external disk error - how can I resolve issue of drive / back up files not being recognized?",
+      "summary": "Windows 11 back up to external disk error - how can I resolve issue of drive / back up files not being recognized?",
+      "company": "",
+      "country": "Não informado",
+      "countries": [],
+      "remote": false,
+      "categories": [
+        "needs"
+      ],
+      "type": "community post · unverified",
+      "salary": "",
+      "publishedAt": "2026-10-20T02:58:08Z",
+      "sourceName": "Stack Exchange · pedidos de ajuda",
+      "sourceUrl": "https://superuser.com/questions/1940959/windows-11-back-up-to-external-disk-error-how-can-i-resolve-issue-of-drive-b",
+      "sourceLinks": [
+        {
+          "name": "Stack Exchange · pedidos de ajuda",
+          "url": "https://superuser.com/questions/1940959/windows-11-back-up-to-external-disk-error-how-can-i-resolve-issue-of-drive-b"
+        },
+        {
+          "name": "Stack Exchange · pedidos de ajuda",
+          "url": "https://superuser.com/questions/1940959/windows-11-backup-to-external-disk-error-how-can-i-resolve-issue-of-drive-back"
+        }
+      ],
+      "tags": [
+        "superuser",
+        "windows-11",
+        "windows-update",
+        "windows-backup"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "social_unverified",
+      "language": "unknown",
+      "project": "superuser",
+      "hasDetails": false
+    },
     {
       "id": "github:5933731982",
       "title": "Make descending ranges interactive",
@@ -17157,7 +21502,7 @@
       "title": "Senior Affiliate Manager (Full Remote - Greece)",
       "summary": "Our Vision & Products EverAI — Building the Future of AI Companionship One of the Top 15 Largest & Fastest-Growing AI Companies in the World 50 Million Users in 2 years — Help Us Reach 100M first, 500M next At EverAI , we’re shaping what it means to connect with AI. With 50 million users and counting , we're not just building products — we're creating entirely new categories. Our flagship product is the world’s…",
       "company": "EverAI",
-      "country": "Não informado",
+      "country": "Remoto/Global",
       "countries": [],
       "remote": true,
       "categories": [
@@ -17393,7 +21738,7 @@
       "title": "Senior Affiliate Manager (Full Remote - Cyprus)",
       "summary": "Our Vision & Products EverAI — Building the Future of AI Companionship One of the Top 15 Largest & Fastest-Growing AI Companies in the World 50 Million Users in 2 years — Help Us Reach 100M first, 500M next At EverAI , we’re shaping what it means to connect with AI. With 50 million users and counting , we're not just building products — we're creating entirely new categories. Our flagship product is the world’s…",
       "company": "EverAI",
-      "country": "Não informado",
+      "country": "Remoto/Global",
       "countries": [],
       "remote": true,
       "categories": [
@@ -25767,6 +30112,75 @@
       ],
       "tags": [
         "Creative & Design"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "source_listing",
+      "language": "unknown",
+      "hasDetails": true
+    },
+    {
+      "id": "jobicy:155823",
+      "title": "Revenue Enablement Manager (Sales)",
+      "summary": "Who is Boulevard ? Boulevard provides the first and only client experience platform for appointment-based, self-care businesses. We empower our customers to give their clients more of the magical moments that matter most. Before launching in 2016, our founders spent months interviewing salon managers and working behind front desks to understand their pain points so we could design a modern, user-friendly platform…",
+      "company": "Boulevard",
+      "country": "Estados Unidos",
+      "countries": [
+        "Estados Unidos"
+      ],
+      "remote": true,
+      "categories": [
+        "applications",
+        "employment",
+        "remote"
+      ],
+      "type": "employment",
+      "salary": "100000–110000 USD",
+      "publishedAt": "2026-10-19T12:09:52Z",
+      "sourceName": "Jobicy",
+      "sourceUrl": "https://jobicy.com/jobs/155823-revenue-enablement-manager-sales-2",
+      "sourceLinks": [
+        {
+          "name": "Jobicy",
+          "url": "https://jobicy.com/jobs/155823-revenue-enablement-manager-sales-2"
+        }
+      ],
+      "tags": [
+        "Sales"
+      ],
+      "status": "UNKNOWN",
+      "trustLevel": "source_listing",
+      "language": "unknown",
+      "hasDetails": true
+    },
+    {
+      "id": "jobicy:155824",
+      "title": "Software Engineering Manager",
+      "summary": "About Us Fanatics is building a leading global digital sports platform. We ignite the passions of global sports fans and maximize the presence and reach for our hundreds of sports partners globally by offering products and services across Fanatics Commerce, Fanatics Collectibles, and Fanatics Betting & Gaming, allowing sports fans to Buy, Collect, and Bet. Through the Fanatics platform, sports fans can buy licensed…",
+      "company": "Fanatics",
+      "country": "Estados Unidos",
+      "countries": [
+        "Estados Unidos"
+      ],
+      "remote": true,
+      "categories": [
+        "programming",
+        "applications",
+        "employment",
+        "remote"
+      ],
+      "type": "internship",
+      "salary": "144000–235000 USD",
+      "publishedAt": "2026-10-19T12:09:50Z",
+      "sourceName": "Jobicy",
+      "sourceUrl": "https://jobicy.com/jobs/155824-software-engineering-manager",
+      "sourceLinks": [
+        {
+          "name": "Jobicy",
+          "url": "https://jobicy.com/jobs/155824-software-engineering-manager"
+        }
+      ],
+      "tags": [
+        "Software Engineering"
       ],
       "status": "UNKNOWN",
       "trustLevel": "source_listing",
@@ -164444,44 +168858,6 @@
       "trustLevel": "source_listing",
       "language": "unknown",
       "hasDetails": true
-    },
-    {
-      "id": "stackexchange:superuser-1940959",
-      "title": "Windows 11 back up to external disk error - how can I resolve issue of drive / back up files not being recognized?",
-      "summary": "Windows 11 back up to external disk error - how can I resolve issue of drive / back up files not being recognized?",
-      "company": "",
-      "country": "Não informado",
-      "countries": [],
-      "remote": false,
-      "categories": [
-        "needs"
-      ],
-      "type": "community post · unverified",
-      "salary": "",
-      "publishedAt": "2026-10-16T03:45:02Z",
-      "sourceName": "Stack Exchange · pedidos de ajuda",
-      "sourceUrl": "https://superuser.com/questions/1940959/windows-11-back-up-to-external-disk-error-how-can-i-resolve-issue-of-drive-b",
-      "sourceLinks": [
-        {
-          "name": "Stack Exchange · pedidos de ajuda",
-          "url": "https://superuser.com/questions/1940959/windows-11-back-up-to-external-disk-error-how-can-i-resolve-issue-of-drive-b"
-        },
-        {
-          "name": "Stack Exchange · pedidos de ajuda",
-          "url": "https://superuser.com/questions/1940959/windows-11-backup-to-external-disk-error-how-can-i-resolve-issue-of-drive-back"
-        }
-      ],
-      "tags": [
-        "superuser",
-        "windows-11",
-        "windows-update",
-        "windows-backup"
-      ],
-      "status": "UNKNOWN",
-      "trustLevel": "social_unverified",
-      "language": "unknown",
-      "project": "superuser",
-      "hasDetails": false
     },
     {
       "id": "jobicy:153330",
@@ -636780,7 +641156,7 @@
       "frequencyMinutes": 60,
       "limit": 100,
       "status": "ok",
-      "lastSyncAt": "2026-10-20T00:27:01Z",
+      "lastSyncAt": "2026-10-20T06:07:58Z",
       "itemsFound": 99,
       "note": "Fonte remota; consultar no máximo uma vez por hora."
     },
@@ -636800,7 +641176,7 @@
       "frequencyMinutes": 60,
       "limit": 250,
       "status": "ok",
-      "lastSyncAt": "2026-10-20T00:27:01Z",
+      "lastSyncAt": "2026-10-20T06:07:58Z",
       "itemsFound": 99,
       "note": "Atribuição e link dofollow para cada anúncio original."
     },
@@ -636819,7 +641195,7 @@
       "frequencyMinutes": 60,
       "limit": 100,
       "status": "ok",
-      "lastSyncAt": "2026-10-20T00:27:01Z",
+      "lastSyncAt": "2026-10-20T06:07:58Z",
       "itemsFound": 90,
       "note": "Preservar a atribuição e o link do feed original."
     },
@@ -636838,7 +641214,7 @@
       "frequencyMinutes": 60,
       "limit": 50,
       "status": "ok",
-      "lastSyncAt": "2026-10-20T00:27:01Z",
+      "lastSyncAt": "2026-10-20T06:07:58Z",
       "itemsFound": 4,
       "note": "Feed RSS oficial do portal de carreiras AGL, filtrada para Angola; manter o link original."
     },
@@ -636858,8 +641234,8 @@
       "frequencyMinutes": 60,
       "limit": 180,
       "status": "ok",
-      "lastSyncAt": "2026-10-20T00:27:01Z",
-      "itemsFound": 271,
+      "lastSyncAt": "2026-10-20T06:07:58Z",
+      "itemsFound": 215,
       "note": "Issues abertas com labels de contribuição; remuneração não presumida."
     },
     {
@@ -636975,8 +641351,8 @@
       "frequencyMinutes": 60,
       "limit": 180,
       "status": "ok",
-      "lastSyncAt": "2026-10-20T00:27:01Z",
-      "itemsFound": 66,
+      "lastSyncAt": "2026-10-20T06:07:58Z",
+      "itemsFound": 65,
       "note": "Perguntas públicas recentes; responde na fonte original. Não são ofertas pagas."
     },
     {
@@ -636996,7 +641372,7 @@
       "frequencyMinutes": 60,
       "limit": 180,
       "status": "ok",
-      "lastSyncAt": "2026-10-20T00:27:01Z",
+      "lastSyncAt": "2026-10-20T06:07:58Z",
       "itemsFound": 0,
       "note": "Vídeos e comentários públicos recentes; requer YOUTUBE_API_KEY e não publica respostas automaticamente."
     }
