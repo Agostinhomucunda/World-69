@@ -1,9 +1,9 @@
 {
-  "next_source": 1,
+  "next_source": 15,
   "sources": {
     "developer-tools": {
       "page": 6,
-      "offset": 79
+      "offset": 90
     },
     "code-editor": {
       "page": 11,
@@ -31,7 +31,7 @@
     },
     "productivity": {
       "page": 6,
-      "offset": 10
+      "offset": 26
     },
     "cybersecurity": {
       "page": 11,
@@ -59,11 +59,11 @@
     },
     "ecommerce": {
       "page": 8,
-      "offset": 0
+      "offset": 20
     },
     "finance": {
       "page": 6,
-      "offset": 75
+      "offset": 85
     },
     "open-source": {
       "page": 11,
@@ -74,6 +74,6 @@
       "offset": 0
     }
   },
-  "runs": 113,
-  "updated_at": "2026-10-25T03:59:17Z"
+  "runs": 114,
+  "updated_at": "2026-10-25T09:05:45Z"
 }
