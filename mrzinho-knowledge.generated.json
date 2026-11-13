@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-12T11:50:24Z",
+  "updatedAt": "2026-11-13T11:31:41Z",
   "sources": [
     {
       "id": "javascript-mdn",
@@ -17,8 +17,8 @@
       "resolvedUrl": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
       "status": "ok",
       "title": "JavaScript | MDN",
-      "contentHash": "fc8c5094ca2b1b09",
-      "checkedAt": "2026-11-12T11:50:24Z"
+      "contentHash": "38b512fa59c4bbaa",
+      "checkedAt": "2026-11-13T11:31:41Z"
     },
     {
       "id": "python-docs",
@@ -35,8 +35,8 @@
       "resolvedUrl": "https://docs.python.org/3/tutorial/",
       "status": "ok",
       "title": "The Python Tutorial &#8212; Python 3.15.2 documentation",
-      "contentHash": "f7d34ff344ac9895",
-      "checkedAt": "2026-11-12T11:50:24Z"
+      "contentHash": "09d89cf4968e94e3",
+      "checkedAt": "2026-11-13T11:31:41Z"
     },
     {
       "id": "cpp-isocpp",
@@ -50,7 +50,7 @@
         "boas práticas"
       ],
       "status": "unavailable",
-      "checkedAt": "2026-11-12T11:50:24Z"
+      "checkedAt": "2026-11-13T11:31:41Z"
     },
     {
       "id": "web-standards-mdn",
@@ -66,8 +66,8 @@
       "resolvedUrl": "https://developer.mozilla.org/en-US/docs/Learn_web_development",
       "status": "ok",
       "title": "Learn web development | MDN",
-      "contentHash": "93700043ae4299d3",
-      "checkedAt": "2026-11-12T11:50:24Z"
+      "contentHash": "8e1d17aef2539649",
+      "checkedAt": "2026-11-13T11:31:41Z"
     }
   ],
   "failures": [
